@@ -279,9 +279,6 @@ input,select,textarea{font-family:inherit;outline:none}
 .status-done{background:var(--success-bg);color:#065F46}
 .status-closed{background:#F1F5F9;color:#475569}
 .status-shelve{background:var(--danger-bg);color:#991B1B}
-.status-info{background:#F0FDFA;color:#0F766E}
-.field-error{color:var(--danger);font-size:.75rem;margin-top:4px;display:none;align-items:center;gap:4px}
-.field-error.show{display:flex}
 
 /* ===== TABS ===== */
 .tabs{display:flex;gap:0;border-bottom:2px solid var(--border);margin-bottom:20px;flex-wrap:wrap;overflow-x:auto;-webkit-overflow-scrolling:touch}
@@ -1089,12 +1086,12 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
         <div class="three-col" data-od-id="path-7-1-1-0-4">
           <div class="card list-card">
             <h4 style="margin-bottom:10px;font-size:.9rem" data-od-id="path-7-1-1-0-4-0-0">需求进度 <a href="#" onclick="switchView('requirements');return false" style="font-size:.75rem;font-weight:500;float:right" data-od-id="path-7-1-1-0-4-0-0-0">查看更多 →</a></h4>
-            <div class="list-item"><span><span class="id">DE-B-20250115-0001</span> 用户权限优化</span><span class="status status-progress">验收中</span></div>
-            <div class="list-item"><span><span class="id">DE-B-20250114-0002</span> 报表导出功能</span><span class="status status-info">待分配</span></div>
-            <div class="list-item"><span><span class="id">DE-B-20250113-0003</span> 消息推送改造</span><span class="status status-done">已上线</span></div>
-            <div class="list-item"><span><span class="id">DE-B-20250109-0006</span> 数据看板升级</span><span class="status status-progress">调研中</span></div>
-            <div class="list-item"><span><span class="id">DE-B-20250108-0007</span> 接口性能优化</span><span class="status status-info">待分配</span></div>
-            <div class="list-item"><span><span class="id">DE-B-20250107-0008</span> 移动端适配</span><span class="status status-done">已上线</span></div>
+            <div class="list-item"><span><span class="id">DE-20250115-001</span> 用户权限优化</span><span class="status status-progress">调研中</span></div>
+            <div class="list-item"><span><span class="id">DE-20250114-003</span> 报表导出功能</span><span class="status status-wait">待分配</span></div>
+            <div class="list-item"><span><span class="id">DE-20250113-002</span> 消息推送改造</span><span class="status status-done">已上线</span></div>
+            <div class="list-item"><span><span class="id">DE-20250112-005</span> 数据看板升级</span><span class="status status-progress">调研中</span></div>
+            <div class="list-item"><span><span class="id">DE-20250110-008</span> 接口性能优化</span><span class="status status-wait">待分配</span></div>
+            <div class="list-item"><span><span class="id">DE-20250109-012</span> 移动端适配</span><span class="status status-done">已上线</span></div>
           </div>
           <div class="card list-card">
             <h4 style="margin-bottom:10px;font-size:.9rem" data-od-id="path-7-1-1-0-4-1-0">问题动态 <a href="#" onclick="switchView('problems');return false" style="font-size:.75rem;font-weight:500;float:right" data-od-id="path-7-1-1-0-4-1-0-0">查看更多 →</a></h4>
@@ -1123,7 +1120,7 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
               <div style="display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--border-light)">
                 <div style="width:8px;height:8px;border-radius:50%;background:var(--primary);margin-top:6px;flex-shrink:0"></div>
                 <div style="flex:1">
-                  <div style="font-size:.85rem;font-weight:600">需求 DE-B-20250115-0001 状态更新为「验收中」</div>
+                  <div style="font-size:.85rem;font-weight:600">需求 DE-20250115-001 状态更新为「调研中」</div>
                   <div style="font-size:.75rem;color:var(--text-muted);margin-top:2px">产品经理李明辉 · 2小时前</div>
                 </div>
               </div>
@@ -1269,97 +1266,56 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
       <div id="view-requirements" class="hidden" data-od-id="path-7-1-1-3">
         <div class="mini-stats" data-od-id="path-7-1-1-3-0">
           <div class="mini-stat ms-primary"><div class="ms-val" id="reqStatTotal" data-od-id="path-7-1-1-3-0-0-0">14</div><div class="ms-label">全部需求</div></div>
-          <div class="mini-stat ms-warn"><div class="ms-val" id="reqStatPending" data-od-id="path-7-1-1-3-0-1-0">2</div><div class="ms-label">待审批</div></div>
+          <div class="mini-stat ms-warn"><div class="ms-val" id="reqStatPending" data-od-id="path-7-1-1-3-0-1-0">4</div><div class="ms-label">待分配</div></div>
           <div class="mini-stat ms-accent"><div class="ms-val" id="reqStatResearch" data-od-id="path-7-1-1-3-0-2-0">3</div><div class="ms-label">调研中</div></div>
-          <div class="mini-stat ms-success"><div class="ms-val" id="reqStatOnline" data-od-id="path-7-1-1-3-0-3-0">3</div><div class="ms-label">已上线</div></div>
+          <div class="mini-stat ms-success"><div class="ms-val" id="reqStatOnline" data-od-id="path-7-1-1-3-0-3-0">4</div><div class="ms-label">已上线</div></div>
         </div>
         <div class="toolbar" data-od-id="path-7-1-1-3-1">
           <div class="tabs" id="reqTabs" data-od-id="path-7-1-1-3-1-0">
             <div class="tab active" onclick="filterReq('all')" data-od-id="path-7-1-1-3-1-0-0">全部</div>
-            <div class="tab" onclick="filterReq('待审批')" data-od-id="path-7-1-1-3-1-0-1">待审批</div>
-            <div class="tab" onclick="filterReq('审批不通过')" data-od-id="path-7-1-1-3-1-0-1b">审批不通过</div>
-            <div class="tab" onclick="filterReq('待分配')" data-od-id="path-7-1-1-3-1-0-2">待分配</div>
-            <div class="tab" onclick="filterReq('调研中')" data-od-id="path-7-1-1-3-1-0-3">调研中</div>
+            <div class="tab" onclick="filterReq('待分配')" data-od-id="path-7-1-1-3-1-0-1">待分配</div>
+            <div class="tab" onclick="filterReq('调研中')" data-od-id="path-7-1-1-3-1-0-2">调研中</div>
+            <div class="tab" onclick="filterReq('评估中')" data-od-id="path-7-1-1-3-1-0-3">评估中</div>
             <div class="tab" onclick="filterReq('验收中')" data-od-id="path-7-1-1-3-1-0-4">验收中</div>
             <div class="tab" onclick="filterReq('已上线')" data-od-id="path-7-1-1-3-1-0-5">已上线</div>
             <div class="tab" onclick="filterReq('已关闭')" data-od-id="path-7-1-1-3-1-0-6">已关闭</div>
           </div>
-          <div style="display:flex;gap:12px;align-items:center">
-            <div class="header-search" data-od-id="path-7-1-1-3-1-2">
-              <input class="search-input" id="reqSearchInput" type="text" placeholder="搜索需求标题/ID" maxlength="100" onkeydown="if(event.key==='Enter')doReqSearch()" oninput="onReqSearchInput(this.value)" data-od-id="path-7-1-1-3-1-2-0" style="width:220px">
-              <button class="search-btn" onclick="doReqSearch()" data-od-id="path-7-1-1-3-1-2-1">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-              </button>
-            </div>
-            <button class="btn btn-primary" onclick="openCreateModal('req')" data-od-id="path-7-1-1-3-1-1">+ 新建需求</button>
-          </div>
+          <button class="btn btn-primary" onclick="openCreateModal('req')" data-od-id="path-7-1-1-3-1-1">+ 新建需求</button>
         </div>
         <div class="split-view" data-od-id="path-7-1-1-3-2">
           <div class="card">
-            <div class="table-wrap" id="reqTableWrap">
+            <div class="table-wrap">
               <table class="data">
-                <thead><tr><th style="width:170px">需求ID</th><th>所属项目-系统</th><th>功能模块</th><th>需求标题</th><th style="width:70px">优先级</th><th style="width:90px">状态</th><th style="width:110px">提交日期</th><th style="width:90px">需求负责人</th><th style="width:80px">操作</th></tr></thead>
+                <thead><tr><th>需求编号</th><th>需求标题</th><th>优先级</th><th>状态</th><th>负责人</th><th>创建时间</th><th>操作</th></tr></thead>
                 <tbody id="reqBody" data-od-id="path-7-1-1-3-2-0-0-0-1"></tbody>
               </table>
-            </div>
-            <div id="reqEmpty" class="hidden" style="text-align:center;padding:60px 20px">
-              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--border)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:16px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
-              <div style="font-size:.95rem;color:var(--text-secondary);margin-bottom:8px">暂无需求记录</div>
-              <div style="font-size:.82rem;color:var(--text-secondary)">点击右上角「+ 新建需求」提交第一条需求</div>
-            </div>
-            <div id="reqNoResult" class="hidden" style="text-align:center;padding:40px 20px">
-              <div style="font-size:.95rem;color:var(--text-secondary)">未找到匹配的需求</div>
             </div>
           </div>
           <div class="side-panel">
             <div class="card sp-section">
               <h4 data-od-id="path-7-1-1-3-2-1-0-0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg> 优先级分布</h4>
-              <div id="reqPriorityDist">
-                <div class="dist-item"><div class="dist-label">紧急</div><div class="dist-bar"><div class="dist-fill" style="width:14%;background:var(--danger)"></div></div><div class="dist-count">2</div></div>
-                <div class="dist-item"><div class="dist-label">高</div><div class="dist-bar"><div class="dist-fill" style="width:29%;background:var(--warning)"></div></div><div class="dist-count">4</div></div>
-                <div class="dist-item"><div class="dist-label">中</div><div class="dist-bar"><div class="dist-fill" style="width:43%;background:var(--primary)"></div></div><div class="dist-count">6</div></div>
-                <div class="dist-item"><div class="dist-label">低</div><div class="dist-bar"><div class="dist-fill" style="width:14%;background:var(--success)"></div></div><div class="dist-count">2</div></div>
-              </div>
+              <div class="dist-item"><div class="dist-label">紧急</div><div class="dist-bar"><div class="dist-fill" style="width:14%;background:var(--danger)"></div></div><div class="dist-count">2</div></div>
+              <div class="dist-item"><div class="dist-label">高</div><div class="dist-bar"><div class="dist-fill" style="width:29%;background:var(--warning)"></div></div><div class="dist-count">4</div></div>
+              <div class="dist-item"><div class="dist-label">中</div><div class="dist-bar"><div class="dist-fill" style="width:43%;background:var(--primary)"></div></div><div class="dist-count">6</div></div>
+              <div class="dist-item"><div class="dist-label">低</div><div class="dist-bar"><div class="dist-fill" style="width:14%;background:var(--success)"></div></div><div class="dist-count">2</div></div>
             </div>
             <div class="card sp-section">
               <h4 data-od-id="path-7-1-1-3-2-1-1-0"><span class="sp-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></span> 状态流转</h4>
-              <div id="reqStatusDist"></div>
+              <div class="dist-item"><div class="dist-label">待分配</div><div class="dist-bar"><div class="dist-fill" style="width:29%;background:var(--warning)"></div></div><div class="dist-count">4</div></div>
+              <div class="dist-item"><div class="dist-label">调研中</div><div class="dist-bar"><div class="dist-fill" style="width:21%;background:var(--primary)"></div></div><div class="dist-count">3</div></div>
+              <div class="dist-item"><div class="dist-label">评估中</div><div class="dist-bar"><div class="dist-fill" style="width:14%;background:var(--accent)"></div></div><div class="dist-count">2</div></div>
+              <div class="dist-item"><div class="dist-label">验收中</div><div class="dist-bar"><div class="dist-fill" style="width:7%;background:#8B5CF6"></div></div><div class="dist-count">1</div></div>
+              <div class="dist-item"><div class="dist-label">已上线</div><div class="dist-bar"><div class="dist-fill" style="width:21%;background:var(--success)"></div></div><div class="dist-count">3</div></div>
             </div>
             <div class="card sp-section">
               <h4 data-od-id="path-7-1-1-3-2-1-2-0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 需求动态</h4>
-              <div class="sp-timeline" id="reqActivityTimeline">
-                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--primary)"></div><div class="sp-tl-body"><div class="sp-tl-text">DE-B-20250115-0001 进入调研阶段</div><div class="sp-tl-time">2小时前 · 李明辉</div></div></div>
-                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--success)"></div><div class="sp-tl-body"><div class="sp-tl-text">DE-B-20250113-0002 已上线发布</div><div class="sp-tl-time">5小时前 · 王小燕</div></div></div>
-                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--warning)"></div><div class="sp-tl-body"><div class="sp-tl-text">DE-B-20250114-0003 提交新需求</div><div class="sp-tl-time">昨天 · 张建国</div></div></div>
-                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--accent)"></div><div class="sp-tl-body"><div class="sp-tl-text">DE-B-20250112-0005 提交需求审批</div><div class="sp-tl-time">2天前 · 陈雪梅</div></div></div>
+              <div class="sp-timeline">
+                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--primary)"></div><div class="sp-tl-body"><div class="sp-tl-text">DE-20250115-001 进入调研阶段</div><div class="sp-tl-time">2小时前 · 李明辉</div></div></div>
+                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--success)"></div><div class="sp-tl-body"><div class="sp-tl-text">DE-20250113-002 已上线发布</div><div class="sp-tl-time">5小时前 · 王小燕</div></div></div>
+                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--warning)"></div><div class="sp-tl-body"><div class="sp-tl-text">DE-20250114-003 提交新需求</div><div class="sp-tl-time">昨天 · 张建国</div></div></div>
+                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--accent)"></div><div class="sp-tl-body"><div class="sp-tl-text">DE-20250112-005 纳入Sprint12评估</div><div class="sp-tl-time">2天前 · 陈雪梅</div></div></div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ===== REQUIREMENT DETAIL ===== -->
-      <div id="view-reqDetail" class="hidden" data-od-id="path-7-1-1-3d">
-        <div class="detail-back" onclick="switchView('requirements')" data-od-id="path-7-1-1-3d-0">← 返回需求列表</div>
-        <div class="card" data-od-id="path-7-1-1-3d-1">
-          <div id="reqDetailRejectBanner" class="hidden" style="background:#fef2f2;border:1px solid #fecaca;border-radius:8px;padding:12px 16px;margin-bottom:16px;color:#dc2626;font-size:.85rem"></div>
-          <div style="display:flex;align-items:center;gap:12px;margin-bottom:4px">
-            <h3 style="margin:0" id="reqDetailTitle" data-od-id="path-7-1-1-3d-1-0">需求详情</h3>
-            <span class="status" id="reqDetailStatusBadge"></span>
-          </div>
-          <p class="mono" style="color:var(--cobalt);margin-bottom:16px" id="reqDetailId" data-od-id="path-7-1-1-3d-1-1"></p>
-          <div id="reqDetailOps" style="margin-bottom:20px"></div>
-          <div class="detail-section">
-            <h4 data-od-id="path-7-1-1-3d-1-2-0">需求内容</h4>
-            <div class="detail-grid" id="reqDetailInfo" data-od-id="path-7-1-1-3d-1-2-1"></div>
-          </div>
-          <div class="detail-section">
-            <h4 data-od-id="path-7-1-1-3d-1-3-0">需求描述</h4>
-            <div id="reqDetailDesc" style="font-size:.88rem;line-height:1.7;color:var(--text-primary);white-space:pre-wrap;padding:12px 0"></div>
-          </div>
-          <div class="detail-section">
-            <h4 data-od-id="path-7-1-1-3d-1-4-0">需求动态</h4>
-            <div class="sp-timeline" id="reqDetailActivity" style="padding:8px 0"></div>
           </div>
         </div>
       </div>
@@ -1604,7 +1560,7 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
             <div class="card sp-section">
               <h4 data-od-id="path-7-1-1-8-0-1-1-0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 最近操作</h4>
               <div class="sp-timeline">
-                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--primary)"></div><div class="sp-tl-body"><div class="sp-tl-text">提交需求 DE-B-20250115-0001</div><div class="sp-tl-time">2小时前</div></div></div>
+                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--primary)"></div><div class="sp-tl-body"><div class="sp-tl-text">提交需求 DE-20250115-001</div><div class="sp-tl-time">2小时前</div></div></div>
                 <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--success)"></div><div class="sp-tl-body"><div class="sp-tl-text">完成验收 IC-20250114-002</div><div class="sp-tl-time">5小时前</div></div></div>
                 <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--warning)"></div><div class="sp-tl-body"><div class="sp-tl-text">反馈问题 PR-20250114-001</div><div class="sp-tl-time">昨天</div></div></div>
                 <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--danger)"></div><div class="sp-tl-body"><div class="sp-tl-text">提交投诉 CS-20250113-001</div><div class="sp-tl-time">2天前</div></div></div>
@@ -1670,54 +1626,20 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
 
 <!-- ===== CREATE REQUIREMENT MODAL ===== -->
 <div class="modal-overlay" id="createReqModal" data-od-id="path-8">
-  <div class="modal" style="max-width:580px" data-od-id="path-8-0">
+  <div class="modal" data-od-id="path-8-0">
     <div class="modal-header"><h3 data-od-id="path-8-0-0-0">新建需求</h3><button class="close" onclick="closeModal('createReqModal')" data-od-id="path-8-0-0-1">×</button></div>
     <div class="modal-body">
-      <div class="form-group"><label>所属项目 <span style="color:var(--danger)">*</span></label>
-        <select id="newReqProject" onchange="onReqProjectChange()" data-od-id="path-8-0-1-0-1">
-          <option value="">请选择项目</option><option>油葱商城V4.30.5</option><option>荟健康V2.8</option><option>用户中心V3.2</option><option>数据中台V1.5</option>
-        </select>
-        <div class="field-error" id="errReqProject"><span></span></div>
-      </div>
+      <div class="form-group"><label>需求标题</label><input type="text" id="newReqTitle" placeholder="请输入需求标题" data-od-id="path-8-0-1-0-1"></div>
       <div class="form-group"><label>所属系统</label>
-        <select id="newReqSystem" onchange="onReqSystemChange()" data-od-id="path-8-0-1-1-1"><option value="">请先选择项目</option></select>
+        <select id="newReqSystem" data-od-id="path-8-0-1-1-1"><option>订单管理系统</option><option>用户中心</option><option>数据中台</option><option>内容管理平台</option></select>
       </div>
-      <div class="form-group"><label>功能模块</label>
-        <select id="newReqModule" data-od-id="path-8-0-1-1b-1"><option value="">请先选择系统</option></select>
+      <div class="form-group"><label>优先级</label>
+        <select id="newReqPriority" data-od-id="path-8-0-1-2-1"><option>高</option><option>中</option><option>低</option></select>
       </div>
-      <div class="form-group"><label>优先级 <span style="color:var(--danger)">*</span></label>
-        <select id="newReqPriority" data-od-id="path-8-0-1-2-1"><option>紧急</option><option>高</option><option selected>中</option><option>低</option></select>
-      </div>
-      <div class="form-group"><label>标题 <span style="color:var(--danger)">*</span></label>
-        <input type="text" id="newReqTitle" placeholder="请输入需求标题" maxlength="50" data-od-id="path-8-0-1-3-1">
-        <div style="font-size:.72rem;color:var(--text-secondary);margin-top:2px"><span id="reqTitleCount">0</span>/50</div>
-        <div class="field-error" id="errReqTitle"><span></span></div>
-      </div>
-      <div class="form-group"><label>描述 <span style="color:var(--danger)">*</span></label>
-        <textarea id="newReqDesc" placeholder="详细描述需求内容" maxlength="5000" style="min-height:100px" data-od-id="path-8-0-1-4-1"></textarea>
-        <div style="font-size:.72rem;color:var(--text-secondary);margin-top:2px"><span id="reqDescCount">0</span>/5000</div>
-        <div class="field-error" id="errReqDesc"><span></span></div>
-      </div>
-      <div class="form-group"><label>审核人 <span style="color:var(--danger)">*</span></label>
-        <select id="newReqAssignee" data-od-id="path-8-0-1-5-1">
-          <option value="">请选择审核人</option>
-          <option value="李明辉">李明辉</option>
-          <option value="张建国">张建国</option>
-          <option value="王小燕">王小燕</option>
-          <option value="赵伟">赵伟</option>
-          <option value="刘磊">刘磊</option>
-          <option value="周明">周明</option>
-          <option value="吴芳">吴芳</option>
-          <option value="郑强">郑强</option>
-          <option value="陈雪梅">陈雪梅</option>
-          <option value="黄静">黄静</option>
-          <option value="林峰">林峰</option>
-        </select>
-        <div class="field-error" id="errReqAssignee"><span></span></div>
-      </div>
+      <div class="form-group"><label>需求描述</label><textarea id="newReqDesc" placeholder="详细描述需求内容" data-od-id="path-8-0-1-3-1"></textarea></div>
     </div>
     <div class="modal-footer">
-      <button class="btn btn-outline" onclick="closeCreateReqModal()" data-od-id="path-8-0-2-0">返回</button>
+      <button class="btn btn-outline" onclick="closeModal('createReqModal')" data-od-id="path-8-0-2-0">取消</button>
       <button class="btn btn-primary" onclick="createRequirement()" data-od-id="path-8-0-2-1">提交</button>
     </div>
   </div>
@@ -2382,54 +2304,46 @@ const PRD_CONTENT = {
 <p><strong>触发条件：</strong>从左侧菜单栏「业务 &gt; 我的需求」进入，或从首页快捷入口、需求进度列表"查看更多"进入。</p>
 
 <h5>列表页</h5>
-<p><strong>Tab页签：</strong>全部、待审批、审批不通过、待分配、调研中、验收中、已上线、已关闭（各Tab显示对应数量）</p>
-<p><strong>搜索框：</strong>模糊搜索需求标题/需求ID，根据当前Tab页签筛选。</p>
+<p><strong>Tab页签：</strong>全部、待分配、调研中、评估中、验收中、已上线、已关闭（各Tab显示对应数量）</p>
+<p><strong>搜索框：</strong>模糊搜索需求名称/需求ID，根据当前Tab页签筛选。</p>
 
 <h5>需求列表字段</h5>
 <table>
 <tr><th>字段</th><th>说明</th></tr>
-<tr><td>需求ID</td><td>全系统唯一，规则：DE-B-创建日期-当天四位序号，如 DE-B-20260615-0001</td></tr>
+<tr><td>需求ID</td><td>全系统唯一，规则：DE-创建日期-当天三位序号，如 DE-20260615-001</td></tr>
 <tr><td>复制按钮</td><td>显示在ID后方，点击复制</td></tr>
-<tr><td>所属项目-系统</td><td>来自创建时所选项目与系统</td></tr>
-<tr><td>功能模块</td><td>来自创建时所选功能模块</td></tr>
+<tr><td>所属系统</td><td>来自创建时所选系统</td></tr>
+<tr><td>功能模块</td><td>来自创建时所选功能</td></tr>
 <tr><td>需求标题</td><td>最多展示20字，超出省略号</td></tr>
 <tr><td>优先级</td><td>紧急 / 高 / 中 / 低</td></tr>
-<tr><td>状态</td><td>待审批 / 审批不通过 / 待分配 / 调研中 / 验收中 / 已上线 / 已关闭</td></tr>
+<tr><td>状态</td><td>待分配 / 调研中 / 评估中 / 验收中 / 已上线 / 已关闭</td></tr>
 <tr><td>提交日期</td><td>格式：2026-06-01</td></tr>
-<tr><td>需求负责人</td><td>业务可指派→不指派→中心端产品人员认领/指派后更新</td></tr>
-<tr><td>详情</td><td>点击进入详情页，查看需求内容以及转化需求内容</td></tr>
+<tr><td>产品负责人</td><td>业务先分配→不分配则待分配→最终由中心端产品人员认领/指派后更新</td></tr>
 </table>
 
 <h5>需求状态机</h5>
 <ul>
-<li>创建并提交 → 待审批（推送至该账号所属组织负责人审批，飞书通知审批人）</li>
-<li>组织负责人审批通过 → 待分配（自动进入管理平台业务需求池，飞书通知提交人）</li>
-<li>组织负责人审批不通过 → 审批不通过（须填写不通过原因，飞书通知提交人，可修改后重新提交）</li>
-<li>需求被转化至版本需求池 → 调研中（管理平台产品人员操作）</li>
-<li>需求被推送至验收单 → 验收中（管理平台产品人员操作）</li>
-<li>验收单完成 → 已上线（系统自动触发）</li>
-<li>管理平台操作关闭 → 已关闭</li>
+<li>提交需求 → 待分配</li>
+<li>中心端产品人员认领/指派 → 调研中</li>
+<li>调研完成，纳入排期 → 评估中</li>
+<li>开发完成，进入验收 → 验收中</li>
+<li>验收通过，发布上线 → 已上线</li>
+<li>需求取消 → 已关闭</li>
 </ul>
 
 <h5>创建需求页字段</h5>
 <table>
 <tr><th>字段</th><th>类型</th><th>是否必填</th><th>限制</th><th>说明</th></tr>
-<tr><td>所属项目</td><td>下拉单选</td><td>是</td><td>-</td><td>枚举值来自中心端项目列表</td></tr>
-<tr><td>所属系统</td><td>下拉单选</td><td>否</td><td>-</td><td>枚举值来自中心端项目-系统列表</td></tr>
-<tr><td>功能模块</td><td>下拉单选</td><td>否</td><td>-</td><td>枚举值来自中心端项目-系统-模块列表</td></tr>
+<tr><td>所属系统</td><td>下拉单选</td><td>是</td><td>-</td><td>枚举值来自中心端平台配置</td></tr>
+<tr><td>功能模块</td><td>下拉单选</td><td>否</td><td>-</td><td>枚举值来自中心端平台配置-模块配置</td></tr>
 <tr><td>优先级</td><td>下拉单选</td><td>是</td><td>-</td><td>枚举值：紧急、高、中、低</td></tr>
-<tr><td>标题</td><td>文本输入</td><td>是</td><td>50字</td><td>-</td></tr>
-<tr><td>描述</td><td>多媒体输入</td><td>是</td><td>5000字符</td><td>支持富文本</td></tr>
-<tr><td>指派给</td><td>搜索选择</td><td>是</td><td>-</td><td>根据所选项目/模块展示推荐负责人列表，可检索工号或姓名</td></tr>
+<tr><td>需求标题</td><td>文本输入</td><td>是</td><td>50字</td><td>-</td></tr>
+<tr><td>需求描述</td><td>多媒体输入</td><td>是</td><td>5000字符</td><td>支持富文本</td></tr>
+<tr><td>指派给</td><td>搜索选择</td><td>否</td><td>-</td><td>数创中心产品人员列表，可检索工号或姓名</td></tr>
 </table>
 
 <h5>提交流程</h5>
-<p>进入创建需求页 → 选择项目（联动刷新系统、模块、指派人列表）→ 填写表单 → 点击提交 → 前端校验必填项 → 不满足则高亮错误字段并提示错误信息；满足则创建需求记录（状态：待审批）→ 自动生成审批单推送至组织负责人 → 关闭页面、返回列表页。</p>
-
-<h5>需求详情页</h5>
-<p><strong>需求内容区：</strong>需求编号、复制按钮、需求标题、优先级、状态、所属项目、所属系统、功能模块、需求描述、提交人/部门、提交日期、负责人。</p>
-<p><strong>需求操作区：</strong>根据状态展示不同操作按钮 — 待审批/审批不通过状态显示「重新提交」按钮，点击后修改内容并重新提交审批。</p>
-<p><strong>需求动态区：</strong>记录创建、审批通过/不通过、重新提交、转化、指派、关闭等操作日志。</p>
+<p>进入创建需求页 → 填写表单 → 点击提交 → 前端校验必填项 → 不满足则高亮错误字段并提示错误信息；满足则调用提交接口 → 后端返回成功则关闭页面、返回列表、数据更新；失败则显示错误码和错误信息。</p>
 
 <h5>边界条件</h5>
 <ul>
@@ -2438,7 +2352,6 @@ const PRD_CONTENT = {
 <li>需求标题超长：前端截断50字</li>
 <li>需求描述超长：前端截断5000字符</li>
 <li>网络异常：提交失败提示重试</li>
-<li>审批不通过需求：列表中标红显示不通过原因，提交人可点击「重新提交」修改后再次提交</li>
 </ul>
 `,
   problems: `
@@ -2703,7 +2616,7 @@ function getCurrentPrdKey(){
   var active = document.querySelector('[id^="view-"]:not(.hidden)');
   if(!active) return 'home';
   var viewId = active.id.replace('view-','');
-  var keyMap = {home:'home',acceptance:'acceptance',accDetail:'acceptance',requirements:'demands',reqDetail:'demands',problems:'problems',documents:'docs',contacts:'contacts',complaints:'complaints',profile:'profile'};
+  var keyMap = {home:'home',acceptance:'acceptance',accDetail:'acceptance',requirements:'demands',problems:'problems',documents:'docs',contacts:'contacts',complaints:'complaints',profile:'profile'};
   return keyMap[viewId] || 'home';
 }
 
@@ -2736,9 +2649,9 @@ document.addEventListener('keydown', function(e){
 
 // ===== DATA =====
 const USERS = {
-  zhangsan: { password: 'Abc123!', name: '张三', feishu: true, firstLogin: false, dept: '产品部' },
-  lisi: { password: 'Test12#', name: '李四', feishu: false, firstLogin: false, dept: '数据部' },
-  wangwu: { password: 'Init12!', name: '王五', feishu: false, firstLogin: true, dept: '运营部' }
+  zhangsan: { password: 'Abc123!', name: '张三', feishu: true, firstLogin: false },
+  lisi: { password: 'Test12#', name: '李四', feishu: false, firstLogin: false },
+  wangwu: { password: 'Init12!', name: '王五', feishu: false, firstLogin: true }
 };
 
 let currentUser = null;
@@ -2753,11 +2666,6 @@ function genId(prefix) {
 function today() {
   const d = new Date();
   return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
-}
-
-function nowTs() {
-  const d = new Date();
-  return today() + ' ' + String(d.getHours()).padStart(2,'0') + ':' + String(d.getMinutes()).padStart(2,'0') + ':' + String(d.getSeconds()).padStart(2,'0');
 }
 
 function errCode() { return 'code[' + String(100000 + Math.floor(Math.random()*900000)) + ']'; }
@@ -2790,107 +2698,22 @@ let accData = [
     items:[{name:'Meta标签动态生成',op:''},{name:'Sitemap自动更新',op:''}] }
 ];
 
-// ===== PROJECT/SYSTEM/MODULE DATA =====
-const PROJECT_SYSTEMS = {
-  '油葱商城V4.30.5': {
-    systems: {
-      '订单管理系统': { modules: ['订单管理','支付系统','物流追踪','售后服务'] },
-      '商品中心':     { modules: ['商品管理','库存管理','价格策略'] }
-    },
-    assignees: ['李明辉','张建国','王小燕','赵伟','刘磊','周明','吴芳','郑强']
-  },
-  '荟健康V2.8': {
-    systems: {
-      '健康管理系统': { modules: ['健康档案','运动记录','饮食管理'] },
-      '用户体系':     { modules: ['用户注册','会员体系','消息中心'] }
-    },
-    assignees: ['李明辉','陈雪梅','王小燕','赵伟','黄静','林峰']
-  },
-  '用户中心V3.2': {
-    systems: {
-      '认证系统': { modules: ['登录认证','权限管理','安全策略'] },
-      '用户系统': { modules: ['用户资料','消息推送','隐私设置'] }
-    },
-    assignees: ['张建国','王小燕','赵伟','刘磊','郑强','林峰']
-  },
-  '数据中台V1.5': {
-    systems: {
-      '数据平台':   { modules: ['数据报表','数据分析','数据导出'] },
-      '数据治理平台': { modules: ['数据质量','数据血缘','元数据管理'] }
-    },
-    assignees: ['李明辉','张建国','刘磊','赵伟','周明','黄静']
-  }
-};
-
 // ===== REQUIREMENTS DATA =====
 let reqData = [
-  { id:'DE-B-20250115-0001', project:'油葱商城V4.30.5', system:'订单管理系统', module:'订单管理', title:'用户权限优化', priority:'高', status:'验收中', assignee:'李明辉', submitter:'张三', dept:'产品部', desc:'优化订单管理系统的用户权限体系，支持多角色配置与细粒度权限控制。', time:'2025-01-15', activity:[
-    {type:'指派',text:'曹操$LG0246$ 指派需求给 李明辉',time:'2025-01-16 10:30:00'},
-    {type:'审批通过',text:'诸葛亮$LG0250$ 审批通过需求 DE-B-20250115-0001',time:'2025-01-15 14:20:30'},
-    {type:'创建',text:'张三$zhangsan$ 创建需求',time:'2025-01-15 09:15:00'}
-  ]},
-  { id:'DE-B-20250114-0002', project:'数据中台V1.5', system:'数据平台', module:'数据报表', title:'报表导出功能', priority:'中', status:'待分配', assignee:'—', submitter:'李四', dept:'数据部', desc:'支持将数据报表导出为Excel和PDF格式，满足业务部门离线分析需求。', time:'2025-01-14', activity:[
-    {type:'审批通过',text:'诸葛亮$LG0250$ 审批通过需求 DE-B-20250114-0002',time:'2025-01-14 16:45:00'},
-    {type:'创建',text:'李四$lisi$ 创建需求',time:'2025-01-14 08:30:00'}
-  ]},
-  { id:'DE-B-20250113-0003', project:'用户中心V3.2', system:'用户系统', module:'消息推送', title:'消息推送改造', priority:'高', status:'已上线', assignee:'张建国', submitter:'王五', dept:'运营部', desc:'改造消息推送通道，支持多渠道推送（站内信、短信、邮件、飞书）。', time:'2025-01-13', activity:[
-    {type:'关闭',text:'关羽$LG0247$ 关闭需求',time:'2025-01-20 11:54:53'},
-    {type:'转化',text:'曹操$LG0246$ 转化需求 DE-B-20250113-0003',time:'2025-01-17 09:00:00'},
-    {type:'审批通过',text:'诸葛亮$LG0250$ 审批通过需求 DE-B-20250113-0003',time:'2025-01-13 15:30:00'},
-    {type:'创建',text:'王五$wangwu$ 创建需求',time:'2025-01-13 10:00:00'}
-  ]},
-  { id:'DE-B-20250112-0004', project:'荟健康V2.8', system:'健康管理系统', module:'健康档案', title:'首页改版', priority:'低', status:'调研中', assignee:'李明辉', submitter:'张三', dept:'产品部', desc:'重新设计荟健康APP首页，突出健康数据概览和运动推荐。', time:'2025-01-12', activity:[
-    {type:'转化',text:'曹操$LG0246$ 转化需求 DE-B-20250112-0004',time:'2025-01-15 14:00:00'},
-    {type:'审批通过',text:'诸葛亮$LG0250$ 审批通过需求 DE-B-20250112-0004',time:'2025-01-12 17:00:00'},
-    {type:'创建',text:'张三$zhangsan$ 创建需求',time:'2025-01-12 11:20:00'}
-  ]},
-  { id:'DE-B-20250110-0005', project:'油葱商城V4.30.5', system:'订单管理系统', module:'订单管理', title:'批量操作功能', priority:'中', status:'待审批', assignee:'—', submitter:'张三', dept:'产品部', desc:'支持批量修改订单状态、批量导出订单数据，提高运营效率。', time:'2025-01-10', activity:[
-    {type:'创建',text:'张三$zhangsan$ 创建需求',time:'2025-01-10 16:40:00'}
-  ]},
-  { id:'DE-B-20250109-0006', project:'数据中台V1.5', system:'数据平台', module:'数据分析', title:'数据看板升级', priority:'高', status:'调研中', assignee:'李明辉', submitter:'李四', dept:'数据部', desc:'升级数据看板组件，支持自定义图表和实时数据刷新。', time:'2025-01-09', activity:[
-    {type:'指派',text:'曹操$LG0246$ 指派需求给 李明辉',time:'2025-01-12 09:00:00'},
-    {type:'审批通过',text:'诸葛亮$LG0250$ 审批通过需求 DE-B-20250109-0006',time:'2025-01-10 10:00:00'},
-    {type:'创建',text:'李四$lisi$ 创建需求',time:'2025-01-09 14:30:00'}
-  ]},
-  { id:'DE-B-20250108-0007', project:'油葱商城V4.30.5', system:'商品中心', module:'库存管理', title:'接口性能优化', priority:'中', status:'待分配', assignee:'—', submitter:'王五', dept:'研发部', desc:'优化商品查询和库存同步接口性能，降低P99延迟至200ms以内。', time:'2025-01-08', activity:[
-    {type:'审批通过',text:'诸葛亮$LG0250$ 审批通过需求 DE-B-20250108-0007',time:'2025-01-09 09:15:00'},
-    {type:'创建',text:'王五$wangwu$ 创建需求',time:'2025-01-08 10:00:00'}
-  ]},
-  { id:'DE-B-20250107-0008', project:'用户中心V3.2', system:'认证系统', module:'登录认证', title:'移动端适配', priority:'高', status:'已上线', assignee:'赵伟', submitter:'张三', dept:'产品部', desc:'适配用户中心所有页面在移动端的展示效果，确保核心流程可操作。', time:'2025-01-07', activity:[
-    {type:'关闭',text:'关羽$LG0247$ 关闭需求',time:'2025-01-22 15:00:00'},
-    {type:'转化',text:'曹操$LG0246$ 转化需求 DE-B-20250107-0008',time:'2025-01-12 11:00:00'},
-    {type:'指派',text:'曹操$LG0246$ 指派需求给 赵伟',time:'2025-01-10 09:00:00'},
-    {type:'审批通过',text:'诸葛亮$LG0250$ 审批通过需求 DE-B-20250107-0008',time:'2025-01-08 14:00:00'},
-    {type:'创建',text:'张三$zhangsan$ 创建需求',time:'2025-01-07 09:00:00'}
-  ]},
-  { id:'DE-B-20250106-0009', project:'荟健康V2.8', system:'用户体系', module:'会员体系', title:'内容审核加速', priority:'低', status:'已关闭', assignee:'陈雪梅', submitter:'李四', dept:'内容部', desc:'优化内容审核流程，引入AI辅助审核，缩短审核时效。', time:'2025-01-06', activity:[
-    {type:'关闭',text:'关羽$LG0247$ 关闭需求',time:'2025-01-18 10:00:00'},
-    {type:'转化',text:'曹操$LG0246$ 转化需求 DE-B-20250106-0009',time:'2025-01-10 16:00:00'},
-    {type:'审批通过',text:'诸葛亮$LG0250$ 审批通过需求 DE-B-20250106-0009',time:'2025-01-07 11:00:00'},
-    {type:'创建',text:'李四$lisi$ 创建需求',time:'2025-01-06 15:20:00'}
-  ]},
-  { id:'DE-B-20250105-0010', project:'油葱商城V4.30.5', system:'订单管理系统', module:'支付系统', title:'支付通道扩容', priority:'高', status:'待审批', assignee:'—', submitter:'张三', dept:'产品部', desc:'接入微信支付和银联云闪付，扩展支付通道覆盖更多用户群体。', time:'2025-01-05', activity:[
-    {type:'创建',text:'张三$zhangsan$ 创建需求',time:'2025-01-05 10:30:00'}
-  ]},
-  { id:'DE-B-20250104-0011', project:'数据中台V1.5', system:'数据平台', module:'数据报表', title:'日志检索优化', priority:'中', status:'验收中', assignee:'张建国', submitter:'王五', dept:'研发部', desc:'优化日志检索引擎，支持全文搜索和多维度筛选，提升查询速度。', time:'2025-01-04', activity:[
-    {type:'指派',text:'曹操$LG0246$ 指派需求给 张建国',time:'2025-01-08 14:00:00'},
-    {type:'审批通过',text:'诸葛亮$LG0250$ 审批通过需求 DE-B-20250104-0011',time:'2025-01-05 10:00:00'},
-    {type:'创建',text:'王五$wangwu$ 创建需求',time:'2025-01-04 09:00:00'}
-  ]},
-  { id:'DE-B-20250103-0012', project:'用户中心V3.2', system:'用户系统', module:'用户资料', title:'用户反馈入口', priority:'低', status:'调研中', assignee:'李明辉', submitter:'张三', dept:'产品部', desc:'在用户中心增加意见反馈入口，支持文字+截图提交反馈。', time:'2025-01-03', activity:[
-    {type:'转化',text:'曹操$LG0246$ 转化需求 DE-B-20250103-0012',time:'2025-01-08 10:00:00'},
-    {type:'审批通过',text:'诸葛亮$LG0250$ 审批通过需求 DE-B-20250103-0012',time:'2025-01-04 09:30:00'},
-    {type:'创建',text:'张三$zhangsan$ 创建需求',time:'2025-01-03 14:00:00'}
-  ]},
-  { id:'DE-B-20250102-0013', project:'荟健康V2.8', system:'健康管理系统', module:'运动记录', title:'定时任务调度', priority:'中', status:'已上线', assignee:'赵伟', submitter:'李四', dept:'研发部', desc:'建设定时任务调度平台，支持cron表达式配置和任务依赖管理。', time:'2025-01-02', activity:[
-    {type:'转化',text:'曹操$LG0246$ 转化需求 DE-B-20250102-0013',time:'2025-01-06 11:00:00'},
-    {type:'审批通过',text:'诸葛亮$LG0250$ 审批通过需求 DE-B-20250102-0013',time:'2025-01-03 10:00:00'},
-    {type:'创建',text:'李四$lisi$ 创建需求',time:'2025-01-02 09:00:00'}
-  ]},
-  { id:'DE-B-20250101-0014', project:'油葱商城V4.30.5', system:'商品中心', module:'商品管理', title:'全站搜索升级', priority:'紧急', status:'审批不通过', assignee:'—', submitter:'张三', dept:'产品部', desc:'升级全站搜索引擎，支持拼音搜索、模糊匹配和搜索建议。', time:'2025-01-01', rejectReason:'需求描述不够详细，缺少竞品分析和技术方案对比，请补充后重新提交。', activity:[
-    {type:'审批不通过',text:'诸葛亮$LG0250$ 审批不通过需求 DE-B-20250101-0014 原因：需求描述不够详细，缺少竞品分析和技术方案对比',time:'2025-01-02 11:00:00'},
-    {type:'创建',text:'张三$zhangsan$ 创建需求',time:'2025-01-01 08:00:00'}
-  ]}
+  { id:'DE-20250115-001', title:'用户权限优化', system:'订单管理系统', priority:'高', status:'验收中', owner:'李明辉', time:'2025-01-15' },
+  { id:'DE-20250114-003', title:'报表导出功能', system:'数据中台', priority:'中', status:'待分配', owner:'—', time:'2025-01-14' },
+  { id:'DE-20250113-002', title:'消息推送改造', system:'用户中心', priority:'高', status:'已上线', owner:'张建国', time:'2025-01-13' },
+  { id:'DE-20250112-001', title:'首页改版', system:'内容管理平台', priority:'低', status:'调研中', owner:'李明辉', time:'2025-01-12' },
+  { id:'DE-20250110-004', title:'批量操作功能', system:'订单管理系统', priority:'中', status:'评估中', owner:'张建国', time:'2025-01-10' },
+  { id:'DE-20250109-005', title:'数据看板升级', system:'数据中台', priority:'高', status:'调研中', owner:'李明辉', time:'2025-01-09' },
+  { id:'DE-20250108-006', title:'接口性能优化', system:'订单管理系统', priority:'中', status:'待分配', owner:'—', time:'2025-01-08' },
+  { id:'DE-20250107-007', title:'移动端适配', system:'用户中心', priority:'高', status:'已上线', owner:'赵伟', time:'2025-01-07' },
+  { id:'DE-20250106-008', title:'内容审核加速', system:'内容管理平台', priority:'低', status:'已关闭', owner:'陈雪梅', time:'2025-01-06' },
+  { id:'DE-20250105-009', title:'支付通道扩容', system:'订单管理系统', priority:'高', status:'评估中', owner:'赵伟', time:'2025-01-05' },
+  { id:'DE-20250104-010', title:'日志检索优化', system:'数据中台', priority:'中', status:'验收中', owner:'张建国', time:'2025-01-04' },
+  { id:'DE-20250103-011', title:'用户反馈入口', system:'用户中心', priority:'低', status:'调研中', owner:'李明辉', time:'2025-01-03' },
+  { id:'DE-20250102-012', title:'定时任务调度', system:'内容管理平台', priority:'中', status:'已上线', owner:'赵伟', time:'2025-01-02' },
+  { id:'DE-20250101-013', title:'全站搜索升级', system:'订单管理系统', priority:'高', status:'已关闭', owner:'陈雪梅', time:'2025-01-01' }
 ];
 
 // ===== PROBLEMS DATA =====
@@ -3212,7 +3035,7 @@ function handleRegister() {
 
 // ===== NAVIGATION =====
 const viewMap = {
-  home:'首页', acceptance:'系统验收单', requirements:'我的需求', reqDetail:'需求详情', problems:'我的问题',
+  home:'首页', acceptance:'系统验收单', requirements:'我的需求', problems:'我的问题',
   documents:'系统资料库', contacts:'数字化对接人', complaints:'我的投诉/建议', approvals:'我的审批', profile:'个人中心',
   accDetail:'验收单详情'
 };
@@ -3220,7 +3043,6 @@ const breadcrumbMap = {
   home: ['概览','首页'],
   acceptance: ['业务','系统验收单'],
   requirements: ['业务','我的需求'],
-  reqDetail: ['业务','我的需求','需求详情'],
   problems: ['业务','我的问题'],
   documents: ['资源','系统资料库'],
   contacts: ['资源','数字化对接人'],
@@ -3312,9 +3134,9 @@ function showError(code, msg) {
 
 // ===== GLOBAL SEARCH =====
 const searchIndex = [
-  { type:'需求', id:'DE-B-20250115-0001', title:'用户权限优化', view:'requirements' },
-  { type:'需求', id:'DE-B-20250114-0002', title:'报表导出功能', view:'requirements' },
-  { type:'需求', id:'DE-B-20250113-0003', title:'消息推送改造', view:'requirements' },
+  { type:'需求', id:'DE-20250115-001', title:'用户权限优化', view:'requirements' },
+  { type:'需求', id:'DE-20250114-003', title:'报表导出功能', view:'requirements' },
+  { type:'需求', id:'DE-20250113-002', title:'消息推送改造', view:'requirements' },
   { type:'问题', id:'PR-20250115-001', title:'登录白屏问题', view:'problems' },
   { type:'问题', id:'PR-20250114-001', title:'数据导出异常', view:'problems' },
   { type:'验收单', id:'IC-20250115-001', title:'油葱商城V4.30.5验收', view:'acceptance' },
@@ -3488,8 +3310,6 @@ function openReleaseModal() { openModal('releaseModal'); }
 
 // ===== REQUIREMENTS =====
 let reqFilter = 'all';
-let reqSearchKw = '';
-
 function filterReq(f) {
   reqFilter = f;
   document.querySelectorAll('#reqTabs .tab').forEach(t => t.classList.remove('active'));
@@ -3497,298 +3317,42 @@ function filterReq(f) {
   renderReqList();
 }
 
-function onReqSearchInput(val) {
-  reqSearchKw = val.trim();
-  if (!reqSearchKw) renderReqList();
-}
-function doReqSearch() {
-  reqSearchKw = document.getElementById('reqSearchInput').value.trim();
-  renderReqList();
-}
-
-function getReqStatusClass(s) {
-  return s === '已上线' ? 'status-done'
-    : s === '已关闭' ? 'status-closed'
-    : s === '审批不通过' ? 'status-shelve'
-    : (s === '验收中' || s === '调研中') ? 'status-progress'
-    : s === '待分配' ? 'status-info'
-    : 'status-wait';
-}
-
 function renderReqList() {
-  let list = reqFilter === 'all' ? reqData : reqData.filter(d => d.status === reqFilter);
-  if (reqSearchKw) {
-    const kw = reqSearchKw.toLowerCase();
-    list = list.filter(d => d.id.toLowerCase().includes(kw) || d.title.toLowerCase().includes(kw));
-  }
+  const list = reqFilter === 'all' ? reqData : reqData.filter(d => d.status === reqFilter);
   const body = document.getElementById('reqBody');
-  const tableWrap = document.getElementById('reqTableWrap');
-  const empty = document.getElementById('reqEmpty');
-  const noResult = document.getElementById('reqNoResult');
-
-  if (!reqData.length) {
-    tableWrap.classList.add('hidden'); noResult.classList.add('hidden'); empty.classList.remove('hidden');
-    updateReqStats(); updateReqSidePanel(); return;
-  }
-  if (!list.length) {
-    tableWrap.classList.add('hidden'); empty.classList.add('hidden'); noResult.classList.remove('hidden');
-    updateReqStats(); updateReqSidePanel(); return;
-  }
-  tableWrap.classList.remove('hidden'); empty.classList.add('hidden'); noResult.classList.add('hidden');
-
   body.innerHTML = list.map(d => {
-    const sc = getReqStatusClass(d.status);
-    const titleShort = d.title.length > 20 ? d.title.slice(0, 20) + '…' : d.title;
-    const projSys = d.project ? (d.project + (d.system ? ' / ' + d.system : '')) : (d.system || '—');
+    const sc = d.status === '已上线' ? 'status-done' : d.status === '已关闭' ? 'status-closed' : d.status === '验收中' ? 'status-progress' : d.status === '调研中' ? 'status-progress' : 'status-wait';
     return `<tr>
-      <td class="mono" style="white-space:nowrap">${d.id} <button class="btn btn-sm btn-outline" style="padding:1px 6px;font-size:.68rem;margin-left:4px" onclick="copyReqId('${d.id}')">复制</button></td>
-      <td style="max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${projSys}">${projSys}</td>
-      <td>${d.module || '—'}</td>
-      <td title="${d.title}">${titleShort}</td>
+      <td class="mono">${d.id}</td>
+      <td>${d.title}</td>
       <td>${d.priority}</td>
-      <td><span class="status ${sc}">${d.status}</span>${d.status === '审批不通过' && d.rejectReason ? '<div style="font-size:.7rem;color:var(--danger);margin-top:2px;max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="'+d.rejectReason+'">'+d.rejectReason+'</div>' : ''}</td>
+      <td><span class="status ${sc}">${d.status}</span></td>
+      <td>${d.owner}</td>
       <td>${d.time}</td>
-      <td>${d.assignee}</td>
-      <td><button class="btn btn-sm btn-outline" onclick="viewReqDetail('${d.id}')">详情</button></td>
+      <td><button class="btn btn-sm btn-outline" onclick="showToast('查看需求详情: ${d.id}')">查看</button></td>
     </tr>`;
-  }).join('');
-  updateReqStats();
-  updateReqSidePanel();
-}
-
-function copyReqId(id) {
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(id).then(() => showToast('已复制到剪贴板')).catch(() => showToast('已复制：' + id));
-  } else { showToast('已复制：' + id); }
-}
-
-function updateReqStats() {
-  const el = id => document.getElementById(id);
-  if (el('reqStatTotal')) el('reqStatTotal').textContent = reqData.length;
-  if (el('reqStatPending')) el('reqStatPending').textContent = reqData.filter(d => d.status === '待审批').length;
-  if (el('reqStatResearch')) el('reqStatResearch').textContent = reqData.filter(d => d.status === '调研中').length;
-  if (el('reqStatOnline')) el('reqStatOnline').textContent = reqData.filter(d => d.status === '已上线').length;
-}
-
-function updateReqSidePanel() {
-  // Priority distribution
-  const prioCounts = { '紧急': 0, '高': 0, '中': 0, '低': 0 };
-  reqData.forEach(d => { if (prioCounts[d.priority] !== undefined) prioCounts[d.priority]++; });
-  const total = reqData.length || 1;
-  const prioColors = { '紧急': 'var(--danger)', '高': 'var(--warning)', '中': 'var(--primary)', '低': 'var(--success)' };
-  const prioDist = document.getElementById('reqPriorityDist');
-  if (prioDist) prioDist.innerHTML = Object.keys(prioCounts).map(k =>
-    `<div class="dist-item"><div class="dist-label">${k}</div><div class="dist-bar"><div class="dist-fill" style="width:${Math.round(prioCounts[k]/total*100)}%;background:${prioColors[k]}"></div></div><div class="dist-count">${prioCounts[k]}</div></div>`
-  ).join('');
-
-  // Status distribution
-  const statusList = ['待审批','审批不通过','待分配','调研中','验收中','已上线','已关闭'];
-  const statusColors = { '待审批':'var(--warning)', '审批不通过':'var(--danger)', '待分配':'var(--accent)', '调研中':'var(--primary)', '验收中':'#8B5CF6', '已上线':'var(--success)', '已关闭':'var(--text-secondary)' };
-  const statusDist = document.getElementById('reqStatusDist');
-  if (statusDist) statusDist.innerHTML = statusList.map(s => {
-    const c = reqData.filter(d => d.status === s).length;
-    return c > 0 ? `<div class="dist-item"><div class="dist-label">${s}</div><div class="dist-bar"><div class="dist-fill" style="width:${Math.round(c/total*100)}%;background:${statusColors[s]||'var(--primary)'}"></div></div><div class="dist-count">${c}</div></div>` : '';
   }).join('');
 }
 
 function openCreateModal(type) {
-  if (type === 'req') {
-    resetReqForm();
-    openModal('createReqModal');
-  }
+  if (type === 'req') openModal('createReqModal');
   if (type === 'prob') openModal('createProbModal');
   if (type === 'comp') openModal('createCompModal');
 }
 
-function resetReqForm() {
-  document.getElementById('newReqProject').selectedIndex = 0;
-  document.getElementById('newReqSystem').innerHTML = '<option value="">请先选择项目</option>';
-  document.getElementById('newReqModule').innerHTML = '<option value="">请先选择系统</option>';
-  document.getElementById('newReqPriority').value = '中';
-  document.getElementById('newReqTitle').value = '';
-  document.getElementById('newReqDesc').value = '';
-  document.getElementById('newReqAssignee').selectedIndex = 0;
-  document.getElementById('reqTitleCount').textContent = '0';
-  document.getElementById('reqDescCount').textContent = '0';
-  clearReqFormErrors();
-}
-
-function clearReqFormErrors() {
-  ['errReqProject','errReqTitle','errReqDesc','errReqAssignee'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) { el.classList.remove('show'); el.querySelector('span').textContent = ''; }
-  });
-}
-
-function setReqFieldErr(id, msg) {
-  const el = document.getElementById(id);
-  if (!el) return;
-  if (msg) { el.querySelector('span').textContent = msg; el.classList.add('show'); }
-  else { el.classList.remove('show'); el.querySelector('span').textContent = ''; }
-}
-
-function onReqProjectChange() {
-  const proj = document.getElementById('newReqProject').value;
-  const sysSel = document.getElementById('newReqSystem');
-  const modSel = document.getElementById('newReqModule');
-  if (!proj || !PROJECT_SYSTEMS[proj]) {
-    sysSel.innerHTML = '<option value="">请先选择项目</option>';
-    modSel.innerHTML = '<option value="">请先选择系统</option>';
-    return;
-  }
-  const sysKeys = Object.keys(PROJECT_SYSTEMS[proj].systems);
-  sysSel.innerHTML = '<option value="">请选择系统</option>' + sysKeys.map(s => `<option>${s}</option>`).join('');
-  modSel.innerHTML = '<option value="">请先选择系统</option>';
-}
-
-function onReqSystemChange() {
-  const proj = document.getElementById('newReqProject').value;
-  const sys = document.getElementById('newReqSystem').value;
-  const modSel = document.getElementById('newReqModule');
-  if (!proj || !sys || !PROJECT_SYSTEMS[proj] || !PROJECT_SYSTEMS[proj].systems[sys]) {
-    modSel.innerHTML = '<option value="">请先选择系统</option>';
-    return;
-  }
-  const modules = PROJECT_SYSTEMS[proj].systems[sys].modules;
-  modSel.innerHTML = '<option value="">请选择模块</option>' + modules.map(m => `<option>${m}</option>`).join('');
-}
-
-// Character counters for create form
-document.getElementById('newReqTitle').addEventListener('input', function() {
-  document.getElementById('reqTitleCount').textContent = this.value.length;
-});
-document.getElementById('newReqDesc').addEventListener('input', function() {
-  document.getElementById('reqDescCount').textContent = this.value.length;
-});
-
-function closeCreateReqModal() {
-  showConfirm('确认关闭？未保存的内容将不会生成数据。', function() {
-    closeModal('createReqModal');
-  });
-}
-
-function genReqId() {
-  const d = new Date();
-  const ds = '' + d.getFullYear() + String(d.getMonth()+1).padStart(2,'0') + String(d.getDate()).padStart(2,'0');
-  const n = String(Math.floor(Math.random()*9999)+1).padStart(4,'0');
-  return 'DE-B-' + ds + '-' + n;
-}
-
 function createRequirement() {
-  clearReqFormErrors();
-  const project = document.getElementById('newReqProject').value;
-  const system = document.getElementById('newReqSystem').value;
-  const module = document.getElementById('newReqModule').value;
-  const priority = document.getElementById('newReqPriority').value;
   const title = document.getElementById('newReqTitle').value.trim();
-  const desc = document.getElementById('newReqDesc').value.trim();
-  const assignee = document.getElementById('newReqAssignee').value;
-  let valid = true;
-
-  if (!project) { setReqFieldErr('errReqProject', '请选择所属项目'); valid = false; }
-  if (!title) { setReqFieldErr('errReqTitle', '请填写需求标题'); valid = false; }
-  if (!desc) { setReqFieldErr('errReqDesc', '请填写需求描述'); valid = false; }
-  if (!assignee) { setReqFieldErr('errReqAssignee', '请选择审核人'); valid = false; }
-  if (!valid) return;
-
-  const submitter = currentUser ? currentUser.name : '—';
-  const dept = currentUser ? (currentUser.dept || '产品部') : '—';
+  if (!title) { showError(errCode(), '请填写需求标题'); return; }
   const d = {
-    id: genReqId(), project, system, module, title, priority,
-    status: '待审批', assignee: '—', submitter, dept,
-    desc: desc.slice(0, 5000), time: today(),
-    activity: [{ type:'创建', text: submitter + '$' + (currentUser ? currentUser.username : '—') + '$ 创建需求', time: nowTs() }]
+    id: genId('DE'), title, system: document.getElementById('newReqSystem').value,
+    priority: document.getElementById('newReqPriority').value, status: '待分配', owner: '—', time: today()
   };
   reqData.unshift(d);
-
-  const ap = {
-    id: genId('AP'), type: '需求审批', title: '需求审批：' + title,
-    status: '待审批', applicant: submitter,
-    applyTime: nowTs(), approveTime: '—', remark: '', rejectReason: '', reqId: d.id
-  };
-  approvalData.unshift(ap);
-
   closeModal('createReqModal');
+  document.getElementById('newReqTitle').value = '';
+  document.getElementById('newReqDesc').value = '';
   renderReqList();
-  if (typeof renderApprovalList === 'function') renderApprovalList();
-  showToast('需求已提交，等待组织负责人审批：' + d.id);
-}
-
-// ===== REQUIREMENT DETAIL =====
-function viewReqDetail(id) {
-  const d = reqData.find(r => r.id === id);
-  if (!d) return;
-  document.getElementById('reqDetailTitle').textContent = d.title;
-  document.getElementById('reqDetailId').textContent = d.id;
-  const badge = document.getElementById('reqDetailStatusBadge');
-  badge.textContent = d.status;
-  badge.className = 'status ' + getReqStatusClass(d.status);
-
-  // Reject banner
-  const banner = document.getElementById('reqDetailRejectBanner');
-  if (d.status === '审批不通过' && d.rejectReason) {
-    banner.textContent = '审批不通过原因：' + d.rejectReason;
-    banner.classList.remove('hidden');
-  } else { banner.classList.add('hidden'); }
-
-  // Operation buttons
-  const ops = document.getElementById('reqDetailOps');
-  let opsHtml = '';
-  if (d.status === '审批不通过' || (d.status === '待审批' && d.submitter === (currentUser ? currentUser.name : ''))) {
-    opsHtml = `<button class="btn btn-primary" onclick="resubmitRequirement('${d.id}')">重新提交</button>`;
-  }
-  ops.innerHTML = opsHtml;
-
-  // Info grid
-  document.getElementById('reqDetailInfo').innerHTML = `
-    <div><div class="label">需求编号</div><div style="font-family:var(--font-mono)">${d.id} <button class="btn btn-sm btn-outline" style="padding:1px 6px;font-size:.68rem;margin-left:4px" onclick="copyReqId('${d.id}')">复制</button></div></div>
-    <div><div class="label">需求标题</div><div>${d.title}</div></div>
-    <div><div class="label">优先级</div><div>${d.priority}</div></div>
-    <div><div class="label">状态</div><div><span class="status ${getReqStatusClass(d.status)}">${d.status}</span></div></div>
-    <div><div class="label">所属项目</div><div>${d.project || '—'}</div></div>
-    <div><div class="label">所属系统</div><div>${d.system || '—'}</div></div>
-    <div><div class="label">功能模块</div><div>${d.module || '—'}</div></div>
-    <div><div class="label">需求负责人</div><div>${d.assignee}</div></div>
-    <div><div class="label">提交人/部门</div><div>${d.submitter} / ${d.dept || '—'}</div></div>
-    <div><div class="label">提交日期</div><div>${d.time}</div></div>
-  `;
-
-  // Description
-  document.getElementById('reqDetailDesc').textContent = d.desc || '暂无描述';
-
-  // Activity timeline
-  const actEl = document.getElementById('reqDetailActivity');
-  const actColors = { '创建':'var(--primary)', '审批通过':'var(--success)', '审批不通过':'var(--danger)', '重新提交':'var(--warning)', '转化':'var(--accent)', '指派':'#8B5CF6', '关闭':'var(--text-secondary)' };
-  if (d.activity && d.activity.length) {
-    actEl.innerHTML = d.activity.map(a =>
-      `<div class="sp-tl-item"><div class="sp-tl-dot" style="background:${actColors[a.type]||'var(--primary)'}"></div><div class="sp-tl-body"><div class="sp-tl-text">${a.text}</div><div class="sp-tl-time">${a.time}</div></div></div>`
-    ).join('');
-  } else {
-    actEl.innerHTML = '<div style="color:var(--text-secondary);font-size:.82rem;padding:8px 0">暂无动态记录</div>';
-  }
-
-  switchView('reqDetail');
-}
-
-function resubmitRequirement(id) {
-  const d = reqData.find(r => r.id === id);
-  if (!d) return;
-  showConfirm('确认重新提交该需求？将重新进入审批流程。', function() {
-    d.status = '待审批';
-    d.rejectReason = '';
-    d.activity.unshift({ type:'重新提交', text: (currentUser ? currentUser.name : '—') + '$' + (currentUser ? currentUser.username : '—') + '$ 重新提交需求 ' + d.id, time: nowTs() });
-    // Generate new approval record
-    const ap = {
-      id: genId('AP'), type: '需求审批', title: '需求审批（重新提交）：' + d.title,
-      status: '待审批', applicant: d.submitter,
-      applyTime: nowTs(), approveTime: '—', remark: '', rejectReason: '', reqId: d.id
-    };
-    approvalData.unshift(ap);
-    renderReqList();
-    if (typeof renderApprovalList === 'function') renderApprovalList();
-    viewReqDetail(id);
-    showToast('需求已重新提交审批：' + d.id);
-  });
+  showToast('需求创建成功：' + d.id);
 }
 
 // ===== PROBLEMS =====
@@ -4109,23 +3673,6 @@ function submitApproval() {
   d.approveTime = ts;
   d.remark = remark;
   if (d.status === '审批不通过') d.rejectReason = remark;
-  // 关联需求审批：通过→待分配，不通过→审批不通过
-  if (d.reqId) {
-    const req = reqData.find(r => r.id === d.reqId);
-    if (req) {
-      const approverName = currentUser ? currentUser.name : '—';
-      const approverId = currentUser ? currentUser.username : '—';
-      if (opinion.value === '同意') {
-        req.status = '待分配';
-        req.activity.unshift({ type:'审批通过', text: approverName + '$' + approverId + '$ 审批通过需求 ' + req.id, time: ts });
-      } else {
-        req.status = '审批不通过';
-        req.rejectReason = remark;
-        req.activity.unshift({ type:'审批不通过', text: approverName + '$' + approverId + '$ 审批不通过需求 ' + req.id + ' 原因：' + remark, time: ts });
-      }
-      if (typeof renderReqList === 'function') renderReqList();
-    }
-  }
   closeModal('approvalModal');
   pendingApprovalId = null;
   renderApprovalList();
