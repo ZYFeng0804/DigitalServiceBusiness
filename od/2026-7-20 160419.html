@@ -216,6 +216,14 @@ input,select,textarea{font-family:inherit;outline:none}
 .header-icon-btn{width:34px;height:34px;border-radius:var(--radius);border:1.5px solid var(--border);background:var(--card);color:var(--text-secondary);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:var(--transition);position:relative}
 .header-icon-btn:hover{border-color:var(--primary);color:var(--primary);background:rgba(79,70,229,.06)}
 .header-icon-btn .badge{position:absolute;top:-4px;right:-4px;width:16px;height:16px;background:var(--danger);color:#fff;border-radius:50%;font-size:.6rem;font-weight:700;display:flex;align-items:center;justify-content:center;border:2px solid var(--bg)}
+/* Search result dropdown */
+.search-dropdown{position:absolute;top:calc(100% + 8px);left:0;right:0;background:var(--card);border:1.5px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);z-index:200;display:none;min-width:360px;overflow:hidden}
+.search-dropdown.show{display:block}
+.search-dropdown .sd-header{padding:10px 14px;font-size:.75rem;color:var(--text-secondary);border-bottom:1px solid var(--border);font-weight:600}
+.search-dropdown .sd-item{padding:10px 14px;display:flex;align-items:center;gap:10px;cursor:pointer;transition:var(--transition);font-size:.85rem}
+.search-dropdown .sd-item:hover{background:var(--border-light)}
+.search-dropdown .sd-type{font-size:.7rem;padding:2px 7px;border-radius:4px;font-weight:600;background:rgba(79,70,229,.1);color:var(--primary)}
+.search-dropdown .sd-empty{padding:24px 14px;text-align:center;color:var(--text-muted);font-size:.85rem}
 /* Message panel */
 .msg-panel{position:absolute;top:calc(100% + 8px);right:0;width:320px;background:var(--card);border:1.5px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);z-index:200;display:none;overflow:hidden}
 .msg-panel.show{display:block}
@@ -258,10 +266,6 @@ input,select,textarea{font-family:inherit;outline:none}
 .quick-btn:hover{transform:translateY(-2px);filter:brightness(1.1)}
 .quick-btn:active{transform:translateY(0)}
 .three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.5vw,16px);width:100%;align-items:stretch}
-.four-col{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,1.5vw,16px);width:100%;align-items:stretch}
-.four-col > .card{height:100%;display:flex;flex-direction:column}
-.four-col > .card > h4{flex-shrink:0}
-.four-col > .card > div{flex:1}
 .three-col > .card{height:100%;display:flex;flex-direction:column}
 .three-col > .card > h4{flex-shrink:0}
 .three-col > .card > div{flex:1}
@@ -351,85 +355,6 @@ table.data tr:last-child td{border-bottom:none}
 .progress-bar{height:8px;background:var(--border-light);border-radius:4px;overflow:hidden;margin-top:6px}
 .progress-bar .fill{height:100%;border-radius:4px;transition:width .4s ease;background:linear-gradient(90deg,var(--primary),var(--accent))}
 
-.progress-steps .step.current-purple .dot{background:linear-gradient(135deg,#7C3AED,#9333EA);box-shadow:0 2px 10px rgba(124,58,237,.4)}
-.progress-steps .step.future .dot{background:var(--border);color:var(--text-secondary)}
-.progress-steps .step.future .step-label{color:var(--text-light)}
-
-.acc-item-tabs{display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap}
-.acc-item-tabs .tab{padding:4px 12px;font-size:.76rem;border-radius:var(--radius);cursor:pointer;background:var(--bg-light);color:var(--text-secondary);border:1px solid var(--border);transition:var(--transition)}
-.acc-item-tabs .tab:hover{background:var(--primary-bg);color:var(--primary);border-color:var(--primary-border)}
-.acc-item-tabs .tab.active{background:var(--primary);color:#fff;border-color:var(--primary)}
-
-.acc-table-compact{width:100%;border-collapse:collapse;font-size:.78rem}
-.acc-table-compact th{background:var(--bg-light);padding:8px 10px;text-align:left;font-weight:600;white-space:nowrap;border-bottom:2px solid var(--border);color:var(--text-secondary);font-size:.72rem;position:sticky;top:0}
-.acc-table-compact td{padding:8px 10px;border-bottom:1px solid var(--border);vertical-align:middle}
-.acc-table-compact tr:hover{background:var(--primary-bg)}
-.acc-table-scroll{overflow-x:auto;border:1px solid var(--border);border-radius:var(--radius);margin-top:8px;max-height:480px;overflow-y:auto}
-
-.deadline-urgent{color:var(--danger)!important;font-weight:700}
-.deadline-warn{color:var(--warning)!important;font-weight:600}
-
-.release-info-box{padding:14px 18px;background:var(--bg-light);border-radius:var(--radius);margin-bottom:16px;border:1px solid var(--border);font-size:.84rem}
-.release-info-box .ril{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:6px}
-.release-info-box .ril span{color:var(--text-secondary)}
-.release-info-box .ril strong{color:var(--text-primary);margin-left:4px}
-.release-log-toggle{cursor:pointer;color:var(--primary);font-size:.78rem;font-weight:600;display:inline-flex;align-items:center;gap:4px}
-.release-log-content{margin-top:10px;padding-top:10px;border-top:1px dashed var(--border);font-size:.78rem;color:var(--text-secondary);display:none}
-.release-log-content.show{display:block}
-
-.acc-op-group{display:flex;flex-wrap:wrap;gap:4px}
-.acc-op-group .btn{min-width:auto;padding:3px 8px;font-size:.72rem}
-
-.acc-toolbar-wrap{margin-bottom:14px}
-.acc-search-row{display:flex;align-items:center;gap:10px;margin-bottom:0}
-
-.acc-picker-cell{min-width:110px}
-.acc-tags{display:flex;flex-wrap:wrap;gap:4px;align-items:center}
-.acc-tag{display:inline-flex;align-items:center;gap:3px;background:var(--primary-bg);color:var(--primary);border:1px solid var(--border-light);border-radius:20px;padding:2px 8px;font-size:.7rem;font-weight:500;white-space:nowrap}
-.acc-tag .acc-tag-del{cursor:pointer;color:var(--text-secondary);font-size:.9rem;line-height:1;padding:0 1px}
-.acc-tag .acc-tag-del:hover{color:var(--danger)}
-.acc-add-btn{display:inline-flex;align-items:center;gap:2px;cursor:pointer;color:var(--primary);font-size:.7rem;border:1px dashed var(--border-light);border-radius:20px;padding:2px 8px;background:none;white-space:nowrap}
-.acc-add-btn:hover{background:var(--primary-bg)}
-.acc-picker-list{max-height:260px;overflow-y:auto;border:1px solid var(--border);border-radius:var(--radius);margin-top:8px}
-.acc-picker-opt{display:flex;align-items:center;gap:8px;padding:9px 14px;cursor:pointer;font-size:.88rem;transition:background .15s;user-select:none;border-bottom:1px solid var(--border-light)}
-.acc-picker-opt:last-child{border-bottom:none}
-.acc-picker-opt:hover{background:var(--primary-bg)}
-.acc-picker-opt.checked{background:color-mix(in oklab,var(--primary),transparent 90%)}
-.acc-picker-check{width:16px;height:16px;border-radius:4px;border:1.5px solid var(--border);display:inline-flex;align-items:center;justify-content:center;font-size:.7rem;color:var(--primary);background:var(--bg);flex-shrink:0}
-.acc-picker-opt.checked .acc-picker-check{border-color:var(--primary);background:var(--primary);color:#fff}
-.acc-doc-item{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:6px;cursor:pointer;font-size:.85rem;color:var(--text);transition:background .15s;border-bottom:1px solid var(--border-light)}
-.acc-doc-item:last-child{border-bottom:none}
-.acc-doc-item:hover{background:var(--primary-bg)}
-.acc-doc-item span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.acc-result-select{font-size:.75rem;padding:3px 6px;border-radius:5px;border:1.5px solid var(--border);background:var(--bg);cursor:pointer;width:100%;min-width:110px;outline:none;transition:border-color .15s,color .15s}
-.acc-result-select:focus{border-color:var(--primary);box-shadow:var(--focus-ring)}
-
-/* ===== ACCEPTANCE LIST FULLSCREEN BUTTON + MODAL ===== */
-.acc-fs-btn{position:relative;display:inline-flex;align-items:center;gap:5px;padding:4px 10px;font-size:.78rem;color:var(--primary);background:var(--primary-bg);border:1px solid color-mix(in oklab,var(--primary) 30%,transparent);border-radius:6px;cursor:pointer;transition:all .18s;font-weight:500}
-.acc-fs-btn:hover{background:var(--primary);color:#fff;transform:translateY(-1px);box-shadow:0 4px 10px color-mix(in oklab,var(--primary) 30%,transparent)}
-.acc-fs-btn svg{flex-shrink:0}
-.acc-fs-hint{display:none;position:absolute;left:50%;top:calc(100% + 6px);transform:translateX(-50%);background:#1f2937;color:#fff;font-size:.7rem;font-weight:400;padding:5px 9px;border-radius:5px;white-space:nowrap;box-shadow:0 4px 10px rgba(0,0,0,.15);z-index:10;pointer-events:none}
-.acc-fs-hint::before{content:"";position:absolute;left:50%;bottom:100%;transform:translateX(-50%);border:4px solid transparent;border-bottom-color:#1f2937}
-.acc-fs-btn:hover .acc-fs-hint{display:block;animation:accHintPop .22s ease-out}
-@keyframes accHintPop{from{opacity:0;transform:translate(-50%,4px)}to{opacity:1;transform:translate(-50%,0)}}
-.acc-fs-overlay{position:fixed;inset:0;background:rgba(15,23,42,.55);backdrop-filter:blur(3px);z-index:9999;display:none;align-items:center;justify-content:center;padding:18px;animation:accFsFade .2s ease-out}
-.acc-fs-overlay.active{display:flex}
-@keyframes accFsFade{from{opacity:0}to{opacity:1}}
-.acc-fs-panel{width:100%;height:100%;max-width:100%;max-height:100%;background:var(--bg);border-radius:12px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.3);animation:accFsSlide .25s cubic-bezier(.2,.8,.2,1)}
-@keyframes accFsSlide{from{transform:scale(.96);opacity:0}to{transform:scale(1);opacity:1}}
-.acc-fs-head{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border);background:var(--surface)}
-.acc-fs-close{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;font-size:.82rem;color:var(--text-secondary);background:transparent;border:1px solid var(--border);border-radius:6px;cursor:pointer;transition:all .15s}
-.acc-fs-close:hover{color:var(--danger);border-color:var(--danger);background:color-mix(in oklab,var(--danger) 8%,transparent)}
-.acc-fs-badge{display:inline-block;font-size:.72rem;padding:2px 8px;border-radius:999px;background:color-mix(in oklab,var(--primary) 12%,transparent);color:var(--primary);font-weight:500}
-.acc-fs-tabs{display:flex;flex-wrap:wrap;gap:4px;padding:12px 20px;border-bottom:1px solid var(--border);background:var(--surface)}
-.acc-fs-tabs .tab{padding:6px 12px;font-size:.8rem;border-radius:6px;cursor:pointer;color:var(--text-secondary);background:transparent;transition:all .15s}
-.acc-fs-tabs .tab:hover{background:var(--bg-light)}
-.acc-fs-tabs .tab.active{background:var(--primary);color:#fff}
-.acc-fs-body{flex:1;overflow:auto;padding:16px 20px;background:var(--bg)}
-.acc-fs-body .acc-table-compact th{position:sticky;top:0;z-index:2;background:var(--bg-light)}
-@media(max-width:768px){.acc-fs-overlay{padding:0}.acc-fs-panel{border-radius:0}.acc-fs-head{padding:10px 14px}.acc-fs-tabs{padding:8px 14px}.acc-fs-body{padding:10px 14px}}
-@media(max-width:900px){#accInfoRow{grid-template-columns:1fr!important}}
-
 /* ===== CONFIRM MODAL ===== */
 .confirm-modal .modal{width:420px;max-width:92vw}
 .confirm-modal .modal-body{text-align:center;padding:32px 24px}
@@ -444,11 +369,13 @@ table.data tr:last-child td{border-bottom:none}
 .error-toast .err-code{font-family:var(--font-mono);font-weight:700;color:var(--danger);font-size:.78rem;background:var(--danger-bg);padding:2px 8px;border-radius:4px}
 
 /* ===== WELCOME BAR ===== */
-.welcome-bar{display:flex;flex-direction:column;align-items:flex-start;margin-bottom:20px;padding:clamp(16px,2vw,22px) clamp(18px,2.5vw,26px);background:linear-gradient(135deg,#4F46E5 0%,#7C3AED 50%,#06B6D4 100%);border-radius:var(--radius-lg);color:#fff;position:relative;overflow:hidden;box-shadow:var(--shadow-primary)}
+.welcome-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;padding:clamp(16px,2vw,22px) clamp(18px,2.5vw,26px);background:linear-gradient(135deg,#4F46E5 0%,#7C3AED 50%,#06B6D4 100%);border-radius:var(--radius-lg);color:#fff;position:relative;overflow:hidden;box-shadow:var(--shadow-primary)}
 .welcome-bar::before{content:'';position:absolute;top:-50%;right:-10%;width:300px;height:300px;background:radial-gradient(circle,rgba(255,255,255,.1),transparent);border-radius:50%}
 .welcome-bar::after{content:'';position:absolute;bottom:-30%;left:30%;width:200px;height:200px;background:radial-gradient(circle,rgba(6,182,212,.15),transparent);border-radius:50%}
-.welcome-bar h3{font-size:clamp(1rem,2vw,1.2rem);font-weight:700;letter-spacing:-.3px;position:relative;z-index:1}
-.welcome-bar p{font-size:.8rem;opacity:.85;margin-top:3px;position:relative;z-index:1}
+.welcome-bar .wb-left{position:relative;z-index:1}
+.welcome-bar .wb-left h3{font-size:clamp(1rem,2vw,1.2rem);font-weight:700;letter-spacing:-.3px}
+.welcome-bar .wb-left p{font-size:.8rem;opacity:.85;margin-top:3px}
+.welcome-bar .wb-date{font-size:.8rem;opacity:.8;font-family:var(--font-mono);position:relative;z-index:1}
 
 /* ===== SMART SUMMARY ===== */
 .smart-summary{background:linear-gradient(135deg,#EEF2FF 0%,#E0F2FE 50%,#F0F9FF 100%);border:1px solid #C7D2FE;border-radius:var(--radius-lg);padding:16px 22px;margin-bottom:20px;font-size:.85rem;color:var(--text);line-height:1.7;position:relative;overflow:hidden}
@@ -535,7 +462,6 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
   .main-content{padding:22px}
   .stat-grid{grid-template-columns:repeat(4,1fr);gap:14px}
   .three-col{grid-template-columns:repeat(3,1fr);gap:14px}
-  .four-col{grid-template-columns:repeat(3,1fr);gap:14px}
 }
 
 /* Small desktop / large tablet (1024px - 1279px) */
@@ -544,7 +470,6 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
   .stat-grid{grid-template-columns:repeat(2,1fr);gap:14px}
   .quick-actions{grid-template-columns:repeat(2,1fr)}
   .three-col{grid-template-columns:repeat(2,1fr);gap:14px}
-  .four-col{grid-template-columns:repeat(2,1fr);gap:14px}
   .detail-grid{grid-template-columns:repeat(2,1fr)}
   .main-content{padding:20px}
 }
@@ -556,7 +481,6 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
   .stat-grid{grid-template-columns:repeat(2,1fr);gap:12px}
   .quick-actions{grid-template-columns:repeat(2,1fr)}
   .three-col{grid-template-columns:1fr;gap:14px}
-  .four-col{grid-template-columns:1fr;gap:14px}
   .toolbar{flex-direction:column;align-items:stretch}
   .toolbar .tabs{width:100%}
   .detail-grid{grid-template-columns:1fr}
@@ -577,7 +501,6 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
   .stat-grid{grid-template-columns:1fr;gap:12px}
   .quick-actions{grid-template-columns:1fr}
   .three-col{grid-template-columns:1fr}
-  .four-col{grid-template-columns:1fr}
   .welcome-bar{flex-direction:column;gap:10px;text-align:center}
   .detail-grid{grid-template-columns:1fr}
   .progress-steps{flex-wrap:wrap;gap:12px}
@@ -625,7 +548,6 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
   .main-content{padding:24px}
   .stat-grid{grid-template-columns:repeat(4,1fr);gap:16px}
   .three-col{grid-template-columns:repeat(3,1fr);gap:16px}
-  .four-col{grid-template-columns:repeat(4,1fr);gap:16px}
 }
 
 /* Large desktop (1440px - 1535px) */
@@ -634,7 +556,6 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
   .main-content{padding:28px}
   .stat-grid{grid-template-columns:repeat(4,1fr);gap:18px}
   .three-col{grid-template-columns:repeat(3,1fr);gap:18px}
-  .four-col{grid-template-columns:repeat(4,1fr);gap:18px}
 }
 
 /* Extra large desktop (1536px - 1919px) */
@@ -643,7 +564,6 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
   .main-content{padding:28px}
   .stat-grid{grid-template-columns:repeat(4,1fr);gap:20px}
   .three-col{grid-template-columns:repeat(3,1fr);gap:20px}
-  .four-col{grid-template-columns:repeat(4,1fr);gap:20px}
 }
 
 /* Wide desktop (1920px - 2559px) */
@@ -652,7 +572,6 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
   .main-content{padding:32px}
   .stat-grid{grid-template-columns:repeat(4,1fr);gap:24px}
   .three-col{grid-template-columns:repeat(4,1fr);gap:24px}
-  .four-col{grid-template-columns:repeat(4,1fr);gap:24px}
   html{font-size:15px}
 }
 
@@ -662,7 +581,6 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
   .main-content{padding:36px}
   .stat-grid{grid-template-columns:repeat(4,1fr);gap:28px}
   .three-col{grid-template-columns:repeat(4,1fr);gap:28px}
-  .four-col{grid-template-columns:repeat(4,1fr);gap:28px}
   html{font-size:16px}
 }
 
@@ -672,6 +590,37 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
   .main{margin-left:0;width:100%}
   .card{box-shadow:none;border:1px solid #ccc}
 }
+
+/* ===== Floating PRD Help Buttons ===== */
+.prd-fab-wrap{position:fixed;right:24px;bottom:28px;z-index:1002;display:flex;flex-direction:column;gap:12px;align-items:flex-end}
+.prd-fab{display:flex;align-items:center;gap:8px;padding:12px 18px;border-radius:9999px;background:linear-gradient(135deg,var(--primary) 0%,#7C3AED 100%);color:#fff;font-size:.85rem;font-weight:600;box-shadow:0 8px 24px rgba(79,70,229,.2);transition:var(--transition);cursor:pointer;border:none;white-space:nowrap}
+.prd-fab:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(79,70,229,.35)}
+.prd-fab svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2}
+.prd-fab.secondary{background:#fff;color:var(--primary);border:1px solid var(--border);box-shadow:0 4px 12px rgba(15,23,42,.06),0 1px 3px rgba(15,23,42,.04)}
+.prd-fab.secondary:hover{border-color:var(--primary-light);box-shadow:var(--shadow-lg)}
+.prd-drawer{position:fixed;top:0;right:0;width:min(680px,92vw);height:100vh;background:#fff;box-shadow:-12px 0 40px rgba(15,23,42,.12);z-index:1003;display:flex;flex-direction:column;transform:translateX(110%);transition:transform .3s cubic-bezier(.4,0,.2,1)}
+.prd-drawer.open{transform:translateX(0)}
+.prd-drawer-overlay{position:fixed;inset:0;background:rgba(15,23,42,.35);z-index:1002;opacity:0;pointer-events:none;transition:opacity .25s}
+.prd-drawer-overlay.open{opacity:1;pointer-events:auto}
+.prd-drawer-header{flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:18px 24px;border-bottom:1px solid var(--border);background:linear-gradient(180deg,#F8FAFC 0%,#EFF6FF 100%)}
+.prd-drawer-header h3{font-size:1.1rem;font-weight:700;color:var(--text);display:flex;align-items:center;gap:10px}
+.prd-drawer-header h3 svg{width:20px;height:20px;stroke:var(--primary);fill:none;stroke-width:2}
+.prd-drawer-close{width:34px;height:34px;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;background:transparent;border:none;color:var(--text-secondary);cursor:pointer;transition:var(--transition)}
+.prd-drawer-close:hover{background:var(--bg);color:var(--text)}
+.prd-drawer-body{flex:1;overflow-y:auto;padding:24px;font-size:.9rem;line-height:1.7;color:var(--text)}
+.prd-drawer-body h4{font-size:1rem;font-weight:700;color:var(--text);margin:22px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--border-light)}
+.prd-drawer-body h4:first-child{margin-top:0}
+.prd-drawer-body h5{font-size:.92rem;font-weight:600;color:var(--text);margin:16px 0 8px}
+.prd-drawer-body p{margin:8px 0;color:var(--text-secondary)}
+.prd-drawer-body ul,.prd-drawer-body ol{margin:8px 0 8px 20px;color:var(--text-secondary)}
+.prd-drawer-body li{margin:4px 0}
+.prd-drawer-body table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.82rem}
+.prd-drawer-body th,.prd-drawer-body td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+.prd-drawer-body th{background:var(--bg);font-weight:600;color:var(--text)}
+.prd-drawer-body code{font-family:var(--font-mono);background:#F1F5F9;padding:1px 5px;border-radius:4px;color:var(--primary-dark);font-size:.8rem}
+.prd-drawer-body blockquote{border-left:3px solid var(--primary);padding-left:12px;margin:10px 0;color:var(--text-secondary);background:var(--bg);padding:10px 12px;border-radius:0 var(--radius) var(--radius) 0}
+@media(max-width:1024px){.prd-fab-wrap{right:16px;bottom:20px}.prd-fab{padding:10px 14px;font-size:.8rem}.prd-fab span{display:none}.prd-fab svg{width:18px;height:18px}}
+@media(max-width:768px){.prd-drawer{width:100vw}}
 
 </style>
 <style data-od-tweaks-bridge-style="">
@@ -912,7 +861,7 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
     <div class="field" data-od-id="path-1-7-4">
       <label for="regOrg">组织*</label>
       <select id="regOrg" data-od-id="path-1-7-4-1">
-        <option value="" disabled="" selected="">请选择所属组织</option>
+        <option value="" disabled selected>请选择所属组织</option>
         <option value="平台运营中心">平台运营中心</option>
         <option value="产品部">产品部</option>
         <option value="研发部">研发部</option>
@@ -1069,10 +1018,11 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
       <div class="header-actions">
         <!-- 全局搜索 -->
         <div class="header-search">
-          <input class="search-input" id="globalSearchInput" type="text" placeholder="输入精准ID" maxlength="100" onkeydown="if(event.key==='Enter')doGlobalSearch()" data-od-id="path-7-1-0-1-0-0">
+          <input class="search-input" id="globalSearchInput" type="text" placeholder="输入精准ID或关键词搜索..." maxlength="100" onkeydown="if(event.key==='Enter')doGlobalSearch()" oninput="onSearchInput(this.value)" data-od-id="path-7-1-0-1-0-0">
           <button class="search-btn" onclick="doGlobalSearch()" data-od-id="path-7-1-0-1-0-1">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
           </button>
+          <div class="search-dropdown" id="searchDropdown" data-od-id="path-7-1-0-1-0-2"></div>
         </div>
         <!-- 消息中心 -->
         <div style="position:relative">
@@ -1115,15 +1065,20 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
       <!-- ===== HOME ===== -->
       <div id="view-home" data-od-id="path-7-1-1-0">
         <div class="welcome-bar" data-od-id="path-7-1-1-0-0">
-          <h3 id="welcomeText" data-od-id="path-7-1-1-0-0-0-0">你好，欢迎使用数字化效能协同平台</h3>
-          <p id="welcomeSub" data-od-id="path-7-1-1-0-0-0-1">今日工作概览</p>
+          <div class="wb-left">
+            <h3 id="welcomeText" data-od-id="path-7-1-1-0-0-0-0">你好，欢迎使用数字化效能协同平台</h3>
+            <p id="welcomeSub" data-od-id="path-7-1-1-0-0-0-1">今日工作概览</p>
+          </div>
+          <div class="wb-date" id="welcomeDate" data-od-id="path-7-1-1-0-0-1"></div>
         </div>
-        <div class="smart-summary hidden" id="smartSummary" data-od-id="path-7-1-1-0-1"></div>
+        <div class="smart-summary" id="smartSummary" data-od-id="path-7-1-1-0-1">
+          <strong>智能摘要：</strong>您有 <strong>3</strong> 条待验收需求，<strong>2</strong> 个待处理问题，<strong>1</strong> 条投诉建议待反馈。本周系统迭代版本 v2.3.1 已发布，请及时验收。
+        </div>
         <div class="stat-grid" data-od-id="path-7-1-1-0-2">
-          <div class="card stat-card"><div class="stat-num" id="statReq" data-od-id="path-7-1-1-0-2-0-0">—</div><div class="stat-label">我的需求</div></div>
-          <div class="card stat-card"><div class="stat-num" id="statProb" data-od-id="path-7-1-1-0-2-1-0">—</div><div class="stat-label">我的问题</div></div>
-          <div class="card stat-card"><div class="stat-num" id="statAcc" data-od-id="path-7-1-1-0-2-2-0">—</div><div class="stat-label">待验收</div></div>
-          <div class="card stat-card"><div class="stat-num" id="statComp" data-od-id="path-7-1-1-0-2-3-0">—</div><div class="stat-label">投诉/建议</div></div>
+          <div class="card stat-card"><div class="stat-num" id="statReq" data-od-id="path-7-1-1-0-2-0-0">5</div><div class="stat-label">我的需求</div></div>
+          <div class="card stat-card"><div class="stat-num" id="statProb" data-od-id="path-7-1-1-0-2-1-0">3</div><div class="stat-label">我的问题</div></div>
+          <div class="card stat-card"><div class="stat-num" id="statAcc" data-od-id="path-7-1-1-0-2-2-0">4</div><div class="stat-label">待验收</div></div>
+          <div class="card stat-card"><div class="stat-num" id="statComp" data-od-id="path-7-1-1-0-2-3-0">1</div><div class="stat-label">投诉/建议</div></div>
         </div>
         <div class="quick-actions" data-od-id="path-7-1-1-0-3">
           <button class="quick-btn" onclick="switchView('requirements');openCreateModal('req')" data-od-id="path-7-1-1-0-3-0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:6px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>快速提需求</button>
@@ -1131,155 +1086,181 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
           <button class="quick-btn" onclick="switchView('acceptance')" data-od-id="path-7-1-1-0-3-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:6px"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>查看验收单</button>
           <button class="quick-btn" onclick="switchView('documents')" data-od-id="path-7-1-1-0-3-3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:6px"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>查看资料库</button>
         </div>
-        <div class="four-col" data-od-id="path-7-1-1-0-4">
+        <div class="three-col" data-od-id="path-7-1-1-0-4">
           <div class="card list-card">
             <h4 style="margin-bottom:10px;font-size:.9rem" data-od-id="path-7-1-1-0-4-0-0">需求进度 <a href="#" onclick="switchView('requirements');return false" style="font-size:.75rem;font-weight:500;float:right" data-od-id="path-7-1-1-0-4-0-0-0">查看更多 →</a></h4>
-            <div id="homeReqList"></div>
+            <div class="list-item"><span><span class="id">DE-B-20250115-0001</span> 用户权限优化</span><span class="status status-progress">验收中</span></div>
+            <div class="list-item"><span><span class="id">DE-B-20250114-0002</span> 报表导出功能</span><span class="status status-info">待分配</span></div>
+            <div class="list-item"><span><span class="id">DE-B-20250113-0003</span> 消息推送改造</span><span class="status status-done">已上线</span></div>
+            <div class="list-item"><span><span class="id">DE-B-20250109-0006</span> 数据看板升级</span><span class="status status-progress">调研中</span></div>
+            <div class="list-item"><span><span class="id">DE-B-20250108-0007</span> 接口性能优化</span><span class="status status-info">待分配</span></div>
+            <div class="list-item"><span><span class="id">DE-B-20250107-0008</span> 移动端适配</span><span class="status status-done">已上线</span></div>
           </div>
           <div class="card list-card">
             <h4 style="margin-bottom:10px;font-size:.9rem" data-od-id="path-7-1-1-0-4-1-0">问题动态 <a href="#" onclick="switchView('problems');return false" style="font-size:.75rem;font-weight:500;float:right" data-od-id="path-7-1-1-0-4-1-0-0">查看更多 →</a></h4>
-            <div id="homeProbList"></div>
+            <div class="list-item"><span><span class="id">PR-20250115-001</span> 登录白屏问题</span><span class="status status-progress">处理中</span></div>
+            <div class="list-item"><span><span class="id">PR-20250114-001</span> 数据导出异常</span><span class="status status-wait">待处理</span></div>
+            <div class="list-item"><span><span class="id">PR-20250112-001</span> 页面加载慢</span><span class="status status-done">已解决</span></div>
+            <div class="list-item"><span><span class="id">PR-20250111-003</span> 权限校验失效</span><span class="status status-progress">处理中</span></div>
+            <div class="list-item"><span><span class="id">PR-20250108-002</span> 定时任务报错</span><span class="status status-wait">待处理</span></div>
+            <div class="list-item"><span><span class="id">PR-20250105-001</span> 缓存同步延迟</span><span class="status status-done">已解决</span></div>
           </div>
           <div class="card list-card">
-            <h4 style="margin-bottom:10px;font-size:.9rem" data-od-id="path-7-1-1-0-4-2-0">待验收 <a href="#" onclick="switchView('acceptance');return false" style="font-size:.75rem;font-weight:500;float:right" data-od-id="path-7-1-1-0-4-2-0-0">查看更多 →</a></h4>
-            <div id="homeAccList"></div>
-          </div>
-          <div class="card list-card">
-            <h4 style="margin-bottom:10px;font-size:.9rem" data-od-id="path-7-1-1-0-4-3-0">常用对接人 <a href="#" onclick="switchView('contacts');return false" style="font-size:.75rem;font-weight:500;float:right" data-od-id="path-7-1-1-0-4-3-0-0">查看更多 →</a></h4>
-            <div id="homeContactList" style="display:flex;flex-direction:column;gap:8px" data-od-id="path-7-1-1-0-4-3-1">
-              <div class="contact-card" data-od-id="path-7-1-1-0-4-3-1-0"><div class="cc-avatar">李</div><div class="cc-info"><div class="cc-name">李明辉</div><div class="cc-role">产品经理 · 订单系统</div></div><div class="cc-actions"><button class="btn btn-sm btn-outline" onclick="switchView('requirements');openCreateModal('req')" data-od-id="path-7-1-1-0-4-3-1-0-1">提需求</button></div></div>
-              <div class="contact-card" data-od-id="path-7-1-1-0-4-3-1-1"><div class="cc-avatar">王</div><div class="cc-info"><div class="cc-name">王小燕</div><div class="cc-role">测试工程师 · 全平台</div></div><div class="cc-actions"><button class="btn btn-sm btn-outline" onclick="switchView('problems');openCreateModal('prob')" data-od-id="path-7-1-1-0-4-3-1-1-1">提问题</button></div></div>
-              <div class="contact-card" data-od-id="path-7-1-1-0-4-3-1-2"><div class="cc-avatar">张</div><div class="cc-info"><div class="cc-name">张建国</div><div class="cc-role">研发负责人 · 中台</div></div><div class="cc-actions"><button class="btn btn-sm btn-outline" onclick="switchView('problems');openCreateModal('prob')" data-od-id="path-7-1-1-0-4-3-1-2-1">提问题</button></div></div>
-              <div class="contact-card" data-od-id="path-7-1-1-0-4-3-1-3"><div class="cc-avatar">陈</div><div class="cc-info"><div class="cc-name">陈雪梅</div><div class="cc-role">UI设计师 · 设计组</div></div><div class="cc-actions"><button class="btn btn-sm btn-outline" onclick="switchView('requirements');openCreateModal('req')" data-od-id="path-7-1-1-0-4-3-1-3-1">提需求</button></div></div>
-              <div class="contact-card" data-od-id="path-7-1-1-0-4-3-1-4"><div class="cc-avatar">刘</div><div class="cc-info"><div class="cc-name">刘志强</div><div class="cc-role">后端开发 · 支付系统</div></div><div class="cc-actions"><button class="btn btn-sm btn-outline" onclick="switchView('problems');openCreateModal('prob')" data-od-id="path-7-1-1-0-4-3-1-4-1">提问题</button></div></div>
-              <div class="contact-card" data-od-id="path-7-1-1-0-4-3-1-5"><div class="cc-avatar">赵</div><div class="cc-info"><div class="cc-name">赵婷婷</div><div class="cc-role">项目经理 · 运营支撑</div></div><div class="cc-actions"><button class="btn btn-sm btn-outline" onclick="switchView('complaints');openCreateModal('comp')" data-od-id="path-7-1-1-0-4-3-1-5-1">投诉/建议</button></div></div>
-            </div>
+            <h4 style="margin-bottom:10px;font-size:.9rem" data-od-id="path-7-1-1-0-4-2-0">常用对接人 <a href="#" onclick="switchView('contacts');return false" style="font-size:.75rem;font-weight:500;float:right" data-od-id="path-7-1-1-0-4-2-0-0">查看更多 →</a></h4>
+            <div class="contact-card"><div class="cc-avatar">李</div><div class="cc-info"><div class="cc-name">李明辉</div><div class="cc-role">产品经理 · 订单系统</div></div><div class="cc-actions"><button class="btn btn-sm btn-outline" onclick="switchView('requirements');openCreateModal('req')" data-od-id="path-7-1-1-0-4-2-1-2-0">提需求</button></div></div>
+            <div class="contact-card"><div class="cc-avatar">王</div><div class="cc-info"><div class="cc-name">王小燕</div><div class="cc-role">测试工程师 · 全平台</div></div><div class="cc-actions"><button class="btn btn-sm btn-outline" onclick="switchView('problems');openCreateModal('prob')" data-od-id="path-7-1-1-0-4-2-2-2-0">提问题</button></div></div>
+            <div class="contact-card"><div class="cc-avatar">张</div><div class="cc-info"><div class="cc-name">张建国</div><div class="cc-role">研发负责人 · 中台</div></div><div class="cc-actions"><button class="btn btn-sm btn-outline" onclick="switchView('problems');openCreateModal('prob')" data-od-id="path-7-1-1-0-4-2-3-2-0">提问题</button></div></div>
+            <div class="contact-card"><div class="cc-avatar">陈</div><div class="cc-info"><div class="cc-name">陈雪梅</div><div class="cc-role">UI设计师 · 设计组</div></div><div class="cc-actions"><button class="btn btn-sm btn-outline" onclick="switchView('requirements');openCreateModal('req')" data-od-id="path-7-1-1-0-4-2-4-2-0">提需求</button></div></div>
+            <div class="contact-card"><div class="cc-avatar">刘</div><div class="cc-info"><div class="cc-name">刘志强</div><div class="cc-role">后端开发 · 支付系统</div></div><div class="cc-actions"><button class="btn btn-sm btn-outline" onclick="switchView('problems');openCreateModal('prob')" data-od-id="path-7-1-1-0-4-2-5-2-0">提问题</button></div></div>
+            <div class="contact-card"><div class="cc-avatar">赵</div><div class="cc-info"><div class="cc-name">赵婷婷</div><div class="cc-role">项目经理 · 运营支撑</div></div><div class="cc-actions"><button class="btn btn-sm btn-outline" onclick="switchView('complaints');openCreateModal('comp')" data-od-id="path-7-1-1-0-4-2-6-2-0">投诉/建议</button></div></div>
           </div>
         </div>
 
+        <div style="display:grid;grid-template-columns:2fr 1fr;gap:20px;margin-top:20px;align-items:stretch">
+          <div class="card" style="height:100%">
+            <h4 style="margin-bottom:14px;font-size:.9rem" data-od-id="path-7-1-1-0-5-0-0">最近动态</h4>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <div style="display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--border-light)">
+                <div style="width:8px;height:8px;border-radius:50%;background:var(--primary);margin-top:6px;flex-shrink:0"></div>
+                <div style="flex:1">
+                  <div style="font-size:.85rem;font-weight:600">需求 DE-B-20250115-0001 状态更新为「验收中」</div>
+                  <div style="font-size:.75rem;color:var(--text-muted);margin-top:2px">产品经理李明辉 · 2小时前</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--border-light)">
+                <div style="width:8px;height:8px;border-radius:50%;background:var(--success);margin-top:6px;flex-shrink:0"></div>
+                <div style="flex:1">
+                  <div style="font-size:.85rem;font-weight:600">验收单 IC-20250114-002 已完成验收</div>
+                  <div style="font-size:.75rem;color:var(--text-muted);margin-top:2px">测试工程师王小燕 · 5小时前</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--border-light)">
+                <div style="width:8px;height:8px;border-radius:50%;background:var(--warning);margin-top:6px;flex-shrink:0"></div>
+                <div style="flex:1">
+                  <div style="font-size:.85rem;font-weight:600">问题 PR-20250114-001 被指派给研发负责人张建国</div>
+                  <div style="font-size:.75rem;color:var(--text-muted);margin-top:2px">系统自动化 · 8小时前</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--border-light)">
+                <div style="width:8px;height:8px;border-radius:50%;background:var(--accent);margin-top:6px;flex-shrink:0"></div>
+                <div style="flex:1">
+                  <div style="font-size:.85rem;font-weight:600">系统资料库新增「订单管理系统操作手册 v3.2」</div>
+                  <div style="font-size:.75rem;color:var(--text-muted);margin-top:2px">中心管理员 · 1天前</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:12px;align-items:flex-start;padding:10px 0;">
+                <div style="width:8px;height:8px;border-radius:50%;background:var(--danger);margin-top:6px;flex-shrink:0"></div>
+                <div style="flex:1">
+                  <div style="font-size:.85rem;font-weight:600">投诉工单 CS-20250113-001 已处理完成</div>
+                  <div style="font-size:.75rem;color:var(--text-muted);margin-top:2px">项目经理赵婷婷 · 2天前</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" style="height:100%">
+            <h4 style="margin-bottom:14px;font-size:.9rem" data-od-id="path-7-1-1-0-5-1-0">系统公告</h4>
+            <div style="display:flex;flex-direction:column;gap:14px">
+              <div style="padding:12px;background:linear-gradient(135deg,#EEF2FF,#F0F9FF);border-radius:var(--radius);border-left:3px solid var(--primary)">
+                <div style="font-size:.82rem;font-weight:700;color:var(--primary)">v2.3.1 版本发布</div>
+                <div style="font-size:.75rem;color:var(--text-secondary);margin-top:4px;line-height:1.5">本次更新优化了验收流程、新增飞书快捷登录、修复若干已知问题。</div>
+                <div style="font-size:.7rem;color:var(--text-muted);margin-top:6px">2025-01-15</div>
+              </div>
+              <div style="padding:12px;background:linear-gradient(135deg,#ECFDF5,#F0FDF4);border-radius:var(--radius);border-left:3px solid var(--success)">
+                <div style="font-size:.82rem;font-weight:700;color:var(--success)">春节假期安排</div>
+                <div style="font-size:.75rem;color:var(--text-secondary);margin-top:4px;line-height:1.5">1月28日至2月4日放假，期间紧急问题请联系值班人员。</div>
+                <div style="font-size:.7rem;color:var(--text-muted);margin-top:6px">2025-01-10</div>
+              </div>
+              <div style="padding:12px;background:linear-gradient(135deg,#FFFBEB,#FEF3C7);border-radius:var(--radius);border-left:3px solid var(--warning)">
+                <div style="font-size:.82rem;font-weight:700;color:var(--warning)">系统维护通知</div>
+                <div style="font-size:.75rem;color:var(--text-secondary);margin-top:4px;line-height:1.5">1月20日凌晨 02:00-04:00 进行数据库升级，期间服务可能短暂不可用。</div>
+                <div style="font-size:.7rem;color:var(--text-muted);margin-top:6px">2025-01-08</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- ===== ACCEPTANCE LIST ===== -->
       <div id="view-acceptance" class="hidden" data-od-id="path-7-1-1-1">
         <div class="mini-stats" id="accMiniStats" data-od-id="path-7-1-1-1-0">
-          <div class="mini-stat ms-primary"><div class="ms-val" id="accStatTotal">0</div><div class="ms-label">全部验收单</div></div>
-          <div class="mini-stat ms-warn"><div class="ms-val" id="accStatWait">0</div><div class="ms-label">待验收</div></div>
-          <div class="mini-stat ms-accent"><div class="ms-val" id="accStatProgress">0</div><div class="ms-label">验收中</div></div>
-          <div class="mini-stat ms-success"><div class="ms-val" id="accStatDone">0</div><div class="ms-label">已完成</div></div>
+          <div class="mini-stat ms-primary" data-od-id="path-7-1-1-1-0-0"><div class="ms-val" id="accStatTotal" data-od-id="path-7-1-1-1-0-0-0">12</div><div class="ms-label">全部验收单</div></div>
+          <div class="mini-stat ms-warn" data-od-id="path-7-1-1-1-0-1"><div class="ms-val" id="accStatWait" data-od-id="path-7-1-1-1-0-1-0">4</div><div class="ms-label">待验收</div></div>
+          <div class="mini-stat ms-accent" data-od-id="path-7-1-1-1-0-2"><div class="ms-val" id="accStatProgress" data-od-id="path-7-1-1-1-0-2-0">5</div><div class="ms-label">验收中</div></div>
+          <div class="mini-stat ms-success" data-od-id="path-7-1-1-1-0-3"><div class="ms-val" id="accStatDone" data-od-id="path-7-1-1-1-0-3-0">3</div><div class="ms-label">已完成</div></div>
         </div>
-        <div class="acc-toolbar-wrap" data-od-id="path-7-1-1-1-1">
-          <div class="acc-search-row">
-            <div class="header-search" style="flex:1;max-width:420px">
-              <input class="search-input" id="accSearchInput" type="text" placeholder="搜索验收系统名称 / 验收单ID" oninput="onAccSearchInput()" style="width:100%">
-              <button class="search-btn" onclick="onAccSearchInput()">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-              </button>
+        <div class="toolbar" data-od-id="path-7-1-1-1-1">
+          <div class="tabs" id="accTabs" data-od-id="path-7-1-1-1-1-0">
+            <div class="tab active" onclick="filterAcc('all')" data-od-id="path-7-1-1-1-1-0-0">全部</div>
+            <div class="tab" onclick="filterAcc('待验收')" data-od-id="path-7-1-1-1-1-0-1">待验收</div>
+            <div class="tab" onclick="filterAcc('验收中')" data-od-id="path-7-1-1-1-1-0-2">验收中</div>
+            <div class="tab" onclick="filterAcc('已完成')" data-od-id="path-7-1-1-1-1-0-3">已完成</div>
+            <div class="tab" onclick="filterAcc('已搁置')" data-od-id="path-7-1-1-1-1-0-4">已搁置</div>
+          </div>
+        </div>
+        <div class="split-view" data-od-id="path-7-1-1-1-2">
+          <div class="card">
+            <div class="table-wrap">
+              <table class="data" id="accTable" data-od-id="path-7-1-1-1-2-0-0-0">
+                <thead>
+                  <tr><th>验收单号</th><th>系统名称</th><th>需求标题</th><th>进度</th><th>状态</th><th>创建时间</th><th>操作</th></tr>
+                </thead>
+                <tbody id="accBody" data-od-id="path-7-1-1-1-2-0-0-0-1"></tbody>
+              </table>
             </div>
           </div>
-          <div class="tabs" id="accTabs" style="margin-top:10px">
-            <div class="tab active" onclick="filterAcc('all')">全部</div>
-            <div class="tab" onclick="filterAcc('待验收')">待验收</div>
-            <div class="tab" onclick="filterAcc('验收中')">验收中</div>
-            <div class="tab" onclick="filterAcc('已完成')">已完成</div>
-            <div class="tab" onclick="filterAcc('已关闭')">已关闭</div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="table-wrap">
-            <table class="data" id="accTable">
-              <thead>
-                <tr><th>验收单ID</th><th>验收系统名称+版本号</th><th>状态</th><th>验收进度条</th><th>截至时间</th><th>操作</th></tr>
-              </thead>
-              <tbody id="accBody"></tbody>
-            </table>
-          </div>
-          <div id="accEmpty" class="empty-state" style="display:none">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--border)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 13h4"/></svg>
-            <p>暂无验收任务</p>
-          </div>
-          <div id="accNoResult" class="empty-state" style="display:none">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--border)" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-            <p>未找到匹配的验收单</p>
+          <div class="side-panel">
+            <div class="card sp-section">
+              <h4 data-od-id="path-7-1-1-1-2-1-0-0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px"><path d="M3 3v18h18"></path><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path></svg> 验收进度概览</h4>
+              <div class="dist-item"><div class="dist-label">待验收</div><div class="dist-bar"><div class="dist-fill" style="width:33%;background:var(--warning)"></div></div><div class="dist-count">4</div></div>
+              <div class="dist-item"><div class="dist-label">验收中</div><div class="dist-bar"><div class="dist-fill" style="width:42%;background:var(--primary)"></div></div><div class="dist-count">5</div></div>
+              <div class="dist-item"><div class="dist-label">已完成</div><div class="dist-bar"><div class="dist-fill" style="width:25%;background:var(--success)"></div></div><div class="dist-count">3</div></div>
+              <div class="dist-item"><div class="dist-label">已搁置</div><div class="dist-bar"><div class="dist-fill" style="width:8%;background:var(--danger)"></div></div><div class="dist-count">1</div></div>
+            </div>
+            <div class="card sp-section">
+              <h4 data-od-id="path-7-1-1-1-2-1-1-0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg> 临近截止</h4>
+              <div class="sp-timeline">
+                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--danger)"></div><div class="sp-tl-body"><div class="sp-tl-text">油葱商城V4.30.5 截止 06-18</div><div class="sp-tl-time">剩余 1 天</div></div></div>
+                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--warning)"></div><div class="sp-tl-body"><div class="sp-tl-text">用户中心V2.1 截止 06-22</div><div class="sp-tl-time">剩余 5 天</div></div></div>
+                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--primary)"></div><div class="sp-tl-body"><div class="sp-tl-text">数据中台V3.0 截止 06-28</div><div class="sp-tl-time">剩余 11 天</div></div></div>
+              </div>
+            </div>
+            <div class="card sp-section">
+              <h4 data-od-id="path-7-1-1-1-2-1-2-0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg> 验收动态</h4>
+              <div class="sp-timeline">
+                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--success)"></div><div class="sp-tl-body"><div class="sp-tl-text">荟健康V3.8 验收完成</div><div class="sp-tl-time">今天 14:30</div></div></div>
+                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--primary)"></div><div class="sp-tl-body"><div class="sp-tl-text">内容平台V1.5 开始验收</div><div class="sp-tl-time">今天 10:15</div></div></div>
+                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--warning)"></div><div class="sp-tl-body"><div class="sp-tl-text">订单系统V4.2 新增验收项</div><div class="sp-tl-time">昨天 16:42</div></div></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- ===== ACCEPTANCE DETAIL ===== -->
       <div id="view-accDetail" class="hidden" data-od-id="path-7-1-1-2">
-        <div class="detail-back" onclick="switchView('acceptance')">← 返回验收单列表</div>
+        <div class="detail-back" onclick="switchView('acceptance')" data-od-id="path-7-1-1-2-0">← 返回验收单列表</div>
         <div class="card" data-od-id="path-7-1-1-2-1">
-          <div style="margin-bottom:12px">
-            <h3 style="margin-bottom:4px" id="accDetailTitle">验收单详情</h3>
-            <p class="mono" style="color:var(--cobalt);margin-bottom:0" id="accDetailId"></p>
+          <h3 style="margin-bottom:4px" id="accDetailTitle" data-od-id="path-7-1-1-2-1-0">验收单详情</h3>
+          <p class="mono" style="color:var(--cobalt);margin-bottom:16px" id="accDetailId" data-od-id="path-7-1-1-2-1-1"></p>
+          <div class="progress-steps" id="accSteps" data-od-id="path-7-1-1-2-1-2">
+            <div class="step done" data-od-id="path-7-1-1-2-1-2-0"><div class="dot">1</div><div class="step-label">需求确认</div></div>
+            <div class="step done" data-od-id="path-7-1-1-2-1-2-1"><div class="dot">2</div><div class="step-label">开发完成</div></div>
+            <div class="step current" data-od-id="path-7-1-1-2-1-2-2"><div class="dot">3</div><div class="step-label">测试验证</div></div>
+            <div class="step" data-od-id="path-7-1-1-2-1-2-3"><div class="dot">4</div><div class="step-label">验收评审</div></div>
+            <div class="step" data-od-id="path-7-1-1-2-1-2-4"><div class="dot">5</div><div class="step-label">上线审批</div></div>
+            <div class="step" data-od-id="path-7-1-1-2-1-2-5"><div class="dot">6</div><div class="step-label">正式发布</div></div>
           </div>
-
-          <!-- 进度节点在上 -->
-          <div class="progress-steps" id="accSteps"></div>
-
-          <!-- 验收资料 + 发版信息 并排 -->
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;margin-bottom:16px" id="accInfoRow">
-            <!-- 验收资料列表 -->
-            <div style="border:1px solid var(--border);border-radius:var(--radius-md);padding:16px">
-              <h4 style="margin:0 0 12px;font-size:.9rem;font-weight:600;color:var(--text)">验收资料</h4>
-              <div id="accDocList">
-                <div class="acc-doc-item" onclick="showToast('PRD文件已在新窗口打开')">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--primary)"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                  <span>PRD 需求文档</span>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:auto;flex-shrink:0;color:var(--text-muted)"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </div>
-                <div class="acc-doc-item" onclick="showToast('原型文件已在新窗口打开')">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--accent)"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                  <span>产品原型文件</span>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:auto;flex-shrink:0;color:var(--text-muted)"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </div>
-                <div class="acc-doc-item" onclick="showToast('验收指导SOP已在新窗口打开')">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--success)"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-                  <span>验收指导 SOP</span>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:auto;flex-shrink:0;color:var(--text-muted)"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </div>
-                <div class="acc-doc-item" onclick="showToast('测试用例文档已在新窗口打开')">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--warn)"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-                  <span>测试用例文档</span>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:auto;flex-shrink:0;color:var(--text-muted)"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </div>
-              </div>
-            </div>
-            <!-- 发版信息区 -->
-            <div id="accReleaseInfoArea" data-od-id="path-7-1-1-2-ri"></div>
-          </div>
-
           <div class="detail-section">
-            <h4>基本信息</h4>
-            <div class="detail-grid" id="accDetailInfo"></div>
+            <h4 data-od-id="path-7-1-1-2-1-3-0">基本信息</h4>
+            <div class="detail-grid" id="accDetailInfo" data-od-id="path-7-1-1-2-1-3-1"></div>
           </div>
-
           <div class="detail-section">
-            <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
-              <h4 style="margin:0">验收列表</h4>
-              <button class="acc-fs-btn" onclick="openAccListFullscreen()" title="点我全屏展示更「全面」" data-od-id="path-7-1-1-2-fs">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
-                <span>全屏</span>
-                <span class="acc-fs-hint">点我全屏展示更「全面」</span>
-              </button>
-            </div>
-            <div class="acc-item-tabs" id="accItemTabs">
-              <div class="tab active" onclick="filterAccItems('all')">全部</div>
-              <div class="tab" onclick="filterAccItems('待验收')">待验收</div>
-              <div class="tab" onclick="filterAccItems('已通过')">已通过</div>
-              <div class="tab" onclick="filterAccItems('不通过')">不通过</div>
-              <div class="tab" onclick="filterAccItems('无测试条件')">无测试条件</div>
-              <div class="tab" onclick="filterAccItems('有调整可上线')">有调整可上线</div>
-              <div class="tab" onclick="filterAccItems('做迭代可上线')">做迭代可上线</div>
-              <div class="tab" onclick="filterAccItems('其他')">其他</div>
-            </div>
-            <div class="acc-table-scroll">
-              <table class="acc-table-compact" id="accItemsTable">
-                <thead>
-                  <tr><th>序号</th><th>需求ID</th><th>系统</th><th>分端</th><th>需求描述</th><th>PRD地址</th><th>验收标准</th><th>产品负责人</th><th>测试负责人</th><th>验收部门</th><th>验收人员</th><th>验收结果</th><th>验收备注</th><th>问题回复</th><th>问题备注</th></tr>
-                </thead>
-                <tbody id="accItemsBody"></tbody>
-              </table>
-            </div>
+            <h4 data-od-id="path-7-1-1-2-1-4-0">验收项目 <button class="btn btn-sm btn-outline" style="float:right" onclick="openReleaseModal()" data-od-id="path-7-1-1-2-1-4-0-0">查看发布信息</button></h4>
+            <div id="accItems" data-od-id="path-7-1-1-2-1-4-1"></div>
+          </div>
+          <div class="detail-section">
+            <h4 data-od-id="path-7-1-1-2-1-5-0">SOP 链接</h4>
+            <a href="#" style="font-size:.85rem" onclick="event.preventDefault();showToast('SOP文档已在新窗口打开')" data-od-id="path-7-1-1-2-1-5-1"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg> 验收指导SOP-v2.3.pdf</a>
           </div>
         </div>
       </div>
@@ -1624,7 +1605,7 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
               <h4 data-od-id="path-7-1-1-8-0-1-1-0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 最近操作</h4>
               <div class="sp-timeline">
                 <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--primary)"></div><div class="sp-tl-body"><div class="sp-tl-text">提交需求 DE-B-20250115-0001</div><div class="sp-tl-time">2小时前</div></div></div>
-                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--success)"></div><div class="sp-tl-body"><div class="sp-tl-text">完成验收 IC-20260714-0002</div><div class="sp-tl-time">5小时前</div></div></div>
+                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--success)"></div><div class="sp-tl-body"><div class="sp-tl-text">完成验收 IC-20250114-002</div><div class="sp-tl-time">5小时前</div></div></div>
                 <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--warning)"></div><div class="sp-tl-body"><div class="sp-tl-text">反馈问题 PR-20250114-001</div><div class="sp-tl-time">昨天</div></div></div>
                 <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--danger)"></div><div class="sp-tl-body"><div class="sp-tl-text">提交投诉 CS-20250113-001</div><div class="sp-tl-time">2天前</div></div></div>
                 <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--accent)"></div><div class="sp-tl-body"><div class="sp-tl-text">下载文档 DB-20250112-037</div><div class="sp-tl-time">3天前</div></div></div>
@@ -1705,7 +1686,7 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
         <select id="newReqModule" data-od-id="path-8-0-1-1b-1"><option value="">请先选择系统</option></select>
       </div>
       <div class="form-group"><label>优先级 <span style="color:var(--danger)">*</span></label>
-        <select id="newReqPriority" data-od-id="path-8-0-1-2-1"><option>紧急</option><option>高</option><option selected="">中</option><option>低</option></select>
+        <select id="newReqPriority" data-od-id="path-8-0-1-2-1"><option>紧急</option><option>高</option><option selected>中</option><option>低</option></select>
       </div>
       <div class="form-group"><label>标题 <span style="color:var(--danger)">*</span></label>
         <input type="text" id="newReqTitle" placeholder="请输入需求标题" maxlength="50" data-od-id="path-8-0-1-3-1">
@@ -1783,26 +1764,20 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
 
 <!-- ===== RELEASE INFO MODAL ===== -->
 <div class="modal-overlay" id="releaseModal" data-od-id="path-11">
-  <div class="modal" style="width:520px" data-od-id="path-11-0">
-    <div class="modal-header"><h3>发版信息</h3><button class="close" onclick="closeModal('releaseModal')">×</button></div>
+  <div class="modal" data-od-id="path-11-0">
+    <div class="modal-header"><h3 data-od-id="path-11-0-0-0">发布信息</h3><button class="close" onclick="closeModal('releaseModal')" data-od-id="path-11-0-0-1">×</button></div>
     <div class="modal-body">
-      <div class="form-group">
-        <label>发版信息内容 <span style="color:var(--danger)">*</span></label>
-        <textarea id="releaseContent" placeholder="请输入发版信息内容（最多100字）" maxlength="100" oninput="document.getElementById('releaseCharCount').textContent=this.value.length+'/100'"></textarea>
-        <div style="text-align:right;font-size:.72rem;color:var(--text-secondary);margin-top:2px"><span id="releaseCharCount">0</span>/100</div>
+      <div class="detail-grid">
+        <div><div class="label">发布版本</div><div>v2.3.1</div></div>
+        <div><div class="label">发布时间</div><div>2025-01-15</div></div>
+        <div><div class="label">发布负责人</div><div>张建国</div></div>
+        <div><div class="label">发布类型</div><div>常规迭代</div></div>
+        <div><div class="label">涉及系统</div><div>订单管理系统、用户中心</div></div>
+        <div><div class="label">变更说明</div><div>修复3个已知缺陷，新增报表导出功能</div></div>
       </div>
-      <div class="form-group" style="margin-top:12px">
-        <label>APP是否强制升级 <span style="color:var(--danger)">*</span></label>
-        <div style="display:flex;gap:20px;margin-top:6px">
-          <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-weight:400"><input type="radio" name="forceUpgrade" value="是"> 是</label>
-          <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-weight:400"><input type="radio" name="forceUpgrade" value="否"> 否</label>
-        </div>
-      </div>
-      <div id="releaseFormError" style="color:var(--danger);font-size:.78rem;margin-top:8px;display:none"></div>
     </div>
     <div class="modal-footer">
-      <button class="btn btn-outline" onclick="closeModal('releaseModal')">取消</button>
-      <button class="btn btn-primary" onclick="submitReleaseInfo()">提交</button>
+      <button class="btn btn-primary" onclick="closeModal('releaseModal')" data-od-id="path-11-0-2-0">确定</button>
     </div>
   </div>
 </div>
@@ -1818,60 +1793,6 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
     <div class="modal-footer">
       <button class="btn btn-outline" onclick="closeModal('accRemarkModal')" data-od-id="path-12-0-2-0">取消</button>
       <button class="btn btn-primary" onclick="submitAccOp()" data-od-id="path-12-0-2-1">确认</button>
-    </div>
-  </div>
-</div>
-
-<!-- ===== ACC PICKER MODAL ===== -->
-<div class="modal-overlay" id="accPickerModal" data-od-id="path-13-picker">
-  <div class="modal" style="width:400px" data-od-id="path-13-picker-0">
-    <div class="modal-header">
-      <h3 id="accPickerTitle">选择验收部门</h3>
-      <button class="close" onclick="closeModal('accPickerModal')">×</button>
-    </div>
-    <div class="modal-body" style="padding-bottom:8px">
-      <input type="text" id="accPickerSearch" class="search-input" placeholder="搜索..." oninput="onAccPickerSearch(this.value)" style="width:100%;margin-bottom:0">
-      <div class="acc-picker-list" id="accPickerList"></div>
-    </div>
-    <div class="modal-footer">
-      <button class="btn btn-outline" onclick="closeModal('accPickerModal')">取消</button>
-      <button class="btn btn-primary" onclick="submitAccPicker()">确认</button>
-    </div>
-  </div>
-</div>
-
-<!-- ===== ACCEPTANCE LIST FULLSCREEN MODAL ===== -->
-<div class="acc-fs-overlay" id="accFsModal" data-od-id="path-14-accfs">
-  <div class="acc-fs-panel" data-od-id="path-14-accfs-0">
-    <div class="acc-fs-head">
-      <div style="display:flex;align-items:center;gap:12px">
-        <h3 style="margin:0;font-size:1.1rem" id="accFsTitle">验收列表</h3>
-        <span class="acc-fs-badge" id="accFsSysTag"></span>
-      </div>
-      <button class="acc-fs-close" onclick="closeAccListFullscreen()" title="退出全屏 (Esc)">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path></svg>
-        <span>退出全屏</span>
-      </button>
-    </div>
-    <div class="acc-fs-tabs" id="accFsTabs">
-      <div class="tab active" onclick="filterAccFs('all')">全部</div>
-      <div class="tab" onclick="filterAccFs('待验收')">待验收</div>
-      <div class="tab" onclick="filterAccFs('已通过')">已通过</div>
-      <div class="tab" onclick="filterAccFs('不通过')">不通过</div>
-      <div class="tab" onclick="filterAccFs('无测试条件')">无测试条件</div>
-      <div class="tab" onclick="filterAccFs('有调整可上线')">有调整可上线</div>
-      <div class="tab" onclick="filterAccFs('做迭代可上线')">做迭代可上线</div>
-      <div class="tab" onclick="filterAccFs('其他')">其他</div>
-    </div>
-    <div class="acc-fs-body">
-      <div class="acc-table-scroll" style="max-height:none">
-        <table class="acc-table-compact" id="accFsTable">
-          <thead>
-            <tr><th>序号</th><th>需求ID</th><th>系统</th><th>分端</th><th>需求描述</th><th>PRD地址</th><th>验收标准</th><th>产品负责人</th><th>测试负责人</th><th>验收部门</th><th>验收人员</th><th>验收结果</th><th>验收备注</th><th>问题回复</th><th>问题备注</th></tr>
-          </thead>
-          <tbody id="accFsBody"></tbody>
-        </table>
-      </div>
     </div>
   </div>
 </div>
@@ -2018,7 +1939,7 @@ const PRD_CONTENT = {
 <tr><th>错误码</th><th>错误描述</th><th>处理建议</th></tr>
 <tr><td>400001</td><td>验收单不存在</td><td>提示刷新页面</td></tr>
 <tr><td>400002</td><td>验收单状态异常，无法操作</td><td>提示刷新页面查看最新状态</td></tr>
-<tr><td>400003</td><td>验收单已关闭，无法操作</td><td>提示验收单已关闭</td></tr>
+<tr><td>400003</td><td>验收单已搁置，无法操作</td><td>提示验收单已搁置</td></tr>
 <tr><td>400004</td><td>发版信息未填写完整，无法完成验收</td><td>提示填写发版信息</td></tr>
 <tr><td>400005</td><td>验收项状态更新失败</td><td>提示重试</td></tr>
 <tr><td>400006</td><td>验收备注不能为空</td><td>提示填写备注</td></tr>
@@ -2353,7 +2274,7 @@ const PRD_CONTENT = {
 <tr><td>待验收</td><td>待验收状态</td><td>显示数量</td></tr>
 <tr><td>验收中</td><td>验收中状态</td><td>显示数量</td></tr>
 <tr><td>已完成</td><td>已完成状态</td><td>显示数量</td></tr>
-<tr><td>已关闭</td><td>已关闭状态</td><td>显示数量</td></tr>
+<tr><td>已搁置</td><td>已搁置状态</td><td>显示数量</td></tr>
 </table>
 <p><strong>搜索框：</strong>模糊搜索验收系统名称/验收单ID，根据当前Tab页签筛选结果。</p>
 
@@ -2363,7 +2284,7 @@ const PRD_CONTENT = {
 <tr><td>验收系统名称+版本号</td><td>标题展示</td></tr>
 <tr><td>验收单ID</td><td>全系统唯一，规则：IC-创建日期-三位序号，如 IC-20260615-001</td></tr>
 <tr><td>复制按钮</td><td>显示在ID后方，点击复制ID到剪贴板</td></tr>
-<tr><td>状态</td><td>待验收 / 验收中 / 已完成 / 已关闭</td></tr>
+<tr><td>状态</td><td>待验收 / 验收中 / 已完成 / 已搁置</td></tr>
 <tr><td>验收功能简介</td><td>简要描述</td></tr>
 <tr><td>验收进度条</td><td>可视化进度</td></tr>
 <tr><td>进度百分比</td><td>数字百分比</td></tr>
@@ -2377,7 +2298,7 @@ const PRD_CONTENT = {
 <tr><td>待验收</td><td>开始验收</td><td>进入验收单详情页，状态变为验收中</td></tr>
 <tr><td>验收中</td><td>继续验收</td><td>进入验收单详情页</td></tr>
 <tr><td>已完成</td><td>查看报告</td><td>进入验收报告页</td></tr>
-<tr><td>已关闭</td><td>无按钮</td><td>所有元素置灰，无法操作和查看详情</td></tr>
+<tr><td>已搁置</td><td>无按钮</td><td>所有元素置灰，无法操作和查看详情</td></tr>
 </table>
 
 <h5>验收单状态机</h5>
@@ -2385,7 +2306,7 @@ const PRD_CONTENT = {
 <li>中心端推送验收单 → 待验收</li>
 <li>点击"开始验收" → 验收中</li>
 <li>所有验收项完成且发版信息完整 → 已完成</li>
-<li>中心端搁置验收 → 已关闭</li>
+<li>中心端搁置验收 → 已搁置</li>
 </ul>
 
 <h5>验收单详情页</h5>
@@ -2786,6 +2707,33 @@ function getCurrentPrdKey(){
   return keyMap[viewId] || 'home';
 }
 
+function openPrdDrawer(type){
+  const key = type === 'common' ? 'common' : getCurrentPrdKey();
+  const title = type === 'common' ? '通用逻辑说明' : '需求说明';
+  const drawerTitle = document.getElementById('prdDrawerTitle');
+  if(drawerTitle) drawerTitle.querySelector('span').textContent = title;
+  const body = document.getElementById('prdDrawerBody');
+  if(body) body.innerHTML = PRD_CONTENT[key] || '<p style="color:var(--text-secondary)">暂无该页面说明</p>';
+  const drawer = document.getElementById('prdDrawer');
+  const overlay = document.getElementById('prdDrawerOverlay');
+  if(drawer) drawer.classList.add('open');
+  if(overlay) overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closePrdDrawer(){
+  const drawer = document.getElementById('prdDrawer');
+  const overlay = document.getElementById('prdDrawerOverlay');
+  if(drawer) drawer.classList.remove('open');
+  if(overlay) overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape') closePrdDrawer();
+});
+// ===== END PRD HELP DRAWER =====
+
 // ===== DATA =====
 const USERS = {
   zhangsan: { password: 'Abc123!', name: '张三', feishu: true, firstLogin: false, dept: '产品部' },
@@ -2816,94 +2764,30 @@ function errCode() { return 'code[' + String(100000 + Math.floor(Math.random()*9
 
 // ===== ACCEPTANCE DATA =====
 let accData = [
-  { id:'IC-20260715-0001', system:'订单管理系统', version:'V4.30.5', title:'用户权限优化', status:'待验收',
-    project:'电商中台升级', deadline:'2026-07-20 17:00',
-    releaseInfo:'', forceUpgrade:'', releaseLog:[], hasAppMp:false,
-    items:[
-      { reqId:'DE-B-20260701-0012', sys:'订单管理系统', endpoint:'Web', desc:'权限校验逻辑优化', prd:'https://docs.example.com/prd/0012', standard:'全部权限点覆盖测试通过', productOwner:'张三', testOwner:'李四', accDept:'产品部', accPerson:'张三', result:'', resultRemark:'', problemReply:'', problemRemark:'' },
-      { reqId:'DE-B-20260701-0015', sys:'订单管理系统', endpoint:'Web', desc:'角色分配页面重构', prd:'https://docs.example.com/prd/0015', standard:'角色CRUD操作完整', productOwner:'张三', testOwner:'王五', accDept:'技术部', accPerson:'李四', result:'通过', resultRemark:'', problemReply:'', problemRemark:'' },
-      { reqId:'DE-B-20260702-0018', sys:'订单管理系统', endpoint:'Web', desc:'审批流程改造', prd:'https://docs.example.com/prd/0018', standard:'审批链路全场景覆盖', productOwner:'王五', testOwner:'赵六', accDept:'运营部', accPerson:'王五', result:'', resultRemark:'', problemReply:'', problemRemark:'' }
-    ] },
-  { id:'IC-20260714-0002', system:'用户中心', version:'V2.1', title:'消息推送改造', status:'验收中',
-    project:'基础服务升级', deadline:'2026-07-22 12:00',
-    releaseInfo:'', forceUpgrade:'', releaseLog:[], hasAppMp:true,
-    items:[
-      { reqId:'DE-B-20260628-0021', sys:'用户中心', endpoint:'APP', desc:'推送通道切换', prd:'https://docs.example.com/prd/0021', standard:'APP/MP推送通道均可用', productOwner:'李四', testOwner:'赵六', accDept:'产品部', accPerson:'张三', result:'通过', resultRemark:'', problemReply:'', problemRemark:'' },
-      { reqId:'DE-B-20260629-0023', sys:'用户中心', endpoint:'MP', desc:'消息模板配置', prd:'https://docs.example.com/prd/0023', standard:'模板变量渲染正确', productOwner:'李四', testOwner:'赵六', accDept:'产品部', accPerson:'张三', result:'有调整可上线', resultRemark:'部分变量格式需后续迭代优化', problemReply:'', problemRemark:'' }
-    ] },
-  { id:'IC-20260713-0003', system:'数据中台', version:'V3.0', title:'报表导出功能', status:'待验收',
-    project:'数据分析平台', deadline:'2026-07-25 17:00',
-    releaseInfo:'', forceUpgrade:'', releaseLog:[], hasAppMp:false,
-    items:[
-      { reqId:'DE-B-20260705-0031', sys:'数据中台', endpoint:'Web', desc:'Excel导出功能', prd:'https://docs.example.com/prd/0031', standard:'支持多维度筛选导出', productOwner:'赵六', testOwner:'李四', accDept:'数据部', accPerson:'赵六', result:'', resultRemark:'', problemReply:'', problemRemark:'' },
-      { reqId:'DE-B-20260705-0033', sys:'数据中台', endpoint:'Web', desc:'PDF报表生成', prd:'https://docs.example.com/prd/0033', standard:'图表+数据完整输出', productOwner:'赵六', testOwner:'李四', accDept:'数据部', accPerson:'赵六', result:'', resultRemark:'', problemReply:'', problemRemark:'' }
-    ] },
-  { id:'IC-20260712-0004', system:'内容管理平台', version:'V1.5', title:'富文本编辑器升级', status:'验收中',
-    project:'内容中台建设', deadline:'2026-07-19 17:00',
-    releaseInfo:'', forceUpgrade:'', releaseLog:[], hasAppMp:false,
-    items:[
-      { reqId:'DE-B-20260620-0041', sys:'内容管理平台', endpoint:'Web', desc:'编辑器组件替换', prd:'https://docs.example.com/prd/0041', standard:'兼容原有内容格式', productOwner:'王五', testOwner:'李四', accDept:'产品部', accPerson:'王五', result:'通过', resultRemark:'', problemReply:'', problemRemark:'' },
-      { reqId:'DE-B-20260621-0043', sys:'内容管理平台', endpoint:'Web', desc:'图片上传适配', prd:'https://docs.example.com/prd/0043', standard:'支持拖拽+批量上传', productOwner:'王五', testOwner:'赵六', accDept:'技术部', accPerson:'李四', result:'不通过', resultRemark:'大文件上传超时未解决', problemReply:'已修复上传组件', problemRemark:'需重新验收' }
-    ] },
-  { id:'IC-20260710-0005', system:'用户中心', version:'V3.2', title:'单点登录集成', status:'已完成',
-    project:'基础服务升级', deadline:'2026-07-15 17:00',
-    releaseInfo:'SSO集成完成，OAuth2.0全量上线', forceUpgrade:'否',
-    releaseLog:[{ submitter:'李四', content:'首次提交发版信息', time:'2026-07-14 10:30' }], hasAppMp:true,
-    items:[
-      { reqId:'DE-B-20260610-0051', sys:'用户中心', endpoint:'Web', desc:'OAuth2.0对接', prd:'https://docs.example.com/prd/0051', standard:'授权码模式完整实现', productOwner:'李四', testOwner:'赵六', accDept:'技术部', accPerson:'李四', result:'通过', resultRemark:'', problemReply:'', problemRemark:'' },
-      { reqId:'DE-B-20260611-0053', sys:'用户中心', endpoint:'Web', desc:'Token刷新机制', prd:'https://docs.example.com/prd/0053', standard:'静默刷新无感续期', productOwner:'李四', testOwner:'赵六', accDept:'技术部', accPerson:'李四', result:'通过', resultRemark:'', problemReply:'', problemRemark:'' },
-      { reqId:'DE-B-20260612-0055', sys:'用户中心', endpoint:'Web', desc:'登出同步', prd:'https://docs.example.com/prd/0055', standard:'多端同步登出', productOwner:'李四', testOwner:'赵六', accDept:'技术部', accPerson:'李四', result:'通过', resultRemark:'', problemReply:'', problemRemark:'' }
-    ] },
-  { id:'IC-20260709-0006', system:'订单管理系统', version:'V4.30.4', title:'退款流程优化', status:'已关闭',
-    project:'电商中台升级', deadline:'2026-07-12 17:00',
-    releaseInfo:'', forceUpgrade:'', releaseLog:[], hasAppMp:false,
-    items:[
-      { reqId:'DE-B-20260601-0061', sys:'订单管理系统', endpoint:'Web', desc:'退款策略调整', prd:'https://docs.example.com/prd/0061', standard:'退款金额计算准确', productOwner:'张三', testOwner:'王五', accDept:'运营部', accPerson:'张三', result:'', resultRemark:'', problemReply:'', problemRemark:'' }
-    ] },
-  { id:'IC-20260708-0007', system:'数据中台', version:'V3.1', title:'数据血缘分析', status:'验收中',
-    project:'数据分析平台', deadline:'2026-07-28 17:00',
-    releaseInfo:'', forceUpgrade:'', releaseLog:[], hasAppMp:false,
-    items:[
-      { reqId:'DE-B-20260615-0071', sys:'数据中台', endpoint:'Web', desc:'血缘图谱展示', prd:'https://docs.example.com/prd/0071', standard:'可视化展示数据血缘关系', productOwner:'赵六', testOwner:'李四', accDept:'数据部', accPerson:'赵六', result:'通过', resultRemark:'', problemReply:'', problemRemark:'' },
-      { reqId:'DE-B-20260616-0073', sys:'数据中台', endpoint:'Web', desc:'影响分析接口', prd:'https://docs.example.com/prd/0073', standard:'变更影响范围自动评估', productOwner:'赵六', testOwner:'李四', accDept:'数据部', accPerson:'赵六', result:'', resultRemark:'', problemReply:'', problemRemark:'' },
-      { reqId:'DE-B-20260617-0075', sys:'数据中台', endpoint:'Web', desc:'血缘回溯查询', prd:'https://docs.example.com/prd/0075', standard:'支持多跳回溯', productOwner:'赵六', testOwner:'李四', accDept:'数据部', accPerson:'赵六', result:'', resultRemark:'', problemReply:'', problemRemark:'' }
-    ] },
-  { id:'IC-20260707-0008', system:'内容管理平台', version:'V1.6', title:'审核工作流重构', status:'待验收',
-    project:'内容中台建设', deadline:'2026-07-20 18:00',
-    releaseInfo:'', forceUpgrade:'', releaseLog:[], hasAppMp:false,
-    items:[
-      { reqId:'DE-B-20260625-0081', sys:'内容管理平台', endpoint:'Web', desc:'多级审批配置', prd:'https://docs.example.com/prd/0081', standard:'支持3级以上审批链', productOwner:'王五', testOwner:'赵六', accDept:'运营部', accPerson:'王五', result:'', resultRemark:'', problemReply:'', problemRemark:'' },
-      { reqId:'DE-B-20260626-0083', sys:'内容管理平台', endpoint:'Web', desc:'审核日志记录', prd:'https://docs.example.com/prd/0083', standard:'操作留痕可追溯', productOwner:'王五', testOwner:'赵六', accDept:'运营部', accPerson:'王五', result:'', resultRemark:'', problemReply:'', problemRemark:'' }
-    ] },
-  { id:'IC-20260706-0009', system:'订单管理系统', version:'V4.30.3', title:'库存实时同步', status:'已完成',
-    project:'电商中台升级', deadline:'2026-07-10 17:00',
-    releaseInfo:'库存同步模块上线，Redis缓存方案稳定运行', forceUpgrade:'否',
-    releaseLog:[{ submitter:'张三', content:'首次提交', time:'2026-07-09 14:20' }], hasAppMp:false,
-    items:[
-      { reqId:'DE-B-20260605-0091', sys:'订单管理系统', endpoint:'Web', desc:'Redis缓存同步', prd:'https://docs.example.com/prd/0091', standard:'缓存与DB数据一致', productOwner:'张三', testOwner:'李四', accDept:'技术部', accPerson:'张三', result:'通过', resultRemark:'', problemReply:'', problemRemark:'' },
-      { reqId:'DE-B-20260606-0093', sys:'订单管理系统', endpoint:'Web', desc:'库存扣减幂等', prd:'https://docs.example.com/prd/0093', standard:'并发场景不超卖', productOwner:'张三', testOwner:'李四', accDept:'技术部', accPerson:'张三', result:'通过', resultRemark:'', problemReply:'', problemRemark:'' }
-    ] },
-  { id:'IC-20260705-0010', system:'用户中心', version:'V2.0', title:'隐私协议更新', status:'已关闭',
-    project:'合规改造', deadline:'2026-07-08 17:00',
-    releaseInfo:'', forceUpgrade:'', releaseLog:[], hasAppMp:false,
-    items:[
-      { reqId:'DE-B-20260601-0101', sys:'用户中心', endpoint:'Web', desc:'协议内容更新', prd:'https://docs.example.com/prd/0101', standard:'新版协议全量替换', productOwner:'李四', testOwner:'王五', accDept:'产品部', accPerson:'李四', result:'', resultRemark:'', problemReply:'', problemRemark:'' }
-    ] },
-  { id:'IC-20260704-0011', system:'数据中台', version:'V3.2', title:'实时数据大屏', status:'验收中',
-    project:'数据分析平台', deadline:'2026-08-01 17:00',
-    releaseInfo:'', forceUpgrade:'', releaseLog:[], hasAppMp:false,
-    items:[
-      { reqId:'DE-B-20260620-0111', sys:'数据中台', endpoint:'Web', desc:'WebSocket推送', prd:'https://docs.example.com/prd/0111', standard:'数据秒级刷新', productOwner:'赵六', testOwner:'李四', accDept:'数据部', accPerson:'赵六', result:'通过', resultRemark:'', problemReply:'', problemRemark:'' },
-      { reqId:'DE-B-20260621-0113', sys:'数据中台', endpoint:'Web', desc:'图表组件渲染', prd:'https://docs.example.com/prd/0113', standard:'图表类型覆盖完整', productOwner:'赵六', testOwner:'李四', accDept:'数据部', accPerson:'赵六', result:'做迭代可上线', resultRemark:'部分图表交互待下版优化', problemReply:'', problemRemark:'' },
-      { reqId:'DE-B-20260622-0115', sys:'数据中台', endpoint:'Web', desc:'告警阈值配置', prd:'https://docs.example.com/prd/0115', standard:'阈值触发告警准确', productOwner:'赵六', testOwner:'李四', accDept:'数据部', accPerson:'赵六', result:'', resultRemark:'', problemReply:'', problemRemark:'' }
-    ] },
-  { id:'IC-20260703-0012', system:'订单管理系统', version:'V4.30.6', title:'支付网关升级', status:'验收中',
-    project:'电商中台升级', deadline:'2026-07-21 14:00',
-    releaseInfo:'', forceUpgrade:'', releaseLog:[], hasAppMp:true,
-    items:[
-      { reqId:'DE-B-20260628-0121', sys:'订单管理系统', endpoint:'APP', desc:'支付通道切换', prd:'https://docs.example.com/prd/0121', standard:'多通道自动降级', productOwner:'张三', testOwner:'赵六', accDept:'技术部', accPerson:'张三', result:'通过', resultRemark:'', problemReply:'', problemRemark:'' },
-      { reqId:'DE-B-20260629-0123', sys:'订单管理系统', endpoint:'APP', desc:'退款回调处理', prd:'https://docs.example.com/prd/0123', standard:'回调幂等处理正确', productOwner:'张三', testOwner:'赵六', accDept:'技术部', accPerson:'张三', result:'', resultRemark:'', problemReply:'', problemRemark:'' }
-    ] }
+  { id:'IC-20250115-001', system:'订单管理系统', title:'用户权限优化', progress:60, status:'验收中', time:'2025-01-15', step:3,
+    items:[{name:'权限校验逻辑',op:''},{name:'角色分配页面',op:''},{name:'审批流程改造',op:''}] },
+  { id:'IC-20250114-002', system:'用户中心', title:'消息推送改造', progress:100, status:'已完成', time:'2025-01-14', step:6,
+    items:[{name:'推送通道切换',op:'通过'},{name:'消息模板配置',op:'通过'}] },
+  { id:'IC-20250113-003', system:'数据中台', title:'报表导出功能', progress:0, status:'待验收', time:'2025-01-13', step:1,
+    items:[{name:'Excel导出',op:''},{name:'PDF导出',op:''}] },
+  { id:'IC-20250112-004', system:'内容管理平台', title:'富文本编辑器升级', progress:80, status:'验收中', time:'2025-01-12', step:4,
+    items:[{name:'编辑器组件替换',op:'通过'},{name:'图片上传适配',op:'有调整可上线'}] },
+  { id:'IC-20250110-005', system:'订单管理系统', title:'退款流程优化', progress:0, status:'已搁置', time:'2025-01-10', step:1,
+    items:[{name:'退款策略调整',op:''}] },
+  { id:'IC-20250109-006', system:'用户中心', title:'单点登录集成', progress:100, status:'已完成', time:'2025-01-09', step:6,
+    items:[{name:'OAuth2.0对接',op:'通过'},{name:'Token刷新机制',op:'通过'},{name:'登出同步',op:'通过'}] },
+  { id:'IC-20250108-007', system:'数据中台', title:'数据血缘分析', progress:30, status:'验收中', time:'2025-01-08', step:2,
+    items:[{name:'血缘图谱展示',op:''},{name:'影响分析接口',op:''},{name:'血缘回溯查询',op:''}] },
+  { id:'IC-20250107-008', system:'内容管理平台', title:'审核工作流重构', progress:0, status:'待验收', time:'2025-01-07', step:1,
+    items:[{name:'多级审批配置',op:''},{name:'审核日志记录',op:''}] },
+  { id:'IC-20250106-009', system:'订单管理系统', title:'库存实时同步', progress:100, status:'已完成', time:'2025-01-06', step:6,
+    items:[{name:'Redis缓存同步',op:'通过'},{name:'库存扣减幂等',op:'通过'}] },
+  { id:'IC-20250105-010', system:'用户中心', title:'隐私协议更新', progress:0, status:'已搁置', time:'2025-01-05', step:1,
+    items:[{name:'协议内容替换',op:''}] },
+  { id:'IC-20250104-011', system:'数据中台', title:'实时数据大屏', progress:45, status:'验收中', time:'2025-01-04', step:3,
+    items:[{name:'WebSocket推送',op:'通过'},{name:'图表组件渲染',op:''},{name:'告警阈值配置',op:''}] },
+  { id:'IC-20250103-012', system:'内容管理平台', title:'SEO优化改造', progress:0, status:'待验收', time:'2025-01-03', step:1,
+    items:[{name:'Meta标签动态生成',op:''},{name:'Sitemap自动更新',op:''}] }
 ];
 
 // ===== PROJECT/SYSTEM/MODULE DATA =====
@@ -3214,9 +3098,9 @@ function enterApp() {
   document.getElementById('sidebarName').textContent = currentUser.name;
   document.getElementById('sidebarRole').textContent = '普通用户';
   document.getElementById('welcomeText').textContent = '你好，' + currentUser.name + '，欢迎使用数字化效能协同平台';
-  const d = new Date();
-  const ds = d.getFullYear() + '年' + String(d.getMonth()+1).padStart(2,'0') + '月' + String(d.getDate()).padStart(2,'0') + '日 星期' + ['日','一','二','三','四','五','六'][d.getDay()];
+  const ds = today() + ' 星期' + ['日','一','二','三','四','五','六'][new Date().getDay()];
   document.getElementById('welcomeSub').textContent = '今日 ' + ds;
+  document.getElementById('welcomeDate').textContent = ds;
   document.getElementById('pfUser').value = currentUser.username;
   document.getElementById('pfName').value = currentUser.name;
   document.getElementById('pfFeishu').textContent = currentUser.feishu ? "已绑定飞书" : "未绑定飞书";
@@ -3346,66 +3230,6 @@ const breadcrumbMap = {
   accDetail: ['业务','系统验收单','验收单详情']
 };
 
-function renderHome() {
-  // --- stat cards ---
-  const reqActive = reqData.filter(r => ['待审批','待分配','调研中','验收中'].includes(r.status)).length;
-  const probActive = probData.filter(p => ['待处理','处理中'].includes(p.status)).length;
-  const accActive = accData.filter(a => ['待验收','验收中'].includes(getAccStatus(a))).length;
-  const compActive = compData.filter(c => ['待处理','处理中'].includes(c.status)).length;
-  document.getElementById('statReq').textContent = reqActive;
-  document.getElementById('statProb').textContent = probActive;
-  document.getElementById('statAcc').textContent = accActive;
-  document.getElementById('statComp').textContent = compActive;
-
-  // --- smart summary ---
-  const ss = document.getElementById('smartSummary');
-  if (accActive > 0) {
-    ss.innerHTML = '<strong>智能摘要：</strong>您有 <strong>' + accActive + '</strong> 个验收单需要验收，请及时处理。';
-    ss.classList.remove('hidden');
-  } else {
-    ss.classList.add('hidden');
-  }
-
-  // --- req list (top 10 by date desc) ---
-  const reqStatusClass = { '待审批':'status-wait','审批不通过':'status-shelve','待分配':'status-info','调研中':'status-progress','验收中':'status-progress','已上线':'status-done','已关闭':'status-muted' };
-  const topReqs = [...reqData].sort((a,b) => b.time.localeCompare(a.time)).slice(0,10);
-  const homeReqList = document.getElementById('homeReqList');
-  if (topReqs.length === 0) {
-    homeReqList.innerHTML = '<div style="text-align:center;color:var(--text-muted);font-size:.8rem;padding:20px 0">暂无数据</div>';
-  } else {
-    homeReqList.innerHTML = topReqs.map(r =>
-      `<div class="list-item"><span><span class="id">${r.id}</span> ${r.title.length > 10 ? r.title.slice(0,10)+'…' : r.title}</span><span class="status ${reqStatusClass[r.status]||'status-wait'}">${r.status}</span></div>`
-    ).join('');
-  }
-
-  // --- prob list (top 10 by date desc) ---
-  const probStatusClass = { '待处理':'status-wait','处理中':'status-progress','已解决':'status-done' };
-  const topProbs = [...probData].sort((a,b) => b.time.localeCompare(a.time)).slice(0,10);
-  const homeProbList = document.getElementById('homeProbList');
-  if (topProbs.length === 0) {
-    homeProbList.innerHTML = '<div style="text-align:center;color:var(--text-muted);font-size:.8rem;padding:20px 0">暂无数据</div>';
-  } else {
-    homeProbList.innerHTML = topProbs.map(p =>
-      `<div class="list-item"><span><span class="id">${p.id}</span> ${p.title.length > 10 ? p.title.slice(0,10)+'…' : p.title}</span><span class="status ${probStatusClass[p.status]||'status-wait'}">${p.status}</span></div>`
-    ).join('');
-  }
-
-  // --- acc list (top 10 by date desc, only 待验收/验收中) ---
-  const accStatusClass = { '待验收':'status-wait','验收中':'status-progress','已完成':'status-done','已关闭':'status-shelve' };
-  const topAccs = [...accData].filter(a => ['待验收','验收中'].includes(getAccStatus(a)))
-    .sort((a,b) => b.deadline.localeCompare(a.deadline)).slice(0,10);
-  const homeAccList = document.getElementById('homeAccList');
-  if (topAccs.length === 0) {
-    homeAccList.innerHTML = '<div style="text-align:center;color:var(--text-muted);font-size:.8rem;padding:20px 0">暂无数据</div>';
-  } else {
-    homeAccList.innerHTML = topAccs.map(a => {
-      const st = getAccStatus(a);
-      const label = a.system + ' ' + a.version;
-      return `<div class="list-item"><span><span class="id">${a.id}</span> ${label.length > 14 ? label.slice(0,14)+'…' : label}</span><span class="status ${accStatusClass[st]||'status-wait'}">${st}</span></div>`;
-    }).join('');
-  }
-}
-
 function switchView(view) {
   // Hide all views
   document.querySelectorAll('[id^="view-"]').forEach(el => el.classList.add('hidden'));
@@ -3431,7 +3255,6 @@ function switchView(view) {
     document.getElementById('sidebarOverlay').classList.remove('show');
   }
   // Render data
-  if (view === 'home') renderHome();
   if (view === 'acceptance') renderAccList();
   if (view === 'requirements') renderReqList();
   if (view === 'problems') renderProbList();
@@ -3488,28 +3311,48 @@ function showError(code, msg) {
 }
 
 // ===== GLOBAL SEARCH =====
-function buildSearchIndex() {
-  const idx = [];
-  reqData.forEach(r => idx.push({ type:'需求', id:r.id, title:r.title, view:'requirements' }));
-  probData.forEach(p => idx.push({ type:'问题', id:p.id, title:p.title, view:'problems' }));
-  accData.forEach(a => idx.push({ type:'验收单', id:a.id, title:a.system + ' ' + a.version, view:'acceptance' }));
-  compData.forEach(c => idx.push({ type:'投诉/建议', id:c.id, title:c.title, view:'complaints' }));
-  return idx;
+const searchIndex = [
+  { type:'需求', id:'DE-B-20250115-0001', title:'用户权限优化', view:'requirements' },
+  { type:'需求', id:'DE-B-20250114-0002', title:'报表导出功能', view:'requirements' },
+  { type:'需求', id:'DE-B-20250113-0003', title:'消息推送改造', view:'requirements' },
+  { type:'问题', id:'PR-20250115-001', title:'登录白屏问题', view:'problems' },
+  { type:'问题', id:'PR-20250114-001', title:'数据导出异常', view:'problems' },
+  { type:'验收单', id:'IC-20250115-001', title:'油葱商城V4.30.5验收', view:'acceptance' },
+  { type:'验收单', id:'IC-20250112-002', title:'荟健康App验收', view:'acceptance' },
+  { type:'对接人', id:'', title:'李明辉', view:'contacts' },
+  { type:'对接人', id:'', title:'张建国', view:'contacts' },
+  { type:'资料库', id:'DB-20250110-001', title:'油葱商城V4.30 PRD', view:'documents' },
+  { type:'资料库', id:'DB-20250108-002', title:'荟健康接口说明', view:'documents' },
+];
+
+function onSearchInput(val) {
+  const dd = document.getElementById('searchDropdown');
+  if (!val.trim()) { dd.classList.remove('show'); return; }
+  const kw = val.toLowerCase();
+  const results = searchIndex.filter(r =>
+    (r.id.toLowerCase().includes(kw) || r.title.toLowerCase().includes(kw))
+  ).slice(0, 6);
+  if (!results.length) {
+    dd.innerHTML = '<div class="sd-empty">未找到相关数据，请检查搜索条件</div>';
+  } else {
+    dd.innerHTML = '<div class="sd-header">搜索结果</div>' +
+      results.map(r => `<div class="sd-item" onclick="switchView('${r.view}');closeSearchDropdown()">
+        <span class="sd-type">${r.type}</span>
+        <span>${r.id ? r.id + ' · ' : ''}${r.title}</span>
+      </div>`).join('');
+  }
+  dd.classList.add('show');
 }
 
 function doGlobalSearch() {
   const val = document.getElementById('globalSearchInput').value.trim();
   if (!val) return;
-  const kw = val.toLowerCase();
-  const searchIndex = buildSearchIndex();
-  const hit = searchIndex.find(r => r.id && r.id.toLowerCase() === kw)
-           || searchIndex.find(r => r.id && r.id.toLowerCase().includes(kw));
+  onSearchInput(val);
+}
+
+function closeSearchDropdown() {
+  document.getElementById('searchDropdown').classList.remove('show');
   document.getElementById('globalSearchInput').value = '';
-  if (!hit) {
-    showToast('未找到相关数据，请检查搜索条件');
-    return;
-  }
-  switchView(hit.view);
 }
 
 // ===== MESSAGE CENTER =====
@@ -3528,7 +3371,7 @@ function markAllRead() {
 
 function openMsg(id) {
   const msgs = {
-    1: { title:'系统验收单待处理提醒', body:'订单管理系统V4.30.5验收单（IC-20260715-0001）截止时间为 2026-07-20 17:00，请及时处理。' },
+    1: { title:'系统验收单待处理提醒', body:'油葱商城V4.30.5验收单（IC-20250115-001）截止时间为 2026-06-20 17:00，请及时处理。' },
     2: { title:'需求进入研发阶段', body:'您提交的需求 DE-20260610-003「数据报表优化」已进入研发阶段，预计完成时间 2026-07-10。' },
     3: { title:'问题已解决', body:'您反馈的问题 PR-20260612-002「荟健康首页崩溃」已由王磊处理并关闭，请确认验证。' },
     4: { title:'平台公告', body:'数字化效能协同平台将于 2026-06-22 02:00-04:00 进行例行维护，期间服务不可用，请提前做好安排。' },
@@ -3547,6 +3390,9 @@ function openMsg(id) {
 
 // Close panels on outside click
 document.addEventListener('click', function(e) {
+  const sp = document.getElementById('searchDropdown');
+  const si = document.getElementById('globalSearchInput');
+  if (sp && !sp.contains(e.target) && e.target !== si) { sp.classList.remove('show'); }
   const mp = document.getElementById('msgPanel');
   if (mp && msgPanelOpen && !mp.contains(e.target) && !e.target.closest('.header-icon-btn')) {
     mp.classList.remove('show'); msgPanelOpen = false;
@@ -3555,60 +3401,6 @@ document.addEventListener('click', function(e) {
 
 // ===== ACCEPTANCE =====
 let accFilter = 'all';
-let accSearchKw = '';
-let accItemFilter = 'all';
-let currentAccId = null;
-let pendingAccOp = null;
-
-const ACC_VALID_RESULTS = ['通过','无测试条件','有调整可上线','做迭代可上线'];
-const ACC_STEP_LABELS = ['需求调研','需求评审','需求研发','需求质检','UAT部署','预期验收','正式发布','应用市场审批'];
-
-function getAccProgress(d) {
-  if (!d.items || d.items.length === 0) return 0;
-  const valid = d.items.filter(it => ACC_VALID_RESULTS.includes(it.result)).length;
-  return Math.round(valid / d.items.length * 100);
-}
-
-function getAccStatus(d) {
-  if (d.status === '已关闭' || d.status === '已完成') return d.status;
-  const hasAnyResult = d.items.some(it => it.result !== '');
-  const allValid = d.items.length > 0 && d.items.every(it => ACC_VALID_RESULTS.includes(it.result));
-  if (allValid) { d.status = '已完成'; return '已完成'; }
-  if (hasAnyResult) return '验收中';
-  return '待验收';
-}
-
-function getDeadlineClass(deadline) {
-  const dl = new Date(deadline);
-  const now = new Date();
-  const diff = dl.getTime() - now.getTime();
-  if (diff <= 0) return 'deadline-urgent';
-  if (diff <= 3 * 3600 * 1000) return 'deadline-urgent';
-  if (diff <= 24 * 3600 * 1000) return 'deadline-warn';
-  return '';
-}
-
-function copyToClipboard(text) {
-  if (navigator.clipboard) { navigator.clipboard.writeText(text); showToast('已复制: ' + text); }
-  else { showToast('复制失败，请手动复制'); }
-}
-
-function updateAccStats() {
-  const total = accData.length;
-  const wait = accData.filter(d => getAccStatus(d) === '待验收').length;
-  const prog = accData.filter(d => getAccStatus(d) === '验收中').length;
-  const done = accData.filter(d => getAccStatus(d) === '已完成').length;
-  document.getElementById('accStatTotal').textContent = total;
-  document.getElementById('accStatWait').textContent = wait;
-  document.getElementById('accStatProgress').textContent = prog;
-  document.getElementById('accStatDone').textContent = done;
-}
-
-function onAccSearchInput() {
-  accSearchKw = document.getElementById('accSearchInput').value.trim().toLowerCase();
-  renderAccList();
-}
-
 function filterAcc(f) {
   accFilter = f;
   document.querySelectorAll('#accTabs .tab').forEach(t => t.classList.remove('active'));
@@ -3617,245 +3409,65 @@ function filterAcc(f) {
 }
 
 function renderAccList() {
-  updateAccStats();
-  let list = accData;
-  if (accFilter !== 'all') list = list.filter(d => getAccStatus(d) === accFilter);
-  if (accSearchKw) list = list.filter(d => d.system.toLowerCase().includes(accSearchKw) || d.id.toLowerCase().includes(accSearchKw) || (d.system + d.version).toLowerCase().includes(accSearchKw));
-
+  const list = accFilter === 'all' ? accData : accData.filter(d => d.status === accFilter);
   const body = document.getElementById('accBody');
-  const emptyEl = document.getElementById('accEmpty');
-  const noResEl = document.getElementById('accNoResult');
-  emptyEl.style.display = 'none';
-  noResEl.style.display = 'none';
-
-  if (accData.length === 0) { emptyEl.style.display = ''; body.innerHTML = ''; return; }
-  if (list.length === 0) { noResEl.style.display = ''; body.innerHTML = ''; return; }
-
   body.innerHTML = list.map(d => {
-    const st = getAccStatus(d);
-    const sc = st === '已完成' ? 'status-done' : st === '已关闭' ? 'status-shelve' : st === '验收中' ? 'status-progress' : 'status-wait';
-    const prog = getAccProgress(d);
-    const dlCls = getDeadlineClass(d.deadline);
+    const sc = d.status === '已完成' ? 'status-done' : d.status === '已搁置' ? 'status-shelve' : d.status === '验收中' ? 'status-progress' : 'status-wait';
     return `<tr>
-      <td class="mono" style="white-space:nowrap">${d.id} <button class="btn btn-sm" style="padding:2px 6px;font-size:.68rem;min-width:auto" onclick="copyToClipboard('${d.id}')" title="复制ID">📋</button></td>
-      <td style="font-weight:500">${d.system} ${d.version}</td>
-      <td><span class="status ${sc}">${st}</span></td>
-      <td style="min-width:120px"><div class="progress-bar"><div class="fill" style="width:${prog}%;background:${prog===100?'var(--success)':'var(--cobalt)'}"></div></div><span style="font-size:.72rem;color:var(--text-secondary)">${prog}%</span></td>
-      <td class="${dlCls}">${d.deadline}</td>
+      <td class="mono">${d.id}</td>
+      <td>${d.system}</td>
+      <td>${d.title}</td>
+      <td><div class="progress-bar"><div class="fill" style="width:${d.progress}%;background:${d.progress===100?'var(--success)':'var(--cobalt)'}"></div></div></td>
+      <td><span class="status ${sc}">${d.status}</span></td>
+      <td>${d.time}</td>
       <td><button class="btn btn-sm btn-primary" onclick="viewAccDetail('${d.id}')">查看</button></td>
     </tr>`;
   }).join('');
 }
 
-function filterAccItems(f) {
-  accItemFilter = f;
-  document.querySelectorAll('#accItemTabs .tab').forEach(t => t.classList.remove('active'));
-  event.target.classList.add('active');
-  renderAccItems();
-}
-
-function renderAccItems() {
-  const d = accData.find(a => a.id === currentAccId);
-  if (!d) return;
-  const ops = ['通过','不通过','无测试条件','有调整可上线','做迭代可上线','其他'];
-  let items = d.items;
-  if (accItemFilter !== 'all') {
-    if (accItemFilter === '待验收') items = items.filter(it => it.result === '');
-    else items = items.filter(it => it.result === accItemFilter);
-  }
-  const tbody = document.getElementById('accItemsBody');
-  if (items.length === 0) {
-    tbody.innerHTML = '<tr><td colspan="15" style="text-align:center;padding:24px;color:var(--text-secondary)">暂无匹配的验收项</td></tr>';
-    return;
-  }
-  const resultColor = {通过:'#17a34a', 不通过:'#dc2626', 无测试条件:'#6b6b6b', 有调整可上线:'#eab308', 做迭代可上线:'#2f6feb', 其他:'#6b6b6b'};
-  tbody.innerHTML = items.map((it, _idx) => {
-    const realIdx = d.items.indexOf(it);
-    const selColor = it.result ? (resultColor[it.result] || '#6b6b6b') : '#6b6b6b';
-    const resultSelect = `<select class="acc-result-select" style="border-color:${it.result ? selColor : 'var(--border)' };color:${it.result ? selColor : 'var(--text-muted)'}" onchange="accItemOp('${d.id}',${realIdx},this.value);this.blur()">
-      <option value="" ${!it.result ? 'selected' : ''}>请选择</option>
-      ${ops.map(op => `<option value="${op}" ${it.result===op ? 'selected' : ''}>${op}</option>`).join('')}
-    </select>`;
-    return `<tr>
-      <td style="text-align:center;font-weight:600">${realIdx+1}</td>
-      <td class="mono" style="font-size:.72rem">${it.reqId}</td>
-      <td>${it.sys}</td>
-      <td>${it.endpoint}</td>
-      <td style="max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${it.desc}">${it.desc}</td>
-      <td><a href="${it.prd}" target="_blank" style="color:var(--primary);font-size:.72rem">查看PRD</a></td>
-      <td style="max-width:120px;font-size:.72rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${it.standard}">${it.standard}</td>
-      <td>${it.productOwner}</td>
-      <td>${it.testOwner}</td>
-      <td class="acc-picker-cell">${renderAccPickerTags(d.id, realIdx, 'dept')}</td>
-      <td class="acc-picker-cell">${renderAccPickerTags(d.id, realIdx, 'person')}</td>
-      <td style="min-width:120px">${resultSelect}</td>
-      <td style="max-width:100px;font-size:.72rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${it.resultRemark}">${it.resultRemark || '-'}</td>
-      <td style="max-width:100px;font-size:.72rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${it.problemReply}">${it.problemReply || '-'}</td>
-      <td style="max-width:100px;font-size:.72rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${it.problemRemark}">${it.problemRemark || '-'}</td>
-    </tr>`;
-  }).join('');
-}
-
-/* ── 验收列表全屏展示 ── */
-let accFsFilter = 'all';
-
-function openAccListFullscreen() {
-  const d = accData.find(a => a.id === currentAccId);
-  if (!d) { showToast('请先打开一个验收单'); return; }
-  accFsFilter = 'all';
-  document.querySelectorAll('#accFsTabs .tab').forEach(t => t.classList.remove('active'));
-  const first = document.querySelector('#accFsTabs .tab');
-  if (first) first.classList.add('active');
-  document.getElementById('accFsTitle').textContent = '验收列表 · ' + d.system + ' ' + d.version;
-  const tag = document.getElementById('accFsSysTag');
-  const st = getAccStatus(d);
-  const prog = getAccProgress(d);
-  tag.textContent = st + ' · 进度 ' + prog + '%';
-  renderAccFs();
-  document.getElementById('accFsModal').classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeAccListFullscreen() {
-  document.getElementById('accFsModal').classList.remove('active');
-  document.body.style.overflow = '';
-}
-
-function filterAccFs(f) {
-  accFsFilter = f;
-  document.querySelectorAll('#accFsTabs .tab').forEach(t => t.classList.remove('active'));
-  if (event && event.target) event.target.classList.add('active');
-  renderAccFs();
-}
-
-function renderAccFs() {
-  const d = accData.find(a => a.id === currentAccId);
-  if (!d) return;
-  const ops = ['通过','不通过','无测试条件','有调整可上线','做迭代可上线','其他'];
-  const resultColor = {通过:'#17a34a', 不通过:'#dc2626', 无测试条件:'#6b6b6b', 有调整可上线:'#eab308', 做迭代可上线:'#2f6feb', 其他:'#6b6b6b'};
-  let items = d.items;
-  if (accFsFilter !== 'all') {
-    if (accFsFilter === '待验收') items = items.filter(it => it.result === '');
-    else items = items.filter(it => it.result === accFsFilter);
-  }
-  const tbody = document.getElementById('accFsBody');
-  if (items.length === 0) {
-    tbody.innerHTML = '<tr><td colspan="15" style="text-align:center;padding:40px;color:var(--text-secondary)">暂无匹配的验收项</td></tr>';
-    return;
-  }
-  tbody.innerHTML = items.map(it => {
-    const realIdx = d.items.indexOf(it);
-    const selColor = it.result ? (resultColor[it.result] || '#6b6b6b') : '#6b6b6b';
-    const resultSelect = `<select class="acc-result-select" style="border-color:${it.result ? selColor : 'var(--border)' };color:${it.result ? selColor : 'var(--text-muted)'}" onchange="accItemOp('${d.id}',${realIdx},this.value);this.blur()">
-      <option value="" ${!it.result ? 'selected' : ''}>请选择</option>
-      ${ops.map(op => `<option value="${op}" ${it.result===op ? 'selected' : ''}>${op}</option>`).join('')}
-    </select>`;
-    const deptTags = renderAccPickerTags(d.id, realIdx, 'dept');
-    const personTags = renderAccPickerTags(d.id, realIdx, 'person');
-    return `<tr>
-      <td style="text-align:center;font-weight:600">${realIdx+1}</td>
-      <td class="mono" style="font-size:.72rem">${it.reqId}</td>
-      <td>${it.sys}</td>
-      <td>${it.endpoint}</td>
-      <td style="min-width:160px;white-space:normal">${it.desc}</td>
-      <td><a href="${it.prd}" target="_blank" style="color:var(--primary);font-size:.72rem">查看PRD</a></td>
-      <td style="min-width:140px;white-space:normal;font-size:.72rem">${it.standard}</td>
-      <td>${it.productOwner}</td>
-      <td>${it.testOwner}</td>
-      <td class="acc-picker-cell">${deptTags}</td>
-      <td class="acc-picker-cell">${personTags}</td>
-      <td style="min-width:130px">${resultSelect}</td>
-      <td style="min-width:120px;white-space:normal;font-size:.72rem">${it.resultRemark || '-'}</td>
-      <td style="min-width:120px;white-space:normal;font-size:.72rem">${it.problemReply || '-'}</td>
-      <td style="min-width:120px;white-space:normal;font-size:.72rem">${it.problemRemark || '-'}</td>
-    </tr>`;
-  }).join('');
-}
-
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && document.getElementById('accFsModal').classList.contains('active')) {
-    closeAccListFullscreen();
-  }
-});
-
 function viewAccDetail(id) {
   const d = accData.find(a => a.id === id);
   if (!d) return;
-  currentAccId = id;
-  accItemFilter = 'all';
-  document.querySelectorAll('#accItemTabs .tab').forEach(t => t.classList.remove('active'));
-  document.querySelector('#accItemTabs .tab').classList.add('active');
-
-  document.getElementById('accDetailTitle').textContent = d.system + ' ' + d.version;
+  document.getElementById('accDetailTitle').textContent = d.title;
   document.getElementById('accDetailId').textContent = d.id;
-
-  // 8-node progress steps
-  const st = getAccStatus(d);
-  const stepsEl = document.getElementById('accSteps');
-  stepsEl.innerHTML = '';
-  if (st !== '已关闭') {
-    const nodeCount = d.hasAppMp ? 8 : 7;
-    ACC_STEP_LABELS.slice(0, nodeCount).forEach((lb, i) => {
-      let cls = '';
-      if (st === '已完成') { cls = 'done'; }
-      else if (st === '待验收') { cls = i < 5 ? 'done' : i === 5 ? 'current-purple' : 'future'; }
-      else if (st === '验收中') { cls = i < 5 ? 'done' : i === 5 ? 'current-purple' : 'future'; }
-      stepsEl.innerHTML += `<div class="step ${cls}"><div class="dot">${i+1}</div><div class="step-label">${lb}</div></div>`;
-    });
-  }
-
-  // Release info area
-  renderReleaseInfoArea(d);
-
-  // Basic info
-  const prog = getAccProgress(d);
-  const dlCls = getDeadlineClass(d.deadline);
+  // Steps
+  const steps = document.getElementById('accSteps');
+  steps.innerHTML = '';
+  const labels = ['需求确认','开发完成','测试验证','验收评审','上线审批','正式发布'];
+  labels.forEach((lb, i) => {
+    const cls = (i+1) < d.step ? 'done' : (i+1) === d.step ? 'current' : '';
+    steps.innerHTML += `<div class="step ${cls}"><div class="dot">${i+1}</div><div class="step-label">${lb}</div></div>`;
+  });
+  // Info
   document.getElementById('accDetailInfo').innerHTML = `
-    <div><div class="label">项目名称</div><div>${d.project}</div></div>
-    <div><div class="label">版本信息</div><div>${d.version}</div></div>
-    <div><div class="label">状态</div><div><span class="status ${st==='已完成'?'status-done':st==='已关闭'?'status-shelve':st==='验收中'?'status-progress':'status-wait'}">${st}</span></div></div>
-    <div><div class="label">验收截止时间</div><div class="${dlCls}">${d.deadline}</div></div>
-    <div><div class="label">验收进度</div><div>${prog}%（${d.items.filter(it=>ACC_VALID_RESULTS.includes(it.result)).length}/${d.items.length}）</div></div>`;
-
-  // Render items
-  renderAccItems();
+    <div><div class="label">系统名称</div><div>${d.system}</div></div>
+    <div><div class="label">状态</div><div>${d.status}</div></div>
+    <div><div class="label">创建时间</div><div>${d.time}</div></div>
+    <div><div class="label">验收进度</div><div>${d.progress}%</div></div>`;
+  // Items
+  const ops = ['通过','不通过','无测试条件','有调整可上线','做迭代可上线','其他'];
+  document.getElementById('accItems').innerHTML = d.items.map((it, idx) => {
+    const opBtns = it.op ? `<span class="status status-done" style="margin-left:8px">${it.op}</span>` :
+      ops.map(op => `<button class="btn btn-sm ${op==='通过'?'btn-success':op==='不通过'?'btn-danger':'btn-outline'}" onclick="accItemOp('${id}',${idx},'${op}')">${op}</button>`).join('');
+    return `<div style="display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)">
+      <span style="font-weight:500;min-width:140px">${it.name}</span>
+      <div class="acceptance-ops">${opBtns}</div>
+    </div>`;
+  }).join('');
   switchView('accDetail');
 }
 
-function renderReleaseInfoArea(d) {
-  const area = document.getElementById('accReleaseInfoArea');
-  const st = getAccStatus(d);
-  if (d.releaseInfo) {
-    let logHtml = '';
-    if (d.releaseLog && d.releaseLog.length) {
-      logHtml = d.releaseLog.map(l => `<div style="margin-top:4px">· <strong>${l.submitter}</strong>：${l.content}（${l.time}）</div>`).join('');
-    }
-    const editable = (st !== '已完成' && st !== '已关闭');
-    area.innerHTML = `<div class="release-info-box">
-      <div class="ril"><span>发版信息：</span><strong>${d.releaseInfo}</strong></div>
-      <div class="ril"><span>APP强制升级：</span><strong>${d.forceUpgrade || '未设置'}</strong></div>
-      ${logHtml ? '<div style="margin-top:6px"><span class="release-log-toggle" onclick="this.nextElementSibling.classList.toggle(\'show\')">填写日志 ▼</span><div class="release-log-content">'+logHtml+'</div></div>' : ''}
-      ${editable ? '<button class="btn btn-sm btn-outline" style="margin-top:8px" onclick="openReleaseModal()">编辑发版信息</button>' : ''}
-    </div>`;
-  } else {
-    area.innerHTML = `<div class="release-info-box" style="text-align:center;color:var(--text-secondary)">
-      发版信息待填写 <button class="btn btn-sm btn-outline" style="margin-left:12px" onclick="openReleaseModal()">填写发版信息</button>
-    </div>`;
-  }
-}
-
+let pendingAccOp = null;
 function accItemOp(accId, itemIdx, op) {
   if (op === '通过') {
     const d = accData.find(a => a.id === accId);
-    d.items[itemIdx].result = '通过';
-    d.items[itemIdx].resultRemark = '';
+    d.items[itemIdx].op = '通过';
     viewAccDetail(accId);
-    if (document.getElementById('accFsModal').classList.contains('active')) renderAccFs();
     showToast('操作成功：通过');
   } else {
     pendingAccOp = { accId, itemIdx, op };
     document.getElementById('accOpTitle').textContent = op + ' - 备注';
-    document.getElementById('accOpDesc').textContent = '选择"' + op + '"需要填写备注说明（必填）';
+    document.getElementById('accOpDesc').textContent = '选择"' + op + '"需要填写备注说明';
     document.getElementById('accRemarkText').value = '';
     openModal('accRemarkModal');
   }
@@ -3865,127 +3477,14 @@ function submitAccOp() {
   const remark = document.getElementById('accRemarkText').value.trim();
   if (!remark) { showError(errCode(), '备注内容不能为空'); return; }
   const d = accData.find(a => a.id === pendingAccOp.accId);
-  d.items[pendingAccOp.itemIdx].result = pendingAccOp.op;
-  d.items[pendingAccOp.itemIdx].resultRemark = remark;
+  d.items[pendingAccOp.itemIdx].op = pendingAccOp.op;
   closeModal('accRemarkModal');
   viewAccDetail(pendingAccOp.accId);
-  if (document.getElementById('accFsModal').classList.contains('active')) renderAccFs();
   showToast('操作成功：' + pendingAccOp.op);
   pendingAccOp = null;
 }
 
-/* ── 验收部门 / 验收人员 tag 选择器 ── */
-const ACC_DEPT_OPTIONS = ['产品部','技术部','运营部','数据部','测试部','市场部','财务部','人事部'];
-const ACC_PERSON_OPTIONS = Object.values(USERS).map(u => u.name);
-let pendingAccPicker = null;
-
-function renderAccPickerTags(accId, itemIdx, field) {
-  const d = accData.find(a => a.id === accId);
-  if (!d) return '';
-  const it = d.items[itemIdx];
-  const raw = field === 'dept' ? it.accDept : it.accPerson;
-  const vals = raw ? raw.split(',').map(s => s.trim()).filter(Boolean) : [];
-  const tags = vals.map(v =>
-    `<span class="acc-tag">${v}<span class="acc-tag-del" onclick="removeAccPickerItem('${accId}',${itemIdx},'${field}','${v.replace(/'/g,"\\'")}');event.stopPropagation()">×</span></span>`
-  ).join('');
-  const addBtn = `<button class="acc-add-btn" onclick="openAccPicker('${accId}',${itemIdx},'${field}')">+ 添加</button>`;
-  return `<div class="acc-tags">${tags}${addBtn}</div>`;
-}
-
-function removeAccPickerItem(accId, itemIdx, field, val) {
-  const d = accData.find(a => a.id === accId);
-  if (!d) return;
-  const it = d.items[itemIdx];
-  const key = field === 'dept' ? 'accDept' : 'accPerson';
-  const vals = (it[key] || '').split(',').map(s => s.trim()).filter(s => s && s !== val);
-  it[key] = vals.join(',');
-  renderAccItems();
-  if (document.getElementById('accFsModal').classList.contains('active')) renderAccFs();
-}
-
-function openAccPicker(accId, itemIdx, field) {
-  pendingAccPicker = { accId, itemIdx, field };
-  const d = accData.find(a => a.id === accId);
-  const it = d.items[itemIdx];
-  const key = field === 'dept' ? 'accDept' : 'accPerson';
-  const selected = (it[key] || '').split(',').map(s => s.trim()).filter(Boolean);
-  const opts = field === 'dept' ? ACC_DEPT_OPTIONS : ACC_PERSON_OPTIONS;
-  document.getElementById('accPickerTitle').textContent = field === 'dept' ? '选择验收部门' : '选择验收人员';
-  document.getElementById('accPickerSearch').value = '';
-  renderAccPickerOptions(opts, selected, '');
-  openModal('accPickerModal');
-}
-
-function renderAccPickerOptions(opts, selected, kw) {
-  const filtered = kw ? opts.filter(o => o.includes(kw)) : opts;
-  document.getElementById('accPickerList').innerHTML = filtered.map(o => {
-    const checked = selected.includes(o);
-    const safeO = o.replace(/'/g, "\\'");
-    return `<div class="acc-picker-opt${checked ? ' checked' : ''}" onclick="toggleAccPickerOpt(this)">
-      <span class="acc-picker-check">${checked ? '✓' : ''}</span><span>${o}</span>
-    </div>`;
-  }).join('') || '<div style="padding:12px;text-align:center;color:var(--text-secondary);font-size:.82rem">无匹配选项</div>';
-}
-
-function toggleAccPickerOpt(el) {
-  el.classList.toggle('checked');
-  el.querySelector('.acc-picker-check').textContent = el.classList.contains('checked') ? '✓' : '';
-}
-
-function onAccPickerSearch(kw) {
-  if (!pendingAccPicker) return;
-  const d = accData.find(a => a.id === pendingAccPicker.accId);
-  const it = d.items[pendingAccPicker.itemIdx];
-  const key = pendingAccPicker.field === 'dept' ? 'accDept' : 'accPerson';
-  const selected = (it[key] || '').split(',').map(s => s.trim()).filter(Boolean);
-  const opts = pendingAccPicker.field === 'dept' ? ACC_DEPT_OPTIONS : ACC_PERSON_OPTIONS;
-  renderAccPickerOptions(opts, selected, kw.trim());
-}
-
-function submitAccPicker() {
-  if (!pendingAccPicker) return;
-  const checked = [...document.querySelectorAll('#accPickerList .acc-picker-opt.checked')].map(el => el.querySelectorAll('span')[1].textContent.trim());
-  const d = accData.find(a => a.id === pendingAccPicker.accId);
-  const it = d.items[pendingAccPicker.itemIdx];
-  const key = pendingAccPicker.field === 'dept' ? 'accDept' : 'accPerson';
-  it[key] = checked.join(',');
-  closeModal('accPickerModal');
-  pendingAccPicker = null;
-  renderAccItems();
-  if (document.getElementById('accFsModal').classList.contains('active')) renderAccFs();
-}
-
-function openReleaseModal() {
-  const d = accData.find(a => a.id === currentAccId);
-  if (!d) return;
-  document.getElementById('releaseContent').value = d.releaseInfo || '';
-  document.getElementById('releaseCharCount').textContent = (d.releaseInfo || '').length + '/100';
-  document.querySelectorAll('input[name="forceUpgrade"]').forEach(r => r.checked = (r.value === d.forceUpgrade));
-  document.getElementById('releaseFormError').style.display = 'none';
-  openModal('releaseModal');
-}
-
-function submitReleaseInfo() {
-  const content = document.getElementById('releaseContent').value.trim();
-  const forceEl = document.querySelector('input[name="forceUpgrade"]:checked');
-  const errEl = document.getElementById('releaseFormError');
-  if (!content) { errEl.textContent = '请填写发版信息内容'; errEl.style.display = ''; return; }
-  if (!forceEl) { errEl.textContent = '请选择APP是否强制升级'; errEl.style.display = ''; return; }
-  errEl.style.display = 'none';
-
-  const d = accData.find(a => a.id === currentAccId);
-  if (!d) return;
-  const now = new Date();
-  const ts = now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0')+' '+String(now.getHours()).padStart(2,'0')+':'+String(now.getMinutes()).padStart(2,'0');
-  const userName = currentUser ? USERS[currentUser]?.name || currentUser : '未知';
-  const logEntry = { submitter: userName, content: d.releaseInfo ? '修改发版信息' : '首次提交发版信息', time: ts };
-  d.releaseInfo = content;
-  d.forceUpgrade = forceEl.value;
-  d.releaseLog.push(logEntry);
-  closeModal('releaseModal');
-  viewAccDetail(currentAccId);
-  showToast('发版信息已保存');
-}
+function openReleaseModal() { openModal('releaseModal'); }
 
 // ===== REQUIREMENTS =====
 let reqFilter = 'all';
@@ -4690,6 +4189,28 @@ function doLogout() {
 // ===== INIT =====
 initDocTabs();
 </script>
+
+<!-- PRD Help Floating Buttons -->
+<div class="prd-fab-wrap" id="prdFabWrap" data-od-id="path-15">
+  <button class="prd-fab" id="prdFabReq" onclick="openPrdDrawer('req')" title="需求说明" data-od-id="path-15-0">
+    <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+    <span>需求说明</span>
+  </button>
+  <button class="prd-fab secondary" id="prdFabCommon" onclick="openPrdDrawer('common')" title="通用逻辑说明" data-od-id="path-15-1">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+    <span>通用逻辑</span>
+  </button>
+</div>
+<div class="prd-drawer-overlay" id="prdDrawerOverlay" onclick="closePrdDrawer()" data-od-id="path-16"></div>
+<div class="prd-drawer" id="prdDrawer" data-od-id="path-17">
+  <div class="prd-drawer-header" data-od-id="path-17-0">
+    <h3 id="prdDrawerTitle" data-od-id="path-17-0-0"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg><span>需求说明</span></h3>
+    <button class="prd-drawer-close" onclick="closePrdDrawer()" aria-label="关闭" data-od-id="path-17-0-1">
+      <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+  </div>
+  <div class="prd-drawer-body" id="prdDrawerBody" data-od-id="path-17-1"></div>
+</div>
 
 
 <script data-od-snapshot-bridge="">(function(){
