@@ -108,25 +108,16 @@ input,select,textarea{font-family:inherit;outline:none}
 @keyframes float{0%,100%{transform:translateY(0) scale(1);opacity:.4}50%{transform:translateY(-40px) scale(1.3);opacity:.7}}
 #loginBg .flow-text{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1}
 #loginBg .flow-item{position:absolute;color:rgba(255,255,255,.08);font-size:clamp(1rem,2.2vw,1.5rem);white-space:nowrap;animation:flowDown linear infinite;will-change:transform,opacity;letter-spacing:3px}
-#loginBg .flow-item:nth-child(1){left:2%;animation-duration:18s;animation-delay:0s;font-size:clamp(1.1rem,2.5vw,1.7rem);color:rgba(255,255,255,.1)}
-#loginBg .flow-item:nth-child(2){left:7%;animation-duration:22s;animation-delay:1.5s}
-#loginBg .flow-item:nth-child(3){left:12%;animation-duration:16s;animation-delay:3s;font-size:clamp(1.2rem,2.8vw,1.8rem);color:rgba(255,255,255,.07)}
-#loginBg .flow-item:nth-child(4){left:17%;animation-duration:20s;animation-delay:0.5s}
-#loginBg .flow-item:nth-child(5){left:22%;animation-duration:24s;animation-delay:4s;font-size:clamp(1.05rem,2.3vw,1.6rem);color:rgba(255,255,255,.09)}
-#loginBg .flow-item:nth-child(6){left:27%;animation-duration:19s;animation-delay:2s}
-#loginBg .flow-item:nth-child(7){left:32%;animation-duration:25s;animation-delay:5s;font-size:clamp(.95rem,2vw,1.4rem);color:rgba(255,255,255,.06)}
-#loginBg .flow-item:nth-child(8){left:37%;animation-duration:21s;animation-delay:1s}
-#loginBg .flow-item:nth-child(9){left:42%;animation-duration:17s;animation-delay:6s;font-size:clamp(1.15rem,2.6vw,1.75rem);color:rgba(255,255,255,.08)}
-#loginBg .flow-item:nth-child(10){left:47%;animation-duration:23s;animation-delay:3.5s}
-#loginBg .flow-item:nth-child(11){left:52%;animation-duration:18s;animation-delay:7s;font-size:clamp(1.1rem,2.4vw,1.6rem);color:rgba(255,255,255,.1)}
-#loginBg .flow-item:nth-child(12){left:57%;animation-duration:20s;animation-delay:2.5s}
-#loginBg .flow-item:nth-child(13){left:62%;animation-duration:16s;animation-delay:4.5s;font-size:clamp(1.2rem,2.7vw,1.8rem);color:rgba(255,255,255,.07)}
-#loginBg .flow-item:nth-child(14){left:67%;animation-duration:22s;animation-delay:1.2s}
-#loginBg .flow-item:nth-child(15){left:72%;animation-duration:19s;animation-delay:5.5s;font-size:clamp(1rem,2.2vw,1.5rem);color:rgba(255,255,255,.09)}
-#loginBg .flow-item:nth-child(16){left:77%;animation-duration:24s;animation-delay:3s}
-#loginBg .flow-item:nth-child(17){left:82%;animation-duration:17s;animation-delay:8s;font-size:clamp(1.05rem,2.3vw,1.6rem);color:rgba(255,255,255,.06)}
-#loginBg .flow-item:nth-child(18){left:88%;animation-duration:21s;animation-delay:6.5s}
-#loginBg .flow-item:nth-child(19){left:94%;animation-duration:25s;animation-delay:2s;font-size:clamp(1.1rem,2.5vw,1.7rem);color:rgba(255,255,255,.08)}
+#loginBg .flow-item:nth-child(1){left:3%;animation-duration:18s;animation-delay:0s;font-size:clamp(1.1rem,2.5vw,1.7rem);color:rgba(255,255,255,.1)}
+#loginBg .flow-item:nth-child(2){left:18%;animation-duration:22s;animation-delay:2s}
+#loginBg .flow-item:nth-child(3){left:35%;animation-duration:16s;animation-delay:5s;font-size:clamp(1.2rem,2.8vw,1.8rem);color:rgba(255,255,255,.07)}
+#loginBg .flow-item:nth-child(4){left:55%;animation-duration:20s;animation-delay:1s}
+#loginBg .flow-item:nth-child(5){left:72%;animation-duration:24s;animation-delay:3s;font-size:clamp(1.05rem,2.3vw,1.6rem);color:rgba(255,255,255,.09)}
+#loginBg .flow-item:nth-child(6){left:88%;animation-duration:19s;animation-delay:6s}
+#loginBg .flow-item:nth-child(7){left:10%;animation-duration:25s;animation-delay:8s;font-size:clamp(.95rem,2vw,1.4rem);color:rgba(255,255,255,.06)}
+#loginBg .flow-item:nth-child(8){left:45%;animation-duration:21s;animation-delay:4s}
+#loginBg .flow-item:nth-child(9){left:65%;animation-duration:17s;animation-delay:7s;font-size:clamp(1.15rem,2.6vw,1.75rem);color:rgba(255,255,255,.08)}
+#loginBg .flow-item:nth-child(10){left:82%;animation-duration:23s;animation-delay:9s}
 @keyframes flowDown{0%{top:-5%;opacity:0;transform:rotate(-2deg)}5%{opacity:.6}15%{opacity:1}85%{opacity:.7}100%{top:105%;opacity:0;transform:rotate(2deg)}}
 .auth-page{background:rgba(255,255,255,.06);backdrop-filter:blur(24px) saturate(150%);-webkit-backdrop-filter:blur(24px) saturate(150%);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius-xl);padding:clamp(28px,4vw,44px);width:clamp(340px,90vw,440px);max-width:92vw;color:#fff;position:relative;z-index:2;box-shadow:0 24px 64px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.1)}
 .auth-page::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--primary-light),var(--accent-light),transparent);border-radius:var(--radius-xl) var(--radius-xl) 0 0}
@@ -237,23 +228,6 @@ input,select,textarea{font-family:inherit;outline:none}
 .msg-panel .mp-title{font-size:.82rem;font-weight:600;margin-bottom:3px;color:var(--text)}
 .msg-panel .mp-meta{font-size:.73rem;color:var(--text-muted)}
 .msg-panel .mp-unread .mp-title::before{content:'';display:inline-block;width:7px;height:7px;background:var(--primary);border-radius:50%;margin-right:6px;vertical-align:1px}
-.msg-item{display:flex;align-items:center;padding:14px 18px;border-bottom:1px solid var(--border-light);cursor:pointer;transition:var(--transition);gap:16px}
-.msg-item:hover{background:var(--border-light)}
-.msg-item:last-child{border-bottom:none}
-.msg-item.unread{background:color-mix(in oklch,var(--primary) 4%,transparent)}
-.msg-item.unread .msg-dot{display:block}
-.msg-dot{display:none;width:8px;height:8px;background:var(--primary);border-radius:50%;flex-shrink:0}
-.msg-body{flex:1;min-width:0}
-.msg-title{font-size:.88rem;font-weight:600;color:var(--text);margin-bottom:4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}
-.msg-content{font-size:.8rem;color:var(--text-secondary);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}
-.msg-time{font-size:.75rem;color:var(--text-muted);flex-shrink:0;white-space:nowrap}
-.msg-view-btn{font-size:.8rem;color:var(--primary);flex-shrink:0;white-space:nowrap;font-weight:500;background:none;border:none;cursor:pointer}
-.msg-view-btn:hover{text-decoration:underline}
-.msg-detail-field{display:flex;padding:10px 0;border-bottom:1px solid var(--border-light);font-size:.88rem}
-.msg-detail-field:last-child{border-bottom:none}
-.msg-detail-label{width:90px;color:var(--text-muted);flex-shrink:0;font-weight:500}
-.msg-detail-value{flex:1;color:var(--text);word-break:break-all}
-.msg-detail-body{margin-top:16px;padding:16px;background:var(--bg);border-radius:var(--radius);font-size:.88rem;line-height:1.7;color:var(--text);white-space:pre-wrap}
 .main-content{padding:clamp(16px,2.5vw,28px);width:100%;box-sizing:border-box}
 
 /* Mobile menu toggle */
@@ -320,28 +294,6 @@ table.data tr:hover td{background:#F8FAFC}
 table.data tr:last-child td{border-bottom:none}
 .mono{font-family:var(--font-mono);font-size:.76rem;font-weight:600}
 .severity-严重{color:var(--danger);font-weight:700}.severity-中等{color:var(--warning);font-weight:700}.severity-一般{color:var(--success);font-weight:700}
-.priority-P0{color:#fff;background:var(--danger);padding:2px 8px;border-radius:4px;font-size:.72rem;font-weight:700}
-.priority-P1{color:#fff;background:var(--warning);padding:2px 8px;border-radius:4px;font-size:.72rem;font-weight:700}
-.priority-P2{color:var(--primary);background:color-mix(in oklch,var(--primary) 12%,transparent);padding:2px 8px;border-radius:4px;font-size:.72rem;font-weight:700}
-.priority-P3{color:var(--text-secondary);background:var(--bg-secondary);padding:2px 8px;border-radius:4px;font-size:.72rem;font-weight:700}
-.prob-stat-card{transition:box-shadow .15s,border-color .15s}
-.prob-filter-bar{display:flex;gap:12px;align-items:center;padding:10px 14px;background:var(--surface);border:1px solid var(--border);border-radius:10px;margin-bottom:14px;flex-wrap:wrap}
-.prob-filter-bar .filter-group{display:flex;align-items:center;gap:6px;font-size:.8rem}
-.prob-filter-bar .filter-group label{font-weight:600;color:var(--text-secondary);white-space:nowrap}
-.prob-filter-bar .filter-group input[type="date"],.prob-filter-bar .filter-group input[type="text"]{padding:5px 8px;border:1px solid var(--border);border-radius:6px;font-size:.78rem}
-.req-filter-bar{display:flex;gap:12px;align-items:center;padding:10px 14px;background:var(--surface);border:1px solid var(--border);border-radius:10px;margin-bottom:14px;flex-wrap:wrap}
-.req-filter-bar .filter-group{display:flex;align-items:center;gap:6px;font-size:.8rem}
-.req-filter-bar .filter-group label{font-weight:600;color:var(--text-secondary);white-space:nowrap}
-.req-filter-bar .filter-group input[type="date"],.req-filter-bar .filter-group input[type="text"],.req-filter-bar .filter-group select{padding:5px 8px;border:1px solid var(--border);border-radius:6px;font-size:.78rem}
-.tab-count{font-size:.7rem;background:var(--bg-secondary);color:var(--text-secondary);padding:1px 6px;border-radius:8px;margin-left:2px}
-.prob-detail-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 24px;margin-bottom:16px}
-.prob-detail-card h4{font-size:.9rem;font-weight:700;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px}
-.prob-detail-field{display:grid;grid-template-columns:100px 1fr;gap:8px 16px;font-size:.84rem;margin-bottom:8px}
-.prob-detail-field .field-label{color:var(--text-secondary);font-weight:600}
-.prob-detail-field .field-value{color:var(--text)}
-.prob-supplement-item{padding:10px 14px;background:var(--bg-secondary);border-radius:8px;margin-bottom:8px;font-size:.82rem}
-.prob-supplement-item .supplement-meta{font-size:.72rem;color:var(--text-secondary);margin-top:6px}
-.prob-ops-bar{position:sticky;bottom:0;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 24px;margin-top:16px;display:flex;justify-content:flex-end;gap:10px;box-shadow:0 -2px 8px rgba(0,0,0,.06)}
 
 /* ===== BUTTONS ===== */
 .btn{padding:8px 18px;border-radius:var(--radius);font-size:.82rem;font-weight:600;transition:var(--transition);letter-spacing:.3px}
@@ -394,7 +346,6 @@ table.data tr:last-child td{border-bottom:none}
 .detail-section h4{font-size:.92rem;font-weight:700;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--border);display:flex;justify-content:space-between;align-items:center}
 .detail-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 28px;font-size:.875rem}
 .detail-grid .label{color:var(--text-secondary);font-size:.76rem;font-weight:500;margin-bottom:2px}
-.detail-ops-bar{position:sticky;bottom:0;background:#fff;border-top:1px solid var(--border);padding:12px 20px;display:flex;align-items:center;gap:12px;box-shadow:0 -2px 8px rgba(0,0,0,.06);z-index:10;border-radius:0 0 12px 12px;margin-top:8px}
 .acceptance-ops{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 .acceptance-ops .btn{min-width:100px;text-align:center}
 .progress-bar{height:8px;background:var(--border-light);border-radius:4px;overflow:hidden;margin-top:6px}
@@ -505,58 +456,30 @@ table.data tr:last-child td{border-bottom:none}
 .smart-summary strong{color:var(--primary);font-weight:700}
 
 /* ===== CONTACT CARD ===== */
-.contact-card{display:flex;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid var(--border-light);transition:var(--transition)}
+.contact-card{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--border-light);transition:var(--transition)}
 .contact-card:last-child{border-bottom:none}
 .contact-card:hover{padding-left:4px}
-.contact-card .cc-avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:600;flex-shrink:0;overflow:hidden;box-shadow:0 4px 12px rgba(79,70,229,.2)}
-.contact-card .cc-avatar img{width:100%;height:100%;object-fit:cover}
-.contact-card .cc-body{flex:1;min-width:0}
-.contact-card .cc-name{font-weight:600;font-size:.92rem;margin-bottom:4px}
-.contact-card .cc-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px}
-.contact-card .cc-tag{font-size:.72rem;padding:2px 8px;border-radius:10px;font-weight:500;line-height:1.6}
-.contact-card .cc-tag.tag-product{background:rgba(79,70,229,.1);color:var(--primary)}
-.contact-card .cc-tag.tag-qa{background:rgba(245,158,11,.1);color:var(--warning)}
-.contact-card .cc-tag.tag-dev{background:rgba(124,58,237,.1);color:var(--accent)}
-.contact-card .cc-tag.tag-mgmt{background:rgba(16,185,129,.1);color:var(--success)}
-.contact-card .cc-systems{font-size:.78rem;color:var(--text-secondary);line-height:1.5}
-.contact-card .cc-systems span{color:var(--text-primary);font-weight:500}
-.contact-card .cc-actions{display:flex;gap:6px;flex-shrink:0;flex-wrap:wrap;align-items:flex-start}
-
-/* ===== FILTER SELECT ===== */
-.filter-select{padding:5px 10px;border:1px solid var(--border);border-radius:6px;font-size:.78rem;color:var(--fg);background:var(--bg);cursor:pointer;min-width:140px;outline:none}
-.filter-select:focus{border-color:var(--primary)}
+.contact-card .cc-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;display:flex;align-items:center;justify-content:center;font-size:.95rem;font-weight:600;flex-shrink:0;box-shadow:0 4px 12px rgba(79,70,229,.2)}
+.contact-card .cc-info{flex:1;min-width:0}
+.contact-card .cc-name{font-weight:600;font-size:.9rem}
+.contact-card .cc-role{font-size:.75rem;color:var(--text-secondary);margin-top:2px}
+.contact-card .cc-actions{display:flex;gap:6px;flex-shrink:0;flex-wrap:wrap}
 
 /* ===== DOC ITEM ===== */
-.doc-item{display:flex;align-items:flex-start;gap:14px;padding:16px 0;border-bottom:1px solid var(--border-light);transition:var(--transition)}
+.doc-item{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--border-light);transition:var(--transition)}
 .doc-item:last-child{border-bottom:none}
-.doc-item:hover{background:rgba(79,70,229,.02);padding-left:4px}
-.doc-item .doc-icon{flex-shrink:0;width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.doc-item:hover{padding-left:4px}
+.doc-item .doc-icon{flex-shrink:0;width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:var(--info-bg)}
 .doc-item .doc-icon svg{width:22px;height:22px;flex-shrink:0;display:block}
 .doc-icon-prd{background:rgba(79,70,229,.1);color:#4F46E5}
 .doc-icon-proto{background:rgba(124,58,237,.1);color:#7C3AED}
 .doc-icon-sop{background:rgba(6,182,212,.1);color:#06B6D4}
 .doc-icon-manual{background:rgba(16,185,129,.1);color:#10B981}
 .doc-icon-misc{background:rgba(234,179,8,.1);color:#D97706}
-.doc-item .doc-body{flex:1;min-width:0}
-.doc-item .doc-row-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.doc-item .doc-id{font-size:.78rem;color:var(--text-secondary);font-family:monospace;display:inline-flex;align-items:center;gap:4px}
-.doc-item .doc-id .copy-btn{cursor:pointer;opacity:.5;transition:opacity .15s;background:none;border:none;padding:0;display:inline-flex;color:inherit}
-.doc-item .doc-id .copy-btn:hover{opacity:1}
-.doc-item .doc-sys-tag{font-size:.72rem;padding:2px 8px;border-radius:4px;background:var(--primary-bg);color:var(--primary);font-weight:500}
-.doc-item .doc-title{font-weight:600;font-size:.92rem;color:var(--text-primary);margin-top:4px}
-.doc-item .doc-desc{font-size:.8rem;color:var(--text-secondary);margin-top:3px;line-height:1.4}
-.doc-item .doc-row-bottom{display:flex;align-items:center;gap:10px;margin-top:8px;flex-wrap:wrap}
-.doc-item .doc-type-tag{font-size:.72rem;padding:2px 8px;border-radius:4px;font-weight:500}
-.doc-type-prd{background:rgba(79,70,229,.1);color:#4F46E5}
-.doc-type-proto{background:rgba(124,58,237,.1);color:#7C3AED}
-.doc-type-sop{background:rgba(6,182,212,.1);color:#06B6D4}
-.doc-type-manual{background:rgba(16,185,129,.1);color:#10B981}
-.doc-type-misc{background:rgba(234,179,8,.1);color:#D97706}
-.doc-item .doc-date{font-size:.75rem;color:var(--text-secondary)}
-.doc-item .doc-actions{display:flex;gap:6px;flex-shrink:0;align-items:flex-start;margin-top:2px}
-.doc-empty{text-align:center;padding:60px 20px;color:var(--text-secondary)}
-.doc-empty svg{width:64px;height:64px;margin-bottom:16px;opacity:.4}
-.doc-empty p{font-size:.9rem;margin:0}
+.doc-item .doc-info{flex:1;min-width:0}
+.doc-item .doc-name{font-weight:600;font-size:.88rem}
+.doc-item .doc-meta{font-size:.72rem;color:var(--text-secondary);margin-top:3px}
+.doc-item .doc-actions{display:flex;gap:6px;flex-shrink:0}
 
 /* ===== PASSWORD STRENGTH ===== */
 .pw-rules{font-size:.72rem;color:var(--text-secondary);margin-top:4px;line-height:1.6}
@@ -664,13 +587,13 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
   .modal-overlay{align-items:flex-end;padding:0}
   .modal-overlay .modal{max-height:90vh}
   .contact-card{flex-wrap:wrap}
-  .contact-card .cc-actions{width:100%;justify-content:flex-end}  .doc-item{flex-wrap:wrap}
+  .contact-card .cc-actions{width:100%;justify-content:flex-end}
+  .doc-item{flex-wrap:wrap}
   .doc-item .doc-actions{width:100%;justify-content:flex-end}
   .error-toast{left:12px;right:12px;top:12px;max-width:none}
   table.data{font-size:.8rem}
   table.data th,table.data td{padding:8px 10px}
-  .pf-form-grid{grid-template-columns:1fr}
-  .pf-stats-row{grid-template-columns:1fr}
+  #view-profile > div > div > div{grid-template-columns:1fr!important}
   .split-view{grid-template-columns:1fr;gap:16px}
   .mini-stats{grid-template-columns:repeat(2,1fr)}
 }
@@ -744,44 +667,6 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
 }
 
 /* Print */
-/* Profile page */
-.pf-header{padding:28px 32px!important}
-.pf-avatar-area{display:flex;align-items:center;gap:24px}
-.pf-avatar{width:72px;height:72px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:700;flex-shrink:0;overflow:hidden}
-.pf-avatar img{width:100%;height:100%;object-fit:cover}
-.pf-header-info{display:flex;flex-direction:column;gap:6px}
-.pf-header-name{font-size:1.25rem;font-weight:700;color:var(--text)}
-.pf-header-tags{display:flex;gap:6px;flex-wrap:wrap}
-.pf-header-tags .tag{font-size:.72rem;padding:2px 10px;border-radius:10px;font-weight:600}
-.pf-header-meta{font-size:.82rem;color:var(--text-secondary);display:flex;align-items:center;gap:6px}
-.pf-meta-sep{color:var(--border)}
-.pf-header-meta em{font-style:normal;font-family:var(--font-mono);font-size:.8rem}
-.pf-stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:0}
-.pf-stat-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:22px 20px;text-align:center}
-.pf-stat-val{font-size:1.8rem;font-weight:800;color:var(--primary);font-family:var(--font-mono);line-height:1.2}
-.pf-stat-card:nth-child(2) .pf-stat-val{color:var(--warning)}
-.pf-stat-card:nth-child(3) .pf-stat-val{color:var(--success)}
-.pf-stat-label{font-size:.82rem;color:var(--text-secondary);margin-top:6px;font-weight:500}
-.pf-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 24px}
-.pf-readonly{background:var(--bg)!important;color:var(--text-secondary)!important;cursor:not-allowed}
-.pf-notify-list{display:flex;flex-direction:column;gap:0}
-.pf-notify-item{display:flex;align-items:center;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--border)}
-.pf-notify-item:last-child{border-bottom:none}
-.pf-notify-title{font-size:.9rem;font-weight:600;color:var(--text)}
-.pf-notify-desc{font-size:.78rem;color:var(--text-secondary);margin-top:2px}
-.pf-toggle{position:relative;display:inline-block;width:40px;height:22px;flex-shrink:0}
-.pf-toggle input{opacity:0;width:0;height:0}
-.pf-toggle-slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background:var(--border);border-radius:22px;transition:.2s}
-.pf-toggle-slider:before{content:'';position:absolute;height:16px;width:16px;left:3px;bottom:3px;background:#fff;border-radius:50%;transition:.2s}
-.pf-toggle input:checked+.pf-toggle-slider{background:var(--primary)}
-.pf-toggle input:checked+.pf-toggle-slider:before{transform:translateX(18px)}
-.pf-toggle-locked .pf-toggle-slider{background:var(--primary);opacity:.7;cursor:not-allowed}
-.pf-toggle-locked .pf-toggle-slider:before{transform:translateX(18px)}
-@media(max-width:768px){
-  .pf-avatar-area{flex-direction:column;text-align:center}
-  .pf-form-grid{grid-template-columns:1fr}
-  .pf-stats-row{grid-template-columns:1fr}
-}
 @media print{
   .sidebar,.main-header,.mobile-menu-btn,.quick-actions,.toolbar button{display:none!important}
   .main{margin-left:0;width:100%}
@@ -904,25 +789,16 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
 
   <!-- Vertical flowing Chinese text -->
   <div class="flow-text" data-od-id="path-1-5">
-    <div class="flow-item">协同 Collaboration</div>
-    <div class="flow-item">枢纽 Hub</div>
-    <div class="flow-item">流转 Workflow</div>
-    <div class="flow-item">闭环 Closed Loop</div>
-    <div class="flow-item">赋能 Empower</div>
-    <div class="flow-item">交付 Delivery</div>
-    <div class="flow-item">对接 Docking</div>
-    <div class="flow-item">质量 Quality</div>
-    <div class="flow-item">衔接 Link</div>
-    <div class="flow-item">贯通 Through</div>
-    <div class="flow-item">效能 Efficiency</div>
-    <div class="flow-item">链路 Chain</div>
-    <div class="flow-item">触达 Reach</div>
-    <div class="flow-item">响应 Response</div>
-    <div class="flow-item">支撑 Support</div>
-    <div class="flow-item">集成 Integration</div>
-    <div class="flow-item">全景 Panorama</div>
-    <div class="flow-item">驱动 Drive</div>
-    <div class="flow-item">矩阵 Matrix</div>
+    <div class="flow-item">有系统需求？找我</div>
+    <div class="flow-item">有好的想法？找我</div>
+    <div class="flow-item">有操作疑问？找我</div>
+    <div class="flow-item">查系统资料？找我</div>
+    <div class="flow-item">寻找协作人？找我</div>
+    <div class="flow-item">如果您有任何需要</div>
+    <div class="flow-item">我随时都在！</div>
+    <div class="flow-item">需求驱动 · 精益交付</div>
+    <div class="flow-item">协同创新 · 数字化转型</div>
+    <div class="flow-item">全流程管理 · 持续改进</div>
   </div>
 
   <!-- ===== LOGIN PAGE ===== -->
@@ -1161,7 +1037,6 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
       <a data-view="acceptance" onclick="switchView('acceptance')" data-od-id="path-7-0-1-3"><span class="icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg></span>系统验收单</a>
       <a data-view="requirements" onclick="switchView('requirements')" data-od-id="path-7-0-1-4"><span class="icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg></span>我的需求</a>
       <a data-view="problems" onclick="switchView('problems')" data-od-id="path-7-0-1-5"><span class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></span>我的问题</a>
-      <a data-view="approvals" onclick="switchView('approvals')" data-od-id="path-7-0-1-10a"><span class="icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg></span>我的审批</a>
 
       <div class="nav-group" data-od-id="path-7-0-1-6">资源</div>
       <a data-view="documents" onclick="switchView('documents')" data-od-id="path-7-0-1-7"><span class="icon"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></span>系统资料库</a>
@@ -1169,7 +1044,7 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
 
       <div class="nav-group" data-od-id="path-7-0-1-9">我的</div>
       <a data-view="complaints" onclick="switchView('complaints')" data-od-id="path-7-0-1-10"><span class="icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></span>我的投诉/建议</a>
-      <a data-view="messages" onclick="switchView('messages')" data-od-id="path-7-0-1-10b"><span class="icon"><svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg></span>消息中心</a>
+      <a data-view="approvals" onclick="switchView('approvals')" data-od-id="path-7-0-1-10a"><span class="icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg></span>我的审批</a>
       <a data-view="profile" onclick="switchView('profile')" data-od-id="path-7-0-1-11"><span class="icon"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span>个人中心</a>
     </nav>
     <div class="sidebar-footer" data-od-id="path-7-0-2">
@@ -1216,7 +1091,7 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
               <div class="mp-meta">DE-20260610-003 · 数据报表优化 · 2分钟前</div>
             </div>
             <div class="mp-item mp-unread" onclick="openMsg(3)" data-od-id="path-7-1-0-1-1-1-3">
-              <div class="mp-title">问题PR-B-20260612-0002 已处理</div>
+              <div class="mp-title">问题PR-20260612-002 已解决</div>
               <div class="mp-meta">荟健康App · 由王磊处理 · 1小时前</div>
             </div>
             <div class="mp-item" onclick="openMsg(4)" data-od-id="path-7-1-0-1-1-1-4">
@@ -1272,12 +1147,12 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
           <div class="card list-card">
             <h4 style="margin-bottom:10px;font-size:.9rem" data-od-id="path-7-1-1-0-4-3-0">常用对接人 <a href="#" onclick="switchView('contacts');return false" style="font-size:.75rem;font-weight:500;float:right" data-od-id="path-7-1-1-0-4-3-0-0">查看更多 →</a></h4>
             <div id="homeContactList" style="display:flex;flex-direction:column;gap:8px" data-od-id="path-7-1-1-0-4-3-1">
-              <div class="contact-card" data-od-id="path-7-1-1-0-4-3-1-0"><div class="cc-avatar">李</div><div class="cc-body"><div class="cc-name">李明辉</div><div class="cc-tags"><span class="cc-tag tag-product">产品</span></div><div class="cc_systems">负责系统：<span>油葱商城V4.30.5</span></div></div><div class="cc-actions"><button class="btn btn-sm btn-primary" onclick="switchView('requirements');openCreateModal('req')" data-od-id="path-7-1-1-0-4-3-1-0-1">快捷提需求</button><button class="btn btn-sm btn-outline" onclick="switchView('problems');openCreateModal('prob')">快捷提问题</button></div></div>
-              <div class="contact-card" data-od-id="path-7-1-1-0-4-3-1-1"><div class="cc-avatar">王</div><div class="cc-body"><div class="cc-name">王小燕</div><div class="cc-tags"><span class="cc-tag tag-qa">质检</span></div><div class="cc_systems">负责系统：<span>油葱商城V4.30.5</span>、<span>荟健康V2.8</span></div></div><div class="cc-actions"><button class="btn btn-sm btn-outline" onclick="switchView('problems');openCreateModal('prob')" data-od-id="path-7-1-1-0-4-3-1-1-1">快捷提问题</button></div></div>
-              <div class="contact-card" data-od-id="path-7-1-1-0-4-3-1-2"><div class="cc-avatar">张</div><div class="cc-body"><div class="cc-name">张建国</div><div class="cc-tags"><span class="cc-tag tag-dev">研发</span></div><div class="cc_systems">负责系统：<span>油葱商城V4.30.5</span>、<span>内容管理平台</span></div></div><div class="cc-actions"><button class="btn btn-sm btn-outline" onclick="switchView('problems');openCreateModal('prob')" data-od-id="path-7-1-1-0-4-3-1-2-1">快捷提问题</button></div></div>
-              <div class="contact-card" data-od-id="path-7-1-1-0-4-3-1-3"><div class="cc-avatar">陈</div><div class="cc-body"><div class="cc-name">陈雪梅</div><div class="cc-tags"><span class="cc-tag tag-product">产品</span></div><div class="cc_systems">负责系统：<span>荟健康V2.8</span></div></div><div class="cc-actions"><button class="btn btn-sm btn-primary" onclick="switchView('requirements');openCreateModal('req')" data-od-id="path-7-1-1-0-4-3-1-3-1">快捷提需求</button><button class="btn btn-sm btn-outline" onclick="switchView('problems');openCreateModal('prob')">快捷提问题</button></div></div>
-              <div class="contact-card" data-od-id="path-7-1-1-0-4-3-1-4"><div class="cc-avatar">刘</div><div class="cc-body"><div class="cc-name">刘磊</div><div class="cc-tags"><span class="cc-tag tag-qa">质检</span></div><div class="cc_systems">负责系统：<span>数据中台V1.5</span></div></div><div class="cc-actions"><button class="btn btn-sm btn-outline" onclick="switchView('problems');openCreateModal('prob')" data-od-id="path-7-1-1-0-4-3-1-4-1">快捷提问题</button></div></div>
-              <div class="contact-card" data-od-id="path-7-1-1-0-4-3-1-5"><div class="cc-avatar">孙</div><div class="cc-body"><div class="cc-name">孙丽</div><div class="cc-tags"><span class="cc-tag tag-mgmt">管理</span></div><div class="cc_systems">负责系统：<span>油葱商城V4.30.5</span>、<span>荟健康V2.8</span></div></div><div class="cc-actions"><button class="btn btn-sm btn-warning" onclick="switchView('complaints');openCreateModal('comp')" data-od-id="path-7-1-1-0-4-3-1-5-1">快捷投诉/建议</button></div></div>
+              <div class="contact-card" data-od-id="path-7-1-1-0-4-3-1-0"><div class="cc-avatar">李</div><div class="cc-info"><div class="cc-name">李明辉</div><div class="cc-role">产品经理 · 订单系统</div></div><div class="cc-actions"><button class="btn btn-sm btn-outline" onclick="switchView('requirements');openCreateModal('req')" data-od-id="path-7-1-1-0-4-3-1-0-1">提需求</button></div></div>
+              <div class="contact-card" data-od-id="path-7-1-1-0-4-3-1-1"><div class="cc-avatar">王</div><div class="cc-info"><div class="cc-name">王小燕</div><div class="cc-role">测试工程师 · 全平台</div></div><div class="cc-actions"><button class="btn btn-sm btn-outline" onclick="switchView('problems');openCreateModal('prob')" data-od-id="path-7-1-1-0-4-3-1-1-1">提问题</button></div></div>
+              <div class="contact-card" data-od-id="path-7-1-1-0-4-3-1-2"><div class="cc-avatar">张</div><div class="cc-info"><div class="cc-name">张建国</div><div class="cc-role">研发负责人 · 中台</div></div><div class="cc-actions"><button class="btn btn-sm btn-outline" onclick="switchView('problems');openCreateModal('prob')" data-od-id="path-7-1-1-0-4-3-1-2-1">提问题</button></div></div>
+              <div class="contact-card" data-od-id="path-7-1-1-0-4-3-1-3"><div class="cc-avatar">陈</div><div class="cc-info"><div class="cc-name">陈雪梅</div><div class="cc-role">UI设计师 · 设计组</div></div><div class="cc-actions"><button class="btn btn-sm btn-outline" onclick="switchView('requirements');openCreateModal('req')" data-od-id="path-7-1-1-0-4-3-1-3-1">提需求</button></div></div>
+              <div class="contact-card" data-od-id="path-7-1-1-0-4-3-1-4"><div class="cc-avatar">刘</div><div class="cc-info"><div class="cc-name">刘志强</div><div class="cc-role">后端开发 · 支付系统</div></div><div class="cc-actions"><button class="btn btn-sm btn-outline" onclick="switchView('problems');openCreateModal('prob')" data-od-id="path-7-1-1-0-4-3-1-4-1">提问题</button></div></div>
+              <div class="contact-card" data-od-id="path-7-1-1-0-4-3-1-5"><div class="cc-avatar">赵</div><div class="cc-info"><div class="cc-name">赵婷婷</div><div class="cc-role">项目经理 · 运营支撑</div></div><div class="cc-actions"><button class="btn btn-sm btn-outline" onclick="switchView('complaints');openCreateModal('comp')" data-od-id="path-7-1-1-0-4-3-1-5-1">投诉/建议</button></div></div>
             </div>
           </div>
         </div>
@@ -1435,43 +1310,49 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
               </button>
             </div>
-            <button class="btn btn-outline" onclick="exportRequirements()" data-od-id="path-7-1-1-3-1-e">导出</button>
             <button class="btn btn-primary" onclick="openCreateModal('req')" data-od-id="path-7-1-1-3-1-1">+ 新建需求</button>
           </div>
         </div>
-        <div class="req-filter-bar" data-od-id="path-7-1-1-3-f">
-          <div class="filter-group">
-            <label>创建时间</label>
-            <input type="date" id="reqFilterDateFrom" onchange="renderReqList()">
-            <span style="color:var(--text-secondary);font-size:.78rem">至</span>
-            <input type="date" id="reqFilterDateTo" onchange="renderReqList()">
+        <div class="split-view" data-od-id="path-7-1-1-3-2">
+          <div class="card">
+            <div class="table-wrap" id="reqTableWrap">
+              <table class="data">
+                <thead><tr><th style="width:170px">需求ID</th><th>所属项目-系统</th><th>功能模块</th><th>需求标题</th><th style="width:70px">优先级</th><th style="width:90px">状态</th><th style="width:110px">提交日期</th><th style="width:90px">需求负责人</th><th style="width:80px">操作</th></tr></thead>
+                <tbody id="reqBody" data-od-id="path-7-1-1-3-2-0-0-0-1"></tbody>
+              </table>
+            </div>
+            <div id="reqEmpty" class="hidden" style="text-align:center;padding:60px 20px">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--border)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:16px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+              <div style="font-size:.95rem;color:var(--text-secondary);margin-bottom:8px">暂无需求记录</div>
+              <div style="font-size:.82rem;color:var(--text-secondary)">点击右上角「+ 新建需求」提交第一条需求</div>
+            </div>
+            <div id="reqNoResult" class="hidden" style="text-align:center;padding:40px 20px">
+              <div style="font-size:.95rem;color:var(--text-secondary)">未找到匹配的需求</div>
+            </div>
           </div>
-          <div class="filter-group">
-            <label>创建人</label>
-            <input type="text" id="reqFilterPerson" placeholder="姓名/工号" oninput="renderReqList()" style="width:140px">
-          </div>
-          <div class="filter-group">
-            <label>项目</label>
-            <select id="reqFilterProject" onchange="renderReqList()" style="padding:5px 8px;border:1px solid var(--border);border-radius:6px;font-size:.78rem">
-              <option value="">全部项目</option>
-            </select>
-          </div>
-          <button class="btn btn-outline btn-sm" onclick="resetReqFilters()" data-od-id="path-7-1-1-3-f-r">重置</button>
-        </div>
-        <div class="card" data-od-id="path-7-1-1-3-2">
-          <div class="table-wrap" id="reqTableWrap">
-            <table class="data">
-              <thead><tr><th style="width:170px">需求ID</th><th>所属项目-系统</th><th>功能模块</th><th>需求标题</th><th style="width:70px">优先级</th><th style="width:90px">状态</th><th style="width:110px">提交日期</th><th style="width:90px">需求负责人</th><th style="width:80px">操作</th></tr></thead>
-              <tbody id="reqBody" data-od-id="path-7-1-1-3-2-0-0-0-1"></tbody>
-            </table>
-          </div>
-          <div id="reqEmpty" class="hidden" style="text-align:center;padding:60px 20px">
-            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--border)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:16px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
-            <div style="font-size:.95rem;color:var(--text-secondary);margin-bottom:8px">暂无需求记录</div>
-            <div style="font-size:.82rem;color:var(--text-secondary)">点击右上角「+ 新建需求」提交第一条需求</div>
-          </div>
-          <div id="reqNoResult" class="hidden" style="text-align:center;padding:40px 20px">
-            <div style="font-size:.95rem;color:var(--text-secondary)">未找到匹配的需求</div>
+          <div class="side-panel">
+            <div class="card sp-section">
+              <h4 data-od-id="path-7-1-1-3-2-1-0-0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg> 优先级分布</h4>
+              <div id="reqPriorityDist">
+                <div class="dist-item"><div class="dist-label">紧急</div><div class="dist-bar"><div class="dist-fill" style="width:14%;background:var(--danger)"></div></div><div class="dist-count">2</div></div>
+                <div class="dist-item"><div class="dist-label">高</div><div class="dist-bar"><div class="dist-fill" style="width:29%;background:var(--warning)"></div></div><div class="dist-count">4</div></div>
+                <div class="dist-item"><div class="dist-label">中</div><div class="dist-bar"><div class="dist-fill" style="width:43%;background:var(--primary)"></div></div><div class="dist-count">6</div></div>
+                <div class="dist-item"><div class="dist-label">低</div><div class="dist-bar"><div class="dist-fill" style="width:14%;background:var(--success)"></div></div><div class="dist-count">2</div></div>
+              </div>
+            </div>
+            <div class="card sp-section">
+              <h4 data-od-id="path-7-1-1-3-2-1-1-0"><span class="sp-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></span> 状态流转</h4>
+              <div id="reqStatusDist"></div>
+            </div>
+            <div class="card sp-section">
+              <h4 data-od-id="path-7-1-1-3-2-1-2-0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 需求动态</h4>
+              <div class="sp-timeline" id="reqActivityTimeline">
+                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--primary)"></div><div class="sp-tl-body"><div class="sp-tl-text">DE-B-20250115-0001 进入调研阶段</div><div class="sp-tl-time">2小时前 · 李明辉</div></div></div>
+                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--success)"></div><div class="sp-tl-body"><div class="sp-tl-text">DE-B-20250113-0002 已上线发布</div><div class="sp-tl-time">5小时前 · 王小燕</div></div></div>
+                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--warning)"></div><div class="sp-tl-body"><div class="sp-tl-text">DE-B-20250114-0003 提交新需求</div><div class="sp-tl-time">昨天 · 张建国</div></div></div>
+                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--accent)"></div><div class="sp-tl-body"><div class="sp-tl-text">DE-B-20250112-0005 提交需求审批</div><div class="sp-tl-time">2天前 · 陈雪梅</div></div></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1479,107 +1360,171 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
       <!-- ===== REQUIREMENT DETAIL ===== -->
       <div id="view-reqDetail" class="hidden" data-od-id="path-7-1-1-3d">
         <div class="detail-back" onclick="switchView('requirements')" data-od-id="path-7-1-1-3d-0">← 返回需求列表</div>
-        <div id="reqDetailRejectBanner" class="hidden" style="background:#fef2f2;border:1px solid #fecaca;border-radius:8px;padding:12px 16px;margin-bottom:16px;color:#dc2626;font-size:.85rem;font-weight:600" data-od-id="path-7-1-1-3d-rb"></div>
         <div class="card" data-od-id="path-7-1-1-3d-1">
-          <div class="detail-section" data-od-id="path-7-1-1-3d-1-s1">
-            <h4 data-od-id="path-7-1-1-3d-1-s1-h">需求信息</h4>
-            <div class="detail-grid" id="reqDetailInfo" data-od-id="path-7-1-1-3d-1-s1-g"></div>
+          <div id="reqDetailRejectBanner" class="hidden" style="background:#fef2f2;border:1px solid #fecaca;border-radius:8px;padding:12px 16px;margin-bottom:16px;color:#dc2626;font-size:.85rem"></div>
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:4px">
+            <h3 style="margin:0" id="reqDetailTitle" data-od-id="path-7-1-1-3d-1-0">需求详情</h3>
+            <span class="status" id="reqDetailStatusBadge"></span>
           </div>
-          <div class="detail-section" data-od-id="path-7-1-1-3d-1-s2">
-            <h4 data-od-id="path-7-1-1-3d-1-s2-h">需求描述</h4>
-            <div class="detail-grid" id="reqDetailMeta" data-od-id="path-7-1-1-3d-1-s2-g" style="margin-bottom:16px"></div>
-            <div id="reqDetailDescText" style="font-size:.88rem;line-height:1.7;color:var(--text);white-space:pre-wrap;padding:12px 16px;background:var(--bg);border-radius:8px;border:1px solid var(--border)"></div>
+          <p class="mono" style="color:var(--cobalt);margin-bottom:16px" id="reqDetailId" data-od-id="path-7-1-1-3d-1-1"></p>
+          <div id="reqDetailOps" style="margin-bottom:20px"></div>
+          <div class="detail-section">
+            <h4 data-od-id="path-7-1-1-3d-1-2-0">需求内容</h4>
+            <div class="detail-grid" id="reqDetailInfo" data-od-id="path-7-1-1-3d-1-2-1"></div>
           </div>
-          <div class="detail-section" id="reqDetailCloseSection" style="display:none" data-od-id="path-7-1-1-3d-1-s3">
-            <h4 data-od-id="path-7-1-1-3d-1-s3-h">需求关闭</h4>
-            <div class="detail-grid" id="reqDetailCloseInfo" data-od-id="path-7-1-1-3d-1-s3-g"></div>
+          <div class="detail-section">
+            <h4 data-od-id="path-7-1-1-3d-1-3-0">需求描述</h4>
+            <div id="reqDetailDesc" style="font-size:.88rem;line-height:1.7;color:var(--text-primary);white-space:pre-wrap;padding:12px 0"></div>
+          </div>
+          <div class="detail-section">
+            <h4 data-od-id="path-7-1-1-3d-1-4-0">需求动态</h4>
+            <div class="sp-timeline" id="reqDetailActivity" style="padding:8px 0"></div>
           </div>
         </div>
-        <div class="detail-ops-bar" id="reqDetailOps" data-od-id="path-7-1-1-3d-ops"></div>
       </div>
 
       <!-- ===== PROBLEMS ===== -->
       <div id="view-problems" class="hidden" data-od-id="path-7-1-1-4">
         <div class="mini-stats" data-od-id="path-7-1-1-4-0">
-          <div class="mini-stat ms-primary prob-stat-card" id="probCardAll" data-od-id="path-7-1-1-4-0-0-0"><div class="ms-val" id="probStatTotal">11</div><div class="ms-label">全部问题</div></div>
-          <div class="mini-stat ms-warn prob-stat-card" id="probCardWait" data-od-id="path-7-1-1-4-0-1-0"><div class="ms-val" id="probStatWait">4</div><div class="ms-label">待处理</div></div>
-          <div class="mini-stat ms-accent prob-stat-card" id="probCardProgress" data-od-id="path-7-1-1-4-0-2-0"><div class="ms-val" id="probStatProgress">4</div><div class="ms-label">处理中</div></div>
-          <div class="mini-stat ms-success prob-stat-card" id="probCardDone" data-od-id="path-7-1-1-4-0-3-0"><div class="ms-val" id="probStatDone">3</div><div class="ms-label">已解决</div></div>
+          <div class="mini-stat ms-primary"><div class="ms-val" id="probStatTotal" data-od-id="path-7-1-1-4-0-0-0">11</div><div class="ms-label">全部问题</div></div>
+          <div class="mini-stat ms-warn"><div class="ms-val" id="probStatWait" data-od-id="path-7-1-1-4-0-1-0">4</div><div class="ms-label">待处理</div></div>
+          <div class="mini-stat ms-accent"><div class="ms-val" id="probStatProgress" data-od-id="path-7-1-1-4-0-2-0">4</div><div class="ms-label">处理中</div></div>
+          <div class="mini-stat ms-success"><div class="ms-val" id="probStatDone" data-od-id="path-7-1-1-4-0-3-0">3</div><div class="ms-label">已解决</div></div>
         </div>
         <div class="toolbar" data-od-id="path-7-1-1-4-1">
           <div class="tabs" id="probTabs" data-od-id="path-7-1-1-4-1-0">
             <div class="tab active" onclick="filterProb('all')" data-od-id="path-7-1-1-4-1-0-0">全部</div>
-            <div class="tab" onclick="filterProb('待处理')" data-od-id="path-7-1-1-4-1-0-1">待处理 <span class="tab-count" id="probTabWait">4</span></div>
-            <div class="tab" onclick="filterProb('处理中')" data-od-id="path-7-1-1-4-1-0-2">处理中 <span class="tab-count" id="probTabProgress">4</span></div>
-            <div class="tab" onclick="filterProb('已处理')" data-od-id="path-7-1-1-4-1-0-3">已处理 <span class="tab-count" id="probTabDone">3</span></div>
+            <div class="tab" onclick="filterProb('待处理')" data-od-id="path-7-1-1-4-1-0-1">待处理</div>
+            <div class="tab" onclick="filterProb('处理中')" data-od-id="path-7-1-1-4-1-0-2">处理中</div>
+            <div class="tab" onclick="filterProb('已解决')" data-od-id="path-7-1-1-4-1-0-3">已解决</div>
           </div>
-          <div style="display:flex;gap:8px;align-items:center">
-            <input type="text" id="probSearch" placeholder="搜索问题名称/ID" oninput="renderProbList()" style="padding:6px 10px;border:1px solid var(--border);border-radius:6px;font-size:.8rem;width:180px" data-od-id="path-7-1-1-4-1-s">
-            <button class="btn btn-outline" onclick="exportProblems()" data-od-id="path-7-1-1-4-1-e">导出</button>
-            <button class="btn btn-primary" onclick="openCreateModal('prob')" data-od-id="path-7-1-1-4-1-1">+ 新建问题</button>
+          <button class="btn btn-primary" onclick="openCreateModal('prob')" data-od-id="path-7-1-1-4-1-1">+ 新建问题</button>
+        </div>
+        <div class="split-view" data-od-id="path-7-1-1-4-2">
+          <div class="card">
+            <div class="table-wrap">
+              <table class="data">
+                <thead><tr><th>问题编号</th><th>问题标题</th><th>严重程度</th><th>状态</th><th>负责人</th><th>创建时间</th><th>操作</th></tr></thead>
+                <tbody id="probBody" data-od-id="path-7-1-1-4-2-0-0-0-1"></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="side-panel">
+            <div class="card sp-section">
+              <h4 data-od-id="path-7-1-1-4-2-1-0-0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg> 严重程度分布</h4>
+              <div class="dist-item"><div class="dist-label">严重</div><div class="dist-bar"><div class="dist-fill" style="width:27%;background:var(--danger)"></div></div><div class="dist-count">3</div></div>
+              <div class="dist-item"><div class="dist-label">中等</div><div class="dist-bar"><div class="dist-fill" style="width:45%;background:var(--warning)"></div></div><div class="dist-count">5</div></div>
+              <div class="dist-item"><div class="dist-label">一般</div><div class="dist-bar"><div class="dist-fill" style="width:27%;background:var(--success)"></div></div><div class="dist-count">3</div></div>
+            </div>
+            <div class="card sp-section">
+              <h4 data-od-id="path-7-1-1-4-2-1-1-0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg> 解决率统计</h4>
+              <div style="text-align:center;padding:16px 0">
+                <div style="font-size:2.2rem;font-weight:800;font-family:var(--font-mono);background:linear-gradient(135deg,var(--success),#059669);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-variant-numeric:tabular-nums">27.3%</div>
+                <div style="font-size:.78rem;color:var(--text-secondary);margin-top:4px">本周问题解决率</div>
+              </div>
+              <div class="dist-item"><div class="dist-label">平均响应</div><div class="dist-bar"><div class="dist-fill" style="width:60%;background:var(--primary)"></div></div><div class="dist-count">2.4h</div></div>
+              <div class="dist-item"><div class="dist-label">平均解决</div><div class="dist-bar"><div class="dist-fill" style="width:80%;background:var(--accent)"></div></div><div class="dist-count">1.2d</div></div>
+            </div>
+            <div class="card sp-section">
+              <h4 data-od-id="path-7-1-1-4-2-1-2-0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg> 问题动态</h4>
+              <div class="sp-timeline">
+                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--danger)"></div><div class="sp-tl-body"><div class="sp-tl-text">PR-20250115-001 严重问题提交</div><div class="sp-tl-time">1小时前 · 登录白屏</div></div></div>
+                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--primary)"></div><div class="sp-tl-body"><div class="sp-tl-text">PR-20250114-001 已指派张建国</div><div class="sp-tl-time">4小时前 · 数据导出异常</div></div></div>
+                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--success)"></div><div class="sp-tl-body"><div class="sp-tl-text">PR-20250112-001 已解决</div><div class="sp-tl-time">昨天 · 页面加载慢</div></div></div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="prob-filter-bar" data-od-id="path-7-1-1-4-f">
-          <div class="filter-group">
-            <label>创建时间</label>
-            <input type="date" id="probFilterDateFrom" onchange="renderProbList()">
-            <span style="color:var(--text-secondary);font-size:.78rem">至</span>
-            <input type="date" id="probFilterDateTo" onchange="renderProbList()">
-          </div>
-          <div class="filter-group">
-            <label>创建人</label>
-            <input type="text" id="probFilterPerson" placeholder="姓名/工号" oninput="renderProbList()" style="width:140px">
-          </div>
-          <button class="btn btn-outline btn-sm" onclick="resetProbFilters()" data-od-id="path-7-1-1-4-f-r">重置</button>
-        </div>
-        <div class="card" data-od-id="path-7-1-1-4-2">
-          <div class="table-wrap">
-            <table class="data">
-              <thead><tr><th>问题编号</th><th>所属项目-系统</th><th>问题标题</th><th>问题级别</th><th>状态</th><th>反馈日期</th><th>反馈人</th><th>跟进人</th><th>详情</th><th>激活</th></tr></thead>
-              <tbody id="probBody" data-od-id="path-7-1-1-4-2-0-0-0-1"></tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <!-- ===== PROBLEM DETAIL ===== -->
-      <div id="view-probDetail" class="hidden" data-od-id="path-7-1-1-4-d">
       </div>
 
       <!-- ===== DOCUMENTS ===== -->
       <div id="view-documents" class="hidden" data-od-id="path-7-1-1-5">
-        <div class="toolbar" data-od-id="path-7-1-1-5-1">
-          <div class="search-box" data-od-id="path-7-1-1-5-1-s">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
-            <input type="text" id="docSearch" placeholder="搜索资料标题 / 资料ID" oninput="renderDocList()">
-          </div>
-          <select id="docProjectFilter" class="filter-select" onchange="filterDoc(this.value)" data-od-id="path-7-1-1-5-1-0">
-            <option value="all">全部项目</option>
-          </select>
+        <div class="mini-stats" data-od-id="path-7-1-1-5-0">
+          <div class="mini-stat ms-primary"><div class="ms-val" id="docStatTotal" data-od-id="path-7-1-1-5-0-0-0">16</div><div class="ms-label">全部资料</div></div>
+          <div class="mini-stat ms-accent"><div class="ms-val">5</div><div class="ms-label">PRD文档</div></div>
+          <div class="mini-stat ms-warn"><div class="ms-val">3</div><div class="ms-label">原型文件</div></div>
+          <div class="mini-stat ms-success"><div class="ms-val">4</div><div class="ms-label">使用手册</div></div>
         </div>
-        <div class="card" id="docList" data-od-id="path-7-1-1-5-2-0"></div>
+        <div class="toolbar" data-od-id="path-7-1-1-5-1">
+          <div class="tabs" id="docTabs" data-od-id="path-7-1-1-5-1-0">
+            <div class="tab active" onclick="filterDoc('all')" data-od-id="path-7-1-1-5-1-0-0">全部</div>
+          </div>
+        </div>
+        <div class="split-view" data-od-id="path-7-1-1-5-2">
+          <div class="card" id="docList" data-od-id="path-7-1-1-5-2-0"></div>
+          <div class="side-panel">
+            <div class="card sp-section">
+              <h4 data-od-id="path-7-1-1-5-2-1-0-0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg> 资料类型分布</h4>
+              <div class="dist-item"><div class="dist-label">PRD文档</div><div class="dist-bar"><div class="dist-fill" style="width:31%;background:var(--primary)"></div></div><div class="dist-count">5</div></div>
+              <div class="dist-item"><div class="dist-label">原型文件</div><div class="dist-bar"><div class="dist-fill" style="width:19%;background:#8B5CF6"></div></div><div class="dist-count">3</div></div>
+              <div class="dist-item"><div class="dist-label">验收SOP</div><div class="dist-bar"><div class="dist-fill" style="width:12%;background:var(--accent)"></div></div><div class="dist-count">2</div></div>
+              <div class="dist-item"><div class="dist-label">使用手册</div><div class="dist-bar"><div class="dist-fill" style="width:25%;background:var(--success)"></div></div><div class="dist-count">4</div></div>
+              <div class="dist-item"><div class="dist-label">辅助资料</div><div class="dist-bar"><div class="dist-fill" style="width:12%;background:var(--warning)"></div></div><div class="dist-count">2</div></div>
+            </div>
+            <div class="card sp-section">
+              <h4 data-od-id="path-7-1-1-5-2-1-1-0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M8 10h.01"></path><path d="M16 10h.01"></path><path d="M8 14h.01"></path><path d="M16 14h.01"></path></svg> 按系统分类</h4>
+              <div class="dist-item"><div class="dist-label">油葱商城</div><div class="dist-bar"><div class="dist-fill" style="width:38%;background:var(--primary)"></div></div><div class="dist-count">6</div></div>
+              <div class="dist-item"><div class="dist-label">荟健康</div><div class="dist-bar"><div class="dist-fill" style="width:25%;background:var(--accent)"></div></div><div class="dist-count">4</div></div>
+              <div class="dist-item"><div class="dist-label">用户中心</div><div class="dist-bar"><div class="dist-fill" style="width:19%;background:var(--warning)"></div></div><div class="dist-count">3</div></div>
+              <div class="dist-item"><div class="dist-label">数据中台</div><div class="dist-bar"><div class="dist-fill" style="width:19%;background:var(--success)"></div></div><div class="dist-count">3</div></div>
+            </div>
+            <div class="card sp-section">
+              <h4 data-od-id="path-7-1-1-5-2-1-2-0"><span class="sp-icon">🆕</span> 最近更新</h4>
+              <div class="sp-timeline">
+                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--primary)"></div><div class="sp-tl-body"><div class="sp-tl-text">订单系统操作手册 v3.2</div><div class="sp-tl-time">今天 · PRD文档</div></div></div>
+                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--accent)"></div><div class="sp-tl-body"><div class="sp-tl-text">荟健康原型文件 v2.8</div><div class="sp-tl-time">昨天 · 原型文件</div></div></div>
+                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--success)"></div><div class="sp-tl-body"><div class="sp-tl-text">用户中心使用手册 v1.5</div><div class="sp-tl-time">3天前 · 使用手册</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- ===== CONTACTS ===== -->
       <div id="view-contacts" class="hidden" data-od-id="path-7-1-1-6">
-        <div class="toolbar" data-od-id="path-7-1-1-6-0">
-          <div class="tabs" id="contactTabs" data-od-id="path-7-1-1-6-0-0">
-            <div class="tab active" onclick="filterContact('all')" data-od-id="path-7-1-1-6-0-0-0">全部</div>
-            <div class="tab" onclick="filterContact('产品')" data-od-id="path-7-1-1-6-0-0-1">产品</div>
-            <div class="tab" onclick="filterContact('质检')" data-od-id="path-7-1-1-6-0-0-2">质检</div>
-            <div class="tab" onclick="filterContact('研发')" data-od-id="path-7-1-1-6-0-0-3">研发</div>
-            <div class="tab" onclick="filterContact('管理')" data-od-id="path-7-1-1-6-0-0-4">管理</div>
-          </div>
-          <div class="search-box" style="margin-left:auto" data-od-id="path-7-1-1-6-0-1">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
-            <input type="text" id="contactSearch" placeholder="搜索姓名或系统" oninput="renderContactList()" style="width:200px">
-          </div>
+        <div class="mini-stats" data-od-id="path-7-1-1-6-0">
+          <div class="mini-stat ms-primary"><div class="ms-val" id="contactStatTotal" data-od-id="path-7-1-1-6-0-0-0">12</div><div class="ms-label">全部对接人</div></div>
+          <div class="mini-stat ms-accent"><div class="ms-val">4</div><div class="ms-label">产品</div></div>
+          <div class="mini-stat ms-warn"><div class="ms-val">3</div><div class="ms-label">研发</div></div>
+          <div class="mini-stat ms-success"><div class="ms-val">2</div><div class="ms-label">管理</div></div>
         </div>
-        <div class="card" data-od-id="path-7-1-1-6-1">
-          <div id="contactList" data-od-id="path-7-1-1-6-1-0"></div>
-          <div id="contactEmpty" class="empty-state hidden" data-od-id="path-7-1-1-6-1-1">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--border)" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-            <p id="contactEmptyText">暂无对接人数据</p>
+        <div class="tabs" id="contactTabs" data-od-id="path-7-1-1-6-1">
+          <div class="tab active" onclick="filterContact('all')" data-od-id="path-7-1-1-6-1-0">全部</div>
+          <div class="tab" onclick="filterContact('产品')" data-od-id="path-7-1-1-6-1-1">产品</div>
+          <div class="tab" onclick="filterContact('测试')" data-od-id="path-7-1-1-6-1-2">测试</div>
+          <div class="tab" onclick="filterContact('研发')" data-od-id="path-7-1-1-6-1-3">研发</div>
+          <div class="tab" onclick="filterContact('管理')" data-od-id="path-7-1-1-6-1-4">管理</div>
+        </div>
+        <div class="split-view" data-od-id="path-7-1-1-6-2">
+          <div class="card" id="contactList" data-od-id="path-7-1-1-6-2-0"></div>
+          <div class="side-panel">
+            <div class="card sp-section">
+              <h4 data-od-id="path-7-1-1-6-2-1-0-0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg> 角色分布</h4>
+              <div class="dist-item"><div class="dist-label">产品</div><div class="dist-bar"><div class="dist-fill" style="width:33%;background:var(--primary)"></div></div><div class="dist-count">4</div></div>
+              <div class="dist-item"><div class="dist-label">研发</div><div class="dist-bar"><div class="dist-fill" style="width:25%;background:var(--accent)"></div></div><div class="dist-count">3</div></div>
+              <div class="dist-item"><div class="dist-label">测试</div><div class="dist-bar"><div class="dist-fill" style="width:25%;background:var(--warning)"></div></div><div class="dist-count">3</div></div>
+              <div class="dist-item"><div class="dist-label">管理</div><div class="dist-bar"><div class="dist-fill" style="width:17%;background:var(--success)"></div></div><div class="dist-count">2</div></div>
+            </div>
+            <div class="card sp-section">
+              <h4 data-od-id="path-7-1-1-6-2-1-1-0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M8 10h.01"></path><path d="M16 10h.01"></path><path d="M8 14h.01"></path><path d="M16 14h.01"></path></svg> 团队架构</h4>
+              <div style="font-size:.82rem;line-height:1.8">
+                <div style="font-weight:700;color:var(--primary);margin-bottom:4px">数字化效能协同平台</div>
+                <div style="padding-left:16px;border-left:2px solid var(--border-light);margin-left:6px">
+                  <div><b style="color:var(--primary);margin-right:4px">P</b>产品组 · 4人 · 订单/用户/中台/内容</div>
+                  <div><b style="color:var(--accent);margin-right:4px">D</b>研发组 · 3人 · 前端/后端/架构</div>
+                  <div><b style="color:var(--success);margin-right:4px">T</b>测试组 · 3人 · 功能/性能/自动化</div>
+                  <div><b style="color:var(--warning);margin-right:4px">M</b>管理层 · 2人 · 项目/运营</div>
+                </div>
+              </div>
+            </div>
+            <div class="card sp-section">
+              <h4 data-od-id="path-7-1-1-6-2-1-2-0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> 常用操作</h4>
+              <div style="display:flex;flex-direction:column;gap:8px">
+                <button class="btn btn-primary" onclick="switchView('requirements');openCreateModal('req')" style="width:100%" data-od-id="path-7-1-1-6-2-1-2-1-0">+ 提交新需求</button>
+                <button class="btn btn-outline" onclick="switchView('problems');openCreateModal('prob')" style="width:100%" data-od-id="path-7-1-1-6-2-1-2-1-1">+ 反馈新问题</button>
+                <button class="btn btn-warning" onclick="switchView('complaints');openCreateModal('comp')" style="width:100%" data-od-id="path-7-1-1-6-2-1-2-1-2">+ 投诉/建议</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1641,60 +1586,60 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
       </div>
 
       <!-- ===== PROFILE ===== -->
-            <div id="view-profile" class="hidden" data-od-id="path-7-1-1-8">
-        <!-- 个人头像区 -->
-        <div class="card pf-header" data-od-id="path-7-1-1-8-0">
-          <div class="pf-avatar-area">
-            <div class="pf-avatar" id="pfAvatar" data-od-id="path-7-1-1-8-0-0"></div>
-            <div class="pf-header-info">
-              <div class="pf-header-name" id="pfHeaderName" data-od-id="path-7-1-1-8-0-1-0"></div>
-              <div class="pf-header-tags" id="pfHeaderTags" data-od-id="path-7-1-1-8-0-1-1"></div>
-              <div class="pf-header-meta">
-                <span id="pfHeaderDept" data-od-id="path-7-1-1-8-0-1-2-0"></span>
-                <span class="pf-meta-sep">&middot;</span>
-                <span>开通于 <em id="pfHeaderDate" data-od-id="path-7-1-1-8-0-1-2-1"></em></span>
+      <div id="view-profile" class="hidden" data-od-id="path-7-1-1-8">
+        <div class="split-view" data-od-id="path-7-1-1-8-0">
+          <div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+              <div class="card">
+                <h4 style="margin-bottom:16px" data-od-id="path-7-1-1-8-0-0-0-0-0">编辑个人信息</h4>
+                <div class="form-group"><label>用户名</label><input type="text" id="pfUser" disabled="" data-od-id="path-7-1-1-8-0-0-0-0-1-1"></div>
+                <div class="form-group"><label>姓名</label><input type="text" id="pfName" data-od-id="path-7-1-1-8-0-0-0-0-2-1"></div>
+                <div class="form-group"><label>邮箱</label><input type="email" id="pfEmail" data-od-id="path-7-1-1-8-0-0-0-0-3-1"></div>
+                <div class="form-group"><label>手机号</label><input type="text" id="pfPhone" data-od-id="path-7-1-1-8-0-0-0-0-4-1"></div>
+                <div class="form-group"><label>飞书绑定</label><div id="pfFeishu" style="font-size:.85rem;padding-top:4px" data-od-id="path-7-1-1-8-0-0-0-0-5-1"></div></div>
+                <button class="btn btn-primary" onclick="saveProfile()" data-od-id="path-7-1-1-8-0-0-0-0-6">保存修改</button>
+              </div>
+              <div class="card">
+                <h4 style="margin-bottom:16px" data-od-id="path-7-1-1-8-0-0-0-1-0">修改密码</h4>
+                <div class="form-group"><label>当前密码</label><input type="password" id="pfOldPw" placeholder="输入当前密码" data-od-id="path-7-1-1-8-0-0-0-1-1-1"></div>
+                <div class="form-group"><label>新密码</label><input type="password" id="pfNewPw" placeholder="8位以上，含大小写+数字+特殊字符" data-od-id="path-7-1-1-8-0-0-0-1-2-1"></div>
+                <div class="form-group"><label>确认新密码</label><input type="password" id="pfNewPw2" placeholder="再次输入新密码" data-od-id="path-7-1-1-8-0-0-0-1-3-1"></div>
+                <button class="btn btn-primary" onclick="changePassword()" data-od-id="path-7-1-1-8-0-0-0-1-4">修改密码</button>
               </div>
             </div>
           </div>
-        </div>
-        <!-- 数据概览 -->
-        <div class="pf-stats-row" data-od-id="path-7-1-1-8-1">
-          <div class="pf-stat-card"><div class="pf-stat-val" id="pfStatReq" data-od-id="path-7-1-1-8-1-0-0">0</div><div class="pf-stat-label">累计提交需求</div></div>
-          <div class="pf-stat-card"><div class="pf-stat-val" id="pfStatIssue" data-od-id="path-7-1-1-8-1-1-0">0</div><div class="pf-stat-label">累计反馈问题</div></div>
-          <div class="pf-stat-card"><div class="pf-stat-val" id="pfStatAccept" data-od-id="path-7-1-1-8-1-2-0">0</div><div class="pf-stat-label">累计完成验收</div></div>
-        </div>
-        <!-- 基本信息 -->
-        <div class="card" data-od-id="path-7-1-1-8-2">
-          <h4 style="margin-bottom:20px" data-od-id="path-7-1-1-8-2-0">基本信息</h4>
-          <div class="pf-form-grid">
-            <div class="form-group"><label>姓名</label><input type="text" id="pfName" disabled class="pf-readonly" data-od-id="path-7-1-1-8-2-1-0-1"></div>
-            <div class="form-group"><label>工号</label><input type="text" id="pfEmpId" disabled class="pf-readonly" data-od-id="path-7-1-1-8-2-1-1-1"></div>
-            <div class="form-group"><label>中心-部门</label><input type="text" id="pfCenterDept" disabled class="pf-readonly" data-od-id="path-7-1-1-8-2-1-2-1"></div>
-            <div class="form-group"><label>邮箱</label><input type="email" id="pfEmail" placeholder="请输入邮箱" data-od-id="path-7-1-1-8-2-1-3-1"></div>
-            <div class="form-group"><label>手机号</label><input type="text" id="pfPhone" placeholder="请输入手机号" maxlength="11" data-od-id="path-7-1-1-8-2-1-4-1"></div>
-            <div class="form-group"><label>分机</label><input type="text" id="pfExt" placeholder="请输入分机号" data-od-id="path-7-1-1-8-2-1-5-1"></div>
-          </div>
-          <div id="pfSaveMsg" style="margin-top:4px;font-size:.82rem;min-height:1.2em"></div>
-          <div style="margin-top:16px"><button class="btn btn-primary" onclick="saveProfile()" data-od-id="path-7-1-1-8-2-2">保存</button></div>
-        </div>
-        <!-- 通知偏好 -->
-        <div class="card" data-od-id="path-7-1-1-8-3">
-          <h4 style="margin-bottom:20px" data-od-id="path-7-1-1-8-3-0">通知偏好</h4>
-          <div class="pf-notify-list">
-            <div class="pf-notify-item">
-              <div class="pf-notify-text"><div class="pf-notify-title">需求状态变更通知</div><div class="pf-notify-desc">开启后，需求状态变更通过飞书通知</div></div>
-              <label class="pf-toggle"><input type="checkbox" id="pfNotifyReq" onchange="saveNotifyPref()"><span class="pf-toggle-slider"></span></label>
+          <div class="side-panel">
+            <div class="card sp-section">
+              <h4 data-od-id="path-7-1-1-8-0-1-0-0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px"><path d="M3 3v18h18"></path><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path></svg> 我的数据</h4>
+              <div class="mini-stats" style="margin-bottom:0">
+                <div class="mini-stat ms-primary"><div class="ms-val">14</div><div class="ms-label">提需求</div></div>
+                <div class="mini-stat ms-accent"><div class="ms-val">11</div><div class="ms-label">提问题</div></div>
+              </div>
+              <div class="mini-stats" style="margin-top:12px;margin-bottom:0">
+                <div class="mini-stat ms-warn"><div class="ms-val">12</div><div class="ms-label">验收参与</div></div>
+                <div class="mini-stat ms-success"><div class="ms-val">8</div><div class="ms-label">投诉/建议</div></div>
+              </div>
             </div>
-            <div class="pf-notify-item">
-              <div class="pf-notify-text"><div class="pf-notify-title">问题处理进展通知</div><div class="pf-notify-desc">开启后，问题状态变更通过飞书通知</div></div>
-              <label class="pf-toggle"><input type="checkbox" id="pfNotifyIssue" onchange="saveNotifyPref()"><span class="pf-toggle-slider"></span></label>
+            <div class="card sp-section">
+              <h4 data-od-id="path-7-1-1-8-0-1-1-0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 最近操作</h4>
+              <div class="sp-timeline">
+                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--primary)"></div><div class="sp-tl-body"><div class="sp-tl-text">提交需求 DE-B-20250115-0001</div><div class="sp-tl-time">2小时前</div></div></div>
+                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--success)"></div><div class="sp-tl-body"><div class="sp-tl-text">完成验收 IC-20260714-0002</div><div class="sp-tl-time">5小时前</div></div></div>
+                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--warning)"></div><div class="sp-tl-body"><div class="sp-tl-text">反馈问题 PR-20250114-001</div><div class="sp-tl-time">昨天</div></div></div>
+                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--danger)"></div><div class="sp-tl-body"><div class="sp-tl-text">提交投诉 CS-20250113-001</div><div class="sp-tl-time">2天前</div></div></div>
+                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--accent)"></div><div class="sp-tl-body"><div class="sp-tl-text">下载文档 DB-20250112-037</div><div class="sp-tl-time">3天前</div></div></div>
+              </div>
             </div>
-            <div class="pf-notify-item">
-              <div class="pf-notify-text"><div class="pf-notify-title">验收任务提醒</div><div class="pf-notify-desc">默认开启，无法关闭</div></div>
-              <label class="pf-toggle pf-toggle-locked"><input type="checkbox" id="pfNotifyAccept" checked disabled><span class="pf-toggle-slider"></span></label>
+            <div class="card sp-section">
+              <h4 data-od-id="path-7-1-1-8-0-1-2-0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg> 账号信息</h4>
+              <div style="font-size:.82rem;line-height:2">
+                <div style="display:flex;justify-content:space-between"><span style="color:var(--text-secondary)">角色</span><span style="font-weight:600">业务人员</span></div>
+                <div style="display:flex;justify-content:space-between"><span style="color:var(--text-secondary)">登录方式</span><span style="font-weight:600" id="pfLoginMethod" data-od-id="path-7-1-1-8-0-1-2-1-1-1">用户名+密码</span></div>
+                <div style="display:flex;justify-content:space-between"><span style="color:var(--text-secondary)">Token有效期</span><span style="font-weight:600;font-family:var(--font-mono)">720h</span></div>
+                <div style="display:flex;justify-content:space-between"><span style="color:var(--text-secondary)">上次登录</span><span style="font-weight:600;font-family:var(--font-mono)">今天 09:15</span></div>
+              </div>
             </div>
           </div>
-          <div id="pfNotifyMsg" style="margin-top:4px;font-size:.82rem;min-height:1.2em"></div>
         </div>
       </div>
 
@@ -1735,35 +1680,6 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
           <div id="appNoResult" class="hidden" style="padding:48px 20px;text-align:center" data-od-id="path-7-1-1-9-2-2">
             <div style="font-size:.9rem;color:var(--text-secondary)">未找到匹配的审批单</div>
           </div>
-        </div>
-      </div>
-
-      <!-- ===== MESSAGES ===== -->
-      <div id="view-messages" class="hidden" data-od-id="path-7-1-1-msg">
-        <div class="toolbar" data-od-id="path-7-1-1-msg-0">
-          <div class="header-search" data-od-id="path-7-1-1-msg-0-0">
-            <input class="search-input" id="msgSearchInput" type="text" placeholder="搜索消息标题" maxlength="100" oninput="renderMsgList()" data-od-id="path-7-1-1-msg-0-0-0" style="width:240px">
-            <button class="search-btn" onclick="renderMsgList()" data-od-id="path-7-1-1-msg-0-0-1">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            </button>
-          </div>
-        </div>
-        <div class="card" data-od-id="path-7-1-1-msg-1">
-          <div id="msgListBody" data-od-id="path-7-1-1-msg-1-0"></div>
-          <div id="msgEmpty" class="hidden" style="padding:56px 20px;text-align:center" data-od-id="path-7-1-1-msg-1-1">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="1.2" style="margin-bottom:14px;opacity:.6"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
-            <div style="font-size:.95rem;font-weight:600;color:var(--text)">暂无消息</div>
-            <div style="font-size:.8rem;color:var(--text-secondary);margin-top:6px">当前没有收到任何消息</div>
-          </div>
-          <div id="msgNoResult" class="hidden" style="padding:48px 20px;text-align:center" data-od-id="path-7-1-1-msg-1-2">
-            <div style="font-size:.9rem;color:var(--text-secondary)">未找到匹配的消息</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ===== MESSAGE DETAIL ===== -->
-      <div id="view-msgDetail" class="hidden" data-od-id="path-7-1-1-msg-d">
-        <div class="card" id="msgDetailCard" style="border-left:3px solid var(--primary)" data-od-id="path-7-1-1-msg-d-0">
         </div>
       </div>
 
@@ -1828,38 +1744,20 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
 
 <!-- ===== CREATE PROBLEM MODAL ===== -->
 <div class="modal-overlay" id="createProbModal" data-od-id="path-9">
-  <div class="modal" style="max-width:580px" data-od-id="path-9-0">
-    <div class="modal-header"><h3 data-od-id="path-9-0-0-0">新建问题</h3><button class="close" onclick="closeCreateProbModal()" data-od-id="path-9-0-0-1">×</button></div>
+  <div class="modal" data-od-id="path-9-0">
+    <div class="modal-header"><h3 data-od-id="path-9-0-0-0">新建问题</h3><button class="close" onclick="closeModal('createProbModal')" data-od-id="path-9-0-0-1">×</button></div>
     <div class="modal-body">
-      <div class="form-group"><label>所属项目 <span style="color:var(--danger)">*</span></label>
-        <select id="newProbProject" onchange="onProbProjectChange()" data-od-id="path-9-0-1-0-1">
-          <option value="">请选择项目</option><option>油葱商城V4.30.5</option><option>荟健康V2.8</option><option>用户中心V3.2</option><option>数据中台V1.5</option>
-        </select>
-        <div class="field-error" id="errProbProject"><span></span></div>
+      <div class="form-group"><label>问题标题</label><input type="text" id="newProbTitle" placeholder="请输入问题标题" data-od-id="path-9-0-1-0-1"></div>
+      <div class="form-group"><label>所属系统</label>
+        <select id="newProbSystem" data-od-id="path-9-0-1-1-1"><option>订单管理系统</option><option>用户中心</option><option>数据中台</option><option>内容管理平台</option></select>
       </div>
-      <div class="form-group"><label>所属系统 <span style="color:var(--danger)">*</span></label>
-        <select id="newProbSystem" onchange="onProbSystemChange()" data-od-id="path-9-0-1-1-1"><option value="">请先选择项目</option></select>
-        <div class="field-error" id="errProbSystem"><span></span></div>
+      <div class="form-group"><label>严重程度</label>
+        <select id="newProbSeverity" data-od-id="path-9-0-1-2-1"><option>严重</option><option>中等</option><option>一般</option></select>
       </div>
-      <div class="form-group"><label>功能模块</label>
-        <select id="newProbModule" data-od-id="path-9-0-1-1b-1"><option value="">请先选择系统</option></select>
-      </div>
-      <div class="form-group"><label>优先级 <span style="color:var(--danger)">*</span></label>
-        <select id="newProbPriority" data-od-id="path-9-0-1-2-1"><option>紧急</option><option>高</option><option selected>中</option><option>低</option></select>
-      </div>
-      <div class="form-group"><label>标题 <span style="color:var(--danger)">*</span></label>
-        <input type="text" id="newProbTitle" placeholder="请输入问题标题" maxlength="50" data-od-id="path-9-0-1-3-1">
-        <div style="font-size:.72rem;color:var(--text-secondary);margin-top:2px"><span id="probTitleCount">0</span>/50</div>
-        <div class="field-error" id="errProbTitle"><span></span></div>
-      </div>
-      <div class="form-group"><label>描述 <span style="color:var(--danger)">*</span></label>
-        <textarea id="newProbDesc" placeholder="详细描述问题现象及复现步骤" maxlength="5000" style="min-height:100px" data-od-id="path-9-0-1-4-1"></textarea>
-        <div style="font-size:.72rem;color:var(--text-secondary);margin-top:2px"><span id="probDescCount">0</span>/5000</div>
-        <div class="field-error" id="errProbDesc"><span></span></div>
-      </div>
+      <div class="form-group"><label>问题描述</label><textarea id="newProbDesc" placeholder="详细描述问题现象及复现步骤" data-od-id="path-9-0-1-3-1"></textarea></div>
     </div>
     <div class="modal-footer">
-      <button class="btn btn-outline" onclick="closeCreateProbModal()" data-od-id="path-9-0-2-0">返回</button>
+      <button class="btn btn-outline" onclick="closeModal('createProbModal')" data-od-id="path-9-0-2-0">取消</button>
       <button class="btn btn-primary" onclick="createProblem()" data-od-id="path-9-0-2-1">提交</button>
     </div>
   </div>
@@ -2192,14 +2090,6 @@ const PRD_CONTENT = {
 <tr><td>910005</td><td>通知偏好保存失败</td><td>提示重试</td></tr>
 </table>
 
-<h5>2.12 消息中心错误（92xxxx）</h5>
-<table>
-<tr><th>错误码</th><th>错误描述</th><th>处理建议</th></tr>
-<tr><td>920001</td><td>消息列表获取失败</td><td>提示"数据加载失败，请点击刷新重试"</td></tr>
-<tr><td>920002</td><td>消息详情不存在</td><td>提示刷新页面</td></tr>
-<tr><td>920003</td><td>全部已读操作失败</td><td>提示重试</td></tr>
-</table>
-
 <h4>三、全局页面结构</h4>
 <h5>3.1 整体布局</h5>
 <ul>
@@ -2214,11 +2104,9 @@ const PRD_CONTENT = {
 <tr><td>业务</td><td>系统验收单</td><td>系统验收单列表页</td></tr>
 <tr><td></td><td>我的需求</td><td>我的需求列表页</td></tr>
 <tr><td></td><td>我的问题</td><td>我的问题列表页</td></tr>
-<tr><td></td><td>我的审批</td><td>我的审批列表页</td></tr>
 <tr><td>资源</td><td>系统资料库</td><td>系统资料库列表页</td></tr>
 <tr><td></td><td>数字化对接人</td><td>数字化对接人卡片列表页</td></tr>
 <tr><td>我的</td><td>投诉/建议</td><td>投诉/建议工单列表页</td></tr>
-<tr><td></td><td>消息中心</td><td>消息中心列表页</td></tr>
 <tr><td></td><td>个人中心</td><td>个人中心页面</td></tr>
 </table>
 <h5>3.3 交互规则</h5>
@@ -2235,8 +2123,8 @@ const PRD_CONTENT = {
 <tr><th>业务对象</th><th>前缀</th><th>格式</th><th>示例</th></tr>
 <tr><td>验收单</td><td>IC</td><td>IC-创建日期-三位序号</td><td>IC-20260615-001</td></tr>
 <tr><td>需求</td><td>DE</td><td>DE-创建日期-三位序号</td><td>DE-20260615-001</td></tr>
-<tr><td>问题</td><td>PR-B</td><td>PR-B-创建日期-四位序号</td><td>PR-B-20260615-0001</td></tr>
-<tr><td>资料</td><td>DOC</td><td>DOC-创建日期-四位序号</td><td>DOC-20260615-0037</td></tr>
+<tr><td>问题</td><td>PR</td><td>PR-创建日期-三位序号</td><td>PR-20260615-001</td></tr>
+<tr><td>资料</td><td>DB</td><td>DB-创建日期-三位序号</td><td>DB-20260615-037</td></tr>
 <tr><td>投诉/建议工单</td><td>CS</td><td>CS-创建日期-三位序号</td><td>CS-20260615-003</td></tr>
 </table>
 
@@ -2405,7 +2293,7 @@ const PRD_CONTENT = {
 <tr><td>搜索结果</td><td>直接打开对应详情页面</td></tr>
 <tr><td>无结果</td><td>提示"未找到相关数据，请检查搜索条件"</td></tr>
 </table>
-<p><strong>消息中心：</strong>用于查看登录账号收到的所有消息，仅支持查看内容。从左侧菜单栏「我的 &gt; 消息中心」进入。顶部提供搜索框模糊搜索消息标题；列表展示消息标题（最多20字）、消息内容（最多30字）、发送时间（年月日时分秒），点击「查看」进入消息详情页展示完整标题、内容和发送时间。消息触达场景包括：需求审批/状态变更通知、问题指派/处理完成/激活通知、投诉建议处理完成、验收通知/催促/发布通知、登录认证相关通知等。</p>
+<p><strong>消息中心：</strong>展示中心端推送的消息列表，支持查看标题和内容详情。</p>
 <p><strong>设置：</strong>点击跳转至个人中心页面。</p>
 
 <h5>智能摘要</h5>
@@ -2638,95 +2526,66 @@ const PRD_CONTENT = {
 <p><strong>触发条件：</strong>从左侧菜单栏「业务 &gt; 我的问题」进入，或从首页快捷入口、问题动态列表"查看更多"进入。</p>
 
 <h5>列表页</h5>
-<p><strong>顶部统计卡片：</strong>全部问题、待处理、处理中、已解决（4张），点击卡片切换对应Tab。卡片数据受筛选条件和搜索框影响实时刷新。</p>
-<p><strong>Tab页签：</strong>全部、待处理、处理中、已处理（除全部标签，其他标签显示对应数量）</p>
+<p><strong>Tab页签：</strong>全部、待处理、处理中、已解决（各Tab显示对应数量）</p>
 <p><strong>搜索框：</strong>模糊搜索问题名称/问题ID，根据当前Tab页签筛选。</p>
-
-<h5>筛选条件</h5>
-<table>
-<tr><th>筛选项</th><th>类型</th><th>说明</th></tr>
-<tr><td>创建时间</td><td>日期范围选择</td><td>选择起止日期，筛选反馈日期在该区间内的问题</td></tr>
-<tr><td>创建人</td><td>搜索选择</td><td>支持按姓名/工号检索，可多选</td></tr>
-</table>
-<p>筛选条件与搜索框、Tab页签为"且"关系，可组合使用；支持"重置"按钮一键清空所有筛选条件。</p>
-
-<h5>导出功能</h5>
-<ul>
-<li>入口：列表页顶部功能区「导出」按钮</li>
-<li>导出范围：按当前搜索+筛选+Tab条件过滤后的全部数据</li>
-<li>导出格式：Excel（.xlsx）</li>
-<li>导出字段：问题ID、问题标题、问题描述、严重程度、状态、负责人、创建时间、创建人</li>
-<li>边界条件：无数据时提示"当前筛选条件下暂无数据，无法导出"；超过5000条提示"数据量较大，请缩小筛选范围后重试"</li>
-</ul>
 
 <h5>问题列表字段</h5>
 <table>
 <tr><th>字段</th><th>说明</th></tr>
-<tr><td>问题ID</td><td>全系统唯一，规则：PR-B-创建日期-当天四位序号</td></tr>
+<tr><td>问题ID</td><td>全系统唯一，规则：PR-创建日期-当天三位序号，如 PR-20260615-001</td></tr>
 <tr><td>复制按钮</td><td>显示在ID后方，点击复制</td></tr>
-<tr><td>所属项目-系统</td><td>来自创建时所选</td></tr>
-<tr><td>问题标题</td><td>最多展示30字，超出省略号</td></tr>
-<tr><td>问题级别</td><td>紧急（P0）/高（P1）/中（P2）/低（P3）</td></tr>
-<tr><td>状态</td><td>待处理 / 处理中 / 已处理</td></tr>
-<tr><td>反馈日期</td><td>格式：年月日时分秒</td></tr>
-<tr><td>反馈人</td><td>创建人</td></tr>
-<tr><td>跟进人</td><td>创建时按所选项目/系统/模块自动分配；管理平台认领/重新指派、解决后更新</td></tr>
-<tr><td>详情</td><td>点击进入详情页，查看问题描述和处理备注</td></tr>
-<tr><td>激活</td><td>仅已处理状态问题可见，点击后提交补充信息，问题状态变为处理中</td></tr>
+<tr><td>所属系统</td><td>来自创建时所选系统</td></tr>
+<tr><td>问题标题</td><td>最多展示20字，超出省略号</td></tr>
+<tr><td>问题级别</td><td>严重 / 中等 / 一般</td></tr>
+<tr><td>状态</td><td>待处理 / 处理中 / 已解决</td></tr>
+<tr><td>反馈日期</td><td>格式：2026-06-01</td></tr>
+<tr><td>跟进人</td><td>待处理时显示"-"；处理中时显示认领人姓名；已解决时显示解决人姓名</td></tr>
 </table>
 
 <h5>问题状态机</h5>
 <ul>
-<li>创建并提交 → 待处理</li>
-<li>管理平台分配跟进人 → 处理中</li>
-<li>管理平台解决问题 → 已处理</li>
-<li>用户激活（提交补充信息） → 处理中（仅已处理状态可操作）</li>
+<li>提交问题 → 待处理</li>
+<li>中心端人员认领 → 处理中</li>
+<li>问题解决 → 已解决</li>
 </ul>
 
 <h5>创建问题页字段</h5>
 <table>
 <tr><th>字段</th><th>类型</th><th>是否必填</th><th>限制</th><th>说明</th></tr>
-<tr><td>所属项目</td><td>下拉单选</td><td>是</td><td>-</td><td>枚举值来自管理平台项目列表</td></tr>
-<tr><td>所属系统</td><td>下拉单选</td><td>是</td><td>-</td><td>二级联动，根据所选项目展示对应系统列表</td></tr>
-<tr><td>功能模块</td><td>下拉单选</td><td>否</td><td>-</td><td>级联，根据所选系统展示对应模块列表</td></tr>
-<tr><td>优先级</td><td>下拉单选</td><td>是</td><td>-</td><td>枚举值：紧急（P0）、高（P1）、中（P2）、低（P3）</td></tr>
-<tr><td>标题</td><td>文本输入</td><td>是</td><td>50字</td><td>实时字数统计</td></tr>
-<tr><td>描述</td><td>多媒体输入</td><td>是</td><td>5000字符</td><td>支持富文本，实时字数统计</td></tr>
+<tr><td>所属系统</td><td>下拉单选</td><td>是</td><td>-</td><td>枚举值来自中心端平台配置</td></tr>
+<tr><td>问题级别</td><td>下拉单选</td><td>是</td><td>-</td><td>枚举值：严重、中等、一般</td></tr>
+<tr><td>问题标题</td><td>文本输入</td><td>是</td><td>50字</td><td>-</td></tr>
+<tr><td>问题描述</td><td>多媒体输入</td><td>是</td><td>5000字符</td><td>支持富文本</td></tr>
+<tr><td>指派给</td><td>搜索选择</td><td>否</td><td>-</td><td>数创中心产品人员列表，可检索工号或姓名</td></tr>
 </table>
 
 <h5>提交流程</h5>
-<p>用户填写问题信息并点击提交 → 前端校验表单完整性 → 校验通过后创建问题记录，状态为「待处理」 → 系统自动向被指派人发送飞书消息通知 → 关闭页面，回到列表页。</p>
-
-<h5>问题详情页</h5>
-<p><strong>问题信息区：</strong>问题ID（含复制按钮）、问题标题、反馈日期、反馈人</p>
-<p><strong>问题描述区：</strong>所属项目、所属系统、功能模块、状态、问题描述、问题补充（每次激活后补充的内容单独一行展示，含补充人和时间）</p>
-<p><strong>问题解决区：</strong>跟进人、解决时间、解决方案（未处理时显示"-"）</p>
-<p><strong>问题操作区：</strong>底部悬浮，仅「已处理」状态展示「激活」按钮</p>
+<p>进入创建问题页 → 填写表单 → 点击提交 → 前端校验必填项 → 不满足则高亮错误字段并提示错误信息；满足则调用提交接口 → 后端返回成功则关闭页面、返回列表、数据更新；失败则显示错误码和错误信息。</p>
 
 <h5>边界条件</h5>
 <ul>
-<li>问题列表为空：显示空状态插图 + "暂无问题记录，点击右上角反馈新问题"</li>
-<li>搜索无结果：显示"暂无问题记录"</li>
-<li>标题超长：前端截断30字+省略号</li>
+<li>问题列表为空：显示空状态插图 + "暂无问题记录"</li>
+<li>搜索无结果：显示"未找到匹配的问题"</li>
+<li>标题/描述超长：前端截断</li>
 <li>网络异常：提交失败提示重试</li>
 </ul>
 `,
   docs: `
 <h4>4.6 系统资料库</h4>
-<p><strong>功能描述：</strong>展示由管理平台上传维护的各类系统资料文档，支持搜索、分类筛选、在线查看和下载。</p>
+<p><strong>功能描述：</strong>展示由中心端上传维护的各类系统资料文档，支持搜索、分类筛选、在线查看和下载。</p>
 <p><strong>触发条件：</strong>从左侧菜单栏「资源 &gt; 系统资料库」进入，或从首页快捷入口进入。</p>
 
 <h5>列表页</h5>
 <p><strong>搜索框：</strong>模糊搜索资料标题/资料ID</p>
-<p><strong>Tab页签：</strong>全部、油葱商城、荟健康...（枚举值来自管理平台项目列表）</p>
+<p><strong>Tab页签：</strong>全部、油葱商城、荟健康...（枚举值来自中心端平台配置）</p>
 
 <h5>资料列表字段</h5>
 <table>
 <tr><th>字段</th><th>说明</th></tr>
 <tr><td>默认图标</td><td>根据资料类型显示对应图标</td></tr>
-<tr><td>资料ID</td><td>全系统唯一，规则：DOC-创建日期-四位序号，如 DOC-20260615-0037</td></tr>
+<tr><td>资料ID</td><td>全系统唯一，规则：DB-创建日期-三位序号，如 DB-20260615-037</td></tr>
 <tr><td>复制按钮</td><td>显示在ID后方，点击复制</td></tr>
-<tr><td>系统标签</td><td>油葱商城、荟健康...（来自管理平台项目列表）</td></tr>
+<tr><td>系统标签</td><td>油葱商城、荟健康...（来自中心端平台配置）</td></tr>
 <tr><td>资料标题</td><td>默认最长30字，超长显示...</td></tr>
 <tr><td>资料简述</td><td>默认展示40字，超长显示...</td></tr>
 <tr><td>资料类型标签</td><td>PRD文档 / 原型文件 / 验收指导SOP / 使用手册 / 辅助资料</td></tr>
@@ -2758,16 +2617,17 @@ const PRD_CONTENT = {
 <p><strong>触发条件：</strong>从左侧菜单栏「资源 &gt; 数字化对接人」进入，或从首页常用对接人列表"查看更多"进入。</p>
 
 <h5>列表页</h5>
-<p><strong>Tab页签：</strong>全部、产品、质检、研发、管理</p>
+<p><strong>Tab页签：</strong>全部、产品、测试、研发、管理</p>
 <p><strong>搜索框：</strong>模糊搜索姓名或系统</p>
 
 <h5>人员卡片字段</h5>
 <table>
 <tr><th>字段</th><th>说明</th></tr>
-<tr><td>头像</td><td>取管理平台人员个人信息中的头像</td></tr>
-<tr><td>姓名</td><td>取管理平台人员个人信息中的姓名</td></tr>
-<tr><td>职位标签</td><td>取管理平台人员职位标签，可多个。如：产品、质检、管理</td></tr>
-<tr><td>系统</td><td>取管理平台人员所负责的项目</td></tr>
+<tr><td>头像</td><td>取中心端人员个人信息中的头像</td></tr>
+<tr><td>姓名</td><td>取中心端人员个人信息中的姓名</td></tr>
+<tr><td>职位标签</td><td>取中心端人员职位标签，可多个。如：产品、管理</td></tr>
+<tr><td>上级</td><td>暂不需要，当前版本不展示此字段</td></tr>
+<tr><td>系统</td><td>取中心端人员所分配的系统</td></tr>
 <tr><td>操作</td><td>根据职业标签动态展示，去重处理</td></tr>
 </table>
 
@@ -2775,9 +2635,9 @@ const PRD_CONTENT = {
 <table>
 <tr><th>职业标签</th><th>可用操作</th><th>操作说明</th></tr>
 <tr><td>产品</td><td>快捷提需求、快捷提问题</td><td>进入对应页面，指派人默认填入该员工</td></tr>
-<tr><td>质检</td><td>快捷提问题</td><td>进入新建问题页，指派人默认填入该员工</td></tr>
+<tr><td>测试</td><td>快捷提问题</td><td>进入新建问题页，指派人默认填入该员工</td></tr>
 <tr><td>研发</td><td>快捷提问题</td><td>进入新建问题页，指派人默认填入该员工</td></tr>
-<tr><td>管理（组织负责人）</td><td>快捷投诉/建议</td><td>进入新建投诉/建议页，提交后推送至投诉/建议管理池的"仅我可见"列表</td></tr>
+<tr><td>管理（含组负责人、团队负责人、中心负责人）</td><td>快捷投诉/建议</td><td>进入新建投诉/建议页，提交后推送至投诉/建议管理池的"仅我可见"列表</td></tr>
 </table>
 
 <h5>去重规则</h5>
@@ -2901,62 +2761,7 @@ const PRD_CONTENT = {
 <li>通知偏好保存失败：提示 code[910005] "通知偏好保存失败，请稍后重试"</li>
 </ul>
 
-<h4>4.10 消息中心</h4>
-<p><strong>功能描述：</strong>用于查看登录账号收到的所有消息，仅支持查看内容。触发条件：从左侧菜单栏「我的 &gt; 消息中心」进入。</p>
-
-<h5>顶部功能区</h5>
-<table>
-<tr><th>功能</th><th>说明</th></tr>
-<tr><td>搜索框</td><td>输入框，模糊搜索消息标题</td></tr>
-</table>
-
-<h5>列表区</h5>
-<table>
-<tr><th>字段</th><th>说明</th></tr>
-<tr><td>消息标题</td><td>最多展示20字，超出用省略号展示</td></tr>
-<tr><td>消息内容</td><td>最多展示30字，超出用省略号展示</td></tr>
-<tr><td>发送时间</td><td>格式：年月日时分秒</td></tr>
-<tr><td>查看</td><td>进入详情页</td></tr>
-</table>
-
-<h5>消息详情</h5>
-<table>
-<tr><th>字段</th><th>说明</th></tr>
-<tr><td>消息标题</td><td>完整的消息标题</td></tr>
-<tr><td>消息内容</td><td>完整的消息内容</td></tr>
-<tr><td>发送时间</td><td>格式：年月日时分秒</td></tr>
-</table>
-
-<h5>消息触达场景与方式</h5>
-<table>
-<tr><th>功能模块</th><th>场景</th><th>消息接收方</th><th>触达方式</th><th>说明</th></tr>
-<tr><td>我的需求</td><td>需求审批通知</td><td>组织负责人</td><td>消息中心+飞书</td><td>业务端用户提交需求后，系统自动向组织负责人发送审批通知</td></tr>
-<tr><td>我的需求</td><td>审批结果通知</td><td>需求提交人</td><td>消息中心+飞书</td><td>组织负责人审批通过/不通过后，通知提交人</td></tr>
-<tr><td>我的需求</td><td>需求催促通知</td><td>审核人</td><td>飞书</td><td>提交人主动催促或待审批满2小时未审批自动催促，飞书提醒审核人尽快审批</td></tr>
-<tr><td>我的需求</td><td>需求状态变更通知</td><td>需求提交人</td><td>消息中心+飞书</td><td>需求被转化、排期、进入验收、上线、关闭时通知提交人</td></tr>
-<tr><td>我的问题</td><td>问题指派通知</td><td>被指派人</td><td>消息中心+飞书</td><td>业务端创建问题后，被指派人接到消息推送</td></tr>
-<tr><td>我的问题</td><td>问题处理完成</td><td>创建人</td><td>消息中心+飞书</td><td>管理平台处理完成后通知创建人</td></tr>
-<tr><td>我的问题</td><td>问题激活</td><td>解决人、抄送人</td><td>消息中心+飞书</td><td>业务端激活已处理的问题，通知解决人、抄送人</td></tr>
-<tr><td>投诉/建议</td><td>创建工单</td><td>对应处理人</td><td>消息中心+飞书</td><td>协同平台创建工单，投诉/建议处理页配置的对应人员接到消息推送</td></tr>
-<tr><td>投诉/建议</td><td>处理完成通知</td><td>创建人</td><td>消息中心+飞书</td><td>管理平台处理完成工单（填写处理备注）后，通知创建人</td></tr>
-<tr><td>系统验收单</td><td>验收通知</td><td>验收人员</td><td>消息中心+飞书</td><td>管理平台通知验收：{项目名}{版本号}版本系统功能已完成UAT环境发版，请进行验收（附验收单链接和截止时间）</td></tr>
-<tr><td>系统验收单</td><td>催促验收</td><td>验收人员</td><td>消息中心+飞书</td><td>管理平台催促验收：{项目名}{版本号}还有{待验收需求数量}项未做验收，请尽快验收</td></tr>
-<tr><td>系统验收单</td><td>已发布通知</td><td>验收人员</td><td>消息中心+飞书</td><td>管理平台完成发布：{项目名}{版本号}版本系统功能已发布至线上</td></tr>
-<tr><td>系统验收单</td><td>应用审核通知</td><td>验收人员</td><td>消息中心+飞书</td><td>APP/小程序审核通过：{项目名}APP应用市场审核通过列表</td></tr>
-<tr><td>登录与认证</td><td>密码重置申请提交</td><td>管理平台审核人员</td><td>消息中心+飞书</td><td>用户提交密码重置申请后，通知管理平台审核人员</td></tr>
-<tr><td>登录与认证</td><td>密码重置审核结果</td><td>申请人</td><td>邮件</td><td>审核通过/拒绝后邮件通知申请人</td></tr>
-<tr><td>登录与认证</td><td>账号开通申请提交</td><td>管理平台管理员</td><td>飞书</td><td>用户提交账号开通申请后，飞书通知管理平台管理员审批</td></tr>
-<tr><td>登录与认证</td><td>账号开通审核结果</td><td>申请人</td><td>邮件</td><td>审核通过后邮件发送账号+初始密码</td></tr>
-</table>
-
-<h5>边界条件</h5>
-<ul>
-<li>消息列表为空：显示空状态插图 + "暂无消息"</li>
-<li>搜索无结果：显示"未找到匹配的消息"</li>
-<li>网络异常：提示"数据加载失败，请点击刷新重试"</li>
-</ul>
-
-<h4>4.11 菜单底部个人信息栏</h4>
+<h4>4.10 菜单底部个人信息栏</h4>
 <p><strong>功能描述：</strong>左侧菜单栏底部固定展示当前登录用户的基本信息和退出登录按钮。此区域始终可见，不随菜单滚动而消失。</p>
 <table>
 <tr><th>字段</th><th>说明</th></tr>
@@ -2977,23 +2782,23 @@ function getCurrentPrdKey(){
   var active = document.querySelector('[id^="view-"]:not(.hidden)');
   if(!active) return 'home';
   var viewId = active.id.replace('view-','');
-  var keyMap = {home:'home',acceptance:'acceptance',accDetail:'acceptance',requirements:'demands',reqDetail:'demands',problems:'problems',probDetail:'problems',documents:'docs',contacts:'contacts',complaints:'complaints',messages:'messages',msgDetail:'messages',profile:'profile'};
+  var keyMap = {home:'home',acceptance:'acceptance',accDetail:'acceptance',requirements:'demands',reqDetail:'demands',problems:'problems',documents:'docs',contacts:'contacts',complaints:'complaints',profile:'profile'};
   return keyMap[viewId] || 'home';
 }
 
 // ===== DATA =====
 const USERS = {
-  zhangsan: { password: 'Abc123!', name: '张三', feishu: true, firstLogin: false, dept: '产品部', empId: 'LG0245', center: '数字化创新中心', tags: ['产品','管理'], avatar: '', accountDate: '2024-03-15', ext: '8001', notifyReq: false, notifyIssue: true, notifyAccept: true, statsReq: 14, statsIssue: 11, statsAccept: 12 },
-  lisi: { password: 'Test12#', name: '李四', feishu: false, firstLogin: false, dept: '数据部', empId: 'LG0246', center: '数字化创新中心', tags: ['研发'], avatar: '', accountDate: '2024-06-20', ext: '8002', notifyReq: true, notifyIssue: true, notifyAccept: true, statsReq: 8, statsIssue: 5, statsAccept: 3 },
-  wangwu: { password: 'Init12!', name: '王五', feishu: false, firstLogin: true, dept: '运营部', empId: 'LG0247', center: '数字化创新中心', tags: ['质检'], avatar: '', accountDate: '2025-01-10', ext: '', notifyReq: true, notifyIssue: false, notifyAccept: true, statsReq: 3, statsIssue: 7, statsAccept: 1 }
+  zhangsan: { password: 'Abc123!', name: '张三', feishu: true, firstLogin: false, dept: '产品部' },
+  lisi: { password: 'Test12#', name: '李四', feishu: false, firstLogin: false, dept: '数据部' },
+  wangwu: { password: 'Init12!', name: '王五', feishu: false, firstLogin: true, dept: '运营部' }
 };
 
 let currentUser = null;
 
-function genId(prefix, digits) {
+function genId(prefix) {
   const d = new Date();
   const ds = '' + d.getFullYear() + String(d.getMonth()+1).padStart(2,'0') + String(d.getDate()).padStart(2,'0');
-  const n = String(Math.floor(Math.random()*9999)+1).padStart(digits || 3,'0');
+  const n = String(Math.floor(Math.random()*999)+1).padStart(3,'0');
   return prefix + '-' + ds + '-' + n;
 }
 
@@ -3174,8 +2979,8 @@ let reqData = [
     {type:'审批通过',text:'诸葛亮$LG0250$ 审批通过需求 DE-B-20250107-0008',time:'2025-01-08 14:00:00'},
     {type:'创建',text:'张三$zhangsan$ 创建需求',time:'2025-01-07 09:00:00'}
   ]},
-  { id:'DE-B-20250106-0009', project:'荟健康V2.8', system:'用户体系', module:'会员体系', title:'内容审核加速', priority:'低', status:'已关闭', assignee:'陈雪梅', submitter:'李四', dept:'内容部', desc:'优化内容审核流程，引入AI辅助审核，缩短审核时效。', time:'2025-01-06', closePerson:'关羽', closeTime:'2025-01-18 10:00:00', closeReason:'业务方取消该需求，优先级调整至下一迭代', activity:[
-    {type:'关闭',text:'关羽$LG0247$ 关闭需求 原因：业务方取消该需求，优先级调整至下一迭代',time:'2025-01-18 10:00:00'},
+  { id:'DE-B-20250106-0009', project:'荟健康V2.8', system:'用户体系', module:'会员体系', title:'内容审核加速', priority:'低', status:'已关闭', assignee:'陈雪梅', submitter:'李四', dept:'内容部', desc:'优化内容审核流程，引入AI辅助审核，缩短审核时效。', time:'2025-01-06', activity:[
+    {type:'关闭',text:'关羽$LG0247$ 关闭需求',time:'2025-01-18 10:00:00'},
     {type:'转化',text:'曹操$LG0246$ 转化需求 DE-B-20250106-0009',time:'2025-01-10 16:00:00'},
     {type:'审批通过',text:'诸葛亮$LG0250$ 审批通过需求 DE-B-20250106-0009',time:'2025-01-07 11:00:00'},
     {type:'创建',text:'李四$lisi$ 创建需求',time:'2025-01-06 15:20:00'}
@@ -3206,53 +3011,54 @@ let reqData = [
 
 // ===== PROBLEMS DATA =====
 let probData = [
-  { id:'PR-B-20250115-0001', project:'油葱商城V4.30.5', system:'订单管理系统', module:'支付系统', title:'登录白屏问题', priority:'紧急', status:'处理中', feedbackDate:'2025-01-15 09:30:22', feedbackPerson:'张三', followUpPerson:'张建国', desc:'用户在Chrome浏览器下点击登录按钮后页面白屏，无法正常登录系统。经排查为前端JS报错导致。', supplements:[], resolveTime:'-', resolveSolution:'-' },
-  { id:'PR-B-20250114-0002', project:'数据中台V1.5', system:'数据平台', module:'数据导出', title:'数据导出异常', priority:'高', status:'待处理', feedbackDate:'2025-01-14 14:15:08', feedbackPerson:'李四', followUpPerson:'—', desc:'导出Excel文件时，数据量超过1万行后导出失败，提示服务器内部错误。', supplements:[], resolveTime:'-', resolveSolution:'-' },
-  { id:'PR-B-20250112-0003', project:'油葱商城V4.30.5', system:'订单管理系统', module:'订单管理', title:'页面加载慢', priority:'中', status:'已处理', feedbackDate:'2025-01-12 10:45:33', feedbackPerson:'王五', followUpPerson:'王小燕', desc:'订单列表页加载时间超过8秒，严重影响使用体验。', supplements:[{person:'王五',time:'2025-01-14 16:20:00',content:'补充：在筛选"近三个月"数据时最为明显，数据量约5万条。'}], resolveTime:'2025-01-13 17:30:00', resolveSolution:'已优化SQL查询，增加分页加载机制，列表加载时间降至1.5秒以内。' },
-  { id:'PR-B-20250111-0004', project:'用户中心V3.2', system:'认证系统', module:'权限管理', title:'权限校验失效', priority:'紧急', status:'处理中', feedbackDate:'2025-01-11 16:22:10', feedbackPerson:'张三', followUpPerson:'赵伟', desc:'部分普通用户可以访问管理员专属页面，权限校验未生效。', supplements:[], resolveTime:'-', resolveSolution:'-' },
-  { id:'PR-B-20250110-0005', project:'数据中台V1.5', system:'数据治理平台', module:'元数据管理', title:'定时任务报错', priority:'高', status:'待处理', feedbackDate:'2025-01-10 08:55:41', feedbackPerson:'赵六', followUpPerson:'—', desc:'每日凌晨2点的数据同步定时任务连续3天执行失败，日志显示连接超时。', supplements:[], resolveTime:'-', resolveSolution:'-' },
-  { id:'PR-B-20250109-0006', project:'油葱商城V4.30.5', system:'订单管理系统', module:'售后服务', title:'缓存同步延迟', priority:'低', status:'已处理', feedbackDate:'2025-01-09 11:30:15', feedbackPerson:'李四', followUpPerson:'刘磊', desc:'退款状态更新后，前端缓存未及时刷新，导致用户看到的退款状态不一致。', supplements:[], resolveTime:'2025-01-10 15:00:00', resolveSolution:'已调整Redis缓存过期策略，退款状态变更后主动清除相关缓存键。' },
-  { id:'PR-B-20250108-0007', project:'用户中心V3.2', system:'用户系统', module:'消息推送', title:'消息重复推送', priority:'紧急', status:'处理中', feedbackDate:'2025-01-08 13:10:55', feedbackPerson:'王五', followUpPerson:'张建国', desc:'同一用户收到多条相同的推送消息，初步判断为消息队列消费重复。', supplements:[], resolveTime:'-', resolveSolution:'-' },
-  { id:'PR-B-20250107-0008', project:'荟健康V2.8', system:'健康管理系统', module:'健康档案', title:'图片上传失败', priority:'中', status:'待处理', feedbackDate:'2025-01-07 09:20:30', feedbackPerson:'张三', followUpPerson:'—', desc:'健康档案中上传体检报告图片时，选择文件后点击上传无响应，控制台无报错。', supplements:[], resolveTime:'-', resolveSolution:'-' },
-  { id:'PR-B-20250106-0009', project:'油葱商城V4.30.5', system:'商品中心', module:'价格策略', title:'搜索排序异常', priority:'低', status:'已处理', feedbackDate:'2025-01-06 15:40:18', feedbackPerson:'赵六', followUpPerson:'王小燕', desc:'商品列表按价格升序排列时，部分商品价格顺序错乱。', supplements:[{person:'赵六',time:'2025-01-07 10:15:00',content:'补充：促销活动中的商品受影响最大，非促销商品排序正常。'}], resolveTime:'2025-01-07 18:00:00', resolveSolution:'修复排序字段未考虑促销价格的计算逻辑，现已统一使用实际售价排序。' },
-  { id:'PR-B-20250105-0010', project:'油葱商城V4.30.5', system:'订单管理系统', module:'支付系统', title:'支付回调超时', priority:'紧急', status:'处理中', feedbackDate:'2025-01-05 20:05:42', feedbackPerson:'李四', followUpPerson:'赵伟', desc:'微信支付回调接口频繁超时，导致用户支付成功但订单状态未更新。', supplements:[], resolveTime:'-', resolveSolution:'-' },
-  { id:'PR-B-20250104-0011', project:'数据中台V1.5', system:'数据平台', module:'数据报表', title:'统计报表数据不一致', priority:'中', status:'已处理', feedbackDate:'2025-01-04 11:25:36', feedbackPerson:'王五', followUpPerson:'刘磊', desc:'数据报表中的日活数据与用户中心统计的日活数据存在约5%的偏差。', supplements:[], resolveTime:'2025-01-06 14:00:00', resolveSolution:'排查发现数据平台统计口径未排除测试账号，已修正过滤规则。' }
+  { id:'PR-20250115-001', title:'登录白屏问题', system:'用户中心', severity:'严重', status:'处理中', owner:'张建国', time:'2025-01-15' },
+  { id:'PR-20250114-001', title:'数据导出异常', system:'数据中台', severity:'中等', status:'待处理', owner:'—', time:'2025-01-14' },
+  { id:'PR-20250112-001', title:'页面加载慢', system:'订单管理系统', severity:'一般', status:'已解决', owner:'王小燕', time:'2025-01-12' },
+  { id:'PR-20250111-002', title:'权限校验失效', system:'用户中心', severity:'严重', status:'处理中', owner:'赵伟', time:'2025-01-11' },
+  { id:'PR-20250110-003', title:'定时任务报错', system:'数据中台', severity:'中等', status:'待处理', owner:'—', time:'2025-01-10' },
+  { id:'PR-20250109-004', title:'缓存同步延迟', system:'订单管理系统', severity:'一般', status:'已解决', owner:'刘磊', time:'2025-01-09' },
+  { id:'PR-20250108-005', title:'消息重复推送', system:'用户中心', severity:'严重', status:'处理中', owner:'张建国', time:'2025-01-08' },
+  { id:'PR-20250107-006', title:'图片上传失败', system:'内容管理平台', severity:'中等', status:'待处理', owner:'—', time:'2025-01-07' },
+  { id:'PR-20250106-007', title:'搜索排序异常', system:'订单管理系统', severity:'一般', status:'已解决', owner:'王小燕', time:'2025-01-06' },
+  { id:'PR-20250105-008', title:'支付回调超时', system:'订单管理系统', severity:'严重', status:'处理中', owner:'赵伟', time:'2025-01-05' },
+  { id:'PR-20250104-009', title:'统计报表数据不一致', system:'数据中台', severity:'中等', status:'已解决', owner:'刘磊', time:'2025-01-04' }
 ];
 
 // ===== DOCUMENTS DATA =====
+const docSystems = ['订单管理系统','用户中心','数据中台','内容管理平台'];
 let docData = [
-  { id:'DOC-20260615-0001', system:'油葱商城V4.30.5', name:'订单管理PRD v3.2', desc:'油葱商城订单管理模块完整产品需求文档，涵盖订单创建、支付、退款、物流追踪等核心流程', type:'PRD文档', time:'2026-06-15' },
-  { id:'DOC-20260614-0002', system:'油葱商城V4.30.5', name:'订单流转原型', desc:'订单从创建到完成的全流程交互原型，包含正向流程与异常处理页面', type:'原型文件', time:'2026-06-14' },
-  { id:'DOC-20260613-0003', system:'油葱商城V4.30.5', name:'验收指导SOP-订单模块', desc:'订单模块上线验收标准操作流程，含验收检查清单、测试用例及通过标准', type:'验收指导SOP', time:'2026-06-13' },
-  { id:'DOC-20260612-0004', system:'荟健康V2.8', name:'用户体系PRD v2.1', desc:'荟健康用户体系重构需求文档，包含会员等级、积分体系、用户画像等功能设计', type:'PRD文档', time:'2026-06-12' },
-  { id:'DOC-20260611-0005', system:'用户中心V3.2', name:'权限管理使用手册', desc:'用户中心权限管理模块操作手册，面向管理员的权限配置与角色分配指南', type:'使用手册', time:'2026-06-11' },
-  { id:'DOC-20260610-0006', system:'数据中台V1.5', name:'数据导出功能PRD', desc:'数据中台数据导出功能需求文档，支持Excel、CSV等多格式导出及定时导出任务', type:'PRD文档', time:'2026-06-10' },
-  { id:'DOC-20260609-0007', system:'数据中台V1.5', name:'数据字典辅助资料', desc:'数据中台核心数据字典，包含字段定义、枚举值说明及表关系图示', type:'辅助资料', time:'2026-06-09' },
-  { id:'DOC-20260608-0008', system:'油葱商城V4.30.5', name:'商品中心使用手册 v4.0', desc:'商品中心操作手册，涵盖商品发布、SKU管理、价格策略配置等日常操作', type:'使用手册', time:'2026-06-08' },
-  { id:'DOC-20260607-0009', system:'荟健康V2.8', name:'健康档案验收SOP', desc:'健康档案模块验收标准流程，含数据迁移验证、接口联调及性能基准测试', type:'验收指导SOP', time:'2026-06-07' },
-  { id:'DOC-20260606-0010', system:'油葱商城V4.30.5', name:'退款流程PRD', desc:'油葱商城退款流程优化需求文档，支持部分退款、自动退款及退款审批流', type:'PRD文档', time:'2026-06-06' },
-  { id:'DOC-20260605-0011', system:'用户中心V3.2', name:'单点登录集成指南', desc:'SSO单点登录集成使用手册，面向接入方技术团队的身份认证对接文档', type:'使用手册', time:'2026-06-05' },
-  { id:'DOC-20260604-0012', system:'数据中台V1.5', name:'实时大屏原型', desc:'数据中台实时数据大屏交互原型，包含多维度数据看板及钻取交互设计', type:'原型文件', time:'2026-06-04' },
-  { id:'DOC-20260603-0013', system:'荟健康V2.8', name:'SEO优化方案', desc:'荟健康官网SEO优化辅助资料，含关键词分析、页面优化建议及竞品对标报告', type:'辅助资料', time:'2026-06-03' },
-  { id:'DOC-20260602-0014', system:'油葱商城V4.30.5', name:'库存同步SOP', desc:'库存实时同步功能验收操作流程，含多仓同步策略及异常回滚操作指南', type:'验收指导SOP', time:'2026-06-02' },
-  { id:'DOC-20260601-0015', system:'用户中心V3.2', name:'隐私协议更新说明', desc:'用户中心隐私协议更新辅助资料，包含GDPR合规检查清单及用户数据处置方案', type:'辅助资料', time:'2026-06-01' },
-  { id:'DOC-20260531-0016', system:'数据中台V1.5', name:'血缘分析PRD', desc:'数据血缘分析功能需求文档，支持字段级血缘追踪、影响分析及变更预警', type:'PRD文档', time:'2026-05-31' }
+  { id:'DB-20250115-001', system:'订单管理系统', name:'订单管理PRD v3.2', type:'PRD文档', time:'2025-01-15' },
+  { id:'DB-20250114-001', system:'订单管理系统', name:'订单流转原型', type:'原型文件', time:'2025-01-14' },
+  { id:'DB-20250113-001', system:'订单管理系统', name:'验收指导SOP-订单模块', type:'验收指导SOP', time:'2025-01-13' },
+  { id:'DB-20250115-002', system:'用户中心', name:'用户体系PRD v2.1', type:'PRD文档', time:'2025-01-15' },
+  { id:'DB-20250114-002', system:'用户中心', name:'权限管理使用手册', type:'使用手册', time:'2025-01-14' },
+  { id:'DB-20250113-002', system:'数据中台', name:'数据导出功能PRD', type:'PRD文档', time:'2025-01-13' },
+  { id:'DB-20250112-001', system:'数据中台', name:'数据字典辅助资料', type:'辅助资料', time:'2025-01-12' },
+  { id:'DB-20250111-001', system:'内容管理平台', name:'CMS使用手册 v4.0', type:'使用手册', time:'2025-01-11' },
+  { id:'DB-20250110-001', system:'内容管理平台', name:'内容审核流程SOP', type:'验收指导SOP', time:'2025-01-10' },
+  { id:'DB-20250109-002', system:'订单管理系统', name:'退款流程PRD', type:'PRD文档', time:'2025-01-09' },
+  { id:'DB-20250108-003', system:'用户中心', name:'单点登录集成指南', type:'使用手册', time:'2025-01-08' },
+  { id:'DB-20250107-004', system:'数据中台', name:'实时大屏原型', type:'原型文件', time:'2025-01-07' },
+  { id:'DB-20250106-005', system:'内容管理平台', name:'SEO优化方案', type:'辅助资料', time:'2025-01-06' },
+  { id:'DB-20250105-006', system:'订单管理系统', name:'库存同步SOP', type:'验收指导SOP', time:'2025-01-05' },
+  { id:'DB-20250104-007', system:'用户中心', name:'隐私协议更新说明', type:'辅助资料', time:'2025-01-04' },
+  { id:'DB-20250103-008', system:'数据中台', name:'血缘分析PRD', type:'PRD文档', time:'2025-01-03' }
 ];
 
 // ===== CONTACTS DATA =====
 let contactData = [
-  { avatar:null, name:'李明辉', tags:['产品'], systems:['油葱商城V4.30.5','用户中心V3.2'] },
-  { avatar:null, name:'陈雪梅', tags:['产品'], systems:['荟健康V2.8'] },
-  { avatar:null, name:'周明', tags:['产品','质检'], systems:['油葱商城V4.30.5','数据中台V1.5'] },
-  { avatar:null, name:'林峰', tags:['产品','研发'], systems:['用户中心V3.2','内容管理平台'] },
-  { avatar:null, name:'王小燕', tags:['质检'], systems:['油葱商城V4.30.5','荟健康V2.8'] },
-  { avatar:null, name:'刘磊', tags:['质检'], systems:['数据中台V1.5'] },
-  { avatar:null, name:'吴芳', tags:['质检'], systems:['用户中心V3.2'] },
-  { avatar:null, name:'张建国', tags:['研发'], systems:['油葱商城V4.30.5','内容管理平台'] },
-  { avatar:null, name:'赵伟', tags:['研发'], systems:['荟健康V2.8','数据中台V1.5'] },
-  { avatar:null, name:'郑强', tags:['研发'], systems:['用户中心V3.2'] },
-  { avatar:null, name:'孙丽', tags:['管理'], systems:['油葱商城V4.30.5','荟健康V2.8','用户中心V3.2','数据中台V1.5'] },
-  { avatar:null, name:'黄静', tags:['管理','产品'], systems:['内容管理平台','数据中台V1.5'] }
+  { name:'李明辉', role:'产品', dept:'产品部', phone:'138xxxx1234' },
+  { name:'陈雪梅', role:'产品', dept:'产品部', phone:'139xxxx5678' },
+  { name:'王小燕', role:'测试', dept:'质量部', phone:'137xxxx9012' },
+  { name:'刘磊', role:'测试', dept:'质量部', phone:'136xxxx3456' },
+  { name:'张建国', role:'研发', dept:'研发部', phone:'135xxxx7890' },
+  { name:'赵伟', role:'研发', dept:'研发部', phone:'188xxxx2345' },
+  { name:'孙丽', role:'管理', dept:'平台运营中心', phone:'186xxxx6789' },
+  { name:'周明', role:'产品', dept:'产品部', phone:'150xxxx1111' },
+  { name:'吴芳', role:'测试', dept:'质量部', phone:'151xxxx2222' },
+  { name:'郑强', role:'研发', dept:'研发部', phone:'152xxxx3333' },
+  { name:'黄静', role:'管理', dept:'平台运营中心', phone:'153xxxx4444' },
+  { name:'林峰', role:'研发', dept:'研发部', phone:'155xxxx5555' }
 ];
 
 // ===== COMPLAINTS DATA =====
@@ -3370,6 +3176,12 @@ function bindFeishu() {
   if (currentUser) currentUser.feishu = true;
   closeModal('feishuAuthModal');
   showToast('飞书授权绑定成功');
+  if (document.getElementById('pfFeishu')) {
+    document.getElementById('pfFeishu').textContent = '已绑定飞书';
+  }
+  if (document.getElementById('pfLoginMethod')) {
+    document.getElementById('pfLoginMethod').textContent = '飞书快捷登录';
+  }
 }
 
 function checkCapsLock(e) {
@@ -3405,7 +3217,9 @@ function enterApp() {
   const d = new Date();
   const ds = d.getFullYear() + '年' + String(d.getMonth()+1).padStart(2,'0') + '月' + String(d.getDate()).padStart(2,'0') + '日 星期' + ['日','一','二','三','四','五','六'][d.getDay()];
   document.getElementById('welcomeSub').textContent = '今日 ' + ds;
-  renderProfile();
+  document.getElementById('pfUser').value = currentUser.username;
+  document.getElementById('pfName').value = currentUser.name;
+  document.getElementById('pfFeishu').textContent = currentUser.feishu ? "已绑定飞书" : "未绑定飞书";
   if (currentUser.firstLogin) {
     showError(errCode(), '首次登录，请及时修改初始密码');
   }
@@ -3514,8 +3328,8 @@ function handleRegister() {
 
 // ===== NAVIGATION =====
 const viewMap = {
-  home:'首页', acceptance:'系统验收单', requirements:'我的需求', reqDetail:'需求详情', problems:'我的问题', probDetail:'问题详情',
-  documents:'系统资料库', contacts:'数字化对接人', complaints:'我的投诉/建议', approvals:'我的审批', messages:'消息中心', msgDetail:'消息详情', profile:'个人中心',
+  home:'首页', acceptance:'系统验收单', requirements:'我的需求', reqDetail:'需求详情', problems:'我的问题',
+  documents:'系统资料库', contacts:'数字化对接人', complaints:'我的投诉/建议', approvals:'我的审批', profile:'个人中心',
   accDetail:'验收单详情'
 };
 const breadcrumbMap = {
@@ -3524,13 +3338,10 @@ const breadcrumbMap = {
   requirements: ['业务','我的需求'],
   reqDetail: ['业务','我的需求','需求详情'],
   problems: ['业务','我的问题'],
-  probDetail: ['业务','我的问题','问题详情'],
   documents: ['资源','系统资料库'],
   contacts: ['资源','数字化对接人'],
   complaints: ['我的','我的投诉/建议'],
-  approvals: ['业务','我的审批'],
-  messages: ['我的','消息中心'],
-  msgDetail: ['我的','消息中心','消息详情'],
+  approvals: ['我的','我的审批'],
   profile: ['我的','个人中心'],
   accDetail: ['业务','系统验收单','验收单详情']
 };
@@ -3622,13 +3433,12 @@ function switchView(view) {
   // Render data
   if (view === 'home') renderHome();
   if (view === 'acceptance') renderAccList();
-  if (view === 'requirements') { initReqFilterProjects(); renderReqList(); }
+  if (view === 'requirements') renderReqList();
   if (view === 'problems') renderProbList();
   if (view === 'documents') renderDocList();
   if (view === 'contacts') renderContactList();
   if (view === 'complaints') renderCompList();
   if (view === 'approvals') renderApprovalList();
-  if (view === 'messages') renderMsgList();
   if (view === 'profile') renderProfile();
 }
 
@@ -3711,24 +3521,28 @@ function toggleMsgPanel() {
 
 function markAllRead() {
   document.querySelectorAll('.mp-unread').forEach(el => el.classList.remove('mp-unread'));
-  msgData.forEach(m => m.read = true);
-  updateMsgBadge();
+  document.getElementById('msgBadge').style.display = 'none';
   msgPanelOpen = false;
   document.getElementById('msgPanel').classList.remove('show');
 }
 
 function openMsg(id) {
-  const msgIdMap = { 1:'MSG-001', 2:'MSG-002', 3:'MSG-003', 4:'MSG-004', 5:'MSG-005' };
-  const targetId = msgIdMap[id];
-  if (targetId) {
-    const m = msgData.find(x => x.id === targetId);
-    if (m) m.read = true;
-    updateMsgBadge();
-    document.querySelector('#msgPanel .mp-item:nth-child(' + (id+1) + ')')?.classList.remove('mp-unread');
-    msgPanelOpen = false;
-    document.getElementById('msgPanel').classList.remove('show');
-    openMsgDetail(targetId);
-  }
+  const msgs = {
+    1: { title:'系统验收单待处理提醒', body:'订单管理系统V4.30.5验收单（IC-20260715-0001）截止时间为 2026-07-20 17:00，请及时处理。' },
+    2: { title:'需求进入研发阶段', body:'您提交的需求 DE-20260610-003「数据报表优化」已进入研发阶段，预计完成时间 2026-07-10。' },
+    3: { title:'问题已解决', body:'您反馈的问题 PR-20260612-002「荟健康首页崩溃」已由王磊处理并关闭，请确认验证。' },
+    4: { title:'平台公告', body:'数字化效能协同平台将于 2026-06-22 02:00-04:00 进行例行维护，期间服务不可用，请提前做好安排。' },
+    5: { title:'账号开通审批通过', body:'您申请的账号已审批通过，初始密码已发送至您的邮箱，请登录后及时修改密码。' }
+  };
+  const m = msgs[id];
+  if (!m) return;
+  document.querySelector('#msgPanel .mp-item:nth-child(' + (id+1) + ')').classList.remove('mp-unread');
+  const unreadCount = document.querySelectorAll('.mp-unread').length;
+  const badge = document.getElementById('msgBadge');
+  if (unreadCount === 0) { badge.style.display = 'none'; } else { badge.textContent = unreadCount; }
+  showToast(m.title + '：' + m.body);
+  msgPanelOpen = false;
+  document.getElementById('msgPanel').classList.remove('show');
 }
 
 // Close panels on outside click
@@ -4202,49 +4016,12 @@ function getReqStatusClass(s) {
     : 'status-wait';
 }
 
-function getFilteredReqList() {
+function renderReqList() {
   let list = reqFilter === 'all' ? reqData : reqData.filter(d => d.status === reqFilter);
   if (reqSearchKw) {
     const kw = reqSearchKw.toLowerCase();
     list = list.filter(d => d.id.toLowerCase().includes(kw) || d.title.toLowerCase().includes(kw));
   }
-  const df = document.getElementById('reqFilterDateFrom')?.value;
-  const dt = document.getElementById('reqFilterDateTo')?.value;
-  if (df) list = list.filter(d => d.time.slice(0,10) >= df);
-  if (dt) list = list.filter(d => d.time.slice(0,10) <= dt);
-  const fp = document.getElementById('reqFilterPerson')?.value?.trim();
-  if (fp) list = list.filter(d => (d.submitter || '').includes(fp) || (d.dept || '').includes(fp));
-  const fproj = document.getElementById('reqFilterProject')?.value;
-  if (fproj) list = list.filter(d => d.project === fproj);
-  return list;
-}
-
-function resetReqFilters() {
-  document.getElementById('reqFilterDateFrom').value = '';
-  document.getElementById('reqFilterDateTo').value = '';
-  document.getElementById('reqFilterPerson').value = '';
-  document.getElementById('reqFilterProject').value = '';
-  document.getElementById('reqSearchInput').value = '';
-  reqSearchKw = '';
-  renderReqList();
-}
-
-function exportRequirements() {
-  const list = getFilteredReqList();
-  if (!list.length) { showToast('当前筛选条件下暂无数据，无法导出 [500009]'); return; }
-  if (list.length > 5000) { showToast('数据量较大，请缩小筛选范围后重试 [500010]'); return; }
-  showToast('导出成功：' + list.length + ' 条需求数据');
-}
-
-function initReqFilterProjects() {
-  const sel = document.getElementById('reqFilterProject');
-  if (!sel) return;
-  const projects = Object.keys(PROJECT_SYSTEMS);
-  sel.innerHTML = '<option value="">全部项目</option>' + projects.map(p => '<option value="'+p+'">'+p+'</option>').join('');
-}
-
-function renderReqList() {
-  const list = getFilteredReqList();
   const body = document.getElementById('reqBody');
   const tableWrap = document.getElementById('reqTableWrap');
   const empty = document.getElementById('reqEmpty');
@@ -4252,11 +4029,11 @@ function renderReqList() {
 
   if (!reqData.length) {
     tableWrap.classList.add('hidden'); noResult.classList.add('hidden'); empty.classList.remove('hidden');
-    updateReqStats(); return;
+    updateReqStats(); updateReqSidePanel(); return;
   }
   if (!list.length) {
     tableWrap.classList.add('hidden'); empty.classList.add('hidden'); noResult.classList.remove('hidden');
-    updateReqStats(); return;
+    updateReqStats(); updateReqSidePanel(); return;
   }
   tableWrap.classList.remove('hidden'); empty.classList.add('hidden'); noResult.classList.add('hidden');
 
@@ -4277,6 +4054,7 @@ function renderReqList() {
     </tr>`;
   }).join('');
   updateReqStats();
+  updateReqSidePanel();
 }
 
 function copyReqId(id) {
@@ -4291,6 +4069,27 @@ function updateReqStats() {
   if (el('reqStatPending')) el('reqStatPending').textContent = reqData.filter(d => d.status === '待审批').length;
   if (el('reqStatResearch')) el('reqStatResearch').textContent = reqData.filter(d => d.status === '调研中').length;
   if (el('reqStatOnline')) el('reqStatOnline').textContent = reqData.filter(d => d.status === '已上线').length;
+}
+
+function updateReqSidePanel() {
+  // Priority distribution
+  const prioCounts = { '紧急': 0, '高': 0, '中': 0, '低': 0 };
+  reqData.forEach(d => { if (prioCounts[d.priority] !== undefined) prioCounts[d.priority]++; });
+  const total = reqData.length || 1;
+  const prioColors = { '紧急': 'var(--danger)', '高': 'var(--warning)', '中': 'var(--primary)', '低': 'var(--success)' };
+  const prioDist = document.getElementById('reqPriorityDist');
+  if (prioDist) prioDist.innerHTML = Object.keys(prioCounts).map(k =>
+    `<div class="dist-item"><div class="dist-label">${k}</div><div class="dist-bar"><div class="dist-fill" style="width:${Math.round(prioCounts[k]/total*100)}%;background:${prioColors[k]}"></div></div><div class="dist-count">${prioCounts[k]}</div></div>`
+  ).join('');
+
+  // Status distribution
+  const statusList = ['待审批','审批不通过','待分配','调研中','验收中','已上线','已关闭'];
+  const statusColors = { '待审批':'var(--warning)', '审批不通过':'var(--danger)', '待分配':'var(--accent)', '调研中':'var(--primary)', '验收中':'#8B5CF6', '已上线':'var(--success)', '已关闭':'var(--text-secondary)' };
+  const statusDist = document.getElementById('reqStatusDist');
+  if (statusDist) statusDist.innerHTML = statusList.map(s => {
+    const c = reqData.filter(d => d.status === s).length;
+    return c > 0 ? `<div class="dist-item"><div class="dist-label">${s}</div><div class="dist-bar"><div class="dist-fill" style="width:${Math.round(c/total*100)}%;background:${statusColors[s]||'var(--primary)'}"></div></div><div class="dist-count">${c}</div></div>` : '';
+  }).join('');
 }
 
 function openCreateModal(type) {
@@ -4417,61 +4216,57 @@ function createRequirement() {
 }
 
 // ===== REQUIREMENT DETAIL =====
-function getPriorityLabel(p) {
-  const map = { '紧急':'紧急(P0)', '高':'高(P1)', '中':'中(P2)', '低':'低(P3)' };
-  return map[p] || p;
-}
 function viewReqDetail(id) {
   const d = reqData.find(r => r.id === id);
   if (!d) return;
+  document.getElementById('reqDetailTitle').textContent = d.title;
+  document.getElementById('reqDetailId').textContent = d.id;
+  const badge = document.getElementById('reqDetailStatusBadge');
+  badge.textContent = d.status;
+  badge.className = 'status ' + getReqStatusClass(d.status);
 
-  // Reject banner — outside card
+  // Reject banner
   const banner = document.getElementById('reqDetailRejectBanner');
   if (d.status === '审批不通过' && d.rejectReason) {
     banner.textContent = '审批不通过原因：' + d.rejectReason;
     banner.classList.remove('hidden');
   } else { banner.classList.add('hidden'); }
 
-  // 需求信息区
-  document.getElementById('reqDetailInfo').innerHTML = `
-    <div><div class="label">需求编号</div><div style="font-family:var(--font-mono)">${d.id} <button class="btn btn-sm btn-outline" style="padding:1px 6px;font-size:.68rem;margin-left:4px" onclick="copyReqId('${d.id}')">复制</button></div></div>
-    <div><div class="label">需求标题</div><div>${d.title}</div></div>
-    <div><div class="label">提交人/部门</div><div>${d.submitter || '—'} / ${d.dept || '—'}</div></div>
-    <div><div class="label">提交日期</div><div>${d.time}</div></div>
-    <div><div class="label">负责人</div><div>${d.assignee || '—'}</div></div>
-  `;
-
-  // 需求描述区 — meta fields
-  document.getElementById('reqDetailMeta').innerHTML = `
-    <div><div class="label">优先级</div><div>${getPriorityLabel(d.priority)}</div></div>
-    <div><div class="label">状态</div><div><span class="status ${getReqStatusClass(d.status)}">${d.status}</span></div></div>
-    <div><div class="label">所属项目</div><div>${d.project || '—'}</div></div>
-    <div><div class="label">所属系统</div><div>${d.system || '—'}</div></div>
-    <div><div class="label">功能模块</div><div>${d.module || '—'}</div></div>
-  `;
-  document.getElementById('reqDetailDescText').textContent = d.desc || '暂无描述';
-
-  // 需求关闭区 — only for 已关闭
-  const closeSection = document.getElementById('reqDetailCloseSection');
-  if (d.status === '已关闭') {
-    document.getElementById('reqDetailCloseInfo').innerHTML = `
-      <div><div class="label">关闭人员</div><div>${d.closePerson || '—'}</div></div>
-      <div><div class="label">关闭时间</div><div>${d.closeTime || '—'}</div></div>
-      <div style="grid-column:1/-1"><div class="label">关闭原因</div><div>${d.closeReason || '—'}</div></div>
-    `;
-    closeSection.style.display = '';
-  } else {
-    closeSection.style.display = 'none';
-  }
-
-  // 需求操作区 — bottom floating, outside card
+  // Operation buttons
   const ops = document.getElementById('reqDetailOps');
   let opsHtml = '';
   if (d.status === '审批不通过' || (d.status === '待审批' && d.submitter === (currentUser ? currentUser.name : ''))) {
     opsHtml = `<button class="btn btn-primary" onclick="resubmitRequirement('${d.id}')">重新提交</button>`;
   }
   ops.innerHTML = opsHtml;
-  ops.style.display = opsHtml ? '' : 'none';
+
+  // Info grid
+  document.getElementById('reqDetailInfo').innerHTML = `
+    <div><div class="label">需求编号</div><div style="font-family:var(--font-mono)">${d.id} <button class="btn btn-sm btn-outline" style="padding:1px 6px;font-size:.68rem;margin-left:4px" onclick="copyReqId('${d.id}')">复制</button></div></div>
+    <div><div class="label">需求标题</div><div>${d.title}</div></div>
+    <div><div class="label">优先级</div><div>${d.priority}</div></div>
+    <div><div class="label">状态</div><div><span class="status ${getReqStatusClass(d.status)}">${d.status}</span></div></div>
+    <div><div class="label">所属项目</div><div>${d.project || '—'}</div></div>
+    <div><div class="label">所属系统</div><div>${d.system || '—'}</div></div>
+    <div><div class="label">功能模块</div><div>${d.module || '—'}</div></div>
+    <div><div class="label">需求负责人</div><div>${d.assignee}</div></div>
+    <div><div class="label">提交人/部门</div><div>${d.submitter} / ${d.dept || '—'}</div></div>
+    <div><div class="label">提交日期</div><div>${d.time}</div></div>
+  `;
+
+  // Description
+  document.getElementById('reqDetailDesc').textContent = d.desc || '暂无描述';
+
+  // Activity timeline
+  const actEl = document.getElementById('reqDetailActivity');
+  const actColors = { '创建':'var(--primary)', '审批通过':'var(--success)', '审批不通过':'var(--danger)', '重新提交':'var(--warning)', '转化':'var(--accent)', '指派':'#8B5CF6', '关闭':'var(--text-secondary)' };
+  if (d.activity && d.activity.length) {
+    actEl.innerHTML = d.activity.map(a =>
+      `<div class="sp-tl-item"><div class="sp-tl-dot" style="background:${actColors[a.type]||'var(--primary)'}"></div><div class="sp-tl-body"><div class="sp-tl-text">${a.text}</div><div class="sp-tl-time">${a.time}</div></div></div>`
+    ).join('');
+  } else {
+    actEl.innerHTML = '<div style="color:var(--text-secondary);font-size:.82rem;padding:8px 0">暂无动态记录</div>';
+  }
 
   switchView('reqDetail');
 }
@@ -4499,250 +4294,57 @@ function resubmitRequirement(id) {
 
 // ===== PROBLEMS =====
 let probFilter = 'all';
-
-function getPriorityLabel(p) {
-  const map = {'紧急':'P0','高':'P1','中':'P2','低':'P3'};
-  return p + '(' + (map[p]||'') + ')';
-}
-
-function updateProbStats() {
-  const search = (document.getElementById('probSearch')?.value || '').toLowerCase();
-  const base = probData.filter(d => {
-    if (search && !d.title.toLowerCase().includes(search) && !d.id.toLowerCase().includes(search)) return false;
-    const df = document.getElementById('probFilterDateFrom')?.value;
-    const dt = document.getElementById('probFilterDateTo')?.value;
-    if (df && d.feedbackDate.slice(0,10) < df) return false;
-    if (dt && d.feedbackDate.slice(0,10) > dt) return false;
-    const fp = document.getElementById('probFilterPerson')?.value?.trim();
-    if (fp && !d.feedbackPerson.includes(fp)) return false;
-    return true;
-  });
-  const total = base.length;
-  const wait = base.filter(d => d.status === '待处理').length;
-  const progress = base.filter(d => d.status === '处理中').length;
-  const done = base.filter(d => d.status === '已处理').length;
-  document.getElementById('probStatTotal').textContent = total;
-  document.getElementById('probStatWait').textContent = wait;
-  document.getElementById('probStatProgress').textContent = progress;
-  document.getElementById('probStatDone').textContent = done;
-  document.getElementById('probTabWait').textContent = wait;
-  document.getElementById('probTabProgress').textContent = progress;
-  document.getElementById('probTabDone').textContent = done;
-}
-
 function filterProb(f) {
   probFilter = f;
   document.querySelectorAll('#probTabs .tab').forEach(t => t.classList.remove('active'));
-  const tabs = document.querySelectorAll('#probTabs .tab');
-  const tabMap = {all:0,'待处理':1,'处理中':2,'已处理':3};
-  if (tabs[tabMap[f]] !== undefined) tabs[tabMap[f]].classList.add('active');
-  updateProbStats();
+  event.target.classList.add('active');
   renderProbList();
-}
-
-function resetProbFilters() {
-  document.getElementById('probFilterDateFrom').value = '';
-  document.getElementById('probFilterDateTo').value = '';
-  document.getElementById('probFilterPerson').value = '';
-  document.getElementById('probSearch').value = '';
-  renderProbList();
-}
-
-function getFilteredProbList() {
-  const search = (document.getElementById('probSearch')?.value || '').toLowerCase();
-  return probData.filter(d => {
-    if (probFilter !== 'all' && d.status !== probFilter) return false;
-    if (search && !d.title.toLowerCase().includes(search) && !d.id.toLowerCase().includes(search)) return false;
-    const df = document.getElementById('probFilterDateFrom')?.value;
-    const dt = document.getElementById('probFilterDateTo')?.value;
-    if (df && d.feedbackDate.slice(0,10) < df) return false;
-    if (dt && d.feedbackDate.slice(0,10) > dt) return false;
-    const fp = document.getElementById('probFilterPerson')?.value?.trim();
-    if (fp && !d.feedbackPerson.includes(fp)) return false;
-    return true;
-  });
 }
 
 function renderProbList() {
-  updateProbStats();
-  const list = getFilteredProbList();
+  const list = probFilter === 'all' ? probData : probData.filter(d => d.status === probFilter);
   const body = document.getElementById('probBody');
-  if (!list.length) {
-    body.innerHTML = '<tr><td colspan="10" style="text-align:center;padding:40px;color:var(--text-secondary)">暂无问题记录，点击右上角反馈新问题</td></tr>';
-    return;
-  }
   body.innerHTML = list.map(d => {
-    const sc = d.status === '已处理' ? 'status-done' : d.status === '处理中' ? 'status-progress' : 'status-wait';
-    const pl = d.priority === '紧急' ? 'P0' : d.priority === '高' ? 'P1' : d.priority === '中' ? 'P2' : 'P3';
-    const projSys = d.project ? (d.project + ' / ' + d.system) : (d.system || '—');
-    const titleDisplay = d.title.length > 30 ? d.title.slice(0,30) + '…' : d.title;
-    const activateBtn = d.status === '已处理' ? `<button class="btn btn-sm btn-outline" onclick="activateProblem('${d.id}')" data-od-id="prob-activate-${d.id}">激活</button>` : '<span style="color:var(--text-secondary);font-size:.75rem">—</span>';
+    const sc = d.status === '已解决' ? 'status-done' : d.status === '处理中' ? 'status-progress' : 'status-wait';
     return `<tr>
-      <td class="mono">${d.id} <button class="btn-icon" onclick="copyProbId('${d.id}')" title="复制" style="background:none;border:none;cursor:pointer;padding:2px;vertical-align:middle;color:var(--text-secondary)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></td>
-      <td style="font-size:.78rem">${projSys}</td>
-      <td title="${d.title}" style="max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${titleDisplay}</td>
-      <td><span class="priority-${pl}">${getPriorityLabel(d.priority)}</span></td>
+      <td class="mono">${d.id}</td>
+      <td>${d.title}</td>
+      <td><span class="severity-${d.severity}">${d.severity}</span></td>
       <td><span class="status ${sc}">${d.status}</span></td>
-      <td style="font-size:.78rem;white-space:nowrap">${d.feedbackDate}</td>
-      <td>${d.feedbackPerson}</td>
-      <td>${d.followUpPerson}</td>
-      <td><button class="btn btn-sm btn-outline" onclick="viewProbDetail('${d.id}')">详情</button></td>
-      <td>${activateBtn}</td>
+      <td>${d.owner}</td>
+      <td>${d.time}</td>
+      <td><button class="btn btn-sm btn-outline" onclick="showToast('查看问题详情: ${d.id}')">查看</button></td>
     </tr>`;
   }).join('');
 }
 
-function copyProbId(id) {
-  navigator.clipboard.writeText(id).then(() => showToast('已复制：' + id));
-}
-
-function viewProbDetail(id) {
-  const d = probData.find(p => p.id === id);
-  if (!d) return;
-  const container = document.getElementById('view-probDetail');
-  const pl = d.priority === '紧急' ? 'P0' : d.priority === '高' ? 'P1' : d.priority === '中' ? 'P2' : 'P3';
-  const projSys = d.project ? (d.project + ' / ' + d.system) : (d.system || '—');
-  const supplementHtml = d.supplements.length ? d.supplements.map(s =>
-    `<div class="prob-supplement-item">${s.content}<div class="supplement-meta">${s.person} · ${s.time}</div></div>`
-  ).join('') : '<div style="color:var(--text-secondary);font-size:.82rem">暂无补充信息</div>';
-
-  container.innerHTML = `
-    <div class="detail-back" onclick="switchView('problems')" data-od-id="prob-detail-back">← 返回问题列表</div>
-    <div class="prob-detail-card" data-od-id="prob-info-${d.id}">
-      <h4><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg> 问题信息</h4>
-      <div class="prob-detail-field"><span class="field-label">问题ID</span><span class="field-value mono">${d.id} <button class="btn-icon" onclick="copyProbId('${d.id}')" title="复制" style="background:none;border:none;cursor:pointer;padding:2px;vertical-align:middle;color:var(--text-secondary)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></span></div>
-      <div class="prob-detail-field"><span class="field-label">问题标题</span><span class="field-value">${d.title}</span></div>
-      <div class="prob-detail-field"><span class="field-label">反馈日期</span><span class="field-value">${d.feedbackDate}</span></div>
-      <div class="prob-detail-field"><span class="field-label">反馈人</span><span class="field-value">${d.feedbackPerson}</span></div>
-    </div>
-    <div class="prob-detail-card" data-od-id="prob-desc-${d.id}">
-      <h4><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg> 问题描述</h4>
-      <div class="prob-detail-field"><span class="field-label">所属项目</span><span class="field-value">${d.project || '—'}</span></div>
-      <div class="prob-detail-field"><span class="field-label">所属系统</span><span class="field-value">${d.system || '—'}</span></div>
-      <div class="prob-detail-field"><span class="field-label">功能模块</span><span class="field-value">${d.module || '—'}</span></div>
-      <div class="prob-detail-field"><span class="field-label">状态</span><span class="field-value"><span class="status ${d.status === '已处理' ? 'status-done' : d.status === '处理中' ? 'status-progress' : 'status-wait'}">${d.status}</span></span></div>
-      <div style="margin-top:12px;padding:14px;background:var(--bg-secondary);border-radius:8px;font-size:.84rem;line-height:1.6">${d.desc}</div>
-      <div style="margin-top:14px"><div style="font-weight:600;font-size:.84rem;margin-bottom:8px">问题补充</div>${supplementHtml}</div>
-    </div>
-    <div class="prob-detail-card" data-od-id="prob-resolve-${d.id}">
-      <h4><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> 问题解决</h4>
-      <div class="prob-detail-field"><span class="field-label">跟进人</span><span class="field-value">${d.followUpPerson}</span></div>
-      <div class="prob-detail-field"><span class="field-label">解决时间</span><span class="field-value">${d.resolveTime}</span></div>
-      <div class="prob-detail-field"><span class="field-label">解决方案</span><span class="field-value">${d.resolveSolution}</span></div>
-    </div>
-    <div class="prob-ops-bar" id="probOpsBar-${d.id}" style="${d.status === '已处理' ? '' : 'display:none'}">
-      <button class="btn btn-primary" onclick="activateProblem('${d.id}')" data-od-id="prob-detail-activate-${d.id}">激活</button>
-    </div>
-  `;
-  switchView('probDetail');
-}
-
-function activateProblem(id) {
-  const d = probData.find(p => p.id === id);
-  if (!d || d.status !== '已处理') return;
-  const content = prompt('请输入补充信息：');
-  if (!content || !content.trim()) return;
-  const now = new Date();
-  const timeStr = now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0') + '-' + String(now.getDate()).padStart(2,'0') + ' ' + String(now.getHours()).padStart(2,'0') + ':' + String(now.getMinutes()).padStart(2,'0') + ':' + String(now.getSeconds()).padStart(2,'0');
-  d.supplements.push({person: currentUser?.name || '当前用户', time: timeStr, content: content.trim()});
-  d.status = '处理中';
-  d.resolveTime = '-';
-  d.resolveSolution = '-';
-  renderProbList();
-  showToast('问题已激活，补充信息已提交：' + id);
-  const detailView = document.getElementById('view-probDetail');
-  if (detailView && !detailView.classList.contains('hidden')) viewProbDetail(id);
-}
-
-function exportProblems() {
-  const list = getFilteredProbList();
-  if (!list.length) { showToast('当前筛选条件下暂无数据，无法导出'); return; }
-  if (list.length > 5000) { showToast('数据量较大，请缩小筛选范围后重试'); return; }
-  showToast('导出成功：' + list.length + ' 条问题数据');
-}
-
-function onProbProjectChange() {
-  const proj = document.getElementById('newProbProject').value;
-  const sysSel = document.getElementById('newProbSystem');
-  const modSel = document.getElementById('newProbModule');
-  if (!proj || !PROJECT_SYSTEMS[proj]) {
-    sysSel.innerHTML = '<option value="">请先选择项目</option>';
-    modSel.innerHTML = '<option value="">请先选择系统</option>';
-    return;
-  }
-  const sysKeys = Object.keys(PROJECT_SYSTEMS[proj].systems);
-  sysSel.innerHTML = '<option value="">请选择系统</option>' + sysKeys.map(s => `<option>${s}</option>`).join('');
-  modSel.innerHTML = '<option value="">请先选择系统</option>';
-}
-
-function onProbSystemChange() {
-  const proj = document.getElementById('newProbProject').value;
-  const sys = document.getElementById('newProbSystem').value;
-  const modSel = document.getElementById('newProbModule');
-  if (!proj || !sys || !PROJECT_SYSTEMS[proj] || !PROJECT_SYSTEMS[proj].systems[sys]) {
-    modSel.innerHTML = '<option value="">请先选择系统</option>';
-    return;
-  }
-  const modules = PROJECT_SYSTEMS[proj].systems[sys].modules;
-  modSel.innerHTML = '<option value="">请选择模块</option>' + modules.map(m => `<option>${m}</option>`).join('');
-}
-
-function closeCreateProbModal() {
-  showConfirm('确认关闭？未保存的内容将不会生成数据。', function() {
-    closeModal('createProbModal');
-  });
-}
-
 function createProblem() {
-  const proj = document.getElementById('newProbProject').value;
-  const sys = document.getElementById('newProbSystem').value;
   const title = document.getElementById('newProbTitle').value.trim();
-  const desc = document.getElementById('newProbDesc').value.trim();
-  let valid = true;
-  if (!proj) { showError('errProbProject', '请选择所属项目'); valid = false; } else { clearError('errProbProject'); }
-  if (!sys) { showError('errProbSystem', '请选择所属系统'); valid = false; } else { clearError('errProbSystem'); }
-  if (!title) { showError('errProbTitle', '请填写问题标题'); valid = false; } else { clearError('errProbTitle'); }
-  if (!desc) { showError('errProbDesc', '请填写问题描述'); valid = false; } else { clearError('errProbDesc'); }
-  if (!valid) return;
+  if (!title) { showError(errCode(), '请填写问题标题'); return; }
   const d = {
-    id: genId('PR-B', 4), project: proj, system: sys,
-    module: document.getElementById('newProbModule').value || '—',
-    title, priority: document.getElementById('newProbPriority').value,
-    status: '待处理', feedbackDate: today() + ' ' + new Date().toTimeString().slice(0,8),
-    feedbackPerson: currentUser?.name || '当前用户', followUpPerson: '—',
-    desc, supplements: [], resolveTime: '-', resolveSolution: '-'
+    id: genId('PR'), title, system: document.getElementById('newProbSystem').value,
+    severity: document.getElementById('newProbSeverity').value, status: '待处理', owner: '—', time: today()
   };
   probData.unshift(d);
   closeModal('createProbModal');
   document.getElementById('newProbTitle').value = '';
   document.getElementById('newProbDesc').value = '';
-  document.getElementById('probTitleCount').textContent = '0';
-  document.getElementById('probDescCount').textContent = '0';
-  document.getElementById('newProbProject').selectedIndex = 0;
-  onProbProjectChange();
   renderProbList();
   showToast('问题创建成功：' + d.id);
 }
 
-document.getElementById('newProbTitle').addEventListener('input', function() {
-  document.getElementById('probTitleCount').textContent = this.value.length;
-});
-document.getElementById('newProbDesc').addEventListener('input', function() {
-  document.getElementById('probDescCount').textContent = this.value.length;
-});
-
 // ===== DOCUMENTS =====
 let docFilter = 'all';
-let docFilterInited = false;
-function initDocFilter() {
-  if (docFilterInited) return;
-  docFilterInited = true;
-  const sel = document.getElementById('docProjectFilter');
-  const projects = Object.keys(PROJECT_SYSTEMS);
-  projects.forEach(p => { const o = document.createElement('option'); o.value = p; o.textContent = p; sel.appendChild(o); });
+function initDocTabs() {
+  const tabs = document.getElementById('docTabs');
+  let html = '<div class="tab active" onclick="filterDoc(\'all\')">全部</div>';
+  docSystems.forEach(s => { html += `<div class="tab" onclick="filterDoc('${s}')">${s}</div>`; });
+  tabs.innerHTML = html;
 }
 function filterDoc(f) {
   docFilter = f;
+  document.querySelectorAll('#docTabs .tab').forEach(t => t.classList.remove('active'));
+  event.target.classList.add('active');
   renderDocList();
 }
 function getDocIcon(type) {
@@ -4756,57 +4358,18 @@ function getDocIcon(type) {
   const [cls, svg] = icons[type] || ['doc-icon-misc', '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>'];
   return `<div class="doc-icon ${cls}">${svg}</div>`;
 }
-function getDocTypeClass(type) {
-  return { 'PRD文档':'doc-type-prd', '原型文件':'doc-type-proto', '验收指导SOP':'doc-type-sop', '使用手册':'doc-type-manual', '辅助资料':'doc-type-misc' }[type] || 'doc-type-misc';
-}
-function getDocActions(type, id) {
-  if (type === 'PRD文档' || type === '原型文件') {
-    return `<button class="btn btn-sm btn-primary" onclick="viewDoc('${id}')">查看</button>`;
-  }
-  if (type === '验收指导SOP' || type === '辅助资料') {
-    return `<button class="btn btn-sm btn-outline" onclick="downloadDoc('${id}')">下载</button>`;
-  }
-  if (type === '使用手册') {
-    return `<button class="btn btn-sm btn-primary" onclick="viewDoc('${id}')">查看</button><button class="btn btn-sm btn-outline" onclick="downloadDoc('${id}')">下载</button>`;
-  }
-  return `<button class="btn btn-sm btn-outline" onclick="downloadDoc('${id}')">下载</button>`;
-}
-function copyDocId(id) {
-  try { navigator.clipboard.writeText(id); showToast('已复制：' + id); }
-  catch(e) { showToast('复制失败'); }
-}
-function truncate(str, max) {
-  return str.length > max ? str.slice(0, max) + '...' : str;
-}
 function renderDocList() {
-  if (!docFilterInited) initDocFilter();
-  const keyword = (document.getElementById('docSearch').value || '').trim().toLowerCase();
-  let list = docFilter === 'all' ? docData : docData.filter(d => d.system === docFilter);
-  if (keyword) {
-    list = list.filter(d => d.name.toLowerCase().includes(keyword) || d.id.toLowerCase().includes(keyword));
-  }
-  if (list.length === 0) {
-    const msg = keyword ? '未找到匹配的资料' : '暂无资料';
-    document.getElementById('docList').innerHTML = `<div class="doc-empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/></svg><p>${msg}</p></div>`;
-    return;
-  }
+  const list = docFilter === 'all' ? docData : docData.filter(d => d.system === docFilter);
   document.getElementById('docList').innerHTML = list.map(d => `
     <div class="doc-item">
       ${getDocIcon(d.type)}
-      <div class="doc-body">
-        <div class="doc-row-top">
-          <span class="doc-id">${d.id}<button class="copy-btn" onclick="copyDocId('${d.id}')" title="复制"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button></span>
-          <span class="doc-sys-tag">${d.system}</span>
-        </div>
-        <div class="doc-title">${truncate(d.name, 30)}</div>
-        <div class="doc-desc">${truncate(d.desc, 40)}</div>
-        <div class="doc-row-bottom">
-          <span class="doc-type-tag ${getDocTypeClass(d.type)}">${d.type}</span>
-          <span class="doc-date">更新 ${d.time}</span>
-        </div>
+      <div class="doc-info">
+        <div class="doc-name">${d.name}</div>
+        <div class="doc-meta">${d.id} · ${d.type} · ${d.system} · ${d.time}</div>
       </div>
       <div class="doc-actions">
-        ${getDocActions(d.type, d.id)}
+        <button class="btn btn-sm btn-outline" onclick="viewDoc('${d.id}')">查看</button>
+        <button class="btn btn-sm btn-primary" onclick="downloadDoc('${d.id}')">下载</button>
       </div>
     </div>
   `).join('');
@@ -4816,14 +4379,6 @@ function downloadDoc(id) { showToast('开始下载：' + id); }
 
 // ===== CONTACTS =====
 let contactFilter = 'all';
-const TAG_CLASS_MAP = { '产品':'tag-product', '质检':'tag-qa', '研发':'tag-dev', '管理':'tag-mgmt' };
-const TAG_ACTION_MAP = {
-  '产品': [{ label:'快捷提需求', cls:'btn-primary', action:"switchView('requirements');openCreateModal('req')" },
-           { label:'快捷提问题', cls:'btn-outline', action:"switchView('problems');openCreateModal('prob')" }],
-  '质检': [{ label:'快捷提问题', cls:'btn-outline', action:"switchView('problems');openCreateModal('prob')" }],
-  '研发': [{ label:'快捷提问题', cls:'btn-outline', action:"switchView('problems');openCreateModal('prob')" }],
-  '管理': [{ label:'快捷投诉/建议', cls:'btn-warning', action:"switchView('complaints');openCreateModal('comp')" }]
-};
 function filterContact(f) {
   contactFilter = f;
   document.querySelectorAll('#contactTabs .tab').forEach(t => t.classList.remove('active'));
@@ -4831,48 +4386,17 @@ function filterContact(f) {
   renderContactList();
 }
 function renderContactList() {
-  const keyword = (document.getElementById('contactSearch').value || '').trim().toLowerCase();
-  let list = contactFilter === 'all' ? contactData : contactData.filter(d => d.tags.includes(contactFilter));
-  if (keyword) {
-    list = list.filter(d =>
-      d.name.toLowerCase().includes(keyword) ||
-      d.systems.some(s => s.toLowerCase().includes(keyword))
-    );
-  }
-  const container = document.getElementById('contactList');
-  const emptyEl = document.getElementById('contactEmpty');
-  const emptyText = document.getElementById('contactEmptyText');
-  if (list.length === 0) {
-    container.innerHTML = '';
-    emptyEl.classList.remove('hidden');
-    emptyText.textContent = keyword ? '未找到匹配的对接人' : '暂无对接人数据';
-    return;
-  }
-  emptyEl.classList.add('hidden');
-  container.innerHTML = list.map(d => {
-    const avatarHtml = d.avatar
-      ? `<img src="${d.avatar}" alt="${d.name}" onerror="this.parentNode.innerHTML='${d.name.charAt(0)}'">`
-      : d.name.charAt(0);
-    const tagsHtml = d.tags.map(t => `<span class="cc-tag ${TAG_CLASS_MAP[t] || ''}">${t}</span>`).join('');
-    const systemsText = d.systems.length > 0
-      ? '负责系统：<span>' + d.systems.join('</span>、<span>') + '</span>'
-      : '负责系统：<span>-</span>';
-    const seen = new Set();
-    const actions = [];
-    d.tags.forEach(tag => {
-      (TAG_ACTION_MAP[tag] || []).forEach(a => {
-        if (!seen.has(a.label)) { seen.add(a.label); actions.push(a); }
-      });
-    });
-    const actionsHtml = actions.map(a => `<button class="btn btn-sm ${a.cls}" onclick="${a.action}">${a.label}</button>`).join('');
+  const list = contactFilter === 'all' ? contactData : contactData.filter(d => d.role === contactFilter);
+  document.getElementById('contactList').innerHTML = list.map(d => {
+    let actions = '';
+    if (d.role === '产品') actions = `<button class="btn btn-sm btn-primary" onclick="switchView('requirements');openCreateModal('req')">快捷提需求</button><button class="btn btn-sm btn-outline" onclick="switchView('problems');openCreateModal('prob')">快捷提问题</button>`;
+    else if (d.role === '测试') actions = `<button class="btn btn-sm btn-outline" onclick="switchView('problems');openCreateModal('prob')">快捷提问题</button>`;
+    else if (d.role === '研发') actions = `<button class="btn btn-sm btn-outline" onclick="switchView('problems');openCreateModal('prob')">快捷提问题</button>`;
+    else if (d.role === '管理') actions = `<button class="btn btn-sm btn-warning" onclick="switchView('complaints');openCreateModal('comp')">快捷投诉/建议</button>`;
     return `<div class="contact-card">
-      <div class="cc-avatar">${avatarHtml}</div>
-      <div class="cc-body">
-        <div class="cc-name">${d.name}</div>
-        <div class="cc-tags">${tagsHtml}</div>
-        <div class="cc_systems">${systemsText}</div>
-      </div>
-      <div class="cc-actions">${actionsHtml}</div>
+      <div class="cc-avatar">${d.name.charAt(0)}</div>
+      <div class="cc-info"><div class="cc-name">${d.name}</div><div class="cc-role">${d.role} · ${d.dept} · ${d.phone}</div></div>
+      <div class="cc-actions">${actions}</div>
     </div>`;
   }).join('');
 }
@@ -5109,133 +4633,39 @@ function submitApproval() {
   showToast('审批操作成功：' + d.id);
 }
 
-// ===== MESSAGES =====
-const msgData = [
-  { id:'MSG-001', title:'系统验收单待处理提醒', content:'油葱商城V4.30.5版本系统功能已完成UAT环境发版，请进行验收。验收单链接：IC-20260715-0001，截止时间：2026-07-20 17:00:00', time:'2026-07-15 09:30:00', read:false },
-  { id:'MSG-002', title:'您的需求已进入研发阶段', content:'您提交的需求 DE-B-20260624-0003「数据报表优化」已由曹操LG0246认领，已进入研发阶段，预计完成时间 2026-07-25。', time:'2026-07-14 14:22:10', read:false },
-  { id:'MSG-003', title:'问题PR-B-20260712-0002已处理', content:'您反馈的问题「荟健康首页崩溃」已由王磊处理并解决，处理备注：修复了首页Banner组件在iOS 16上的兼容性问题，请确认验证。', time:'2026-07-13 16:45:33', read:false },
-  { id:'MSG-004', title:'需求审批通过通知', content:'您提交的需求 DE-B-20260710-0005「会员积分兑换功能」已由诸葛亮LG0250审批通过，需求进入待分配状态。', time:'2026-07-12 10:15:30', read:true },
-  { id:'MSG-005', title:'问题指派通知', content:'您创建的问题 PR-B-20260710-0008「订单列表加载缓慢」已指派给张建国LG0246处理，请耐心等待。', time:'2026-07-11 11:08:42', read:true },
-  { id:'MSG-006', title:'催促验收提醒', content:'油葱商城V4.30.5还有3项未做验收，请尽快验收。截止时间：2026-07-20 17:00:00。', time:'2026-07-10 08:00:00', read:true },
-  { id:'MSG-007', title:'需求状态变更通知', content:'您提交的需求 DE-B-20260615-0001「商品详情页改版」已进入验收中状态，请关注验收进度。', time:'2026-07-09 09:30:15', read:true },
-  { id:'MSG-008', title:'投诉工单处理完成', content:'您提交的投诉/建议「物流信息展示不准确」已由处理人李明辉处理完成。处理备注：已协调物流部门修正物流节点展示逻辑，预计下个版本上线。', time:'2026-07-08 15:20:00', read:true },
-  { id:'MSG-009', title:'平台公告：7月系统维护通知', content:'数字化效能协同平台将于 2026-07-20 02:00-04:00 进行例行维护，期间服务不可用，请提前做好安排。', time:'2026-07-07 10:00:00', read:true },
-  { id:'MSG-010', title:'您提交的账号开通申请已审批通过', content:'您申请的平台账号已审批通过，初始密码已发送至您的邮箱 liubei@example.com，请登录后及时修改密码。', time:'2026-07-05 14:30:00', read:true },
-  { id:'MSG-011', title:'需求审批不通过通知', content:'您提交的需求 DE-B-20260701-0002「用户画像分析模块」审批不通过，原因：需求描述不清晰，缺少业务场景说明，请补充后重新提交。', time:'2026-07-03 16:40:22', read:true },
-  { id:'MSG-012', title:'已发布通知', content:'油葱商城V4.30.4版本系统功能已发布至线上，本次发布包含12项需求、修复8个问题。', time:'2026-07-01 18:00:00', read:true }
-];
-
-function renderMsgList() {
-  const kw = (document.getElementById('msgSearchInput')?.value || '').trim().toLowerCase();
-  const filtered = msgData.filter(m => !kw || m.title.toLowerCase().includes(kw));
-  const body = document.getElementById('msgListBody');
-  const empty = document.getElementById('msgEmpty');
-  const noResult = document.getElementById('msgNoResult');
-
-  if (msgData.length === 0) {
-    body.innerHTML = '';
-    empty.classList.remove('hidden');
-    noResult.classList.add('hidden');
-    return;
-  }
-  empty.classList.add('hidden');
-
-  if (filtered.length === 0) {
-    body.innerHTML = '';
-    noResult.classList.remove('hidden');
-    return;
-  }
-  noResult.classList.add('hidden');
-
-  body.innerHTML = filtered.map(m => {
-    const titleDisplay = m.title.length > 20 ? m.title.slice(0, 20) + '...' : m.title;
-    const contentDisplay = m.content.length > 30 ? m.content.slice(0, 30) + '...' : m.content;
-    return `<div class="msg-item${m.read ? '' : ' unread'}" onclick="openMsgDetail('${m.id}')" data-od-id="msg-item-${m.id}">
-      <span class="msg-dot"></span>
-      <div class="msg-body">
-        <div class="msg-title" title="${m.title}">${titleDisplay}</div>
-        <div class="msg-content">${contentDisplay}</div>
-      </div>
-      <div class="msg-time">${m.time}</div>
-      <button class="msg-view-btn" onclick="event.stopPropagation();openMsgDetail('${m.id}')">查看</button>
-    </div>`;
-  }).join('');
-}
-
-function openMsgDetail(id) {
-  const m = msgData.find(x => x.id === id);
-  if (!m) return;
-  m.read = true;
-  updateMsgBadge();
-  switchView('msgDetail');
-  const card = document.getElementById('msgDetailCard');
-  card.innerHTML = `
-    <div class="detail-back" onclick="switchView('messages')" data-od-id="msg-detail-back">← 返回消息列表</div>
-    <h3 style="font-size:1.1rem;font-weight:700;margin:12px 0 20px" data-od-id="msg-detail-title">${m.title}</h3>
-    <div class="msg-detail-field"><span class="msg-detail-label">消息ID</span><span class="msg-detail-value">${m.id}</span></div>
-    <div class="msg-detail-field"><span class="msg-detail-label">发送时间</span><span class="msg-detail-value">${m.time}</span></div>
-    <div class="msg-detail-body" data-od-id="msg-detail-content">${m.content}</div>`;
-}
-
-function updateMsgBadge() {
-  const unread = msgData.filter(m => !m.read).length;
-  const badge = document.getElementById('msgBadge');
-  if (badge) {
-    if (unread > 0) { badge.textContent = unread; badge.style.display = ''; }
-    else { badge.style.display = 'none'; }
-  }
-}
-
 // ===== PROFILE =====
 function renderProfile() {
   if (!currentUser) return;
-  var tagColors = {'产品':'var(--primary)','研发':'var(--success)','质检':'var(--warning)','管理':'var(--accent)'};
-  var avatar = document.getElementById('pfAvatar');
-  if (currentUser.avatar) {
-    avatar.innerHTML = '<img src="'+currentUser.avatar+'" onerror="this.parentNode.innerHTML=\''+currentUser.name.charAt(0)+'\'">';
-  } else {
-    avatar.textContent = currentUser.name.charAt(0);
-  }
-  document.getElementById('pfHeaderName').textContent = currentUser.name;
-  document.getElementById('pfHeaderTags').innerHTML = (currentUser.tags||[]).map(function(t){return '<span class="tag" style="background:'+(tagColors[t]||'var(--text-secondary)')+';color:#fff">'+t+'</span>';}).join('');
-  document.getElementById('pfHeaderDept').textContent = (currentUser.center||'')+'-'+(currentUser.dept||'');
-  document.getElementById('pfHeaderDate').textContent = currentUser.accountDate||'-';
-  document.getElementById('pfStatReq').textContent = currentUser.statsReq||0;
-  document.getElementById('pfStatIssue').textContent = currentUser.statsIssue||0;
-  document.getElementById('pfStatAccept').textContent = currentUser.statsAccept||0;
-  document.getElementById('pfName').value = currentUser.name||'';
-  document.getElementById('pfEmpId').value = currentUser.empId||'';
-  document.getElementById('pfCenterDept').value = (currentUser.center||'')+'-'+(currentUser.dept||'');
-  document.getElementById('pfEmail').value = currentUser.email||'';
-  document.getElementById('pfPhone').value = currentUser.phone||'';
-  document.getElementById('pfExt').value = currentUser.ext||'';
-  document.getElementById('pfNotifyReq').checked = !!currentUser.notifyReq;
-  document.getElementById('pfNotifyIssue').checked = currentUser.notifyIssue!==false;
-  document.getElementById('pfSaveMsg').textContent = '';
-  document.getElementById('pfNotifyMsg').textContent = '';
+  document.getElementById('pfUser').value = currentUser.username;
+  document.getElementById('pfName').value = currentUser.name;
+  document.getElementById('pfEmail').value = currentUser.email || '';
+  document.getElementById('pfPhone').value = currentUser.phone || '';
+  document.getElementById('pfFeishu').textContent = currentUser.feishu ? "已绑定飞书" : "未绑定飞书";
+  var lm = document.getElementById('pfLoginMethod');
+  if (lm) lm.textContent = currentUser.feishu ? '飞书快捷登录' : '用户名+密码';
 }
 function saveProfile() {
-  var msg = document.getElementById('pfSaveMsg');
-  var email = document.getElementById('pfEmail').value.trim();
-  var phone = document.getElementById('pfPhone').value.trim();
-  var ext = document.getElementById('pfExt').value.trim();
-  if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    msg.style.color = 'var(--danger)'; msg.textContent = '请输入正确的邮箱格式'; return;
-  }
-  if (phone && !/^1[3-9]\d{9}$/.test(phone)) {
-    msg.style.color = 'var(--danger)'; msg.textContent = '请输入正确的手机号格式'; return;
-  }
-  currentUser.email = email;
-  currentUser.phone = phone;
-  currentUser.ext = ext;
-  msg.style.color = 'var(--success)'; msg.textContent = '保存成功';
+  currentUser.name = document.getElementById('pfName').value.trim();
+  currentUser.email = document.getElementById('pfEmail').value.trim();
+  currentUser.phone = document.getElementById('pfPhone').value.trim();
+  document.getElementById('sidebarName').textContent = currentUser.name;
+  document.getElementById('sidebarAvatar').textContent = currentUser.name.charAt(0);
   showToast('个人信息已保存');
 }
-function saveNotifyPref() {
-  var msg = document.getElementById('pfNotifyMsg');
-  currentUser.notifyReq = document.getElementById('pfNotifyReq').checked;
-  currentUser.notifyIssue = document.getElementById('pfNotifyIssue').checked;
-  msg.style.color = 'var(--success)'; msg.textContent = '通知偏好已更新';
+function changePassword() {
+  const old = document.getElementById('pfOldPw').value;
+  const nw = document.getElementById('pfNewPw').value;
+  const nw2 = document.getElementById('pfNewPw2').value;
+  if (!old) { showError(errCode(), '请输入当前密码'); return; }
+  if (old !== currentUser.password) { showError(errCode(), '当前密码错误'); return; }
+  if (nw.length < 8) { showError(errCode(), '新密码至少8位'); return; }
+  if (nw !== nw2) { showError(errCode(), '两次密码不一致'); return; }
+  currentUser.password = nw;
+  currentUser.firstLogin = false;
+  document.getElementById('pfOldPw').value = '';
+  document.getElementById('pfNewPw').value = '';
+  document.getElementById('pfNewPw2').value = '';
+  showToast('密码修改成功');
 }
 
 // ===== LOGOUT =====
@@ -5258,7 +4688,7 @@ function doLogout() {
 }
 
 // ===== INIT =====
-initDocFilter();
+initDocTabs();
 </script>
 
 
