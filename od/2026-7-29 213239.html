@@ -172,19 +172,8 @@ body:has(.modal-overlay.show) #btnViewReqs{display:none}
 .nav-pin{position:absolute;top:3px;right:8px;width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#EF4444,#DC2626);border:1px solid rgba(255,255,255,.3);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(220,38,38,.45);cursor:pointer;transition:var(--transition);z-index:2;flex:none}
 .nav-pin:hover{transform:scale(1.15);box-shadow:0 3px 9px rgba(220,38,38,.6)}
 .nav-pin svg{width:9px;height:9px}
-.sidebar-footer{position:relative;border-top:1px solid rgba(255,255,255,.06);padding:14px}
+.sidebar-footer{position:relative}
 .sidebar-footer .nav-pin{top:6px;right:10px}
-.sidebar-footer-row{display:flex;align-items:center;gap:8px}
-.sidebar-footer .user-info{display:flex;align-items:center;gap:10px;flex:1;min-width:0}
-.sidebar-footer .avatar{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;font-size:.82rem;font-weight:600;flex-shrink:0;box-shadow:0 2px 8px rgba(79,70,229,.3)}
-.sidebar-footer .uname{font-size:.82rem;color:rgba(255,255,255,.85);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.sidebar-footer .urole{font-size:.65rem;color:rgba(255,255,255,.4);margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.btn-logout{width:32px;height:32px;flex-shrink:0;border-radius:8px;background:transparent;color:rgba(255,255,255,.35);display:flex;align-items:center;justify-content:center;transition:var(--transition);position:relative}
-.btn-logout:hover{background:rgba(239,68,68,.15);color:#FCA5A5}
-.btn-logout::after{content:'退出登录';position:absolute;bottom:calc(100% + 6px);right:0;background:rgba(30,20,60,.95);color:#fff;font-size:.72rem;padding:4px 8px;border-radius:6px;white-space:nowrap;pointer-events:none;opacity:0;transition:opacity .15s;transform:translateY(4px)}
-.btn-logout:hover::after{opacity:1;transform:translateY(0)}
-.action-link{color:var(--primary);font-size:.78rem;cursor:pointer;font-weight:500;vertical-align:middle;display:inline-flex;align-items:center}
-.action-link:hover{text-decoration:underline}
 
 /* Login mode tabs */
 .login-tabs{display:flex;gap:8px;margin-bottom:22px;background:rgba(255,255,255,.08);border-radius:var(--radius);padding:4px}
@@ -224,6 +213,13 @@ body:has(.modal-overlay.show) #btnViewReqs{display:none}
 .sidebar nav a .icon{width:20px;text-align:center;font-size:1rem;flex-shrink:0}
 .sidebar nav a .icon svg{width:18px;height:18px;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
 .sidebar nav .nav-group{padding:16px 14px 6px;font-size:.65rem;font-weight:600;color:rgba(255,255,255,.25);letter-spacing:1.2px;text-transform:uppercase;font-family:var(--font-mono);user-select:none;pointer-events:none}
+.sidebar .sidebar-footer{border-top:1px solid rgba(255,255,255,.06);padding:12px 14px}
+.sidebar .sidebar-footer .user-info{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.sidebar .sidebar-footer .avatar{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;font-size:.82rem;font-weight:600;flex-shrink:0;box-shadow:0 2px 8px rgba(79,70,229,.3)}
+.sidebar .sidebar-footer .uname{font-size:.8rem;color:rgba(255,255,255,.85);font-weight:500}
+.sidebar .sidebar-footer .urole{font-size:.65rem;color:rgba(255,255,255,.4);margin-top:1px}
+.btn-logout{width:100%;padding:8px;border-radius:var(--radius);background:rgba(239,68,68,.1);color:#FCA5A5;font-size:.78rem;font-weight:500;transition:var(--transition)}
+.btn-logout:hover{background:rgba(239,68,68,.2);color:#fff}
 .main{margin-left:var(--sidebar-w);height:100vh;overflow-y:auto;background:var(--bg-gradient);width:calc(100vw - var(--sidebar-w))}
 .main-header{padding:0 28px;height:var(--header-h);background:rgba(255,255,255,.8);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:50}
 .main-header h2{font-size:1.15rem;font-weight:700;letter-spacing:-.3px;color:var(--text)}
@@ -340,19 +336,6 @@ table.data tr:last-child td{border-bottom:none}
 .priority-P1{color:#fff;background:var(--warning);padding:2px 8px;border-radius:4px;font-size:.72rem;font-weight:700}
 .priority-P2{color:var(--primary);background:color-mix(in oklch,var(--primary) 12%,transparent);padding:2px 8px;border-radius:4px;font-size:.72rem;font-weight:700}
 .priority-P3{color:var(--text-secondary);background:var(--bg-secondary);padding:2px 8px;border-radius:4px;font-size:.72rem;font-weight:700}
-.priority-urgent{color:#fff;background:var(--danger);padding:2px 8px;border-radius:4px;font-size:.72rem;font-weight:700}
-.priority-normal{color:var(--primary);background:color-mix(in oklch,var(--primary) 12%,transparent);padding:2px 8px;border-radius:4px;font-size:.72rem;font-weight:700}
-.field-count{font-size:.72rem;color:var(--text-secondary);font-weight:400}
-.detail-field{display:flex;flex-direction:column;gap:2px;font-size:.875rem}
-.detail-field label{color:var(--text-secondary);font-size:.76rem;font-weight:500}
-.detail-section-title{font-size:.92rem;font-weight:700;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--border)}
-.detail-desc-box{background:var(--bg-light);border:1px solid var(--border-light);border-radius:8px;padding:16px;font-size:.875rem;line-height:1.7;color:var(--text)}
-.timeline{position:relative;padding-left:24px}
-.timeline::before{content:'';position:absolute;left:7px;top:4px;bottom:4px;width:2px;background:var(--border-light)}
-.tl-item{position:relative;padding-bottom:16px}
-.tl-item:last-child{padding-bottom:0}
-.tl-dot{position:absolute;left:-20px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--primary);border:2px solid #fff;box-shadow:0 0 0 2px var(--border-light)}
-.tl-content{font-size:.84rem;color:var(--text);line-height:1.5}
 .prob-stat-card{transition:box-shadow .15s,border-color .15s}
 .prob-filter-bar{display:flex;gap:12px;align-items:center;padding:10px 14px;background:var(--surface);border:1px solid var(--border);border-radius:10px;margin-bottom:14px;flex-wrap:wrap}
 .prob-filter-bar .filter-group{display:flex;align-items:center;gap:6px;font-size:.8rem}
@@ -569,6 +552,8 @@ table.data tr:last-child td{border-bottom:none}
 .doc-item .doc-body{flex:1;min-width:0}
 .doc-item .doc-row-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .doc-item .doc-id{font-size:.78rem;color:var(--text-secondary);font-family:monospace;display:inline-flex;align-items:center;gap:4px}
+.doc-item .doc-id .copy-btn{cursor:pointer;opacity:.5;transition:opacity .15s;background:none;border:none;padding:0;display:inline-flex;color:inherit}
+.doc-item .doc-id .copy-btn:hover{opacity:1}
 .doc-item .doc-sys-tag{font-size:.72rem;padding:2px 8px;border-radius:4px;background:var(--primary-bg);color:var(--primary);font-weight:500}
 .doc-item .doc-title{font-weight:600;font-size:.92rem;color:var(--text-primary);margin-top:4px}
 .doc-item .doc-desc{font-size:.8rem;color:var(--text-secondary);margin-top:3px;line-height:1.4}
@@ -988,11 +973,6 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
       </div>
       <div id="loginErrMsg" style="display:none;color:#FCA5A5;font-size:.78rem;margin:-4px 0 10px;line-height:1.5" data-od-id="login-error-msg"></div>
       <button class="btn-login" id="btnLogin" data-od-id="path-1-6-3-3">登录</button>
-      <div style="margin-top:14px;padding:10px 12px;border-radius:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);font-size:.72rem;color:rgba(255,255,255,.55);line-height:1.7" data-od-id="login-demo-accounts">
-        <div style="font-weight:600;color:rgba(255,255,255,.7);margin-bottom:2px">演示账号</div>
-        <div>zhangsan / Abc@123 — 已绑定飞书，登录后直接进入首页</div>
-        <div>lisi / Abc@123 — 未绑定飞书，登录后弹出绑定授权弹窗</div>
-      </div>
       <div class="links" data-od-id="path-1-6-3-4">
         <a href="#" onclick="showForgotUsername(event)" data-od-id="path-1-6-3-4-0">忘记用户名</a>
         <a href="#" onclick="showForgotPwModal(event)" data-od-id="path-1-6-3-4-1">忘记密码</a>
@@ -1210,18 +1190,14 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
     </nav>
     <div class="sidebar-footer" data-od-id="path-7-0-2">
       <span class="nav-pin" onclick="openNavDoc(event,'userbar')" title="查看页面需求"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg></span>
-      <div class="sidebar-footer-row">
-        <div class="user-info">
-          <div class="avatar" id="sidebarAvatar" data-od-id="path-7-0-2-0-0">U</div>
-          <div style="min-width:0">
-            <div class="uname" id="sidebarName" data-od-id="path-7-0-2-0-1-0">用户</div>
-            <div class="urole" id="sidebarRole" data-od-id="path-7-0-2-0-1-1">普通用户</div>
-          </div>
+      <div class="user-info">
+        <div class="avatar" id="sidebarAvatar" data-od-id="path-7-0-2-0-0">U</div>
+        <div>
+          <div class="uname" id="sidebarName" data-od-id="path-7-0-2-0-1-0">用户</div>
+          <div class="urole" id="sidebarRole" data-od-id="path-7-0-2-0-1-1">普通用户</div>
         </div>
-        <button class="btn-logout" onclick="confirmLogout()" data-od-id="path-7-0-2-1" title="退出登录">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
-        </button>
       </div>
+      <button class="btn-logout" onclick="confirmLogout()" data-od-id="path-7-0-2-1">退出登录</button>
     </div>
   </aside>
 
@@ -1463,7 +1439,7 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
             <div class="tab active" onclick="filterReq('all')" data-od-id="path-7-1-1-3-1-0-0">全部</div>
             <div class="tab" onclick="filterReq('待审批')" data-od-id="path-7-1-1-3-1-0-1">待审批</div>
             <div class="tab" onclick="filterReq('审批不通过')" data-od-id="path-7-1-1-3-1-0-1b">审批不通过</div>
-            <div class="tab" onclick="filterReq('待评估')" data-od-id="path-7-1-1-3-1-0-2">待评估</div>
+            <div class="tab" onclick="filterReq('待分配')" data-od-id="path-7-1-1-3-1-0-2">待分配</div>
             <div class="tab" onclick="filterReq('调研中')" data-od-id="path-7-1-1-3-1-0-3">调研中</div>
             <div class="tab" onclick="filterReq('验收中')" data-od-id="path-7-1-1-3-1-0-4">验收中</div>
             <div class="tab" onclick="filterReq('已上线')" data-od-id="path-7-1-1-3-1-0-5">已上线</div>
@@ -1576,7 +1552,7 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
         <div class="card" data-od-id="path-7-1-1-4-2">
           <div class="table-wrap">
             <table class="data">
-              <thead><tr><th>问题ID</th><th>所属项目-系统</th><th>问题标题</th><th>问题级别</th><th>状态</th><th>反馈日期</th><th>反馈人</th><th>跟进人</th><th>详情</th><th>激活</th></tr></thead>
+              <thead><tr><th>问题编号</th><th>所属项目-系统</th><th>问题标题</th><th>问题级别</th><th>状态</th><th>反馈日期</th><th>反馈人</th><th>跟进人</th><th>详情</th><th>激活</th></tr></thead>
               <tbody id="probBody" data-od-id="path-7-1-1-4-2-0-0-0-1"></tbody>
             </table>
           </div>
@@ -1627,28 +1603,57 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
 
       <!-- ===== COMPLAINTS ===== -->
       <div id="view-complaints" class="hidden" data-od-id="path-7-1-1-7">
+        <div class="mini-stats" data-od-id="path-7-1-1-7-0">
+          <div class="mini-stat ms-primary"><div class="ms-val" id="compStatTotal" data-od-id="path-7-1-1-7-0-0-0">8</div><div class="ms-label">全部工单</div></div>
+          <div class="mini-stat ms-warn"><div class="ms-val" id="compStatWait" data-od-id="path-7-1-1-7-0-1-0">3</div><div class="ms-label">待处理</div></div>
+          <div class="mini-stat ms-accent"><div class="ms-val" id="compStatProgress" data-od-id="path-7-1-1-7-0-2-0">3</div><div class="ms-label">处理中</div></div>
+          <div class="mini-stat ms-success"><div class="ms-val" id="compStatDone" data-od-id="path-7-1-1-7-0-3-0">2</div><div class="ms-label">已处理</div></div>
+        </div>
         <div class="toolbar" data-od-id="path-7-1-1-7-1">
           <div class="tabs" id="compTabs" data-od-id="path-7-1-1-7-1-0">
             <div class="tab active" onclick="filterComp('all')" data-od-id="path-7-1-1-7-1-0-0">全部</div>
-            <div class="tab" onclick="filterComp('待处理')" data-od-id="path-7-1-1-7-1-0-1">待处理 <span class="tab-count" id="compTabWait">0</span></div>
-            <div class="tab" onclick="filterComp('已处理')" data-od-id="path-7-1-1-7-1-0-2">已处理 <span class="tab-count" id="compTabDone">0</span></div>
+            <div class="tab" onclick="filterComp('待处理')" data-od-id="path-7-1-1-7-1-0-1">待处理</div>
+            <div class="tab" onclick="filterComp('处理中')" data-od-id="path-7-1-1-7-1-0-2">处理中</div>
+            <div class="tab" onclick="filterComp('已处理')" data-od-id="path-7-1-1-7-1-0-3">已处理</div>
+            <div class="tab" onclick="filterComp('已撤销')" data-od-id="path-7-1-1-7-1-0-4">已撤销</div>
           </div>
-          <input type="text" class="search-input" id="compSearchInput" placeholder="搜索工单标题" oninput="onCompSearchInput(this.value)" data-od-id="path-7-1-1-7-1-2">
           <button class="btn btn-primary" onclick="openCreateModal('comp')" data-od-id="path-7-1-1-7-1-1">+ 新建投诉/建议</button>
         </div>
-        <div class="card">
-          <div class="table-wrap">
-            <table class="data">
-              <thead><tr><th>工单ID</th><th>标题</th><th>工单类型</th><th>优先级</th><th>状态</th><th>操作</th></tr></thead>
-              <tbody id="compBody" data-od-id="path-7-1-1-7-2-0-0-0-1"></tbody>
-            </table>
+        <div class="split-view" data-od-id="path-7-1-1-7-2">
+          <div class="card">
+            <div class="table-wrap">
+              <table class="data">
+                <thead><tr><th>编号</th><th>类型</th><th>标题</th><th>状态</th><th>创建时间</th><th>操作</th></tr></thead>
+                <tbody id="compBody" data-od-id="path-7-1-1-7-2-0-0-0-1"></tbody>
+              </table>
+            </div>
           </div>
-        </div>
-        <!-- 工单详情页 -->
-        <div id="compDetail" class="hidden" data-od-id="path-7-1-1-7-3">
-          <div class="detail-back" onclick="closeCompDetail()" data-od-id="path-7-1-1-7-3-0">← 返回工单列表</div>
-          <div class="card comp-detail-card" data-od-id="path-7-1-1-7-3-1"></div>
-          <div class="detail-ops-bar" id="compDetailOps" data-od-id="path-7-1-1-7-3-2"></div>
+          <div class="side-panel">
+            <div class="card sp-section">
+              <h4 data-od-id="path-7-1-1-7-2-1-0-0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px"><path d="M3 3v18h18"></path><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path></svg> 工单类型分布</h4>
+              <div class="dist-item"><div class="dist-label">服务投诉</div><div class="dist-bar"><div class="dist-fill" style="width:38%;background:var(--danger)"></div></div><div class="dist-count">3</div></div>
+              <div class="dist-item"><div class="dist-label">功能建议</div><div class="dist-bar"><div class="dist-fill" style="width:25%;background:var(--primary)"></div></div><div class="dist-count">2</div></div>
+              <div class="dist-item"><div class="dist-label">流程优化</div><div class="dist-bar"><div class="dist-fill" style="width:25%;background:var(--accent)"></div></div><div class="dist-count">2</div></div>
+              <div class="dist-item"><div class="dist-label">其他</div><div class="dist-bar"><div class="dist-fill" style="width:12%;background:var(--warning)"></div></div><div class="dist-count">1</div></div>
+            </div>
+            <div class="card sp-section">
+              <h4 data-od-id="path-7-1-1-7-2-1-1-0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg> 处理效率</h4>
+              <div style="text-align:center;padding:16px 0">
+                <div style="font-size:2.2rem;font-weight:800;font-family:var(--font-mono);background:linear-gradient(135deg,var(--primary),#7C3AED);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-variant-numeric:tabular-nums">62.5%</div>
+                <div style="font-size:.78rem;color:var(--text-secondary);margin-top:4px">本月处理率</div>
+              </div>
+              <div class="dist-item"><div class="dist-label">平均响应</div><div class="dist-bar"><div class="dist-fill" style="width:40%;background:var(--primary)"></div></div><div class="dist-count">4.2h</div></div>
+              <div class="dist-item"><div class="dist-label">平均处理</div><div class="dist-bar"><div class="dist-fill" style="width:65%;background:var(--accent)"></div></div><div class="dist-count">1.8d</div></div>
+            </div>
+            <div class="card sp-section">
+              <h4 data-od-id="path-7-1-1-7-2-1-2-0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg> 工单动态</h4>
+              <div class="sp-timeline">
+                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--warning)"></div><div class="sp-tl-body"><div class="sp-tl-text">CS-20250115-002 提交功能建议</div><div class="sp-tl-time">3小时前 · 功能建议</div></div></div>
+                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--primary)"></div><div class="sp-tl-body"><div class="sp-tl-text">CS-20250114-001 开始处理</div><div class="sp-tl-time">昨天 · 服务投诉</div></div></div>
+                <div class="sp-tl-item"><div class="sp-tl-dot" style="background:var(--success)"></div><div class="sp-tl-body"><div class="sp-tl-text">CS-20250113-001 处理完成</div><div class="sp-tl-time">2天前 · 流程优化</div></div></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -1880,28 +1885,16 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
 <!-- ===== CREATE COMPLAINT MODAL ===== -->
 <div class="modal-overlay" id="createCompModal" data-od-id="path-10">
   <div class="modal" data-od-id="path-10-0">
-    <div class="modal-header"><h3 data-od-id="path-10-0-0-0">新建投诉/建议</h3><button class="close" onclick="confirmCompCancel()" data-od-id="path-10-0-0-1">×</button></div>
+    <div class="modal-header"><h3 data-od-id="path-10-0-0-0">新建投诉/建议</h3><button class="close" onclick="closeModal('createCompModal')" data-od-id="path-10-0-0-1">×</button></div>
     <div class="modal-body">
-      <div class="form-group"><label>工单类型 <em style="color:var(--danger)">*</em></label>
-        <select id="newCompType" data-od-id="path-10-0-1-0-1"><option>投诉</option><option>建议</option></select>
+      <div class="form-group"><label>类型</label>
+        <select id="newCompType" data-od-id="path-10-0-1-0-1"><option>服务投诉</option><option>功能建议</option><option>流程优化</option><option>其他</option></select>
       </div>
-      <div class="form-group"><label>优先级 <em style="color:var(--danger)">*</em></label>
-        <div class="radio-group" id="newCompPriority" data-od-id="path-10-0-1-0-2">
-          <label class="radio-item"><input type="radio" name="compPriority" value="普通" checked> 普通</label>
-          <label class="radio-item"><input type="radio" name="compPriority" value="紧急"> 紧急</label>
-        </div>
-      </div>
-      <div class="form-group">
-        <label>工单标题 <span class="field-count" id="compTitleCount">0</span>/30</label>
-        <input type="text" id="newCompTitle" maxlength="30" placeholder="请输入工单标题，最多30字" oninput="document.getElementById('compTitleCount').textContent=this.value.length" data-od-id="path-10-0-1-1-1">
-      </div>
-      <div class="form-group">
-        <label>详细描述 <span class="field-count" id="compDescCount">0</span>/5000</label>
-        <textarea id="newCompDesc" maxlength="5000" rows="5" placeholder="详细描述您的投诉或建议，最多5000字符" oninput="document.getElementById('compDescCount').textContent=this.value.length" data-od-id="path-10-0-1-2-1"></textarea>
-      </div>
+      <div class="form-group"><label>标题</label><input type="text" id="newCompTitle" placeholder="请输入标题" data-od-id="path-10-0-1-1-1"></div>
+      <div class="form-group"><label>详细内容</label><textarea id="newCompDesc" placeholder="详细描述您的投诉或建议" data-od-id="path-10-0-1-2-1"></textarea></div>
     </div>
     <div class="modal-footer">
-      <button class="btn btn-outline" onclick="confirmCompCancel()" data-od-id="path-10-0-2-0">返回</button>
+      <button class="btn btn-outline" onclick="closeModal('createCompModal')" data-od-id="path-10-0-2-0">取消</button>
       <button class="btn btn-primary" onclick="createComplaint()" data-od-id="path-10-0-2-1">提交</button>
     </div>
   </div>
@@ -2261,7 +2254,7 @@ const PRD_CONTENT = {
 <tr><td>需求</td><td>DE</td><td>DE-创建日期-三位序号</td><td>DE-20260615-001</td></tr>
 <tr><td>问题</td><td>PR-B</td><td>PR-B-创建日期-四位序号</td><td>PR-B-20260615-0001</td></tr>
 <tr><td>资料</td><td>DOC</td><td>DOC-创建日期-四位序号</td><td>DOC-20260615-0037</td></tr>
-<tr><td>投诉/建议工单</td><td>FB</td><td>FB-创建日期-四位序号</td><td>FB-20260615-0003</td></tr>
+<tr><td>投诉/建议工单</td><td>CS</td><td>CS-创建日期-三位序号</td><td>CS-20260615-003</td></tr>
 </table>
 
 <h4>六、文案规范</h4>
@@ -2597,7 +2590,7 @@ const PRD_CONTENT = {
 <p><strong>触发条件：</strong>从左侧菜单栏「业务 &gt; 我的需求」进入，或从首页快捷入口、需求进度列表"查看更多"进入。</p>
 
 <h5>列表页</h5>
-<p><strong>Tab页签：</strong>全部、待审批、审批不通过、待评估、调研中、验收中、已上线、已关闭（各Tab显示对应数量）</p>
+<p><strong>Tab页签：</strong>全部、待审批、审批不通过、待分配、调研中、验收中、已上线、已关闭（各Tab显示对应数量）</p>
 <p><strong>搜索框：</strong>模糊搜索需求标题/需求ID，根据当前Tab页签筛选。</p>
 
 <h5>需求列表字段</h5>
@@ -2609,7 +2602,7 @@ const PRD_CONTENT = {
 <tr><td>功能模块</td><td>来自创建时所选功能模块</td></tr>
 <tr><td>需求标题</td><td>最多展示20字，超出省略号</td></tr>
 <tr><td>优先级</td><td>紧急 / 高 / 中 / 低</td></tr>
-<tr><td>状态</td><td>待审批 / 审批不通过 / 待评估 / 调研中 / 验收中 / 已上线 / 已关闭</td></tr>
+<tr><td>状态</td><td>待审批 / 审批不通过 / 待分配 / 调研中 / 验收中 / 已上线 / 已关闭</td></tr>
 <tr><td>提交日期</td><td>格式：2026-06-01</td></tr>
 <tr><td>需求负责人</td><td>业务可指派→不指派→中心端产品人员认领/指派后更新</td></tr>
 <tr><td>详情</td><td>点击进入详情页，查看需求内容以及转化需求内容</td></tr>
@@ -2618,7 +2611,7 @@ const PRD_CONTENT = {
 <h5>需求状态机</h5>
 <ul>
 <li>创建并提交 → 待审批（推送至该账号所属组织负责人审批，飞书通知审批人）</li>
-<li>组织负责人审批通过 → 待评估（自动进入管理平台业务需求池，飞书通知提交人）</li>
+<li>组织负责人审批通过 → 待分配（自动进入管理平台业务需求池，飞书通知提交人）</li>
 <li>组织负责人审批不通过 → 审批不通过（须填写不通过原因，飞书通知提交人，可修改后重新提交）</li>
 <li>需求被转化至版本需求池 → 调研中（管理平台产品人员操作）</li>
 <li>需求被推送至验收单 → 验收中（管理平台产品人员操作）</li>
@@ -2816,63 +2809,60 @@ const PRD_CONTENT = {
 `,
   complaints: `
 <h4>4.8 投诉/建议</h4>
-<p><strong>功能描述：</strong>用户可提交投诉/建议工单，并跟踪处理进度。</p>
+<p><strong>功能描述：</strong>用户可提交服务投诉、功能建议、流程优化等工单，并跟踪处理进度。</p>
 <p><strong>触发条件：</strong>从左侧菜单栏「我的 &gt; 投诉/建议」进入，或从对接人页快捷入口进入。</p>
 
 <h5>列表页</h5>
-<p><strong>Tab页签：</strong>全部、待处理、已处理（除全部标签，其他标签显示对应数量）</p>
+<p><strong>Tab页签：</strong>全部、待处理、处理中、已处理、已撤销（各Tab显示对应数量）</p>
 <p><strong>搜索框：</strong>模糊搜索工单标题</p>
 
 <h5>工单列表字段</h5>
 <table>
 <tr><th>字段</th><th>说明</th></tr>
-<tr><td>工单ID</td><td>全系统唯一，规则：FB-创建日期-当天四位序号</td></tr>
-<tr><td>复制按钮</td><td>显示在ID后方，点击复制</td></tr>
 <tr><td>标题</td><td>最多展示30字，超出...展示</td></tr>
-<tr><td>工单类型</td><td>投诉 / 建议</td></tr>
+<tr><td>工单ID</td><td>全系统唯一，规则：CS-创建日期-当天三位序号，如 CS-20260615-003</td></tr>
+<tr><td>复制按钮</td><td>显示在ID后方，点击复制</td></tr>
+<tr><td>工单类型</td><td>服务投诉 / 功能建议 / 流程优化 / 其他</td></tr>
 <tr><td>优先级</td><td>紧急 / 普通</td></tr>
-<tr><td>状态</td><td>待处理 / 已处理</td></tr>
+<tr><td>状态</td><td>待处理 / 处理中 / 已处理</td></tr>
 </table>
 
 <h5>操作按钮</h5>
 <table>
 <tr><th>工单状态</th><th>操作</th><th>说明</th></tr>
-<tr><td>待处理</td><td>查看</td><td>查看工单详情</td></tr>
+<tr><td>待处理</td><td>撤销</td><td>需二次确认，撤销后状态变为已撤销</td></tr>
+<tr><td>处理中</td><td>撤销</td><td>需二次确认，撤销后状态变为已撤销</td></tr>
 <tr><td>已处理</td><td>查看</td><td>查看处理结果、处理时间和处理人信息</td></tr>
+<tr><td>已撤销</td><td>无</td><td>-</td></tr>
 </table>
 
 <h5>工单状态机</h5>
 <ul>
-<li>创建并提交 → 待处理</li>
-<li>管理平台处理完成 → 已处理</li>
+<li>提交工单 → 待处理</li>
+<li>中心端开始处理 → 处理中</li>
+<li>中心端完成处理 → 已处理</li>
+<li>用户撤销工单 → 已撤销</li>
 </ul>
-<p>说明：管理平台处理包含指派、填写处理备注等操作，但对业务端而言统一表现为「待处理→已处理」的状态变更。</p>
 
 <h5>创建工单页字段</h5>
 <table>
 <tr><th>字段</th><th>类型</th><th>是否必填</th><th>限制</th><th>说明</th></tr>
-<tr><td>工单类型</td><td>下拉单选</td><td>是</td><td>-</td><td>枚举值：投诉、建议</td></tr>
+<tr><td>工单类型</td><td>下拉单选</td><td>是</td><td>-</td><td>枚举值：服务投诉、功能建议、流程优化、其他</td></tr>
+<tr><td>涉及系统</td><td>下拉单选</td><td>否</td><td>-</td><td>枚举值取中心端平台配置项</td></tr>
 <tr><td>优先级</td><td>单选</td><td>是</td><td>-</td><td>普通（默认）、紧急</td></tr>
-<tr><td>工单标题</td><td>文本输入</td><td>否</td><td>30字</td><td>-</td></tr>
+<tr><td>工单标题</td><td>文本输入</td><td>是</td><td>30字</td><td>-</td></tr>
 <tr><td>详细描述</td><td>多媒体输入</td><td>否</td><td>5000字符</td><td>支持富文本</td></tr>
 </table>
 
 <h5>提交流程</h5>
-<p>用户填写工单信息并点击提交 → 系统校验表单完整性 → 校验通过后创建工单记录，状态为「待处理」 → 系统自动向投诉/建议处理页配置的对应人员发送飞书消息通知 → 关闭页面，回到列表页。</p>
-
-<h5>工单详情页</h5>
-<p><strong>工单信息区：</strong>工单ID（含复制按钮）、工单标题、工单类型、提交人、提交日期（年月日时分秒）、处理人（无时显示"-"）、状态</p>
-<p><strong>工单描述区：</strong>工单详细描述内容（富文本）</p>
-<p><strong>处理备注区：</strong>处理备注（富文本）、处理人、处理时间。仅已处理状态展示。</p>
-<p><strong>操作区：</strong>底部悬浮，根据状态展示操作按钮，同列表规则。</p>
-<p><strong>处理记录区：</strong>时间线形式展示创建工单、指派工单、处理工单等动态。</p>
+<p>进入创建工单页 → 填写表单 → 点击提交 → 前端校验必填项 → 不满足则高亮错误字段；满足则调用提交接口 → 后端返回成功则返回列表，数据进入中心端投诉/建议管理数据池；失败则显示错误码和错误信息。</p>
 
 <h5>边界条件</h5>
 <ul>
 <li>工单列表为空：显示空状态插图 + "暂无工单记录"</li>
-<li>搜索无结果：显示"未找到匹配的工单"</li>
+<li>撤销操作：必须二次确认，弹窗提示"操作前请确认，避免误操作"</li>
+<li>已撤销的工单不可恢复</li>
 <li>工单标题超长：前端截断30字</li>
-<li>返回按钮：二次提示确认后返回列表页，不生成数据</li>
 </ul>
 `,
   profile: `
@@ -3010,8 +3000,8 @@ function getCurrentPrdKey(){
 
 // ===== DATA =====
 const USERS = {
-  zhangsan: { password: 'Abc@123', name: '张三', feishu: true, firstLogin: false, dept: '产品部', empId: 'LG0245', center: '数字化创新中心', tags: ['产品','管理'], avatar: '', accountDate: '2024-03-15', ext: '8001', notifyReq: false, notifyIssue: true, notifyAccept: true, statsReq: 14, statsIssue: 11, statsAccept: 12 },
-  lisi: { password: 'Abc@123', name: '李四', feishu: false, firstLogin: false, dept: '数据部', empId: 'LG0246', center: '数字化创新中心', tags: ['研发'], avatar: '', accountDate: '2024-06-20', ext: '8002', notifyReq: true, notifyIssue: true, notifyAccept: true, statsReq: 8, statsIssue: 5, statsAccept: 3 },
+  zhangsan: { password: 'Abc123!', name: '张三', feishu: true, firstLogin: false, dept: '产品部', empId: 'LG0245', center: '数字化创新中心', tags: ['产品','管理'], avatar: '', accountDate: '2024-03-15', ext: '8001', notifyReq: false, notifyIssue: true, notifyAccept: true, statsReq: 14, statsIssue: 11, statsAccept: 12 },
+  lisi: { password: 'Test12#', name: '李四', feishu: false, firstLogin: false, dept: '数据部', empId: 'LG0246', center: '数字化创新中心', tags: ['研发'], avatar: '', accountDate: '2024-06-20', ext: '8002', notifyReq: true, notifyIssue: true, notifyAccept: true, statsReq: 8, statsIssue: 5, statsAccept: 3 },
   wangwu: { password: 'Init12!', name: '王五', feishu: false, firstLogin: true, dept: '运营部', empId: 'LG0247', center: '数字化创新中心', tags: ['质检'], avatar: '', accountDate: '2025-01-10', ext: '', notifyReq: true, notifyIssue: false, notifyAccept: true, statsReq: 3, statsIssue: 7, statsAccept: 1 }
 };
 
@@ -3167,7 +3157,7 @@ let reqData = [
     {type:'审批通过',text:'诸葛亮$LG0250$ 审批通过需求 DE-B-20250115-0001',time:'2025-01-15 14:20:30'},
     {type:'创建',text:'张三$zhangsan$ 创建需求',time:'2025-01-15 09:15:00'}
   ]},
-  { id:'DE-B-20250114-0002', project:'数据中台V1.5', system:'数据平台', module:'数据报表', title:'报表导出功能', priority:'中', status:'待评估', assignee:'—', submitter:'李四', dept:'数据部', desc:'支持将数据报表导出为Excel和PDF格式，满足业务部门离线分析需求。', time:'2025-01-14', activity:[
+  { id:'DE-B-20250114-0002', project:'数据中台V1.5', system:'数据平台', module:'数据报表', title:'报表导出功能', priority:'中', status:'待分配', assignee:'—', submitter:'李四', dept:'数据部', desc:'支持将数据报表导出为Excel和PDF格式，满足业务部门离线分析需求。', time:'2025-01-14', activity:[
     {type:'审批通过',text:'诸葛亮$LG0250$ 审批通过需求 DE-B-20250114-0002',time:'2025-01-14 16:45:00'},
     {type:'创建',text:'李四$lisi$ 创建需求',time:'2025-01-14 08:30:00'}
   ]},
@@ -3190,7 +3180,7 @@ let reqData = [
     {type:'审批通过',text:'诸葛亮$LG0250$ 审批通过需求 DE-B-20250109-0006',time:'2025-01-10 10:00:00'},
     {type:'创建',text:'李四$lisi$ 创建需求',time:'2025-01-09 14:30:00'}
   ]},
-  { id:'DE-B-20250108-0007', project:'油葱商城V4.30.5', system:'商品中心', module:'库存管理', title:'接口性能优化', priority:'中', status:'待评估', assignee:'—', submitter:'王五', dept:'研发部', desc:'优化商品查询和库存同步接口性能，降低P99延迟至200ms以内。', time:'2025-01-08', activity:[
+  { id:'DE-B-20250108-0007', project:'油葱商城V4.30.5', system:'商品中心', module:'库存管理', title:'接口性能优化', priority:'中', status:'待分配', assignee:'—', submitter:'王五', dept:'研发部', desc:'优化商品查询和库存同步接口性能，降低P99延迟至200ms以内。', time:'2025-01-08', activity:[
     {type:'审批通过',text:'诸葛亮$LG0250$ 审批通过需求 DE-B-20250108-0007',time:'2025-01-09 09:15:00'},
     {type:'创建',text:'王五$wangwu$ 创建需求',time:'2025-01-08 10:00:00'}
   ]},
@@ -3284,12 +3274,14 @@ let contactData = [
 
 // ===== COMPLAINTS DATA =====
 let compData = [
-  { id:'FB-20260710-0001', type:'投诉', title:'物流信息展示不准确，收件地址与配送范围偏差较大', priority:'紧急', status:'待处理', submitter:'张三', submitTime:'2026-07-10 14:30:00', handler:'-', desc:'油葱商城V4.30.5中，订单详情页的物流信息显示配送范围与实际收件地址存在较大偏差，导致用户无法准确预估配送时间。建议校准地图API数据源，并增加地址校验功能。', handleNote:'', handleTime:'', records:[{text:'张三 提交投诉 2026-07-10 14:30:00'}] },
-  { id:'FB-20260709-0002', type:'建议', title:'商品详情页增加对比功能', priority:'普通', status:'待处理', submitter:'李四', submitTime:'2026-07-09 10:15:00', handler:'-', desc:'建议在商品详情页增加"加入对比"功能，用户可选择2-4件同类商品进行参数对比，提升购物决策效率。', handleNote:'', handleTime:'', records:[{text:'李四 提交建议 2026-07-09 10:15:00'}] },
-  { id:'FB-20260708-0003', type:'投诉', title:'支付环节偶发超时，影响用户体验', priority:'紧急', status:'已处理', submitter:'王五', submitTime:'2026-07-08 09:20:00', handler:'陈志强', desc:'在高峰时段（10:00-12:00），部分用户反馈支付环节出现超时现象，等待时间超过30秒，严重影响购物体验。', handleNote:'已排查为第三方支付网关响应慢导致，已联系支付服务商优化接口响应时间，同时在前端增加超时提示和重试机制。预计下个版本修复上线。', handleTime:'2026-07-08 16:45:00', records:[{text:'王五 提交投诉 2026-07-08 09:20:00'},{text:'陈志强 处理工单 2026-07-08 16:45:00'}] },
-  { id:'FB-20260707-0004', type:'建议', title:'会员中心增加积分兑换专区', priority:'普通', status:'已处理', submitter:'赵六', submitTime:'2026-07-07 15:40:00', handler:'李明辉', desc:'建议在会员中心增加积分兑换专区，用户可使用累积积分兑换优惠券、小礼品或享受专属折扣，提升用户粘性和活跃度。', handleNote:'已采纳该建议，积分兑换专区已纳入V4.31.0版本规划，预计8月中旬上线。', handleTime:'2026-07-07 17:30:00', records:[{text:'赵六 提交建议 2026-07-07 15:40:00'},{text:'李明辉 处理工单 2026-07-07 17:30:00'}] },
-  { id:'FB-20260706-0005', type:'投诉', title:'搜索结果排序混乱，无法按销量或价格排序', priority:'普通', status:'待处理', submitter:'孙七', submitTime:'2026-07-06 11:00:00', handler:'-', desc:'商品搜索结果的排序功能存在问题，点击"销量"或"价格"排序后，列表顺序没有变化，或者排序结果与预期不符。', handleNote:'', handleTime:'', records:[{text:'孙七 提交投诉 2026-07-06 11:00:00'}] },
-  { id:'FB-20260705-0006', type:'建议', title:'订单列表增加批量导出功能', priority:'普通', status:'待处理', submitter:'周八', submitTime:'2026-07-05 16:20:00', handler:'-', desc:'企业用户反馈，在订单管理页面需要逐页查看订单，希望增加批量导出功能，支持按时间范围导出为Excel格式，方便对账和数据分析。', handleNote:'', handleTime:'', records:[{text:'周八 提交建议 2026-07-05 16:20:00'}] }
+  { id:'CS-20250115-001', type:'服务投诉', title:'需求响应时间过长', status:'待处理', time:'2025-01-15' },
+  { id:'CS-20250114-001', type:'功能建议', title:'增加批量操作功能', status:'处理中', time:'2025-01-14' },
+  { id:'CS-20250112-001', type:'流程优化', title:'验收流程简化建议', status:'已处理', time:'2025-01-12' },
+  { id:'CS-20250111-002', type:'服务投诉', title:'系统访问权限申请太慢', status:'待处理', time:'2025-01-11' },
+  { id:'CS-20250110-003', type:'功能建议', title:'希望增加数据导出为Excel', status:'处理中', time:'2025-01-10' },
+  { id:'CS-20250109-004', type:'流程优化', title:'问题反馈后无进度通知', status:'已撤销', time:'2025-01-09' },
+  { id:'CS-20250108-005', type:'其他', title:'操作手册更新不及时', status:'已处理', time:'2025-01-08' },
+  { id:'CS-20250107-006', type:'功能建议', title:'首页增加快捷搜索框', status:'待处理', time:'2025-01-07' }
 ];
 
 // ===== APPROVALS DATA =====
@@ -3695,10 +3687,10 @@ const breadcrumbMap = {
 
 function renderHome() {
   // --- stat cards ---
-  const reqActive = reqData.filter(r => ['待审批','待评估','调研中','验收中'].includes(r.status)).length;
+  const reqActive = reqData.filter(r => ['待审批','待分配','调研中','验收中'].includes(r.status)).length;
   const probActive = probData.filter(p => ['待处理','处理中'].includes(p.status)).length;
   const accActive = accData.filter(a => ['待验收','验收中'].includes(getAccStatus(a))).length;
-  const compActive = compData.filter(c => c.status === '待处理').length;
+  const compActive = compData.filter(c => ['待处理','处理中'].includes(c.status)).length;
   document.getElementById('statReq').textContent = reqActive;
   document.getElementById('statProb').textContent = probActive;
   document.getElementById('statAcc').textContent = accActive;
@@ -3714,7 +3706,7 @@ function renderHome() {
   }
 
   // --- req list (top 10 by date desc) ---
-  const reqStatusClass = { '待审批':'status-wait','审批不通过':'status-shelve','待评估':'status-info','调研中':'status-progress','验收中':'status-progress','已上线':'status-done','已关闭':'status-muted' };
+  const reqStatusClass = { '待审批':'status-wait','审批不通过':'status-shelve','待分配':'status-info','调研中':'status-progress','验收中':'status-progress','已上线':'status-done','已关闭':'status-muted' };
   const topReqs = [...reqData].sort((a,b) => b.time.localeCompare(a.time)).slice(0,10);
   const homeReqList = document.getElementById('homeReqList');
   if (topReqs.length === 0) {
@@ -3937,12 +3929,6 @@ function copyToClipboard(text) {
   else { showToast('复制失败，请手动复制'); }
 }
 
-function copyText(text) {
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(text).then(() => showToast('info','已复制到剪贴板')).catch(() => showToast('已复制：' + text));
-  } else { showToast('已复制：' + text); }
-}
-
 function updateAccStats() {
   const total = accData.length;
   const wait = accData.filter(d => getAccStatus(d) === '待验收').length;
@@ -3987,7 +3973,7 @@ function renderAccList() {
     const prog = getAccProgress(d);
     const dlCls = getDeadlineClass(d.deadline);
     return `<tr>
-      <td class="mono" style="white-space:nowrap">${d.id} <span class="action-link" title="复制" onclick="copyText('${d.id}')"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:var(--primary);fill:none;stroke-width:2;cursor:pointer;vertical-align:middle"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></span></td>
+      <td class="mono" style="white-space:nowrap">${d.id} <button class="btn btn-sm" style="padding:2px 6px;font-size:.68rem;min-width:auto" onclick="copyToClipboard('${d.id}')" title="复制ID">📋</button></td>
       <td style="font-weight:500">${d.system} ${d.version}</td>
       <td><span class="status ${sc}">${st}</span></td>
       <td style="min-width:120px"><div class="progress-bar"><div class="fill" style="width:${prog}%;background:${prog===100?'var(--success)':'var(--cobalt)'}"></div></div><span style="font-size:.72rem;color:var(--text-secondary)">${prog}%</span></td>
@@ -4362,7 +4348,7 @@ function getReqStatusClass(s) {
     : s === '已关闭' ? 'status-closed'
     : s === '审批不通过' ? 'status-shelve'
     : (s === '验收中' || s === '调研中') ? 'status-progress'
-    : s === '待评估' ? 'status-info'
+    : s === '待分配' ? 'status-info'
     : 'status-wait';
 }
 
@@ -4429,7 +4415,7 @@ function renderReqList() {
     const titleShort = d.title.length > 20 ? d.title.slice(0, 20) + '…' : d.title;
     const projSys = d.project ? (d.project + (d.system ? ' / ' + d.system : '')) : (d.system || '—');
     return `<tr>
-      <td class="mono" style="white-space:nowrap">${d.id} <span class="action-link" title="复制" onclick="copyReqId('${d.id}')"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:var(--primary);fill:none;stroke-width:2;cursor:pointer;vertical-align:middle"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></span></td>
+      <td class="mono" style="white-space:nowrap">${d.id} <button class="btn btn-sm btn-outline" style="padding:1px 6px;font-size:.68rem;margin-left:4px" onclick="copyReqId('${d.id}')">复制</button></td>
       <td style="max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${projSys}">${projSys}</td>
       <td>${d.module || '—'}</td>
       <td title="${d.title}">${titleShort}</td>
@@ -4598,7 +4584,7 @@ function viewReqDetail(id) {
 
   // 需求信息区
   document.getElementById('reqDetailInfo').innerHTML = `
-    <div><div class="label">需求编号</div><div style="font-family:var(--font-mono)">${d.id} <span class="action-link" title="复制" onclick="copyReqId('${d.id}')"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:var(--primary);fill:none;stroke-width:2;cursor:pointer;vertical-align:middle"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></span></div></div>
+    <div><div class="label">需求编号</div><div style="font-family:var(--font-mono)">${d.id} <button class="btn btn-sm btn-outline" style="padding:1px 6px;font-size:.68rem;margin-left:4px" onclick="copyReqId('${d.id}')">复制</button></div></div>
     <div><div class="label">需求标题</div><div>${d.title}</div></div>
     <div><div class="label">提交人/部门</div><div>${d.submitter || '—'} / ${d.dept || '—'}</div></div>
     <div><div class="label">提交日期</div><div>${d.time}</div></div>
@@ -4737,7 +4723,7 @@ function renderProbList() {
     const titleDisplay = d.title.length > 30 ? d.title.slice(0,30) + '…' : d.title;
     const activateBtn = d.status === '已处理' ? `<button class="btn btn-sm btn-outline" onclick="activateProblem('${d.id}')" data-od-id="prob-activate-${d.id}">激活</button>` : '<span style="color:var(--text-secondary);font-size:.75rem">—</span>';
     return `<tr>
-      <td class="mono">${d.id} <span class="action-link" title="复制" onclick="copyText('${d.id}')"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:var(--primary);fill:none;stroke-width:2;cursor:pointer;vertical-align:middle"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></span></td>
+      <td class="mono">${d.id} <button class="btn-icon" onclick="copyProbId('${d.id}')" title="复制" style="background:none;border:none;cursor:pointer;padding:2px;vertical-align:middle;color:var(--text-secondary)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></td>
       <td style="font-size:.78rem">${projSys}</td>
       <td title="${d.title}" style="max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${titleDisplay}</td>
       <td><span class="priority-${pl}">${getPriorityLabel(d.priority)}</span></td>
@@ -4749,6 +4735,10 @@ function renderProbList() {
       <td>${activateBtn}</td>
     </tr>`;
   }).join('');
+}
+
+function copyProbId(id) {
+  navigator.clipboard.writeText(id).then(() => showToast('已复制：' + id));
 }
 
 function viewProbDetail(id) {
@@ -4765,7 +4755,7 @@ function viewProbDetail(id) {
     <div class="detail-back" onclick="switchView('problems')" data-od-id="prob-detail-back">← 返回问题列表</div>
     <div class="prob-detail-card" data-od-id="prob-info-${d.id}">
       <h4><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg> 问题信息</h4>
-      <div class="prob-detail-field"><span class="field-label">问题ID</span><span class="field-value mono">${d.id} <span class="action-link" title="复制" onclick="copyText('${d.id}')"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:var(--primary);fill:none;stroke-width:2;cursor:pointer;vertical-align:middle"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></span></span></div>
+      <div class="prob-detail-field"><span class="field-label">问题ID</span><span class="field-value mono">${d.id} <button class="btn-icon" onclick="copyProbId('${d.id}')" title="复制" style="background:none;border:none;cursor:pointer;padding:2px;vertical-align:middle;color:var(--text-secondary)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></span></div>
       <div class="prob-detail-field"><span class="field-label">问题标题</span><span class="field-value">${d.title}</span></div>
       <div class="prob-detail-field"><span class="field-label">反馈日期</span><span class="field-value">${d.feedbackDate}</span></div>
       <div class="prob-detail-field"><span class="field-label">反馈人</span><span class="field-value">${d.feedbackPerson}</span></div>
@@ -4950,7 +4940,7 @@ function renderDocList() {
       ${getDocIcon(d.type)}
       <div class="doc-body">
         <div class="doc-row-top">
-          <span class="doc-id">${d.id}<span class="action-link" title="复制" onclick="copyDocId('${d.id}')"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:var(--primary);fill:none;stroke-width:2;cursor:pointer;vertical-align:middle"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></span></span>
+          <span class="doc-id">${d.id}<button class="copy-btn" onclick="copyDocId('${d.id}')" title="复制"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button></span>
           <span class="doc-sys-tag">${d.system}</span>
         </div>
         <div class="doc-title">${truncate(d.name, 30)}</div>
@@ -5034,119 +5024,48 @@ function renderContactList() {
 
 // ===== COMPLAINTS =====
 let compFilter = 'all';
-let compSearchKw = '';
 function filterComp(f) {
   compFilter = f;
   document.querySelectorAll('#compTabs .tab').forEach(t => t.classList.remove('active'));
   event.target.classList.add('active');
   renderCompList();
 }
-function onCompSearchInput(val) {
-  compSearchKw = val.trim();
-  renderCompList();
-}
 function renderCompList() {
-  let list = compFilter === 'all' ? compData : compData.filter(d => d.status === compFilter);
-  if (compSearchKw) {
-    const kw = compSearchKw.toLowerCase();
-    list = list.filter(d => d.title.toLowerCase().includes(kw) || d.id.toLowerCase().includes(kw));
-  }
-  document.getElementById('compTabWait').textContent = compData.filter(d => d.status === '待处理').length;
-  document.getElementById('compTabDone').textContent = compData.filter(d => d.status === '已处理').length;
+  const list = compFilter === 'all' ? compData : compData.filter(d => d.status === compFilter);
   const body = document.getElementById('compBody');
-  if (!list.length) {
-    body.innerHTML = '<tr><td colspan="6" style="text-align:center;padding:40px;color:var(--text-secondary)">' + (compSearchKw ? '未找到匹配的资料' : '暂无资料') + '</td></tr>';
-    return;
-  }
   body.innerHTML = list.map(d => {
-    const sc = d.status === '已处理' ? 'status-done' : 'status-wait';
-    const pc = d.priority === '紧急' ? 'priority-urgent' : 'priority-normal';
-    const titleDisplay = d.title.length > 30 ? d.title.slice(0, 30) + '...' : d.title;
+    const sc = d.status === '已处理' ? 'status-done' : d.status === '处理中' ? 'status-progress' : d.status === '已撤销' ? 'status-closed' : 'status-wait';
+    const canRevoke = d.status === '待处理';
     return `<tr>
-      <td class="mono">${d.id} <span class="action-link" title="复制" onclick="copyText('${d.id}')"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:var(--primary);fill:none;stroke-width:2;cursor:pointer;vertical-align:middle"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></span></td>
-      <td title="${d.title}">${titleDisplay}</td>
+      <td class="mono">${d.id}</td>
       <td>${d.type}</td>
-      <td><span class="status ${pc}">${d.priority}</span></td>
+      <td>${d.title}</td>
       <td><span class="status ${sc}">${d.status}</span></td>
-      <td><button class="btn btn-sm btn-outline" onclick="openCompDetail('${d.id}')">查看</button></td>
+      <td>${d.time}</td>
+      <td>
+        <button class="btn btn-sm btn-outline" onclick="showToast('查看详情: ${d.id}')">查看</button>
+        ${canRevoke ? `<button class="btn btn-sm btn-danger" onclick="revokeComplaint('${d.id}')">撤销</button>` : ''}
+      </td>
     </tr>`;
   }).join('');
 }
-function openCompDetail(id) {
-  const d = compData.find(c => c.id === id);
-  if (!d) return;
-  document.querySelector('#view-complaints > .toolbar').classList.add('hidden');
-  document.querySelector('#view-complaints > .card').classList.add('hidden');
-  const detail = document.getElementById('compDetail');
-  detail.classList.remove('hidden');
-  const card = detail.querySelector('.comp-detail-card');
-  let html = '';
-  // 工单信息区
-  html += '<div class="detail-section"><h4 class="detail-section-title">工单信息</h4><div class="detail-grid">';
-  html += '<div class="detail-field"><label>工单ID</label><span class="mono">' + d.id + ' <span class="action-link" title="复制" onclick="copyText(\'' + d.id + '\')"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:var(--primary);fill:none;stroke-width:2;cursor:pointer;vertical-align:middle"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></span></span></div>';
-  html += '<div class="detail-field"><label>工单标题</label><span>' + d.title + '</span></div>';
-  html += '<div class="detail-field"><label>工单类型</label><span>' + d.type + '</span></div>';
-  html += '<div class="detail-field"><label>提交人</label><span>' + d.submitter + '</span></div>';
-  html += '<div class="detail-field"><label>提交日期</label><span>' + d.submitTime + '</span></div>';
-  html += '<div class="detail-field"><label>处理人</label><span>' + d.handler + '</span></div>';
-  html += '<div class="detail-field"><label>状态</label><span class="status ' + (d.status === '已处理' ? 'status-done' : 'status-wait') + '">' + d.status + '</span></div>';
-  html += '</div></div>';
-  // 工单描述区
-  html += '<div class="detail-section"><h4 class="detail-section-title">工单描述</h4>';
-  html += '<div class="detail-desc-box">' + (d.desc || '—') + '</div></div>';
-  // 处理备注区（仅已处理展示）
-  if (d.status === '已处理' && d.handleNote) {
-    html += '<div class="detail-section"><h4 class="detail-section-title">处理备注</h4>';
-    html += '<div class="detail-desc-box">' + d.handleNote + '</div>';
-    html += '<div class="detail-grid" style="margin-top:12px">';
-    html += '<div class="detail-field"><label>处理人</label><span>' + d.handler + '</span></div>';
-    html += '<div class="detail-field"><label>处理时间</label><span>' + d.handleTime + '</span></div>';
-    html += '</div></div>';
-  }
-  // 处理记录区
-  if (d.records && d.records.length) {
-    html += '<div class="detail-section"><h4 class="detail-section-title">处理记录</h4>';
-    html += '<div class="timeline">';
-    d.records.forEach(r => {
-      html += '<div class="tl-item"><div class="tl-dot"></div><div class="tl-content">' + r.text + '</div></div>';
-    });
-    html += '</div></div>';
-  }
-  card.innerHTML = html;
-  // 操作区（底部悬浮）
-  const ops = document.getElementById('compDetailOps');
-  ops.innerHTML = '<button class="btn btn-outline" onclick="closeCompDetail()">返回</button>';
-  ops.style.display = 'flex';
-}
-function closeCompDetail() {
-  document.getElementById('compDetail').classList.add('hidden');
-  document.querySelector('#view-complaints > .toolbar').classList.remove('hidden');
-  document.querySelector('#view-complaints > .card').classList.remove('hidden');
-  document.getElementById('compDetailOps').style.display = 'none';
-}
-function confirmCompCancel() {
-  showConfirm('确认放弃编辑？未保存的内容将不会保存。', function() {
-    closeModal('createCompModal');
+function revokeComplaint(id) {
+  showConfirm('确认撤销该投诉/建议？', function() {
+    const d = compData.find(c => c.id === id);
+    if (d) { d.status = '已撤销'; renderCompList(); showToast('已撤销：' + id); }
   });
 }
 function createComplaint() {
   const title = document.getElementById('newCompTitle').value.trim();
-  if (!title) { showError(errCode(), '请填写工单标题'); return; }
-  const type = document.getElementById('newCompType').value;
-  const priority = document.querySelector('input[name="compPriority"]:checked').value;
-  const desc = document.getElementById('newCompDesc').value.trim();
-  const submitter = currentUser ? currentUser.name : '张三';
+  if (!title) { showError(errCode(), '请填写标题'); return; }
   const d = {
-    id: genId('FB', 4), type, title, priority, status:'待处理',
-    submitter, submitTime: nowTs(), handler:'-', desc,
-    handleNote:'', handleTime:'', records:[{text: submitter + ' 提交' + type + ' ' + nowTs()}]
+    id: genId('CS'), type: document.getElementById('newCompType').value,
+    title, status: '待处理', time: today()
   };
   compData.unshift(d);
   closeModal('createCompModal');
   document.getElementById('newCompTitle').value = '';
   document.getElementById('newCompDesc').value = '';
-  document.getElementById('compTitleCount').textContent = '0';
-  document.getElementById('compDescCount').textContent = '0';
   renderCompList();
   showToast('投诉/建议提交成功：' + d.id);
 }
@@ -5213,7 +5132,7 @@ function renderApprovalList() {
     const sc = d.status === '审批通过' ? 'status-done' : d.status === '审批不通过' ? 'status-shelve' : 'status-wait';
     const canApprove = d.status === '待审批';
     return `<tr>
-      <td class="mono"><span style="font-family:var(--font-mono)">${d.id}</span><span class="action-link" title="复制" onclick="copyApprovalId('${d.id}')"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:var(--primary);fill:none;stroke-width:2;cursor:pointer;vertical-align:middle"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></span></td>
+      <td class="mono"><span style="font-family:var(--font-mono)">${d.id}</span><button class="btn btn-sm btn-outline" style="margin-left:8px;padding:2px 8px;font-size:.7rem" onclick="copyApprovalId('${d.id}')" title="复制">复制</button></td>
       <td>${d.type}</td>
       <td><span title="${d.title}">${truncateText(d.title, 30)}</span></td>
       <td><span class="status ${sc}">${d.status}</span></td>
@@ -5312,14 +5231,14 @@ function submitApproval() {
   d.approveTime = ts;
   d.remark = remark;
   if (d.status === '审批不通过') d.rejectReason = remark;
-  // 关联需求审批：通过→待评估，不通过→审批不通过
+  // 关联需求审批：通过→待分配，不通过→审批不通过
   if (d.reqId) {
     const req = reqData.find(r => r.id === d.reqId);
     if (req) {
       const approverName = currentUser ? currentUser.name : '—';
       const approverId = currentUser ? currentUser.username : '—';
       if (opinion.value === '同意') {
-        req.status = '待评估';
+        req.status = '待分配';
         req.activity.unshift({ type:'审批通过', text: approverName + '$' + approverId + '$ 审批通过需求 ' + req.id, time: ts });
       } else {
         req.status = '审批不通过';
@@ -5340,7 +5259,7 @@ const msgData = [
   { id:'MSG-001', title:'系统验收单待处理提醒', content:'油葱商城V4.30.5版本系统功能已完成UAT环境发版，请进行验收。验收单链接：IC-20260715-0001，截止时间：2026-07-20 17:00:00', time:'2026-07-15 09:30:00', read:false },
   { id:'MSG-002', title:'您的需求已进入研发阶段', content:'您提交的需求 DE-B-20260624-0003「数据报表优化」已由曹操LG0246认领，已进入研发阶段，预计完成时间 2026-07-25。', time:'2026-07-14 14:22:10', read:false },
   { id:'MSG-003', title:'问题PR-B-20260712-0002已处理', content:'您反馈的问题「荟健康首页崩溃」已由王磊处理并解决，处理备注：修复了首页Banner组件在iOS 16上的兼容性问题，请确认验证。', time:'2026-07-13 16:45:33', read:false },
-  { id:'MSG-004', title:'需求审批通过通知', content:'您提交的需求 DE-B-20260710-0005「会员积分兑换功能」已由诸葛亮LG0250审批通过，需求进入待评估状态。', time:'2026-07-12 10:15:30', read:true },
+  { id:'MSG-004', title:'需求审批通过通知', content:'您提交的需求 DE-B-20260710-0005「会员积分兑换功能」已由诸葛亮LG0250审批通过，需求进入待分配状态。', time:'2026-07-12 10:15:30', read:true },
   { id:'MSG-005', title:'问题指派通知', content:'您创建的问题 PR-B-20260710-0008「订单列表加载缓慢」已指派给张建国LG0246处理，请耐心等待。', time:'2026-07-11 11:08:42', read:true },
   { id:'MSG-006', title:'催促验收提醒', content:'油葱商城V4.30.5还有3项未做验收，请尽快验收。截止时间：2026-07-20 17:00:00。', time:'2026-07-10 08:00:00', read:true },
   { id:'MSG-007', title:'需求状态变更通知', content:'您提交的需求 DE-B-20260615-0001「商品详情页改版」已进入验收中状态，请关注验收进度。', time:'2026-07-09 09:30:15', read:true },
