@@ -954,12 +954,12 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
     <div id="accountLoginPanel" data-od-id="path-1-6-3">
       <div class="field" data-od-id="path-1-6-3-0">
         <label>用户名</label>
-        <input type="text" id="loginUser" placeholder="请输入用户名" maxlength="50" autocomplete="off" data-od-id="path-1-6-3-0-1">
+        <input type="text" id="loginUser" placeholder="请输入用户名" autocomplete="off" data-od-id="path-1-6-3-0-1">
       </div>
       <div class="field" data-od-id="path-1-6-3-1">
         <label>密码</label>
         <div class="pw-wrap">
-          <input type="password" id="loginPass" placeholder="请输入密码" maxlength="50" data-od-id="path-1-6-3-1-1-0">
+          <input type="password" id="loginPass" placeholder="请输入密码" data-od-id="path-1-6-3-1-1-0">
           <button type="button" class="pw-toggle" onclick="toggleLoginPw()" aria-label="显示或隐藏密码" data-od-id="path-1-6-3-1-1-1">
             <svg id="pwEyeLogin" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-od-id="path-1-6-3-1-1-1-0"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"></path><circle cx="12" cy="12" r="3"></circle></svg>
             <svg id="pwEyeOffLogin" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none" data-od-id="path-1-6-3-1-1-1-1"><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"></path><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"></path><path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"></path><line x1="2" y1="2" x2="22" y2="22"></line></svg>
@@ -971,7 +971,6 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
         <input type="checkbox" id="rememberMe" style="width:auto;margin:0" data-od-id="path-1-6-3-2-0">
         <label for="rememberMe" style="margin:0;font-size:.8rem;color:rgba(255,255,255,.5);cursor:pointer">记住我</label>
       </div>
-      <div id="loginErrMsg" style="display:none;color:#FCA5A5;font-size:.78rem;margin:-4px 0 10px;line-height:1.5" data-od-id="login-error-msg"></div>
       <button class="btn-login" id="btnLogin" data-od-id="path-1-6-3-3">登录</button>
       <div class="links" data-od-id="path-1-6-3-4">
         <a href="#" onclick="showForgotUsername(event)" data-od-id="path-1-6-3-4-0">忘记用户名</a>
@@ -1153,7 +1152,7 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
       <div class="confirm-text">飞书账号授权</div>
       <div class="confirm-sub" id="feishuAuthText" data-od-id="path-4-0-0-2">检测到您的账号尚未绑定飞书，授权后下次可直接使用飞书快捷登录</div>
       <div style="display:flex;justify-content:center;gap:12px">
-        <button class="btn btn-outline" onclick="rejectFeishuAuth()" data-od-id="path-4-0-0-3-0">不同意</button>
+        <button class="btn btn-outline" onclick="closeModal('feishuAuthModal')" data-od-id="path-4-0-0-3-0">暂不授权</button>
         <button class="btn btn-primary" onclick="bindFeishu()" data-od-id="path-4-0-0-3-1">同意授权</button>
       </div>
     </div>
@@ -3302,30 +3301,14 @@ const loginUser = document.getElementById('loginUser');
 const loginPass = document.getElementById('loginPass');
 const rememberMe = document.getElementById('rememberMe');
 
-// Restore remembered username & password (本地加密存储 - base64模拟加密)
+// Restore remembered username
 try {
   const savedUser = localStorage.getItem('rememberUser');
-  const savedPass = localStorage.getItem('rememberPass');
-  if (savedUser) {
-    loginUser.value = savedUser;
-    rememberMe.checked = true;
-    if (savedPass) { try { loginPass.value = atob(savedPass); } catch(e2) {} }
-  }
+  if (savedUser) { loginUser.value = savedUser; rememberMe.checked = true; }
 } catch(e) { /* localStorage unavailable in sandboxed preview */ }
 
-function showLoginErr(msg) {
-  const el = document.getElementById('loginErrMsg');
-  el.textContent = msg;
-  el.style.display = 'block';
-}
-function clearLoginErr() {
-  const el = document.getElementById('loginErrMsg');
-  el.textContent = '';
-  el.style.display = 'none';
-}
-
 loginBtn.disabled = false;
-function checkLoginBtn() { clearLoginErr(); }
+function checkLoginBtn() { /* no-op: button always enabled */ }
 loginUser.addEventListener('input', checkLoginBtn);
 loginPass.addEventListener('input', checkLoginBtn);
 
@@ -3402,44 +3385,30 @@ function stopQRScan() {
 }
 
 function doFeishuLogin(fromShortcut) {
-  // 模拟扫码结果：随机命中已绑定/未绑定账号
+  // Simulate: random user lisi is unbound; random user zhangsan is bound.
+  // For prototype predictability, we reuse the existing demo accounts logic.
+  const boundUsers = ['zhangsan'];
+  const unboundUsers = ['lisi', 'wangwu'];
+  // Randomly pick bound or unbound for QR scan demo
   const isBound = Math.random() > 0.4;
-  if (isBound) {
-    // 飞书二维码 + 已绑定：扫码后自动进入首页
-    currentUser = { username: 'zhangsan', ...USERS['zhangsan'] };
-    enterApp();
+  const uKey = isBound ? 'zhangsan' : (Math.random() > 0.5 ? 'lisi' : 'wangwu');
+  currentUser = { username: uKey, ...USERS[uKey] };
+  if (fromShortcut && !currentUser.feishu) {
+    document.getElementById('feishuAuthText').textContent = '飞书快捷入口访问需要授权，同意后可使用飞书直接登录';
+    openModal('feishuAuthModal');
     return;
   }
-  // 飞书二维码 + 未绑定：提示未绑定账号，跳转至账号登录tab页签
-  showError('code[200004]', '该飞书账号未绑定平台账号，请使用账号密码登录');
-  switchLoginMode('account');
+  enterApp();
+  if (!currentUser.feishu) {
+    document.getElementById('feishuAuthText').textContent = '检测到您的账号尚未绑定飞书，授权后下次可直接使用飞书快捷登录';
+    openModal('feishuAuthModal');
+  }
 }
 
 function bindFeishu() {
+  if (currentUser) currentUser.feishu = true;
   closeModal('feishuAuthModal');
-  if (pendingUser) {
-    pendingUser.feishu = true;
-    if (USERS[pendingUser.username]) USERS[pendingUser.username].feishu = true;
-    currentUser = pendingUser;
-    pendingUser = null;
-    showToast('飞书授权绑定成功');
-    enterApp();
-    return;
-  }
-  if (currentUser) {
-    currentUser.feishu = true;
-    if (USERS[currentUser.username]) USERS[currentUser.username].feishu = true;
-  }
   showToast('飞书授权绑定成功');
-}
-
-function rejectFeishuAuth() {
-  // 不同意授权：退回登录页，无法进入系统
-  closeModal('feishuAuthModal');
-  if (pendingUser) {
-    pendingUser = null;
-    showError('code[200005]', '未完成飞书授权绑定，无法进入系统');
-  }
 }
 
 function checkCapsLock(e) {
@@ -3458,91 +3427,11 @@ loginPass.addEventListener('blur', function() {
   if (bubble) bubble.classList.remove('show');
 });
 
-// 连续错误计数（按账号），达5次锁定 code[200003]
-const loginFailCount = {};
-const lockedAccounts = {};
-let pendingUser = null; // 登录成功但未绑定飞书，待授权后进入
-
-function validateLoginForm(u, p) {
-  if (!u) { showLoginErr('请输入用户名'); return false; }
-  if (u.length > 50) { showLoginErr('用户名最多50字'); return false; }
-  if (!p) { showLoginErr('请输入密码'); return false; }
-  if (p.length > 50) { showLoginErr('密码最多50字'); return false; }
-  let types = 0;
-  if (/[A-Z]/.test(p)) types++;
-  if (/[a-z]/.test(p)) types++;
-  if (/[0-9]/.test(p)) types++;
-  if (/[~!@#$%^&*()_+\-=]/.test(p)) types++;
-  if (types < 2) { showLoginErr('密码需至少包含2种字符组合（大小写字母、数字、符号：~!@#$%^&*()_+-=）'); return false; }
-  return true;
-}
-
-function setLoginLoading(loading) {
-  loginBtn.disabled = loading;
-  loginBtn.textContent = loading ? '登录中...' : '登录';
-  loginUser.disabled = loading;
-  loginPass.disabled = loading;
-  rememberMe.disabled = loading;
-}
-
-function saveRemember(u, p) {
-  try {
-    if (rememberMe.checked) {
-      localStorage.setItem('rememberUser', u);
-      localStorage.setItem('rememberPass', btoa(p)); // 本地加密存储（原型以base64模拟）
-    } else {
-      localStorage.removeItem('rememberUser');
-      localStorage.removeItem('rememberPass');
-    }
-  } catch(e) {}
-}
-
-function loginSuccess(uKey, p) {
-  loginFailCount[uKey] = 0;
-  saveRemember(uKey, p);
-  currentUser = { username: uKey, ...USERS[uKey] };
-  if (!currentUser.feishu) {
-    // 未绑定飞书：必须授权绑定后才能进入系统
-    pendingUser = currentUser;
-    currentUser = null;
-    document.getElementById('feishuAuthText').textContent = '检测到您的账号尚未绑定飞书，必须完成授权绑定才能进入系统';
-    openModal('feishuAuthModal');
-    return;
-  }
-  enterApp();
-}
-
 loginBtn.addEventListener('click', function() {
-  clearLoginErr();
-  const u = loginUser.value.trim();
-  const p = loginPass.value;
-  // 前端校验必填项，不满足不请求接口
-  if (!validateLoginForm(u, p)) return;
-  setLoginLoading(true);
-  // 模拟调用登录接口
-  setTimeout(function() {
-    setLoginLoading(false);
-    if (lockedAccounts[u]) {
-      showLoginErr('code[200003] 账号已被锁定，请联系管理员');
-      return;
-    }
-    const user = USERS[u];
-    if (!user) {
-      showLoginErr('code[200001] 账号不存在，可点击下方申请开通账号');
-      return;
-    }
-    if (user.password !== p) {
-      loginFailCount[u] = (loginFailCount[u] || 0) + 1;
-      if (loginFailCount[u] >= 5) {
-        lockedAccounts[u] = true;
-        showLoginErr('code[200003] 账号已被锁定，请联系管理员');
-      } else {
-        showLoginErr('code[200002] 密码错误，请重试（连续错误' + loginFailCount[u] + '/5次将锁定账号）');
-      }
-      return;
-    }
-    loginSuccess(u, p);
-  }, 600);
+  const u = loginUser.value.trim() || 'zhangsan';
+  const user = USERS[u] || USERS['zhangsan'];
+  currentUser = { username: u in USERS ? u : 'zhangsan', ...user };
+  enterApp();
 });
 
 function enterApp() {
@@ -4650,6 +4539,11 @@ function resubmitRequirement(id) {
 // ===== PROBLEMS =====
 let probFilter = 'all';
 
+function getPriorityLabel(p) {
+  const map = {'紧急':'P0','高':'P1','中':'P2','低':'P3'};
+  return p + '(' + (map[p]||'') + ')';
+}
+
 function updateProbStats() {
   const search = (document.getElementById('probSearch')?.value || '').toLowerCase();
   const base = probData.filter(d => {
@@ -5389,20 +5283,9 @@ function confirmLogout() {
 }
 function doLogout() {
   currentUser = null;
-  pendingUser = null;
   loginUser.value = '';
   loginPass.value = '';
-  clearLoginErr();
-  setLoginLoading(false);
-  try {
-    const savedUser = localStorage.getItem('rememberUser');
-    const savedPass = localStorage.getItem('rememberPass');
-    if (savedUser) {
-      loginUser.value = savedUser;
-      rememberMe.checked = true;
-      if (savedPass) { try { loginPass.value = atob(savedPass); } catch(e2) {} }
-    }
-  } catch(e) {}
+  loginBtn.disabled = false;
   stopQRScan();
   switchLoginMode('account');
   document.getElementById('appShell').style.display = 'none';
