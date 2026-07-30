@@ -312,24 +312,6 @@ body:has(.modal-overlay.show) #btnViewReqs{display:none}
 .list-card .list-item:hover{padding-left:4px}
 .list-card .list-item .id{font-family:var(--font-mono);font-size:.76rem;color:var(--primary);font-weight:600}
 .list-card .list-item .status{font-size:.72rem;padding:3px 10px;border-radius:var(--radius-pill);font-weight:600;letter-spacing:.3px}
-.home-card-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.home-mini-card{background:var(--bg-secondary,#f8f9fa);border:1px solid var(--border-light);border-radius:8px;padding:10px 12px;display:flex;flex-direction:column;gap:6px;transition:var(--transition);cursor:default;min-width:0}
-.home-mini-card:hover{border-color:var(--primary);box-shadow:0 2px 8px rgba(79,70,229,.08)}
-.home-mini-card .mc-top{display:flex;justify-content:space-between;align-items:flex-start;gap:6px}
-.home-mini-card .mc-id{font-family:var(--font-mono);font-size:.7rem;color:var(--primary);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:60%}
-.home-mini-card .mc-status{font-size:.66rem;padding:2px 8px;border-radius:var(--radius-pill);font-weight:600;white-space:nowrap;flex-shrink:0}
-.home-mini-card .mc-title{font-size:.78rem;font-weight:500;color:var(--text-primary);line-height:1.4;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.home-mini-card .mc-sub{font-size:.7rem;color:var(--text-secondary);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.home-mini-card.mc-contact{align-items:center;text-align:center;padding:12px 8px}
-.home-mini-card.mc-contact .mc-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:600;margin:0 auto 4px}
-.home-mini-card.mc-contact .mc-name{font-size:.8rem;font-weight:600;color:var(--text-primary)}
-.home-mini-card.mc-contact .mc-tags{display:flex;gap:4px;justify-content:center;flex-wrap:wrap}
-.home-mini-card.mc-contact .mc-tag{font-size:.62rem;padding:1px 6px;border-radius:8px;font-weight:500}
-.home-mini-card.mc-contact .mc-tag.tag-product{background:rgba(79,70,229,.1);color:var(--primary)}
-.home-mini-card.mc-contact .mc-tag.tag-qa{background:rgba(245,158,11,.1);color:var(--warning)}
-.home-mini-card.mc-contact .mc-tag.tag-dev{background:rgba(124,58,237,.1);color:var(--accent)}
-.home-mini-card.mc-contact .mc-tag.tag-mgmt{background:rgba(16,185,129,.1);color:var(--success)}
-.home-mini-card.mc-contact .mc-sys{font-size:.66rem;color:var(--text-secondary);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}
 .status-wait{background:var(--warning-bg);color:#92400E}
 .status-progress{background:var(--info-bg);color:#1E40AF}
 .status-done{background:var(--success-bg);color:#065F46}
@@ -1330,7 +1312,14 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
           </div>
           <div class="card list-card">
             <h4 style="margin-bottom:10px;font-size:.9rem" data-od-id="path-7-1-1-0-4-3-0">常用对接人 <a href="#" onclick="switchView('contacts');return false" style="font-size:.75rem;font-weight:500;float:right" data-od-id="path-7-1-1-0-4-3-0-0">查看更多 →</a></h4>
-            <div id="homeContactList" data-od-id="path-7-1-1-0-4-3-1"></div>
+            <div id="homeContactList" style="display:flex;flex-direction:column;gap:8px" data-od-id="path-7-1-1-0-4-3-1">
+              <div class="contact-card" data-od-id="path-7-1-1-0-4-3-1-0"><div class="cc-avatar">李</div><div class="cc-body"><div class="cc-name">李明辉</div><div class="cc-tags"><span class="cc-tag tag-product">产品</span></div><div class="cc_systems">负责系统：<span>油葱商城V4.30.5</span></div></div><div class="cc-actions"><button class="btn btn-sm btn-primary" onclick="switchView('requirements');openCreateModal('req')" data-od-id="path-7-1-1-0-4-3-1-0-1">快捷提需求</button><button class="btn btn-sm btn-outline" onclick="switchView('problems');openCreateModal('prob')">快捷提问题</button></div></div>
+              <div class="contact-card" data-od-id="path-7-1-1-0-4-3-1-1"><div class="cc-avatar">王</div><div class="cc-body"><div class="cc-name">王小燕</div><div class="cc-tags"><span class="cc-tag tag-qa">质检</span></div><div class="cc_systems">负责系统：<span>油葱商城V4.30.5</span>、<span>荟健康V2.8</span></div></div><div class="cc-actions"><button class="btn btn-sm btn-outline" onclick="switchView('problems');openCreateModal('prob')" data-od-id="path-7-1-1-0-4-3-1-1-1">快捷提问题</button></div></div>
+              <div class="contact-card" data-od-id="path-7-1-1-0-4-3-1-2"><div class="cc-avatar">张</div><div class="cc-body"><div class="cc-name">张建国</div><div class="cc-tags"><span class="cc-tag tag-dev">研发</span></div><div class="cc_systems">负责系统：<span>油葱商城V4.30.5</span>、<span>内容管理平台</span></div></div><div class="cc-actions"><button class="btn btn-sm btn-outline" onclick="switchView('problems');openCreateModal('prob')" data-od-id="path-7-1-1-0-4-3-1-2-1">快捷提问题</button></div></div>
+              <div class="contact-card" data-od-id="path-7-1-1-0-4-3-1-3"><div class="cc-avatar">陈</div><div class="cc-body"><div class="cc-name">陈雪梅</div><div class="cc-tags"><span class="cc-tag tag-product">产品</span></div><div class="cc_systems">负责系统：<span>荟健康V2.8</span></div></div><div class="cc-actions"><button class="btn btn-sm btn-primary" onclick="switchView('requirements');openCreateModal('req')" data-od-id="path-7-1-1-0-4-3-1-3-1">快捷提需求</button><button class="btn btn-sm btn-outline" onclick="switchView('problems');openCreateModal('prob')">快捷提问题</button></div></div>
+              <div class="contact-card" data-od-id="path-7-1-1-0-4-3-1-4"><div class="cc-avatar">刘</div><div class="cc-body"><div class="cc-name">刘磊</div><div class="cc-tags"><span class="cc-tag tag-qa">质检</span></div><div class="cc_systems">负责系统：<span>数据中台V1.5</span></div></div><div class="cc-actions"><button class="btn btn-sm btn-outline" onclick="switchView('problems');openCreateModal('prob')" data-od-id="path-7-1-1-0-4-3-1-4-1">快捷提问题</button></div></div>
+              <div class="contact-card" data-od-id="path-7-1-1-0-4-3-1-5"><div class="cc-avatar">孙</div><div class="cc-body"><div class="cc-name">孙丽</div><div class="cc-tags"><span class="cc-tag tag-mgmt">管理</span></div><div class="cc_systems">负责系统：<span>油葱商城V4.30.5</span>、<span>荟健康V2.8</span></div></div><div class="cc-actions"><button class="btn btn-sm btn-warning" onclick="switchView('complaints');openCreateModal('comp')" data-od-id="path-7-1-1-0-4-3-1-5-1">快捷投诉/建议</button></div></div>
+            </div>
           </div>
         </div>
 
@@ -3724,58 +3713,43 @@ function renderHome() {
     ss.classList.add('hidden');
   }
 
-  // --- req list (top 8 as mini cards) ---
+  // --- req list (top 10 by date desc) ---
   const reqStatusClass = { '待审批':'status-wait','审批不通过':'status-shelve','待评估':'status-info','调研中':'status-progress','验收中':'status-progress','已上线':'status-done','已关闭':'status-muted' };
-  const topReqs = [...reqData].sort((a,b) => b.time.localeCompare(a.time)).slice(0,8);
+  const topReqs = [...reqData].sort((a,b) => b.time.localeCompare(a.time)).slice(0,10);
   const homeReqList = document.getElementById('homeReqList');
   if (topReqs.length === 0) {
     homeReqList.innerHTML = '<div style="text-align:center;color:var(--text-muted);font-size:.8rem;padding:20px 0">暂无数据</div>';
   } else {
-    homeReqList.innerHTML = '<div class="home-card-grid">' + topReqs.map(r =>
-      `<div class="home-mini-card"><div class="mc-top"><span class="mc-id">${r.id}</span><span class="mc-status ${reqStatusClass[r.status]||'status-wait'}">${r.status}</span></div><div class="mc-title" title="${r.title}">${r.title.length > 12 ? r.title.slice(0,12)+'…' : r.title}</div><div class="mc-sub">${r.time.slice(0,10)}</div></div>`
-    ).join('') + '</div>';
+    homeReqList.innerHTML = topReqs.map(r =>
+      `<div class="list-item"><span><span class="id">${r.id}</span> ${r.title.length > 10 ? r.title.slice(0,10)+'…' : r.title}</span><span class="status ${reqStatusClass[r.status]||'status-wait'}">${r.status}</span></div>`
+    ).join('');
   }
 
-  // --- prob list (top 8 as mini cards) ---
-  const probStatusClass = { '待处理':'status-wait','处理中':'status-progress','已处理':'status-done' };
-  const topProbs = [...probData].sort((a,b) => b.feedbackDate.localeCompare(a.feedbackDate)).slice(0,8);
+  // --- prob list (top 10 by date desc) ---
+  const probStatusClass = { '待处理':'status-wait','处理中':'status-progress','已解决':'status-done' };
+  const topProbs = [...probData].sort((a,b) => b.time.localeCompare(a.time)).slice(0,10);
   const homeProbList = document.getElementById('homeProbList');
   if (topProbs.length === 0) {
     homeProbList.innerHTML = '<div style="text-align:center;color:var(--text-muted);font-size:.8rem;padding:20px 0">暂无数据</div>';
   } else {
-    homeProbList.innerHTML = '<div class="home-card-grid">' + topProbs.map(p =>
-      `<div class="home-mini-card"><div class="mc-top"><span class="mc-id">${p.id}</span><span class="mc-status ${probStatusClass[p.status]||'status-wait'}">${p.status}</span></div><div class="mc-title" title="${p.title}">${p.title.length > 12 ? p.title.slice(0,12)+'…' : p.title}</div><div class="mc-sub">${p.feedbackDate.slice(0,10)}</div></div>`
-    ).join('') + '</div>';
+    homeProbList.innerHTML = topProbs.map(p =>
+      `<div class="list-item"><span><span class="id">${p.id}</span> ${p.title.length > 10 ? p.title.slice(0,10)+'…' : p.title}</span><span class="status ${probStatusClass[p.status]||'status-wait'}">${p.status}</span></div>`
+    ).join('');
   }
 
-  // --- acc list (top 8 as mini cards, only 待验收/验收中) ---
+  // --- acc list (top 10 by date desc, only 待验收/验收中) ---
   const accStatusClass = { '待验收':'status-wait','验收中':'status-progress','已完成':'status-done','已关闭':'status-shelve' };
   const topAccs = [...accData].filter(a => ['待验收','验收中'].includes(getAccStatus(a)))
-    .sort((a,b) => b.deadline.localeCompare(a.deadline)).slice(0,8);
+    .sort((a,b) => b.deadline.localeCompare(a.deadline)).slice(0,10);
   const homeAccList = document.getElementById('homeAccList');
   if (topAccs.length === 0) {
     homeAccList.innerHTML = '<div style="text-align:center;color:var(--text-muted);font-size:.8rem;padding:20px 0">暂无数据</div>';
   } else {
-    homeAccList.innerHTML = '<div class="home-card-grid">' + topAccs.map(a => {
+    homeAccList.innerHTML = topAccs.map(a => {
       const st = getAccStatus(a);
       const label = a.system + ' ' + a.version;
-      return `<div class="home-mini-card"><div class="mc-top"><span class="mc-id">${a.id}</span><span class="mc-status ${accStatusClass[st]||'status-wait'}">${st}</span></div><div class="mc-title" title="${label}">${label.length > 14 ? label.slice(0,14)+'…' : label}</div><div class="mc-sub">截止 ${a.deadline.slice(0,10)}</div></div>`;
-    }).join('') + '</div>';
-  }
-
-  // --- contacts (top 8 as mini cards) ---
-  const tagClassMap = { '产品':'tag-product','质检':'tag-qa','研发':'tag-dev','管理':'tag-mgmt' };
-  const topContacts = contactData.slice(0,8);
-  const homeContactList = document.getElementById('homeContactList');
-  if (topContacts.length === 0) {
-    homeContactList.innerHTML = '<div style="text-align:center;color:var(--text-muted);font-size:.8rem;padding:20px 0">暂无数据</div>';
-  } else {
-    homeContactList.innerHTML = '<div class="home-card-grid">' + topContacts.map(c => {
-      const initial = c.name.charAt(0);
-      const tagsHtml = c.tags.map(t => `<span class="mc-tag ${tagClassMap[t]||''}">${t}</span>`).join('');
-      const sysText = c.systems.length > 2 ? c.systems.slice(0,2).join('、') + '…' : c.systems.join('、');
-      return `<div class="home-mini-card mc-contact"><div class="mc-avatar">${initial}</div><div class="mc-name">${c.name}</div><div class="mc-tags">${tagsHtml}</div><div class="mc-sys" title="${c.systems.join('、')}">${sysText}</div></div>`;
-    }).join('') + '</div>';
+      return `<div class="list-item"><span><span class="id">${a.id}</span> ${label.length > 14 ? label.slice(0,14)+'…' : label}</span><span class="status ${accStatusClass[st]||'status-wait'}">${st}</span></div>`;
+    }).join('');
   }
 }
 
