@@ -311,7 +311,7 @@ th:has(.th-tooltip){overflow:visible!important}
 .quick-btn:hover{transform:translateY(-2px);filter:brightness(1.1)}
 .quick-btn:active{transform:translateY(0)}
 .three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.5vw,16px);width:100%;align-items:stretch}
-.four-col{display:grid;grid-template-columns:1fr;gap:clamp(12px,1.5vw,16px);width:100%;align-items:stretch}
+.four-col{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,1.5vw,16px);width:100%;align-items:stretch}
 .four-col > .card{height:100%;display:flex;flex-direction:column}
 .four-col > .card > h4{flex-shrink:0}
 .four-col > .card > div{flex:1}
@@ -674,7 +674,7 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
   .main-content{padding:22px}
   .stat-grid{grid-template-columns:repeat(4,1fr);gap:14px}
   .three-col{grid-template-columns:repeat(3,1fr);gap:14px}
-  .four-col{grid-template-columns:1fr;gap:14px}
+  .four-col{grid-template-columns:repeat(3,1fr);gap:14px}
 }
 
 /* Small desktop / large tablet (1024px - 1279px) */
@@ -683,7 +683,7 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
   .stat-grid{grid-template-columns:repeat(2,1fr);gap:14px}
   .quick-actions{grid-template-columns:repeat(2,1fr)}
   .three-col{grid-template-columns:repeat(2,1fr);gap:14px}
-  .four-col{grid-template-columns:1fr;gap:14px}
+  .four-col{grid-template-columns:repeat(2,1fr);gap:14px}
   .detail-grid{grid-template-columns:repeat(2,1fr)}
   .main-content{padding:20px}
 }
@@ -764,7 +764,7 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
   .main-content{padding:24px}
   .stat-grid{grid-template-columns:repeat(4,1fr);gap:16px}
   .three-col{grid-template-columns:repeat(3,1fr);gap:16px}
-  .four-col{grid-template-columns:1fr;gap:16px}
+  .four-col{grid-template-columns:repeat(4,1fr);gap:16px}
 }
 
 /* Large desktop (1440px - 1535px) */
@@ -773,7 +773,7 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
   .main-content{padding:28px}
   .stat-grid{grid-template-columns:repeat(4,1fr);gap:18px}
   .three-col{grid-template-columns:repeat(3,1fr);gap:18px}
-  .four-col{grid-template-columns:1fr;gap:18px}
+  .four-col{grid-template-columns:repeat(4,1fr);gap:18px}
 }
 
 /* Extra large desktop (1536px - 1919px) */
@@ -782,7 +782,7 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
   .main-content{padding:28px}
   .stat-grid{grid-template-columns:repeat(4,1fr);gap:20px}
   .three-col{grid-template-columns:repeat(3,1fr);gap:20px}
-  .four-col{grid-template-columns:1fr;gap:20px}
+  .four-col{grid-template-columns:repeat(4,1fr);gap:20px}
 }
 
 /* Wide desktop (1920px - 2559px) */
@@ -791,7 +791,7 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
   .main-content{padding:32px}
   .stat-grid{grid-template-columns:repeat(4,1fr);gap:24px}
   .three-col{grid-template-columns:repeat(4,1fr);gap:24px}
-  .four-col{grid-template-columns:1fr;gap:24px}
+  .four-col{grid-template-columns:repeat(4,1fr);gap:24px}
   html{font-size:15px}
 }
 
@@ -801,7 +801,7 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
   .main-content{padding:36px}
   .stat-grid{grid-template-columns:repeat(4,1fr);gap:28px}
   .three-col{grid-template-columns:repeat(4,1fr);gap:28px}
-  .four-col{grid-template-columns:1fr;gap:28px}
+  .four-col{grid-template-columns:repeat(4,1fr);gap:28px}
   html{font-size:16px}
 }
 
@@ -1778,52 +1778,41 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
 
       <!-- ===== MY APPROVALS ===== -->
       <div id="view-approvals" class="hidden" data-od-id="path-7-1-1-9">
-        <!-- 列表页 -->
-        <div id="appListView">
-          <div class="toolbar" data-od-id="path-7-1-1-9-1">
-            <div class="tabs" id="appTabs" data-od-id="path-7-1-1-9-1-0">
-              <div class="tab active" onclick="filterApprovals('all')">全部 <span class="tab-count" id="appTabCountAll"></span></div>
-              <div class="tab" onclick="filterApprovals('待审批')">待审批 <span class="tab-count tab-count-warn" id="appTabCountWait"></span></div>
-              <div class="tab" onclick="filterApprovals('审批通过')">审批通过 <span class="tab-count" id="appTabCountPass"></span></div>
-              <div class="tab" onclick="filterApprovals('审批不通过')">审批不通过 <span class="tab-count tab-count-danger" id="appTabCountReject"></span></div>
-            </div>
-            <div class="header-search">
-              <input class="search-input" id="appSearchInput" type="text" placeholder="搜索需求标题/需求ID" maxlength="100" onkeydown="if(event.key==='Enter')doApprovalSearch()" oninput="onApprovalSearchInput(this.value)" style="width:220px">
-              <button class="search-btn" onclick="doApprovalSearch()">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-              </button>
-            </div>
+        <div class="mini-stats" data-od-id="path-7-1-1-9-0">
+          <div class="mini-stat ms-primary"><div class="ms-val" id="appStatTotal" data-od-id="path-7-1-1-9-0-0-0">6</div><div class="ms-label">全部审批</div></div>
+          <div class="mini-stat ms-warn"><div class="ms-val" id="appStatWait" data-od-id="path-7-1-1-9-0-1-0">3</div><div class="ms-label">待审批</div></div>
+          <div class="mini-stat ms-success"><div class="ms-val" id="appStatPass" data-od-id="path-7-1-1-9-0-2-0">2</div><div class="ms-label">审批通过</div></div>
+          <div class="mini-stat ms-danger"><div class="ms-val" id="appStatReject" data-od-id="path-7-1-1-9-0-3-0">1</div><div class="ms-label">审批不通过</div></div>
+        </div>
+        <div class="toolbar" data-od-id="path-7-1-1-9-1">
+          <div class="tabs" id="appTabs" data-od-id="path-7-1-1-9-1-0">
+            <div class="tab active" onclick="filterApprovals('all')" data-od-id="path-7-1-1-9-1-0-0">全部</div>
+            <div class="tab" onclick="filterApprovals('待审批')" data-od-id="path-7-1-1-9-1-0-1">待审批</div>
+            <div class="tab" onclick="filterApprovals('审批通过')" data-od-id="path-7-1-1-9-1-0-2">审批通过</div>
+            <div class="tab" onclick="filterApprovals('审批不通过')" data-od-id="path-7-1-1-9-1-0-3">审批不通过</div>
           </div>
-          <div class="card">
-            <div class="table-wrap">
-              <table class="data">
-                <thead><tr>
-                  <th style="width:200px">需求ID</th>
-                  <th>需求标题</th>
-                  <th style="width:100px">优先级</th>
-                  <th style="width:110px">状态</th>
-                  <th style="width:100px">提交人</th>
-                  <th style="width:160px">提交时间</th>
-                  <th style="width:160px">审批时间</th>
-                  <th style="width:140px">操作</th>
-                </tr></thead>
-                <tbody id="appBody"></tbody>
-              </table>
-            </div>
-            <div id="appEmpty" class="hidden" style="padding:56px 20px;text-align:center">
-              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="1.2" style="margin-bottom:14px;opacity:.6"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
-              <div style="font-size:.95rem;font-weight:600;color:var(--text)">暂无审批记录</div>
-              <div style="font-size:.8rem;color:var(--text-secondary);margin-top:6px">当前没有需要您审批的记录</div>
-            </div>
-            <div id="appNoResult" class="hidden" style="padding:48px 20px;text-align:center">
-              <div style="font-size:.9rem;color:var(--text-secondary)">未找到匹配的审批记录</div>
-            </div>
+          <div class="header-search" data-od-id="path-7-1-1-9-1-1">
+            <input class="search-input" id="appSearchInput" type="text" placeholder="搜索审批单标题/ID" maxlength="100" onkeydown="if(event.key==='Enter')doApprovalSearch()" oninput="onApprovalSearchInput(this.value)" data-od-id="path-7-1-1-9-1-1-0" style="width:220px">
+            <button class="search-btn" onclick="doApprovalSearch()" data-od-id="path-7-1-1-9-1-1-1">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </button>
           </div>
         </div>
-        <!-- 详情页 -->
-        <div id="appDetailView" class="hidden">
-          <div class="detail-back" onclick="switchAppView('list')">← 返回审批列表</div>
-          <div class="card" id="appDetailCard"></div>
+        <div class="card" data-od-id="path-7-1-1-9-2">
+          <div class="table-wrap">
+            <table class="data">
+              <thead><tr><th style="width:180px">审批单ID</th><th style="width:130px">审批类型</th><th>审批标题</th><th style="width:110px">状态</th><th style="width:100px">申请人</th><th style="width:160px">申请时间</th><th style="width:160px">审批时间</th><th style="width:140px">操作</th></tr></thead>
+              <tbody id="appBody" data-od-id="path-7-1-1-9-2-0-0-0-1"></tbody>
+            </table>
+          </div>
+          <div id="appEmpty" class="hidden" style="padding:56px 20px;text-align:center" data-od-id="path-7-1-1-9-2-1">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="1.2" style="margin-bottom:14px;opacity:.6"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+            <div style="font-size:.95rem;font-weight:600;color:var(--text)">暂无审批记录</div>
+            <div style="font-size:.8rem;color:var(--text-secondary);margin-top:6px">当前没有需要您审批的工单</div>
+          </div>
+          <div id="appNoResult" class="hidden" style="padding:48px 20px;text-align:center" data-od-id="path-7-1-1-9-2-2">
+            <div style="font-size:.9rem;color:var(--text-secondary)">未找到匹配的审批单</div>
+          </div>
         </div>
       </div>
 
@@ -2109,10 +2098,10 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
 <!-- ===== APPROVAL ACTION MODAL ===== -->
 <div class="modal-overlay" id="approvalModal" data-od-id="path-13a">
   <div class="modal" style="width:480px" data-od-id="path-13a-0">
-    <div class="modal-header"><h3 data-od-id="path-13a-0-0-0">需求审批</h3><button class="close" onclick="closeModal('approvalModal')" data-od-id="path-13a-0-0-1">×</button></div>
+    <div class="modal-header"><h3 data-od-id="path-13a-0-0-0">审批操作</h3><button class="close" onclick="closeModal('approvalModal')" data-od-id="path-13a-0-0-1">×</button></div>
     <div class="modal-body">
       <div class="form-group" style="margin-bottom:14px">
-        <label>需求信息</label>
+        <label>审批单</label>
         <div id="appModalId" style="font-family:var(--font-mono);font-size:.85rem;font-weight:600;color:var(--primary)"></div>
         <div id="appModalTitle" style="font-size:.9rem;color:var(--text);margin-top:4px"></div>
       </div>
@@ -2123,15 +2112,33 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
           <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:.875rem;font-weight:500"><input type="radio" name="appOpinion" value="不同意" onchange="onApprovalOpinionChange()"> 不同意</label>
         </div>
       </div>
-      <div class="form-group" id="appRejectGroup" style="margin-bottom:0;display:none">
-        <label>不通过原因*</label>
-        <textarea id="appRemark" placeholder="请填写不通过原因" data-od-id="path-13a-0-1-2-0"></textarea>
-        <div id="appRemarkError" class="hidden" style="font-size:.75rem;color:var(--danger);margin-top:6px;display:flex;align-items:center;gap:4px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg><span>不同意时必须填写不通过原因</span></div>
+      <div class="form-group" style="margin-bottom:0">
+        <label>备注</label>
+        <textarea id="appRemark" placeholder="请填写备注" data-od-id="path-13a-0-1-2-0"></textarea>
+        <div id="appRemarkHint" style="font-size:.75rem;color:var(--text-muted);margin-top:6px">同意时默认填入“已审查通过”</div>
+        <div id="appRemarkError" class="hidden" style="font-size:.75rem;color:var(--danger);margin-top:6px;display:flex;align-items:center;gap:4px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg><span>不同意时必须填写备注</span></div>
       </div>
     </div>
     <div class="modal-footer">
       <button class="btn btn-outline" onclick="closeModal('approvalModal')" data-od-id="path-13a-0-2-0">取消</button>
       <button class="btn btn-primary" onclick="submitApproval()" data-od-id="path-13a-0-2-1">确认审批</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== APPROVAL DETAIL MODAL ===== -->
+<div class="modal-overlay" id="approvalDetailModal" data-od-id="path-13b">
+  <div class="modal" style="width:520px" data-od-id="path-13b-0">
+    <div class="modal-header"><h3 data-od-id="path-13b-0-0-0">审批单详情</h3><button class="close" onclick="closeModal('approvalDetailModal')" data-od-id="path-13b-0-0-1">×</button></div>
+    <div class="modal-body">
+      <div class="detail-grid" id="appDetailGrid" data-od-id="path-13b-0-1-0"></div>
+      <div id="appDetailRejectReason" class="hidden" style="margin-top:16px;padding:12px;background:var(--danger-bg);border-radius:var(--radius);border-left:3px solid var(--danger)" data-od-id="path-13b-0-1-1">
+        <div style="font-size:.78rem;font-weight:600;color:var(--danger);margin-bottom:4px">不通过原因</div>
+        <div id="appDetailRejectText" style="font-size:.85rem;color:var(--text);line-height:1.6"></div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary" onclick="closeModal('approvalDetailModal')" data-od-id="path-13b-0-2-0">关闭</button>
     </div>
   </div>
 </div>
@@ -3413,7 +3420,14 @@ let compData = [
 ];
 
 // ===== APPROVALS DATA =====
-// 审批列表数据直接从 reqData 中筛选状态为 待审批/审批通过/审批不通过 的需求
+let approvalData = [
+  { id:'AP-20250115-001', type:'验收单审批', title:'油葱商城V4.30.5 系统验收审批', status:'待审批', applicant:'李明辉', applyTime:'2025-01-15 09:32:18', approveTime:'—', remark:'', rejectReason:'' },
+  { id:'AP-20250114-002', type:'项目关闭审批', title:'数据中台实时大屏项目关闭申请', status:'待审批', applicant:'张建国', applyTime:'2025-01-14 16:45:22', approveTime:'—', remark:'', rejectReason:'' },
+  { id:'AP-20250113-003', type:'验收单审批', title:'用户中心单点登录集成验收', status:'审批通过', applicant:'王小燕', applyTime:'2025-01-13 11:20:05', approveTime:'2025-01-13 14:08:37', remark:'已审查通过', rejectReason:'' },
+  { id:'AP-20250112-004', type:'项目关闭审批', title:'内容管理平台SEO优化迭代关闭', status:'审批不通过', applicant:'陈雪梅', applyTime:'2025-01-12 10:15:33', approveTime:'2025-01-12 16:42:19', remark:'关闭理由不充分，需补充上线数据', rejectReason:'关闭理由不充分，需补充上线数据与未结事项清单后再提交。' },
+  { id:'AP-20250111-005', type:'验收单审批', title:'订单管理系统库存实时同步验收', status:'待审批', applicant:'赵伟', applyTime:'2025-01-11 14:28:51', approveTime:'—', remark:'', rejectReason:'' },
+  { id:'AP-20250110-006', type:'验收单审批', title:'内容管理平台审核工作流重构验收', status:'审批通过', applicant:'刘磊', applyTime:'2025-01-10 08:55:40', approveTime:'2025-01-10 11:12:03', remark:'符合上线标准', rejectReason:'' }
+];
 
 // ===== AUTH LOGIC =====
 let loginAttempts = 0;
@@ -3828,32 +3842,32 @@ function renderHome() {
 
   // --- req list (top 8 as mini cards) ---
   const reqStatusClass = { '待审批':'status-wait','审批不通过':'status-shelve','待评估':'status-info','调研中':'status-progress','验收中':'status-progress','已上线':'status-done','已关闭':'status-muted' };
-  const topReqs = [...reqData].sort((a,b) => b.time.localeCompare(a.time)).slice(0,16);
+  const topReqs = [...reqData].sort((a,b) => b.time.localeCompare(a.time)).slice(0,8);
   const homeReqList = document.getElementById('homeReqList');
   if (topReqs.length === 0) {
     homeReqList.innerHTML = '<div style="text-align:center;color:var(--text-muted);font-size:.8rem;padding:20px 0">暂无数据</div>';
   } else {
     homeReqList.innerHTML = '<div class="home-card-grid">' + topReqs.map(r =>
-      `<div class="home-mini-card" style="cursor:pointer" onclick="switchView('requirements');viewReqDetail('${r.id}')"><div class="mc-top"><span class="mc-id">${r.id}</span><span class="mc-status ${reqStatusClass[r.status]||'status-wait'}">${r.status}</span></div><div class="mc-title" title="${r.title}">${r.title.length > 12 ? r.title.slice(0,12)+'…' : r.title}</div><div class="mc-sub">${r.time.slice(0,10)}</div></div>`
+      `<div class="home-mini-card"><div class="mc-top"><span class="mc-id">${r.id}</span><span class="mc-status ${reqStatusClass[r.status]||'status-wait'}">${r.status}</span></div><div class="mc-title" title="${r.title}">${r.title.length > 12 ? r.title.slice(0,12)+'…' : r.title}</div><div class="mc-sub">${r.time.slice(0,10)}</div></div>`
     ).join('') + '</div>';
   }
 
   // --- prob list (top 8 as mini cards) ---
   const probStatusClass = { '待处理':'status-wait','处理中':'status-progress','已处理':'status-done' };
-  const topProbs = [...probData].sort((a,b) => b.feedbackDate.localeCompare(a.feedbackDate)).slice(0,16);
+  const topProbs = [...probData].sort((a,b) => b.feedbackDate.localeCompare(a.feedbackDate)).slice(0,8);
   const homeProbList = document.getElementById('homeProbList');
   if (topProbs.length === 0) {
     homeProbList.innerHTML = '<div style="text-align:center;color:var(--text-muted);font-size:.8rem;padding:20px 0">暂无数据</div>';
   } else {
     homeProbList.innerHTML = '<div class="home-card-grid">' + topProbs.map(p =>
-      `<div class="home-mini-card" style="cursor:pointer" onclick="switchView('problems');viewProbDetail('${p.id}')"><div class="mc-top"><span class="mc-id">${p.id}</span><span class="mc-status ${probStatusClass[p.status]||'status-wait'}">${p.status}</span></div><div class="mc-title" title="${p.title}">${p.title.length > 12 ? p.title.slice(0,12)+'…' : p.title}</div><div class="mc-sub">${p.feedbackDate.slice(0,10)}</div></div>`
+      `<div class="home-mini-card"><div class="mc-top"><span class="mc-id">${p.id}</span><span class="mc-status ${probStatusClass[p.status]||'status-wait'}">${p.status}</span></div><div class="mc-title" title="${p.title}">${p.title.length > 12 ? p.title.slice(0,12)+'…' : p.title}</div><div class="mc-sub">${p.feedbackDate.slice(0,10)}</div></div>`
     ).join('') + '</div>';
   }
 
   // --- acc list (top 8 as mini cards, only 待验收/验收中) ---
   const accStatusClass = { '待验收':'status-wait','验收中':'status-progress','已完成':'status-done','已关闭':'status-shelve' };
   const topAccs = [...accData].filter(a => ['待验收','验收中'].includes(getAccStatus(a)))
-    .sort((a,b) => b.deadline.localeCompare(a.deadline)).slice(0,16);
+    .sort((a,b) => b.deadline.localeCompare(a.deadline)).slice(0,8);
   const homeAccList = document.getElementById('homeAccList');
   if (topAccs.length === 0) {
     homeAccList.innerHTML = '<div style="text-align:center;color:var(--text-muted);font-size:.8rem;padding:20px 0">暂无数据</div>';
@@ -3861,13 +3875,13 @@ function renderHome() {
     homeAccList.innerHTML = '<div class="home-card-grid">' + topAccs.map(a => {
       const st = getAccStatus(a);
       const label = a.system + ' ' + a.version;
-      return `<div class="home-mini-card" style="cursor:pointer" onclick="switchView('acceptances');viewAccDetail('${a.id}')"><div class="mc-top"><span class="mc-id">${a.id}</span><span class="mc-status ${accStatusClass[st]||'status-wait'}">${st}</span></div><div class="mc-title" title="${label}">${label.length > 14 ? label.slice(0,14)+'…' : label}</div><div class="mc-sub">截止 ${a.deadline.slice(0,10)}</div></div>`;
+      return `<div class="home-mini-card"><div class="mc-top"><span class="mc-id">${a.id}</span><span class="mc-status ${accStatusClass[st]||'status-wait'}">${st}</span></div><div class="mc-title" title="${label}">${label.length > 14 ? label.slice(0,14)+'…' : label}</div><div class="mc-sub">截止 ${a.deadline.slice(0,10)}</div></div>`;
     }).join('') + '</div>';
   }
 
   // --- contacts (top 8 as mini cards) ---
   const tagClassMap = { '产品':'tag-product','质检':'tag-qa','研发':'tag-dev','管理':'tag-mgmt' };
-  const topContacts = contactData.slice(0,16);
+  const topContacts = contactData.slice(0,8);
   const homeContactList = document.getElementById('homeContactList');
   if (topContacts.length === 0) {
     homeContactList.innerHTML = '<div style="text-align:center;color:var(--text-muted);font-size:.8rem;padding:20px 0">暂无数据</div>';
@@ -3876,7 +3890,7 @@ function renderHome() {
       const initial = c.name.charAt(0);
       const tagsHtml = c.tags.map(t => `<span class="mc-tag ${tagClassMap[t]||''}">${t}</span>`).join('');
       const sysText = c.systems.length > 2 ? c.systems.slice(0,2).join('、') + '…' : c.systems.join('、');
-      return `<div class="home-mini-card mc-contact" style="cursor:pointer" onclick="switchView('contacts');document.getElementById('contactSearch').value='${c.name}';renderContactList()"><div class="mc-avatar">${initial}</div><div class="mc-name">${c.name}</div><div class="mc-tags">${tagsHtml}</div><div class="mc-sys" title="${c.systems.join('、')}">${sysText}</div></div>`;
+      return `<div class="home-mini-card mc-contact"><div class="mc-avatar">${initial}</div><div class="mc-name">${c.name}</div><div class="mc-tags">${tagsHtml}</div><div class="mc-sys" title="${c.systems.join('、')}">${sysText}</div></div>`;
     }).join('') + '</div>';
   }
 }
@@ -3913,7 +3927,7 @@ function switchView(view) {
   if (view === 'documents') renderDocList();
   if (view === 'contacts') renderContactList();
   if (view === 'complaints') renderCompList();
-  if (view === 'approvals') { switchAppView('list'); renderApprovalList(); }
+  if (view === 'approvals') renderApprovalList();
   if (view === 'messages') renderMsgList();
   if (view === 'profile') renderProfile();
 }
@@ -4794,6 +4808,13 @@ function createRequirement() {
   };
   reqData.unshift(d);
 
+  const ap = {
+    id: genId('AP'), type: '需求审批', title: '需求审批：' + title,
+    status: '待审批', applicant: submitter,
+    applyTime: nowTs(), approveTime: '—', remark: '', rejectReason: '', reqId: d.id
+  };
+  approvalData.unshift(ap);
+
   closeModal('createReqModal');
   renderReqList();
   if (typeof renderApprovalList === 'function') renderApprovalList();
@@ -4873,6 +4894,13 @@ function resubmitRequirement(id) {
     d.status = '待审批';
     d.rejectReason = '';
     d.activity.unshift({ type:'重新提交', text: (currentUser ? currentUser.name : '—') + '$' + (currentUser ? currentUser.username : '—') + '$ 重新提交需求 ' + d.id, time: nowTs() });
+    // Generate new approval record
+    const ap = {
+      id: genId('AP'), type: '需求审批', title: '需求审批（重新提交）：' + d.title,
+      status: '待审批', applicant: d.submitter,
+      applyTime: nowTs(), approveTime: '—', remark: '', rejectReason: '', reqId: d.id
+    };
+    approvalData.unshift(ap);
     renderReqList();
     if (typeof renderApprovalList === 'function') renderApprovalList();
     viewReqDetail(id);
@@ -5373,24 +5401,7 @@ function createComplaint() {
 // ===== APPROVALS =====
 let approvalFilter = 'all';
 let approvalSearchKw = '';
-let pendingApprovalReqId = null;
-
-function getApprovalList() {
-  return reqData.filter(r => ['待审批','审批通过','审批不通过'].includes(r.status));
-}
-
-function getApprovalStatusClass(s) {
-  return s === '审批通过' ? 'status-done' : s === '审批不通过' ? 'status-shelve' : 'status-wait';
-}
-
-function updateApprovalTabCounts() {
-  const all = getApprovalList();
-  const el = (id, val) => { const e = document.getElementById(id); if (e) e.textContent = val > 0 ? val : ''; };
-  el('appTabCountAll', all.length);
-  el('appTabCountWait', all.filter(r => r.status === '待审批').length);
-  el('appTabCountPass', all.filter(r => r.status === '审批通过').length);
-  el('appTabCountReject', all.filter(r => r.status === '审批不通过').length);
-}
+let pendingApprovalId = null;
 
 function filterApprovals(f) {
   approvalFilter = f;
@@ -5409,102 +5420,124 @@ function doApprovalSearch() {
   renderApprovalList();
 }
 
-function switchAppView(v) {
-  document.getElementById('appListView').classList.toggle('hidden', v !== 'list');
-  document.getElementById('appDetailView').classList.toggle('hidden', v !== 'detail');
+function updateApprovalStats() {
+  document.getElementById('appStatTotal').textContent = approvalData.length;
+  document.getElementById('appStatWait').textContent = approvalData.filter(d => d.status === '待审批').length;
+  document.getElementById('appStatPass').textContent = approvalData.filter(d => d.status === '审批通过').length;
+  document.getElementById('appStatReject').textContent = approvalData.filter(d => d.status === '审批不通过').length;
 }
 
 function renderApprovalList() {
-  updateApprovalTabCounts();
-  let list = getApprovalList();
-  if (approvalFilter !== 'all') list = list.filter(r => r.status === approvalFilter);
+  updateApprovalStats();
+  let list = approvalFilter === 'all' ? approvalData : approvalData.filter(d => d.status === approvalFilter);
   if (approvalSearchKw) {
     const kw = approvalSearchKw.toLowerCase();
-    list = list.filter(r => r.id.toLowerCase().includes(kw) || r.title.toLowerCase().includes(kw));
+    list = list.filter(d => d.id.toLowerCase().includes(kw) || d.title.toLowerCase().includes(kw));
   }
   const body = document.getElementById('appBody');
   const empty = document.getElementById('appEmpty');
   const noResult = document.getElementById('appNoResult');
   const tableWrap = body.closest('.table-wrap');
-  const allList = getApprovalList();
 
-  if (!allList.length) {
-    tableWrap.classList.add('hidden'); noResult.classList.add('hidden'); empty.classList.remove('hidden'); return;
+  if (!approvalData.length) {
+    tableWrap.classList.add('hidden');
+    noResult.classList.add('hidden');
+    empty.classList.remove('hidden');
+    return;
   }
   if (!list.length) {
-    tableWrap.classList.add('hidden'); empty.classList.add('hidden'); noResult.classList.remove('hidden'); return;
+    tableWrap.classList.add('hidden');
+    empty.classList.add('hidden');
+    noResult.classList.remove('hidden');
+    return;
   }
-  tableWrap.classList.remove('hidden'); empty.classList.add('hidden'); noResult.classList.add('hidden');
 
-  const priorityClass = { '紧急':'priority-urgent','高':'priority-high','中':'priority-medium','低':'priority-low' };
-  body.innerHTML = list.map(r => {
-    const sc = getApprovalStatusClass(r.status);
-    const pc = priorityClass[r.priority] || '';
-    const approveTime = (r.approveTime && r.approveTime !== '—') ? r.approveTime : '—';
-    const canApprove = r.status === '待审批';
+  tableWrap.classList.remove('hidden');
+  empty.classList.add('hidden');
+  noResult.classList.add('hidden');
+
+  body.innerHTML = list.map(d => {
+    const sc = d.status === '审批通过' ? 'status-done' : d.status === '审批不通过' ? 'status-shelve' : 'status-wait';
+    const canApprove = d.status === '待审批';
     return `<tr>
-      <td class="mono"><span style="font-family:var(--font-mono)">${r.id}</span><span class="action-link" title="复制" onclick="copyText('${r.id}')"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:var(--primary);fill:none;stroke-width:2;cursor:pointer;vertical-align:middle"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></span></td>
-      <td><span title="${r.title}">${truncateText(r.title, 30)}</span></td>
-      <td><span class="status ${pc}">${r.priority || '—'}</span></td>
-      <td><span class="status ${sc}">${r.status}</span></td>
-      <td>${r.submitter || '—'}</td>
-      <td>${r.time || '—'}</td>
-      <td>${approveTime}</td>
+      <td class="mono"><span style="font-family:var(--font-mono)">${d.id}</span><span class="action-link" title="复制" onclick="copyApprovalId('${d.id}')"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:var(--primary);fill:none;stroke-width:2;cursor:pointer;vertical-align:middle"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></span></td>
+      <td>${d.type}</td>
+      <td><span title="${d.title}">${truncateText(d.title, 30)}</span></td>
+      <td><span class="status ${sc}">${d.status}</span></td>
+      <td>${d.applicant}</td>
+      <td>${d.applyTime}</td>
+      <td>${d.approveTime}</td>
       <td>
-        <button class="btn btn-sm btn-outline" onclick="viewAppDetail('${r.id}')">详情</button>
-        ${canApprove ? `<button class="btn btn-sm btn-primary" onclick="openApprovalModal('${r.id}')">审批</button>` : ''}
+        <button class="btn btn-sm btn-outline" onclick="openApprovalDetail('${d.id}')">详情</button>
+        ${canApprove ? `<button class="btn btn-sm btn-primary" onclick="openApprovalModal('${d.id}')">审批</button>` : ''}
       </td>
     </tr>`;
   }).join('');
 }
 
-function viewAppDetail(reqId) {
-  const r = reqData.find(x => x.id === reqId);
-  if (!r) return;
-  switchAppView('detail');
-  const sc = getApprovalStatusClass(r.status);
-  const rejectBanner = (r.status === '审批不通过' && r.rejectReason)
-    ? `<div style="background:var(--danger-bg);border-left:3px solid var(--danger);border-radius:var(--radius);padding:12px 16px;margin-bottom:16px"><span style="font-weight:600;color:var(--danger)">审批不通过原因：</span>${r.rejectReason}</div>` : '';
-  const canApprove = r.status === '待审批';
-  document.getElementById('appDetailCard').innerHTML = `
-    ${rejectBanner}
-    <div style="padding:20px">
-      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px 24px;margin-bottom:16px">
-        <div><div class="label">需求ID</div><div style="font-family:var(--font-mono)">${r.id}<span class="action-link" title="复制" onclick="copyText('${r.id}')" style="margin-left:6px"><svg viewBox="0 0 24 24" style="width:13px;height:13px;stroke:var(--primary);fill:none;stroke-width:2;cursor:pointer;vertical-align:middle"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></span></div></div>
-        <div><div class="label">需求标题</div><div>${r.title}</div></div>
-        <div><div class="label">状态</div><div><span class="status ${sc}">${r.status}</span></div></div>
-        <div><div class="label">优先级</div><div>${getPriorityLabel(r.priority)}</div></div>
-        <div><div class="label">提交人/部门</div><div>${r.submitter || '—'}${r.dept ? ' / ' + r.dept : ''}</div></div>
-        <div><div class="label">提交日期</div><div>${(r.time||'').slice(0,10) || '—'}</div></div>
-        <div><div class="label">所属项目</div><div>${r.project || '—'}</div></div>
-        <div><div class="label">所属系统</div><div>${r.system || '—'}</div></div>
-        <div><div class="label">功能模块</div><div>${r.module || '—'}</div></div>
-        <div><div class="label">需求负责人</div><div>${r.assignee || '—'}</div></div>
-      </div>
-      <div style="margin-top:16px"><div class="label" style="margin-bottom:8px">需求描述</div><div style="background:var(--bg-secondary);border-radius:var(--radius);padding:12px 16px;font-size:.875rem;line-height:1.7;color:var(--text)">${r.desc || '—'}</div></div>
-      ${canApprove ? `<div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border)"><button class="btn btn-primary" onclick="openApprovalModal('${r.id}')">审批此需求</button></div>` : ''}
-    </div>`;
+function truncateText(str, max) {
+  if (!str) return '';
+  return str.length > max ? str.slice(0, max) + '…' : str;
 }
 
-function openApprovalModal(reqId) {
-  const r = reqData.find(x => x.id === reqId);
-  if (!r || r.status !== '待审批') return;
-  pendingApprovalReqId = reqId;
-  document.getElementById('appModalId').textContent = r.id;
-  document.getElementById('appModalTitle').textContent = r.title;
-  document.querySelectorAll('input[name="appOpinion"]').forEach(x => x.checked = false);
+function copyApprovalId(id) {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(id).then(() => showToast('已复制到剪贴板')).catch(() => showToast('已复制：' + id));
+  } else {
+    showToast('已复制：' + id);
+  }
+}
+
+function openApprovalDetail(id) {
+  const d = approvalData.find(a => a.id === id);
+  if (!d) return;
+  document.getElementById('appDetailGrid').innerHTML = `
+    <div><div class="label">审批单ID</div><div style="font-family:var(--font-mono)">${d.id}</div></div>
+    <div><div class="label">审批类型</div><div>${d.type}</div></div>
+    <div><div class="label">审批标题</div><div>${d.title}</div></div>
+    <div><div class="label">状态</div><div>${d.status}</div></div>
+    <div><div class="label">申请人</div><div>${d.applicant}</div></div>
+    <div><div class="label">申请时间</div><div>${d.applyTime}</div></div>
+    <div><div class="label">审批时间</div><div>${d.approveTime}</div></div>
+    <div><div class="label">审批备注</div><div>${d.remark || '—'}</div></div>`;
+  const rejectBox = document.getElementById('appDetailRejectReason');
+  const rejectText = document.getElementById('appDetailRejectText');
+  if (d.status === '审批不通过' && d.rejectReason) {
+    rejectText.textContent = d.rejectReason;
+    rejectBox.classList.remove('hidden');
+  } else {
+    rejectBox.classList.add('hidden');
+  }
+  openModal('approvalDetailModal');
+}
+
+function openApprovalModal(id) {
+  const d = approvalData.find(a => a.id === id);
+  if (!d || d.status !== '待审批') return;
+  pendingApprovalId = id;
+  document.getElementById('appModalId').textContent = d.id;
+  document.getElementById('appModalTitle').textContent = d.title;
+  document.querySelectorAll('input[name="appOpinion"]').forEach(r => r.checked = false);
   document.getElementById('appRemark').value = '';
-  document.getElementById('appRejectGroup').style.display = 'none';
+  document.getElementById('appRemarkHint').classList.remove('hidden');
   document.getElementById('appRemarkError').classList.add('hidden');
   openModal('approvalModal');
 }
 
 function onApprovalOpinionChange() {
   const opinion = document.querySelector('input[name="appOpinion"]:checked');
+  const remark = document.getElementById('appRemark');
+  const hint = document.getElementById('appRemarkHint');
+  const err = document.getElementById('appRemarkError');
   if (!opinion) return;
-  document.getElementById('appRemarkError').classList.add('hidden');
-  document.getElementById('appRejectGroup').style.display = opinion.value === '不同意' ? 'block' : 'none';
-  if (opinion.value === '同意') document.getElementById('appRemark').value = '';
+  err.classList.add('hidden');
+  if (opinion.value === '同意') {
+    remark.value = '已审查通过';
+    hint.classList.remove('hidden');
+  } else {
+    remark.value = '';
+    hint.classList.add('hidden');
+  }
 }
 
 function submitApproval() {
@@ -5512,33 +5545,41 @@ function submitApproval() {
   if (!opinion) { showError(errCode(), '请选择审核意见'); return; }
   const remark = document.getElementById('appRemark').value.trim();
   const err = document.getElementById('appRemarkError');
-  if (opinion.value === '不同意' && !remark) { err.classList.remove('hidden'); return; }
+  if (opinion.value === '不同意' && !remark) {
+    err.classList.remove('hidden');
+    return;
+  }
   err.classList.add('hidden');
-  const r = reqData.find(x => x.id === pendingApprovalReqId);
-  if (!r) return;
-  const ts = nowTs();
-  const approverName = currentUser ? currentUser.name : '—';
-  const approverId = currentUser ? currentUser.username : '—';
-  if (opinion.value === '同意') {
-    r.status = '待评估';
-    r.approveTime = ts;
-    r.activity && r.activity.unshift({ type:'审批通过', text: approverName + '$' + approverId + '$ 审批通过需求 ' + r.id, time: ts });
-  } else {
-    r.status = '审批不通过';
-    r.rejectReason = remark;
-    r.approveTime = ts;
-    r.activity && r.activity.unshift({ type:'审批不通过', text: approverName + '$' + approverId + '$ 审批不通过需求 ' + r.id + ' 原因：' + remark, time: ts });
+  const d = approvalData.find(a => a.id === pendingApprovalId);
+  if (!d) return;
+  const now = new Date();
+  const ts = now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0') + '-' + String(now.getDate()).padStart(2,'0') + ' ' +
+    String(now.getHours()).padStart(2,'0') + ':' + String(now.getMinutes()).padStart(2,'0') + ':' + String(now.getSeconds()).padStart(2,'0');
+  d.status = opinion.value === '同意' ? '审批通过' : '审批不通过';
+  d.approveTime = ts;
+  d.remark = remark;
+  if (d.status === '审批不通过') d.rejectReason = remark;
+  // 关联需求审批：通过→待评估，不通过→审批不通过
+  if (d.reqId) {
+    const req = reqData.find(r => r.id === d.reqId);
+    if (req) {
+      const approverName = currentUser ? currentUser.name : '—';
+      const approverId = currentUser ? currentUser.username : '—';
+      if (opinion.value === '同意') {
+        req.status = '待评估';
+        req.activity.unshift({ type:'审批通过', text: approverName + '$' + approverId + '$ 审批通过需求 ' + req.id, time: ts });
+      } else {
+        req.status = '审批不通过';
+        req.rejectReason = remark;
+        req.activity.unshift({ type:'审批不通过', text: approverName + '$' + approverId + '$ 审批不通过需求 ' + req.id + ' 原因：' + remark, time: ts });
+      }
+      if (typeof renderReqList === 'function') renderReqList();
+    }
   }
   closeModal('approvalModal');
-  pendingApprovalReqId = null;
-  if (typeof renderReqList === 'function') renderReqList();
+  pendingApprovalId = null;
   renderApprovalList();
-  showToast('审批操作成功');
-}
-
-function truncateText(str, max) {
-  if (!str) return '';
-  return str.length > max ? str.slice(0, max) + '…' : str;
+  showToast('审批操作成功：' + d.id);
 }
 
 // ===== MESSAGES =====
