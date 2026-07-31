@@ -1025,8 +1025,8 @@ table.data td,table.data th{overflow:hidden;text-overflow:ellipsis;white-space:n
       <button class="btn-login" id="btnLogin" data-od-id="path-1-6-3-3">登录</button>
       <div style="margin-top:14px;padding:10px 12px;border-radius:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);font-size:.72rem;color:rgba(255,255,255,.55);line-height:1.7" data-od-id="login-demo-accounts">
         <div style="font-weight:600;color:rgba(255,255,255,.7);margin-bottom:2px">演示账号</div>
-        <div>zhangsan / Abc@123 — 已绑定飞书，登录后直接进入首页</div>
-        <div>lisi / Abc@123 — 未绑定飞书，登录后弹出绑定授权弹窗</div>
+        <div>2026001 / Abc@123 — 已绑定飞书，登录后直接进入首页</div>
+        <div>2026002 / Abc@123 — 未绑定飞书，登录后弹出绑定授权弹窗</div>
       </div>
       <div class="links" data-od-id="path-1-6-3-4">
         <a href="#" onclick="showForgotUsername(event)" data-od-id="path-1-6-3-4-0">忘记用户名</a>
@@ -3104,8 +3104,8 @@ function getCurrentPrdKey(){
 
 // ===== DATA =====
 const USERS = {
-  zhangsan: { password: 'Abc@123', name: '张三', feishu: true, firstLogin: false, dept: '产品部', empId: 'LG0245', center: '数字化创新中心', tags: ['产品','管理'], avatar: '', accountDate: '2024-03-15', ext: '8001', notifyReq: false, notifyIssue: true, notifyAccept: true, statsReq: 14, statsIssue: 11, statsAccept: 12 },
-  lisi: { password: 'Abc@123', name: '李四', feishu: false, firstLogin: false, dept: '数据部', empId: 'LG0246', center: '数字化创新中心', tags: ['研发'], avatar: '', accountDate: '2024-06-20', ext: '8002', notifyReq: true, notifyIssue: true, notifyAccept: true, statsReq: 8, statsIssue: 5, statsAccept: 3 },
+  '2026001': { password: 'Abc@123', name: '张三', feishu: true, firstLogin: false, dept: '产品部', empId: 'LG0245', center: '数字化创新中心', tags: ['产品','管理'], avatar: '', accountDate: '2024-03-15', ext: '8001', notifyReq: false, notifyIssue: true, notifyAccept: true, statsReq: 14, statsIssue: 11, statsAccept: 12 },
+  '2026002': { password: 'Abc@123', name: '李四', feishu: false, firstLogin: false, dept: '数据部', empId: 'LG0246', center: '数字化创新中心', tags: ['研发'], avatar: '', accountDate: '2024-06-20', ext: '8002', notifyReq: true, notifyIssue: true, notifyAccept: true, statsReq: 8, statsIssue: 5, statsAccept: 3 },
   wangwu: { password: 'Init12!', name: '王五', feishu: false, firstLogin: true, dept: '运营部', empId: 'LG0247', center: '数字化创新中心', tags: ['质检'], avatar: '', accountDate: '2025-01-10', ext: '', notifyReq: true, notifyIssue: false, notifyAccept: true, statsReq: 3, statsIssue: 7, statsAccept: 1 }
 };
 
@@ -3268,11 +3268,11 @@ let reqData = [
   { id:'DE-B-20250115-0001', project:'油葱商城V4.30.5', system:'订单管理系统', module:'订单管理', title:'用户权限优化', priority:'高', status:'验收中', assignee:'李明辉', submitter:'张三', dept:'产品部', desc:'优化订单管理系统的用户权限体系，支持多角色配置与细粒度权限控制。', time:'2025-01-15', activity:[
     {type:'指派',text:'曹操$LG0246$ 指派需求给 李明辉',time:'2025-01-16 10:30:00'},
     {type:'审批通过',text:'诸葛亮$LG0250$ 审批通过需求 DE-B-20250115-0001',time:'2025-01-15 14:20:30'},
-    {type:'创建',text:'张三$zhangsan$ 创建需求',time:'2025-01-15 09:15:00'}
+    {type:'创建',text:'张三$2026001$ 创建需求',time:'2025-01-15 09:15:00'}
   ]},
   { id:'DE-B-20250114-0002', project:'数据中台V1.5', system:'数据平台', module:'数据报表', title:'报表导出功能', priority:'中', status:'待评估', assignee:'—', submitter:'李四', dept:'数据部', desc:'支持将数据报表导出为Excel和PDF格式，满足业务部门离线分析需求。', time:'2025-01-14', activity:[
     {type:'审批通过',text:'诸葛亮$LG0250$ 审批通过需求 DE-B-20250114-0002',time:'2025-01-14 16:45:00'},
-    {type:'创建',text:'李四$lisi$ 创建需求',time:'2025-01-14 08:30:00'}
+    {type:'创建',text:'李四$2026002$ 创建需求',time:'2025-01-14 08:30:00'}
   ]},
   { id:'DE-B-20250113-0003', project:'用户中心V3.2', system:'用户系统', module:'消息推送', title:'消息推送改造', priority:'高', status:'已上线', assignee:'张建国', submitter:'王五', dept:'运营部', desc:'改造消息推送通道，支持多渠道推送（站内信、短信、邮件、飞书）。', time:'2025-01-13', activity:[
     {type:'关闭',text:'关羽$LG0247$ 关闭需求',time:'2025-01-20 11:54:53'},
@@ -3283,15 +3283,15 @@ let reqData = [
   { id:'DE-B-20250112-0004', project:'荟健康V2.8', system:'健康管理系统', module:'健康档案', title:'首页改版', priority:'低', status:'调研中', assignee:'李明辉', submitter:'张三', dept:'产品部', desc:'重新设计荟健康APP首页，突出健康数据概览和运动推荐。', time:'2025-01-12', activity:[
     {type:'转化',text:'曹操$LG0246$ 转化需求 DE-B-20250112-0004',time:'2025-01-15 14:00:00'},
     {type:'审批通过',text:'诸葛亮$LG0250$ 审批通过需求 DE-B-20250112-0004',time:'2025-01-12 17:00:00'},
-    {type:'创建',text:'张三$zhangsan$ 创建需求',time:'2025-01-12 11:20:00'}
+    {type:'创建',text:'张三$2026001$ 创建需求',time:'2025-01-12 11:20:00'}
   ]},
   { id:'DE-B-20250110-0005', project:'油葱商城V4.30.5', system:'订单管理系统', module:'订单管理', title:'批量操作功能', priority:'中', status:'待审批', assignee:'—', submitter:'张三', dept:'产品部', desc:'支持批量修改订单状态、批量导出订单数据，提高运营效率。', time:'2025-01-10', activity:[
-    {type:'创建',text:'张三$zhangsan$ 创建需求',time:'2025-01-10 16:40:00'}
+    {type:'创建',text:'张三$2026001$ 创建需求',time:'2025-01-10 16:40:00'}
   ]},
   { id:'DE-B-20250109-0006', project:'数据中台V1.5', system:'数据平台', module:'数据分析', title:'数据看板升级', priority:'高', status:'调研中', assignee:'李明辉', submitter:'李四', dept:'数据部', desc:'升级数据看板组件，支持自定义图表和实时数据刷新。', time:'2025-01-09', activity:[
     {type:'指派',text:'曹操$LG0246$ 指派需求给 李明辉',time:'2025-01-12 09:00:00'},
     {type:'审批通过',text:'诸葛亮$LG0250$ 审批通过需求 DE-B-20250109-0006',time:'2025-01-10 10:00:00'},
-    {type:'创建',text:'李四$lisi$ 创建需求',time:'2025-01-09 14:30:00'}
+    {type:'创建',text:'李四$2026002$ 创建需求',time:'2025-01-09 14:30:00'}
   ]},
   { id:'DE-B-20250108-0007', project:'油葱商城V4.30.5', system:'商品中心', module:'库存管理', title:'接口性能优化', priority:'中', status:'待评估', assignee:'—', submitter:'王五', dept:'研发部', desc:'优化商品查询和库存同步接口性能，降低P99延迟至200ms以内。', time:'2025-01-08', activity:[
     {type:'审批通过',text:'诸葛亮$LG0250$ 审批通过需求 DE-B-20250108-0007',time:'2025-01-09 09:15:00'},
@@ -3302,16 +3302,16 @@ let reqData = [
     {type:'转化',text:'曹操$LG0246$ 转化需求 DE-B-20250107-0008',time:'2025-01-12 11:00:00'},
     {type:'指派',text:'曹操$LG0246$ 指派需求给 赵伟',time:'2025-01-10 09:00:00'},
     {type:'审批通过',text:'诸葛亮$LG0250$ 审批通过需求 DE-B-20250107-0008',time:'2025-01-08 14:00:00'},
-    {type:'创建',text:'张三$zhangsan$ 创建需求',time:'2025-01-07 09:00:00'}
+    {type:'创建',text:'张三$2026001$ 创建需求',time:'2025-01-07 09:00:00'}
   ]},
   { id:'DE-B-20250106-0009', project:'荟健康V2.8', system:'用户体系', module:'会员体系', title:'内容审核加速', priority:'低', status:'已关闭', assignee:'陈雪梅', submitter:'李四', dept:'内容部', desc:'优化内容审核流程，引入AI辅助审核，缩短审核时效。', time:'2025-01-06', closePerson:'关羽', closeTime:'2025-01-18 10:00:00', closeReason:'业务方取消该需求，优先级调整至下一迭代', activity:[
     {type:'关闭',text:'关羽$LG0247$ 关闭需求 原因：业务方取消该需求，优先级调整至下一迭代',time:'2025-01-18 10:00:00'},
     {type:'转化',text:'曹操$LG0246$ 转化需求 DE-B-20250106-0009',time:'2025-01-10 16:00:00'},
     {type:'审批通过',text:'诸葛亮$LG0250$ 审批通过需求 DE-B-20250106-0009',time:'2025-01-07 11:00:00'},
-    {type:'创建',text:'李四$lisi$ 创建需求',time:'2025-01-06 15:20:00'}
+    {type:'创建',text:'李四$2026002$ 创建需求',time:'2025-01-06 15:20:00'}
   ]},
   { id:'DE-B-20250105-0010', project:'油葱商城V4.30.5', system:'订单管理系统', module:'支付系统', title:'支付通道扩容', priority:'高', status:'待审批', assignee:'—', submitter:'张三', dept:'产品部', desc:'接入微信支付和银联云闪付，扩展支付通道覆盖更多用户群体。', time:'2025-01-05', activity:[
-    {type:'创建',text:'张三$zhangsan$ 创建需求',time:'2025-01-05 10:30:00'}
+    {type:'创建',text:'张三$2026001$ 创建需求',time:'2025-01-05 10:30:00'}
   ]},
   { id:'DE-B-20250104-0011', project:'数据中台V1.5', system:'数据平台', module:'数据报表', title:'日志检索优化', priority:'中', status:'验收中', assignee:'张建国', submitter:'王五', dept:'研发部', desc:'优化日志检索引擎，支持全文搜索和多维度筛选，提升查询速度。', time:'2025-01-04', activity:[
     {type:'指派',text:'曹操$LG0246$ 指派需求给 张建国',time:'2025-01-08 14:00:00'},
@@ -3321,16 +3321,16 @@ let reqData = [
   { id:'DE-B-20250103-0012', project:'用户中心V3.2', system:'用户系统', module:'用户资料', title:'用户反馈入口', priority:'低', status:'调研中', assignee:'李明辉', submitter:'张三', dept:'产品部', desc:'在用户中心增加意见反馈入口，支持文字+截图提交反馈。', time:'2025-01-03', activity:[
     {type:'转化',text:'曹操$LG0246$ 转化需求 DE-B-20250103-0012',time:'2025-01-08 10:00:00'},
     {type:'审批通过',text:'诸葛亮$LG0250$ 审批通过需求 DE-B-20250103-0012',time:'2025-01-04 09:30:00'},
-    {type:'创建',text:'张三$zhangsan$ 创建需求',time:'2025-01-03 14:00:00'}
+    {type:'创建',text:'张三$2026001$ 创建需求',time:'2025-01-03 14:00:00'}
   ]},
   { id:'DE-B-20250102-0013', project:'荟健康V2.8', system:'健康管理系统', module:'运动记录', title:'定时任务调度', priority:'中', status:'已上线', assignee:'赵伟', submitter:'李四', dept:'研发部', desc:'建设定时任务调度平台，支持cron表达式配置和任务依赖管理。', time:'2025-01-02', activity:[
     {type:'转化',text:'曹操$LG0246$ 转化需求 DE-B-20250102-0013',time:'2025-01-06 11:00:00'},
     {type:'审批通过',text:'诸葛亮$LG0250$ 审批通过需求 DE-B-20250102-0013',time:'2025-01-03 10:00:00'},
-    {type:'创建',text:'李四$lisi$ 创建需求',time:'2025-01-02 09:00:00'}
+    {type:'创建',text:'李四$2026002$ 创建需求',time:'2025-01-02 09:00:00'}
   ]},
   { id:'DE-B-20250101-0014', project:'油葱商城V4.30.5', system:'商品中心', module:'商品管理', title:'全站搜索升级', priority:'紧急', status:'审批不通过', assignee:'—', submitter:'张三', dept:'产品部', desc:'升级全站搜索引擎，支持拼音搜索、模糊匹配和搜索建议。', time:'2025-01-01', rejectReason:'需求描述不够详细，缺少竞品分析和技术方案对比，请补充后重新提交。', activity:[
     {type:'审批不通过',text:'诸葛亮$LG0250$ 审批不通过需求 DE-B-20250101-0014 原因：需求描述不够详细，缺少竞品分析和技术方案对比',time:'2025-01-02 11:00:00'},
-    {type:'创建',text:'张三$zhangsan$ 创建需求',time:'2025-01-01 08:00:00'}
+    {type:'创建',text:'张三$2026001$ 创建需求',time:'2025-01-01 08:00:00'}
   ]}
 ];
 
@@ -3527,7 +3527,7 @@ function doFeishuLogin(fromShortcut) {
   const isBound = Math.random() > 0.4;
   if (isBound) {
     // 飞书二维码 + 已绑定：扫码后自动进入首页
-    currentUser = { username: 'zhangsan', ...USERS['zhangsan'] };
+    currentUser = { username: '2026001', ...USERS['2026001'] };
     enterApp();
     return;
   }
@@ -3719,7 +3719,7 @@ function handleForgotPw() {
 }
 
 // Simulated existing employee IDs for uniqueness check on registration
-const existingEmpIds = ['zhangsan', 'lisi', 'wangwu', '10086', '10010'];
+const existingEmpIds = ['2026001', '2026002', 'wangwu', '10086', '10010'];
 
 function setFieldError(id, msg) {
   const el = document.getElementById(id);
@@ -4956,7 +4956,7 @@ function renderProbList() {
     const titleDisplay = d.title.length > 30 ? d.title.slice(0,30) + '…' : d.title;
     const activateBtn = d.status === '已处理' ? `<button class="btn btn-sm btn-outline" onclick="activateProblem('${d.id}')" data-od-id="prob-activate-${d.id}">激活</button>` : '<span style="color:var(--text-secondary);font-size:.75rem">—</span>';
     return `<tr>
-      <td class="mono">${d.id} <span class="action-link" title="复制" onclick="copyText('${d.id}')"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:var(--primary);fill:none;stroke-width:2;cursor:pointer;vertical-align:middle"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></span></td>
+      <td class="mono" style="white-space:nowrap;font-size:.78rem">${d.id} <span class="action-link" title="复制" onclick="copyText('${d.id}')"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:var(--primary);fill:none;stroke-width:2;cursor:pointer;vertical-align:middle"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></span></td>
       <td style="font-size:.78rem">${projSys}</td>
       <td title="${d.title}" style="max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${titleDisplay}</td>
       <td><span class="priority-${pl}">${getPriorityLabel(d.priority)}</span></td>
